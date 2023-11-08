@@ -21,7 +21,7 @@ const FormBox = styled.View`
   width: 85%;
   height: 45%;
 
-  border: 1px;
+  border: 2px;
   border-radius: 30px;
 `;
 
@@ -32,11 +32,11 @@ const FormButton = styled.TouchableOpacity`
   align-items: center;
 
   bottom: 0;
-  height: 12.5%;
+  height: 15%;
   width: 100%;
 
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
 
   background: #518bfe;
 `;
@@ -74,19 +74,17 @@ function SignIn({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
-  const HomeIcon = isDarkMode
-    ? require('../../../assets/icons/home-icon_dark.png')
-    : require('../../../assets/icons/home-icon.png');
-
   return (
     <StyledSafeView>
       <StyledCol>
         <Image
           style={{width: 100, height: 100}}
-          source={HomeIcon}
+          source={require('../../../assets/icons/home-icon.png')}
           alt={'HomeIcon'}
         />
-        <StyledText40 style={contentStyle.bold}>Psy-DD</StyledText40>
+        <StyledText40 style={[contentStyle.bold, {color: 'white'}]}>
+          Psy-DD
+        </StyledText40>
       </StyledCol>
       <FormBox
         style={{
@@ -95,10 +93,10 @@ function SignIn({isDarkMode}) {
           marginTop: 40,
           marginBottom: 30,
         }}>
-        <StyledCol style={{marginBottom: 40}}>
+        <StyledCol style={{marginBottom: 25}}>
           <StyledText34 style={inputStyle.semibold}>Sign Up</StyledText34>
         </StyledCol>
-        <FormInput style={{marginBottom: 25}}>
+        <FormInput style={{marginBottom: 35}}>
           <StyledText20 style={inputStyle.semibold}>Email</StyledText20>
           <FormTextInput
             style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}
@@ -113,22 +111,27 @@ function SignIn({isDarkMode}) {
           />
         </FormInput>
         <FormButton>
-          <StyledText16 style={contentStyle.semibold}>Sign In</StyledText16>
+          <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
+            Sign In
+          </StyledText16>
         </FormButton>
       </FormBox>
       <StyledRow style={{marginBottom: 25}}>
         <TouchableOpacity>
-          <StyledText16 style={contentStyle.bold}>
+          <StyledText16 style={[contentStyle.bold, {color: 'white'}]}>
             Forgot Password?
           </StyledText16>
         </TouchableOpacity>
       </StyledRow>
       <StyledRow style={{marginTop: 50}}>
-        <StyledText16 style={contentStyle.medium}>
+        <StyledText16 style={[contentStyle.medium, {color: 'white'}]}>
           Don't have any Account?
         </StyledText16>
         <TouchableOpacity>
-          <StyledText16 style={contentStyle.semibold}> Sign Up</StyledText16>
+          <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
+            {' '}
+            Sign Up
+          </StyledText16>
         </TouchableOpacity>
       </StyledRow>
     </StyledSafeView>
