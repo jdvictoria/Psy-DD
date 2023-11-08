@@ -18,3 +18,17 @@ export const StyledSafeView = styled.SafeAreaView`
 
   background: #518bfe;
 `;
+
+export const StyledRow = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+`;
+
+export const StyledCol = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
