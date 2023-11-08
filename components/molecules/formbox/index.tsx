@@ -78,12 +78,12 @@ function FormComponent({isDarkMode}) {
         backgroundColor: isDarkMode ? '#010919' : '#ffffff',
         borderColor: isDarkMode ? '#010919' : '#ffffff',
         marginTop: 40,
-        marginBottom: 30,
+        marginBottom: 40,
       }}>
       <StyledCol style={{marginBottom: 25}}>
-        <StyledText34 style={inputStyle.semibold}>Sign Up</StyledText34>
+        <StyledText34 style={inputStyle.semibold}>Sign In</StyledText34>
       </StyledCol>
-      <FormInput style={{marginBottom: 35}}>
+      <FormInput style={{marginBottom: 50}}>
         <StyledText20 style={inputStyle.semibold}>Email</StyledText20>
         <FormTextInput
           style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}

@@ -37,7 +37,7 @@ function SignIn({isDarkMode}) {
         <TouchableOpacity>
           <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
             {' '}
-            Sign In
+            Sign Up
           </StyledText16>
         </TouchableOpacity>
       </StyledRow>
