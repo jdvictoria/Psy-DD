@@ -19,8 +19,8 @@ const FormBox = styled.View`
   width: 85%;
   height: 45%;
 
-  border: 2px;
-  border-radius: 30px;
+  border: 1px;
+  border-radius: 25px;
 `;
 
 const FormButton = styled.TouchableOpacity`
@@ -33,8 +33,8 @@ const FormButton = styled.TouchableOpacity`
   height: 15%;
   width: 100%;
 
-  border-bottom-left-radius: 35px;
-  border-bottom-right-radius: 35px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 
   background: #518bfe;
 `;
