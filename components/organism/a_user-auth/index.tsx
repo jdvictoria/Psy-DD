@@ -21,7 +21,7 @@ import SignUpComponent from '../../molecules/sign-up';
 function UserAuth({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
-  const [isSignIn, setIsSignIn] = useState(false);
+  const [isSignIn, setIsSignIn] = useState(true);
 
   const [isKeyboardOn, setIsKeyboardOn] = useState(false);
 

@@ -29,6 +29,13 @@ export const StyledText16 = styled.Text`
   font-size: 16px;
 `;
 
+export const StyledText12 = styled.Text`
+  align-self: center;
+  text-align: center;
+
+  font-size: 14px;
+`;
+
 export const contentText = isDarkMode => {
   return StyleSheet.create({
     black: {

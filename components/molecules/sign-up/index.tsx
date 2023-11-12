@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import {Button, Image, TouchableOpacity} from 'react-native';
+import {Image, TouchableOpacity} from 'react-native';
 
 import DatePicker from 'react-native-date-picker';
 
-import {StyledCol} from '../../../styles/container';
+import {StyledCol, StyledRow} from '../../../styles/container';
 
 import {
   contentText,
@@ -91,7 +91,7 @@ function SignUpComponent({isDarkMode}) {
       )}
       {formStep === 2 && (
         <>
-          <StyledCol style={{marginTop: 0, width: '100%'}}>
+          <StyledRow style={{marginTop: 0, width: '100%'}}>
             <TouchableOpacity
               style={{
                 display: 'flex',
@@ -116,7 +116,7 @@ function SignUpComponent({isDarkMode}) {
               />
             </TouchableOpacity>
             <StyledText30 style={inputStyle.semibold}>Sign Up</StyledText30>
-          </StyledCol>
+          </StyledRow>
           <FormInput style={{marginBottom: 17.5}}>
             <StyledText17 style={inputStyle.semibold}>
               Date Of Birth
