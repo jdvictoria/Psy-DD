@@ -17,7 +17,7 @@ const FormBox = styled.View`
   flex-direction: column;
 
   width: 85%;
-  height: 40%;
+  height: 42.5%;
 
   border: 1px;
   border-radius: 25px;

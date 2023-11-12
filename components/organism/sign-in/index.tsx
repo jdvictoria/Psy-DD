@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   Image,
   Keyboard,
@@ -19,17 +19,42 @@ import FormComponent from '../../molecules/formbox';
 function SignIn({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
+  const [isKeyboardOn, setIsKeyboardOn] = useState(false);
+
+  useEffect(() => {
+    const showSubscription = Keyboard.addListener('keyboardDidShow', () => {
+      setIsKeyboardOn(true);
+      console.log('keyboard is on');
+    });
+    const hideSubscription = Keyboard.addListener('keyboardDidHide', () => {
+      setIsKeyboardOn(false);
+    });
+
+    return () => {
+      showSubscription.remove();
+      hideSubscription.remove();
+    };
+  }, []);
+
   return (
-    <StyledKeyboardView>
+    <StyledKeyboardView style={{marginBottom: isKeyboardOn ? 90 : 0}}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <>
-          <StyledCol>
+          <StyledCol style={{flexDirection: isKeyboardOn ? 'row' : 'column'}}>
             <Image
-              style={{width: 100, height: 100}}
+              style={{
+                width: isKeyboardOn ? 60 : 100,
+                height: isKeyboardOn ? 60 : 100,
+                resizeMode: 'contain',
+              }}
               source={require('../../../assets/icons/home-icon.png')}
               alt={'HomeIcon'}
             />
-            <StyledText40 style={[contentStyle.bold, {color: 'white'}]}>
+            <StyledText40
+              style={[
+                contentStyle.bold,
+                {color: 'white', fontSize: isKeyboardOn ? 35 : 40},
+              ]}>
               Psy-DD
             </StyledText40>
           </StyledCol>
