@@ -91,7 +91,30 @@ function SignUpComponent({isDarkMode}) {
       )}
       {formStep === 2 && (
         <>
-          <StyledCol style={{marginTop: 0}}>
+          <StyledCol style={{marginTop: 0, width: '100%'}}>
+            <TouchableOpacity
+              style={{
+                display: 'flex',
+                position: 'absolute',
+                justifyContent: 'center',
+                alignItems: 'center',
+                left: 25,
+              }}
+              onPress={() => setFormStep(formStep - 1)}>
+              <Image
+                style={{
+                  width: 20,
+                  height: 20,
+                  resizeMode: 'contain',
+                }}
+                source={
+                  isDarkMode
+                    ? require('../../../assets/icons/back-button_dark.png')
+                    : require('../../../assets/icons/back-button.png')
+                }
+                alt={'Calendar'}
+              />
+            </TouchableOpacity>
             <StyledText30 style={inputStyle.semibold}>Sign Up</StyledText30>
           </StyledCol>
           <FormInput style={{marginBottom: 17.5}}>
@@ -122,8 +145,8 @@ function SignUpComponent({isDarkMode}) {
                 onPress={() => setOpen(true)}>
                 <Image
                   style={{
-                    width: 35,
-                    height: 35,
+                    width: 30,
+                    height: 30,
                     resizeMode: 'contain',
                   }}
                   source={
