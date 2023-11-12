@@ -6,7 +6,7 @@ import {
   contentText,
   inputText,
   StyledText16,
-  StyledText20,
+  StyledText17,
   StyledText30,
 } from '../../../styles/text';
 
@@ -34,13 +34,13 @@ function SignInComponent({isDarkMode}) {
         <StyledText30 style={inputStyle.semibold}>Sign In</StyledText30>
       </StyledCol>
       <FormInput style={{marginBottom: 17.5}}>
-        <StyledText20 style={inputStyle.semibold}>Email</StyledText20>
+        <StyledText17 style={inputStyle.semibold}>Email</StyledText17>
         <FormTextInput
           style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}
           placeholder="useless placeholder"
           placeholderTextColor="#9fa4ac"
         />
-        <StyledText20 style={inputStyle.semibold}>Password</StyledText20>
+        <StyledText17 style={inputStyle.semibold}>Password</StyledText17>
         <FormTextInput
           style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}
           placeholder="useless placeholder"

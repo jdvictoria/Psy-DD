@@ -15,11 +15,11 @@ export const StyledText30 = styled.Text`
   font-size: 27.5px;
 `;
 
-export const StyledText20 = styled.Text`
+export const StyledText17 = styled.Text`
   align-self: flex-start;
   text-align: center;
 
-  font-size: 17.5px;
+  font-size: 17px;
 `;
 
 export const StyledText16 = styled.Text`
