@@ -11,20 +11,23 @@ import {
   StyledKeyboardView,
   StyledRow,
 } from '../../../styles/container';
+
 import {contentText, StyledText16, StyledText40} from '../../../styles/text';
 
-import FormComponent from '../../molecules/formbox';
+import SignInComponent from '../../molecules/sign-in';
+import SignUpComponent from '../../molecules/sign-up';
 
 // @ts-ignore
-function SignIn({isDarkMode}) {
+function UserAuth({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
+
+  const [isSignIn, setIsSignIn] = useState(false);
 
   const [isKeyboardOn, setIsKeyboardOn] = useState(false);
 
   useEffect(() => {
     const showSubscription = Keyboard.addListener('keyboardDidShow', () => {
       setIsKeyboardOn(true);
-      console.log('keyboard is on');
     });
     const hideSubscription = Keyboard.addListener('keyboardDidHide', () => {
       setIsKeyboardOn(false);
@@ -36,8 +39,17 @@ function SignIn({isDarkMode}) {
     };
   }, []);
 
+  const changeToSignUp = () => {
+    setIsSignIn(false);
+  };
+
+  const changeToSignIn = () => {
+    setIsSignIn(true);
+  };
+
   return (
-    <StyledKeyboardView style={{marginBottom: isKeyboardOn ? 90 : 0}}>
+    <StyledKeyboardView
+      style={{marginBottom: isKeyboardOn ? (isSignIn ? 90 : 135) : 0}}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <>
           <StyledCol style={{flexDirection: isKeyboardOn ? 'row' : 'column'}}>
@@ -58,22 +70,31 @@ function SignIn({isDarkMode}) {
               Psy-DD
             </StyledText40>
           </StyledCol>
-          <FormComponent isDarkMode={isDarkMode} />
-          <StyledRow style={{marginBottom: 25}}>
-            <TouchableOpacity>
-              <StyledText16 style={[contentStyle.bold, {color: 'white'}]}>
-                Forgot Password?
-              </StyledText16>
-            </TouchableOpacity>
-          </StyledRow>
+          {isSignIn ? (
+            <SignInComponent isDarkMode={isDarkMode} />
+          ) : (
+            <SignUpComponent isDarkMode={isDarkMode} />
+          )}
+          {isSignIn && (
+            <StyledRow style={{marginBottom: 25}}>
+              <TouchableOpacity>
+                <StyledText16 style={[contentStyle.bold, {color: 'white'}]}>
+                  Forgot Password?
+                </StyledText16>
+              </TouchableOpacity>
+            </StyledRow>
+          )}
           <StyledRow style={{marginTop: 50}}>
             <StyledText16 style={[contentStyle.medium, {color: 'white'}]}>
-              Don't have any Account?
+              {isSignIn
+                ? "Don't have any Account?"
+                : 'Already have an Account?'}
             </StyledText16>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={isSignIn ? changeToSignUp : changeToSignIn}>
               <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
                 {' '}
-                Sign Up
+                {isSignIn ? 'Sign Up' : 'Sign In'}
               </StyledText16>
             </TouchableOpacity>
           </StyledRow>
@@ -83,4 +104,4 @@ function SignIn({isDarkMode}) {
   );
 }
 
-export default SignIn;
+export default UserAuth;

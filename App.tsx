@@ -2,14 +2,14 @@ import React, {useState} from 'react';
 
 import {StyledSafeView} from './styles/container';
 
-import SignIn from './components/organism/sign-in';
+import UserAuth from './components/organism/a_user-auth';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   return (
     <StyledSafeView>
-      <SignIn isDarkMode={isDarkMode} />
+      <UserAuth isDarkMode={isDarkMode} />
     </StyledSafeView>
   );
 }
