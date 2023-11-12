@@ -7,7 +7,7 @@ import {
   inputText,
   StyledText16,
   StyledText20,
-  StyledText34,
+  StyledText30,
 } from '../../../styles/text';
 
 const FormBox = styled.View`
@@ -17,7 +17,7 @@ const FormBox = styled.View`
   flex-direction: column;
 
   width: 85%;
-  height: 45%;
+  height: 40%;
 
   border: 1px;
   border-radius: 25px;
@@ -45,6 +45,7 @@ const FormInput = styled.View`
   align-items: center;
   flex-direction: column;
 
+  height: 70%;
   width: 87.5%;
 `;
 
@@ -53,11 +54,11 @@ const FormTextInput = styled.TextInput`
   justify-content: center;
   align-items: center;
 
-  height: 60px;
+  height: 22.5%;
   width: 100%;
 
-  margin-top: 10px;
-  margin-bottom: 25px;
+  margin-top: 7.5px;
+  margin-bottom: 15px;
   padding-left: 25px;
 
   border-radius: 10px;
@@ -77,13 +78,13 @@ function FormComponent({isDarkMode}) {
       style={{
         backgroundColor: isDarkMode ? '#010919' : '#ffffff',
         borderColor: isDarkMode ? '#010919' : '#ffffff',
-        marginTop: 40,
-        marginBottom: 40,
+        marginTop: 25,
+        marginBottom: 25,
       }}>
-      <StyledCol style={{marginBottom: 25}}>
-        <StyledText34 style={inputStyle.semibold}>Sign In</StyledText34>
+      <StyledCol style={{marginTop: 0}}>
+        <StyledText30 style={inputStyle.semibold}>Sign In</StyledText30>
       </StyledCol>
-      <FormInput style={{marginBottom: 50}}>
+      <FormInput style={{marginBottom: 17.5}}>
         <StyledText20 style={inputStyle.semibold}>Email</StyledText20>
         <FormTextInput
           style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}
