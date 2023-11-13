@@ -1,44 +1,25 @@
 import React, {useState} from 'react';
 import {Image, TouchableOpacity} from 'react-native';
 
-import DatePicker from 'react-native-date-picker';
-
 import {StyledCol, StyledRow} from '../../../styles/container';
 
 import {
   contentText,
   inputText,
   StyledText16,
-  StyledText17,
   StyledText30,
 } from '../../../styles/text';
 
-import {
-  FormBox,
-  FormInput,
-  FormTextInput,
-  FormButton,
-} from '../../../styles/forms';
-import styled from 'styled-components';
+import {FormBox, FormInput, FormButton} from '../../../styles/forms';
 
-const DatePlaceholder = styled.View`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-
-  height: 22.5%;
-  width: 100%;
-
-  margin-top: 7.5px;
-  margin-bottom: 15px;
-  padding-left: 25px;
-
-  border-radius: 10px;
-`;
+import AuthEmail from '../../atoms/auth-email';
+import AuthPassword from '../../atoms/auth-password';
+import AuthDate from '../../atoms/auth-date';
+import AuthLicense from '../../atoms/auth-license';
 
 // @ts-ignore
 function SignUpComponent({isDarkMode}) {
+  // TODO: Firebase Auth
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
@@ -48,12 +29,10 @@ function SignUpComponent({isDarkMode}) {
     setFormStep(formStep + 1);
   };
 
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [license, setLicense] = useState('');
   const [date, setDate] = useState(new Date());
-  const [open, setOpen] = useState(false);
-
-  const birthdayMinDate = new Date();
-  const birthdayMaxData = new Date(birthdayMinDate);
-  birthdayMaxData.setFullYear(birthdayMinDate.getFullYear() - 18);
 
   return (
     <FormBox
@@ -69,17 +48,15 @@ function SignUpComponent({isDarkMode}) {
             <StyledText30 style={inputStyle.semibold}>Sign Up</StyledText30>
           </StyledCol>
           <FormInput style={{marginBottom: 17.5}}>
-            <StyledText17 style={inputStyle.semibold}>Email</StyledText17>
-            <FormTextInput
-              style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}
-              placeholder="useless placeholder"
-              placeholderTextColor="#9fa4ac"
+            <AuthEmail
+              isDarkMode={isDarkMode}
+              email={email}
+              setEmail={setEmail}
             />
-            <StyledText17 style={inputStyle.semibold}>Password</StyledText17>
-            <FormTextInput
-              style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}
-              placeholder="useless placeholder"
-              placeholderTextColor="#9fa4ac"
+            <AuthPassword
+              isDarkMode={isDarkMode}
+              password={password}
+              setPassword={setPassword}
             />
           </FormInput>
           <FormButton onPress={handleNextStep}>
@@ -118,69 +95,13 @@ function SignUpComponent({isDarkMode}) {
             <StyledText30 style={inputStyle.semibold}>Sign Up</StyledText30>
           </StyledRow>
           <FormInput style={{marginBottom: 17.5}}>
-            <StyledText17 style={inputStyle.semibold}>
-              Date Of Birth
-            </StyledText17>
-            <DatePlaceholder
-              style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}>
-              <StyledText16
-                style={{
-                  color: '#94a4ac',
-                  display: 'flex',
-                  position: 'absolute',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  left: 25,
-                }}>
-                useless placeholder
-              </StyledText16>
-              <TouchableOpacity
-                style={{
-                  display: 'flex',
-                  position: 'absolute',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  right: 25,
-                }}
-                onPress={() => setOpen(true)}>
-                <Image
-                  style={{
-                    width: 30,
-                    height: 30,
-                    resizeMode: 'contain',
-                  }}
-                  source={
-                    isDarkMode
-                      ? require('../../../assets/icons/calendar-button_dark.png')
-                      : require('../../../assets/icons/calendar-button.png')
-                  }
-                  alt={'Calendar'}
-                />
-              </TouchableOpacity>
-            </DatePlaceholder>
-            <StyledText17 style={inputStyle.semibold}>
-              Registration No.
-            </StyledText17>
-            <FormTextInput
-              style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}
-              placeholder="useless placeholder"
-              placeholderTextColor="#9fa4ac"
+            <AuthDate isDarkMode={isDarkMode} date={date} setDate={setDate} />
+            <AuthLicense
+              isDarkMode={isDarkMode}
+              license={license}
+              setLicense={setLicense}
             />
           </FormInput>
-          <DatePicker
-            modal
-            mode={'date'}
-            maximumDate={birthdayMaxData}
-            open={open}
-            date={date}
-            onConfirm={date => {
-              setOpen(false);
-              setDate(date);
-            }}
-            onCancel={() => {
-              setOpen(false);
-            }}
-          />
           <FormButton>
             <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
               Submit
