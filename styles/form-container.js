@@ -50,20 +50,17 @@ export const BodyContainer = styled.View`
   height: 85%;
 `;
 
-export const ProfileHeaderStyle = styled.View`
-  display: flex;
-  position: absolute;
+export const ProfileCircle = styled.View`
   justify-content: center;
   align-items: center;
 
-  flex: 1;
-  top: 0;
-  bottom: 0;
+  margin-top: 50px;
+  margin-bottom: 25px;
 
-  width: 40%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
 
-  background-color: #1a2230;
+  border-radius: 50px;
 `;
 
 export const ProfileInfoCard = styled.View`
@@ -78,6 +75,4 @@ export const ProfileInfoCard = styled.View`
   height: 100px;
 
   border-radius: 15px;
-
-  background-color: #041325;
 `;

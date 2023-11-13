@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import {StyleSheet} from 'react-native';
 
+export const StyledText40 = styled.Text`
+  align-self: center;
+  text-align: center;
+
+  font-size: 40px;
+`;
+
 export const StyledText20 = styled.Text`
   align-self: center;
   text-align: center;

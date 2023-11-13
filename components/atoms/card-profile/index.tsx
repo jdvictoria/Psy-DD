@@ -16,7 +16,8 @@ function CardProfile({isDarkMode, label, value, icon}) {
   const subcontentStyle = subcontentText();
 
   return (
-    <ProfileInfoCard>
+    <ProfileInfoCard
+      style={{backgroundColor: isDarkMode ? '#041325' : '#FFFFFF'}}>
       <Image
         style={{
           width: 20,

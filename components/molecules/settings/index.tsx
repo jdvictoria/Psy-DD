@@ -16,13 +16,13 @@ function HomeSettings({isDarkMode}) {
   return (
     <StyledView>
       <HeaderContainer
-        style={{backgroundColor: isDarkMode ? '#010919' : '#F8FAFF'}}>
+        style={{backgroundColor: isDarkMode ? '#010919' : '#EFEFEF'}}>
         <StyledText20 style={[{alignSelf: 'flex-end'}, contentStyle.semibold]}>
           SETTINGS
         </StyledText20>
       </HeaderContainer>
       <BodyContainer
-        style={{backgroundColor: isDarkMode ? '#010919' : '#F8FAFF'}}>
+        style={{backgroundColor: isDarkMode ? '#010919' : '#EFEFEF'}}>
         <ScrollView
           contentContainerStyle={{
             justifyContent: 'center',
