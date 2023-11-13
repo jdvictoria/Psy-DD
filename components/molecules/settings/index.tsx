@@ -5,12 +5,12 @@ import {
   BodyContainer,
   HeaderContainer,
   StyledView,
-} from '../../../../styles/form-container';
+} from '../../../styles/form-container';
 
-import {contentText, StyledText20} from '../../../../styles/form-text';
+import {contentText, StyledText20} from '../../../styles/form-text';
 
 // @ts-ignore
-function HomeDiagnose({isDarkMode}) {
+function HomeSettings({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
   return (
@@ -18,7 +18,7 @@ function HomeDiagnose({isDarkMode}) {
       <HeaderContainer
         style={{backgroundColor: isDarkMode ? '#010919' : '#F8FAFF'}}>
         <StyledText20 style={[{alignSelf: 'flex-end'}, contentStyle.semibold]}>
-          DIAGNOSE
+          SETTINGS
         </StyledText20>
       </HeaderContainer>
       <BodyContainer
@@ -36,4 +36,4 @@ function HomeDiagnose({isDarkMode}) {
   );
 }
 
-export default HomeDiagnose;
+export default HomeSettings;

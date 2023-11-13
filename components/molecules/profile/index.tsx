@@ -8,14 +8,14 @@ import {
   ProfileInfoCard,
   StyledRow,
   StyledView,
-} from '../../../../styles/form-container';
+} from '../../../styles/form-container';
 
 import {
   contentText,
   subcontentText,
   StyledText16,
   StyledText20,
-} from '../../../../styles/form-text';
+} from '../../../styles/form-text';
 
 // @ts-ignore
 function HomeProfile({isDarkMode}) {
@@ -54,7 +54,7 @@ function HomeProfile({isDarkMode}) {
                   height: 15,
                   resizeMode: 'contain',
                 }}
-                source={require('../../../../assets/icons/name-icon.png')}
+                source={require('../../../assets/icons/name-icon.png')}
                 alt={'Diagnose'}
               />
               <StyledText20
