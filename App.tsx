@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import {StyledSafeView} from './styles/input-container';
 
-import UserAuth from './components/organism/a_user-auth';
+import UserAuth from './components/organism/1_user-auth';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
