@@ -1,15 +1,17 @@
 import React, {useState} from 'react';
+import {Image} from 'react-native';
 
 import {
   AnimatedTabBarNavigator,
   DotSize,
   TabElementDisplayOptions,
 } from 'react-native-animated-nav-tab-bar';
-import HomeProfile from './components/organism/2_home/b_profile';
+
 import {NavigationContainer} from '@react-navigation/native';
+
 import HomeDiagnose from './components/organism/2_home/a_diagnose';
+import HomeProfile from './components/organism/2_home/b_profile';
 import HomeSettings from './components/organism/2_home/c_settings';
-import {Image} from 'react-native';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -25,10 +27,10 @@ function App() {
           whenActiveShow: TabElementDisplayOptions.ICON_ONLY,
           whenInactiveShow: TabElementDisplayOptions.ICON_ONLY,
           dotSize: DotSize.SMALL,
-          dotCornerRadius: 30,
           tabBarBackground: isDarkMode ? '#1a2230' : '#ffffff',
           activeTabBackgrounds: '#518cff',
-        }}>
+        }}
+        initialRouteName={'Profile'}>
         <Tabs.Screen
           name="Diagnose"
           options={{
@@ -65,7 +67,7 @@ function App() {
                     ? require('./assets/icons/profile_dark.png')
                     : require('./assets/icons/profile.png')
                 }
-                alt={'Diagnose'}
+                alt={'Profile'}
               />
             ),
           }}>
@@ -86,7 +88,7 @@ function App() {
                     ? require('./assets/icons/settings_dark.png')
                     : require('./assets/icons/settings.png')
                 }
-                alt={'Diagnose'}
+                alt={'Settings'}
               />
             ),
           }}>
