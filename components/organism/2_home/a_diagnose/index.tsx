@@ -7,7 +7,7 @@ import {
   StyledView,
 } from '../../../../styles/form-container';
 
-import {contentText, SampleText} from '../../../../styles/form-text';
+import {contentText, StyledText20} from '../../../../styles/form-text';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -17,7 +17,9 @@ function HomeDiagnose({isDarkMode}) {
     <StyledView>
       <HeaderContainer
         style={{backgroundColor: isDarkMode ? '#010919' : '#F8FAFF'}}>
-        <SampleText style={contentStyle.semibold}>DIAGNOSE</SampleText>
+        <StyledText20 style={[{alignSelf: 'flex-end'}, contentStyle.semibold]}>
+          DIAGNOSE
+        </StyledText20>
       </HeaderContainer>
       <BodyContainer
         style={{backgroundColor: isDarkMode ? '#010919' : '#F8FAFF'}}>

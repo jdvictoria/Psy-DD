@@ -13,6 +13,20 @@ export const StyledView = styled.View`
   bottom: 0;
 `;
 
+export const StyledRow = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+`;
+
+export const StyledCol = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
 export const HeaderContainer = styled.View`
   position: absolute;
   justify-content: center;
@@ -34,4 +48,36 @@ export const BodyContainer = styled.View`
 
   width: 100%;
   height: 85%;
+`;
+
+export const ProfileHeaderStyle = styled.View`
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+
+  flex: 1;
+  top: 0;
+  bottom: 0;
+
+  width: 40%;
+  height: 100%;
+
+  background-color: #1a2230;
+`;
+
+export const ProfileInfoCard = styled.View`
+  justify-content: center;
+  align-items: flex-start;
+
+  margin: 10px 7.5px 10px 7.5px;
+
+  padding-left: 15px;
+
+  width: 45%;
+  height: 100px;
+
+  border-radius: 15px;
+
+  background-color: #041325;
 `;
