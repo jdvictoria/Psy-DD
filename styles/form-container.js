@@ -11,6 +11,4 @@ export const StyledSafeView = styled.SafeAreaView`
   left: 0;
   right: 0;
   bottom: 0;
-
-  background: #518bfe;
 `;
