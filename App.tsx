@@ -7,11 +7,7 @@ import HomeNavigation from './components/organism/2_home';
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
-  return (
-    <StyledSafeView>
-      <HomeNavigation isDarkMode={isDarkMode} />
-    </StyledSafeView>
-  );
+  return <HomeNavigation isDarkMode={isDarkMode} />;
 }
 
 export default App;
