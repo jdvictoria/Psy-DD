@@ -1,17 +1,13 @@
 import React, {useState} from 'react';
 
-import {StyledSafeView} from './styles/container';
+import {StyledSafeView} from './styles/input-container';
 
-import UserAuth from './components/organism/a_user-auth';
+import HomeNavigation from './components/organism/2_home';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  return (
-    <StyledSafeView>
-      <UserAuth isDarkMode={isDarkMode} />
-    </StyledSafeView>
-  );
+  return <HomeNavigation isDarkMode={isDarkMode} />;
 }
 
 export default App;

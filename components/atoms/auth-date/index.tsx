@@ -2,7 +2,11 @@ import React, {useState} from 'react';
 import {Image, TouchableOpacity} from 'react-native';
 import styled from 'styled-components';
 
-import {inputText, StyledText16, StyledText17} from '../../../styles/text';
+import {
+  inputText,
+  StyledText16,
+  StyledText17,
+} from '../../../styles/input-text';
 import DatePicker from 'react-native-date-picker';
 
 const DatePlaceholder = styled.View`

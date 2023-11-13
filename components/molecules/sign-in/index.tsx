@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 
-import {StyledCol} from '../../../styles/container';
+import {StyledCol} from '../../../styles/input-container';
 
 import {
   contentText,
   inputText,
   StyledText16,
   StyledText30,
-} from '../../../styles/text';
+} from '../../../styles/input-text';
 
-import {FormBox, FormInput, FormButton} from '../../../styles/forms';
+import {FormBox, FormInput, FormButton} from '../../../styles/input-forms';
 
 import AuthEmail from '../../atoms/auth-email';
 import AuthPassword from '../../atoms/auth-password';
