@@ -10,9 +10,13 @@ import {
   StyledCol,
   StyledKeyboardView,
   StyledRow,
-} from '../../../styles/container';
+} from '../../../styles/input-container';
 
-import {contentText, StyledText16, StyledText40} from '../../../styles/text';
+import {
+  contentText,
+  StyledText16,
+  StyledText40,
+} from '../../../styles/input-text';
 
 import SignInComponent from '../../molecules/sign-in';
 import SignUpComponent from '../../molecules/sign-up';

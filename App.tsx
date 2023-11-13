@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {StyledSafeView} from './styles/container';
+import {StyledSafeView} from './styles/input-container';
 
 import UserAuth from './components/organism/a_user-auth';
 

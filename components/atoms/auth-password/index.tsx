@@ -1,7 +1,11 @@
 import React, {useState} from 'react';
-import {StyledCol} from '../../../styles/container';
-import {inputText, StyledText12, StyledText17} from '../../../styles/text';
-import {FormTextInput} from '../../../styles/forms';
+import {StyledCol} from '../../../styles/input-container';
+import {
+  inputText,
+  StyledText12,
+  StyledText17,
+} from '../../../styles/input-text';
+import {FormTextInput} from '../../../styles/input-forms';
 
 // @ts-ignore
 function AuthPassword({isDarkMode, password, setPassword}) {
