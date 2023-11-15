@@ -96,3 +96,12 @@ export const SettingsCardLeft = styled.View`
 
   left: 25px;
 `;
+
+export const SettingsCardRight = styled.View`
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  right: 25px;
+`;

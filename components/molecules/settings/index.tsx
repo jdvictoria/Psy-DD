@@ -1,11 +1,12 @@
-import React from 'react';
-import {Image, ScrollView} from 'react-native';
+import React, {useState} from 'react';
+import {Image, ScrollView, Switch} from 'react-native';
 
 import {
   BodyContainer,
   HeaderContainer,
   SettingsCard,
   SettingsCardLeft,
+  SettingsCardRight,
   StyledView,
 } from '../../../styles/form-container';
 
@@ -16,8 +17,10 @@ import {
 } from '../../../styles/form-text';
 
 // @ts-ignore
-function HomeSettings({isDarkMode}) {
+function HomeSettings({isDarkMode, setIsDarkMode}) {
   const contentStyle = contentText(isDarkMode);
+
+  const toggleSwitch = () => setIsDarkMode(previousState => !previousState);
 
   return (
     <StyledView>
@@ -58,6 +61,14 @@ function HomeSettings({isDarkMode}) {
                 Toggle Dark Mode
               </StyledText16>
             </SettingsCardLeft>
+            <SettingsCardRight>
+              <Switch
+                trackColor={{false: '#767577', true: '#518cff'}}
+                thumbColor={isDarkMode ? '#ffffff' : '#f4f3f4'}
+                onValueChange={toggleSwitch}
+                value={isDarkMode}
+              />
+            </SettingsCardRight>
           </SettingsCard>
         </ScrollView>
       </BodyContainer>
