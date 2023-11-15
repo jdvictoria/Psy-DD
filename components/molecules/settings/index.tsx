@@ -1,13 +1,19 @@
 import React from 'react';
-import {ScrollView} from 'react-native';
+import {Image, ScrollView} from 'react-native';
 
 import {
   BodyContainer,
   HeaderContainer,
+  SettingsCard,
+  SettingsCardLeft,
   StyledView,
 } from '../../../styles/form-container';
 
-import {contentText, StyledText20} from '../../../styles/form-text';
+import {
+  contentText,
+  StyledText20,
+  StyledText16,
+} from '../../../styles/form-text';
 
 // @ts-ignore
 function HomeSettings({isDarkMode}) {
@@ -29,8 +35,31 @@ function HomeSettings({isDarkMode}) {
             alignItems: 'center',
           }}
           style={{width: '100%'}}
-          showsVerticalScrollIndicator={false}
-        />
+          showsVerticalScrollIndicator={false}>
+          <SettingsCard
+            style={{backgroundColor: isDarkMode ? '#041325' : '#FFFFFF'}}>
+            <SettingsCardLeft>
+              <Image
+                style={{
+                  width: 40,
+                  height: 40,
+                  resizeMode: 'contain',
+                  paddingRight: 50,
+                }}
+                source={
+                  isDarkMode
+                    ? require('../../../assets/icons/darkmode-icon_dark.png')
+                    : require('../../../assets/icons/darkmode-icon.png')
+                }
+                alt={'Dark Mode'}
+              />
+              <StyledText16 style={contentStyle.medium}>
+                {' '}
+                Toggle Dark Mode
+              </StyledText16>
+            </SettingsCardLeft>
+          </SettingsCard>
+        </ScrollView>
       </BodyContainer>
     </StyledView>
   );

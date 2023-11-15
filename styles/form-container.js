@@ -76,3 +76,23 @@ export const ProfileInfoCard = styled.View`
 
   border-radius: 15px;
 `;
+
+export const SettingsCard = styled.View`
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  width: 85%;
+  height: 60px;
+
+  border-radius: 20px;
+`;
+
+export const SettingsCardLeft = styled.View`
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  left: 25px;
+`;
