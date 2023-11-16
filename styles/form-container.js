@@ -82,6 +82,8 @@ export const SettingsCard = styled.View`
   align-items: center;
   flex-direction: row;
 
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 85%;
   height: 60px;
 
@@ -95,6 +97,12 @@ export const SettingsCardLeft = styled.View`
   flex-direction: row;
 
   left: 25px;
+`;
+
+export const SettingsCardCenter = styled.TouchableOpacity`
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 `;
 
 export const SettingsCardRight = styled.View`
