@@ -1,17 +1,27 @@
-import React from 'react';
-import {ScrollView} from 'react-native';
+import React, {useState} from 'react';
+import {Image, ScrollView, Switch} from 'react-native';
 
 import {
   BodyContainer,
   HeaderContainer,
+  SettingsCard,
+  SettingsCardLeft,
+  SettingsCardRight,
   StyledView,
 } from '../../../styles/form-container';
 
-import {contentText, StyledText20} from '../../../styles/form-text';
+import {
+  contentText,
+  StyledText20,
+  StyledText16,
+} from '../../../styles/form-text';
+import CardSettings from '../../atoms/card-settings';
 
 // @ts-ignore
-function HomeSettings({isDarkMode}) {
+function HomeSettings({isDarkMode, setIsDarkMode}) {
   const contentStyle = contentText(isDarkMode);
+
+  const toggleSwitch = () => setIsDarkMode(previousState => !previousState);
 
   return (
     <StyledView>
@@ -27,10 +37,33 @@ function HomeSettings({isDarkMode}) {
           contentContainerStyle={{
             justifyContent: 'center',
             alignItems: 'center',
+            marginTop: 25,
           }}
           style={{width: '100%'}}
-          showsVerticalScrollIndicator={false}
-        />
+          showsVerticalScrollIndicator={false}>
+          <CardSettings
+            isDarkMode={isDarkMode}
+            setIsDarkMode={setIsDarkMode}
+            icon={
+              isDarkMode
+                ? require('../../../assets/icons/darkmode-icon_dark.png')
+                : require('../../../assets/icons/darkmode-icon.png')
+            }
+            text={'Toggle Dark Mode'}
+            rightIcon={true}
+          />
+          <CardSettings
+            isDarkMode={isDarkMode}
+            setIsDarkMode={null}
+            icon={
+              isDarkMode
+                ? require('../../../assets/icons/logout-icon_dark.png')
+                : require('../../../assets/icons/logout-icon.png')
+            }
+            text={'Log Out Session'}
+            rightIcon={false}
+          />
+        </ScrollView>
       </BodyContainer>
     </StyledView>
   );

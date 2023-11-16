@@ -76,3 +76,40 @@ export const ProfileInfoCard = styled.View`
 
   border-radius: 15px;
 `;
+
+export const SettingsCard = styled.View`
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 85%;
+  height: 60px;
+
+  border-radius: 20px;
+`;
+
+export const SettingsCardLeft = styled.View`
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  left: 25px;
+`;
+
+export const SettingsCardCenter = styled.TouchableOpacity`
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+`;
+
+export const SettingsCardRight = styled.View`
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  right: 25px;
+`;
