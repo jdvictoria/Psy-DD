@@ -21,8 +21,6 @@ import CardSettings from '../../atoms/card-settings';
 function HomeSettings({isDarkMode, setIsDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
-  const toggleSwitch = () => setIsDarkMode(previousState => !previousState);
-
   return (
     <StyledView>
       <HeaderContainer

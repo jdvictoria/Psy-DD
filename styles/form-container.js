@@ -84,6 +84,7 @@ export const SettingsCard = styled.View`
 
   margin-top: 10px;
   margin-bottom: 10px;
+
   width: 85%;
   height: 60px;
 
@@ -112,4 +113,54 @@ export const SettingsCardRight = styled.View`
   flex-direction: row;
 
   right: 25px;
+`;
+
+export const DiagnoseResultCard = styled.View`
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  width: 85%;
+  height: 60px;
+
+  border-radius: 20px;
+`;
+
+export const DiagnoseResultLeft = styled.TouchableOpacity`
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  left: 0;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  width: 50%;
+  height: 60px;
+
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+`;
+
+export const DiagnoseResultRight = styled.TouchableOpacity`
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  right: 0;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  width: 50%;
+  height: 60px;
+
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 `;
