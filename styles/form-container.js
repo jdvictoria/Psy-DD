@@ -123,7 +123,7 @@ export const DiagnoseResultCard = styled.View`
   margin-top: 10px;
   margin-bottom: 10px;
 
-  width: 85%;
+  width: 90%;
   height: 60px;
 
   border-radius: 20px;
@@ -162,5 +162,34 @@ export const DiagnoseResultRight = styled.TouchableOpacity`
   height: 60px;
 
   border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+`;
+
+export const DiagnoseSymptomCard = styled.View`
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  width: 90%;
+  height: 240px;
+
+  border-radius: 20px;
+`;
+
+export const DiagnoseSymptomAdd = styled.TouchableOpacity`
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  bottom: 0;
+
+  width: 100%;
+  height: 60px;
+
+  border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 `;

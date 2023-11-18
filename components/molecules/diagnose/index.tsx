@@ -3,14 +3,15 @@ import {ScrollView} from 'react-native';
 
 import {
   BodyContainer,
-  DiagnoseResultCard,
-  DiagnoseResultLeft,
-  DiagnoseResultRight,
   HeaderContainer,
   StyledView,
 } from '../../../styles/form-container';
 
 import {contentText, StyledText20} from '../../../styles/form-text';
+
+import CardDiagnoseResult from '../../atoms/card-diagnose_result';
+import CardDiagnoseSmall from '../../atoms/card-diagnose_small';
+import CardDiagnoseBig from '../../atoms/card-diagnose_big';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -35,31 +36,9 @@ function HomeDiagnose({isDarkMode}) {
           }}
           style={{width: '100%'}}
           showsVerticalScrollIndicator={false}>
-          <DiagnoseResultCard
-            style={{backgroundColor: isDarkMode ? '#041325' : '#FFFFFF'}}>
-            <StyledText20 style={contentStyle.bold}>
-              Result: {result}
-            </StyledText20>
-          </DiagnoseResultCard>
-          <DiagnoseResultCard
-            style={{
-              backgroundColor: isDarkMode ? '#041325' : '#FFFFFF',
-            }}>
-            <DiagnoseResultLeft
-              style={{
-                backgroundColor: '#FE7762',
-              }}>
-              <StyledText20 style={contentStyle.semibold}>Clear</StyledText20>
-            </DiagnoseResultLeft>
-            <DiagnoseResultRight
-              style={{
-                backgroundColor: '#00A911',
-              }}>
-              <StyledText20 style={contentStyle.semibold}>
-                Diagnose
-              </StyledText20>
-            </DiagnoseResultRight>
-          </DiagnoseResultCard>
+          <CardDiagnoseResult isDarkMode={isDarkMode} result={result} />
+          <CardDiagnoseSmall isDarkMode={isDarkMode} />
+          <CardDiagnoseBig isDarkMode={isDarkMode} />
         </ScrollView>
       </BodyContainer>
     </StyledView>

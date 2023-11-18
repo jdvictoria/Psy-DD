@@ -8,6 +8,13 @@ export const StyledText40 = styled.Text`
   font-size: 40px;
 `;
 
+export const StyledText24 = styled.Text`
+  align-self: center;
+  text-align: center;
+
+  font-size: 24px;
+`;
+
 export const StyledText20 = styled.Text`
   align-self: center;
   text-align: center;
