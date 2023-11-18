@@ -54,7 +54,7 @@ export const ProfileCircle = styled.View`
   justify-content: center;
   align-items: center;
 
-  margin-top: 50px;
+  margin-top: 25px;
   margin-bottom: 25px;
 
   width: 100px;
@@ -84,6 +84,7 @@ export const SettingsCard = styled.View`
 
   margin-top: 10px;
   margin-bottom: 10px;
+
   width: 85%;
   height: 60px;
 
@@ -112,4 +113,96 @@ export const SettingsCardRight = styled.View`
   flex-direction: row;
 
   right: 25px;
+`;
+
+export const DiagnoseResultCard = styled.View`
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  width: 90%;
+  height: 60px;
+
+  border-radius: 20px;
+`;
+
+export const DiagnoseResultLeft = styled.TouchableOpacity`
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  left: 0;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  width: 40%;
+  height: 60px;
+
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+`;
+
+export const DiagnoseResultRight = styled.TouchableOpacity`
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  right: 0;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  width: 40%;
+  height: 60px;
+
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+`;
+
+export const DiagnoseResultCenter = styled.TouchableOpacity`
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  width: 20%;
+  height: 60px;
+`;
+
+export const DiagnoseSymptomCard = styled.View`
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 1px;
+
+  width: 90%;
+  height: 240px;
+
+  border-radius: 20px;
+`;
+
+export const DiagnoseSymptomAdd = styled.TouchableOpacity`
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  bottom: 0;
+
+  width: 100%;
+  height: 60px;
+
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 `;

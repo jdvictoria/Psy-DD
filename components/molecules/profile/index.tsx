@@ -29,7 +29,11 @@ function HomeProfile({isDarkMode}) {
     <StyledView>
       <HeaderContainer
         style={{backgroundColor: isDarkMode ? '#010919' : '#EFEFEF'}}>
-        <StyledText20 style={[{alignSelf: 'flex-end'}, contentStyle.semibold]}>
+        <StyledText20
+          style={[
+            {alignSelf: 'flex-end', paddingBottom: 15},
+            contentStyle.semibold,
+          ]}>
           PROFILE
         </StyledText20>
       </HeaderContainer>
@@ -44,7 +48,7 @@ function HomeProfile({isDarkMode}) {
           style={{width: '100%'}}
           showsVerticalScrollIndicator={false}>
           <ProfileCircle
-            style={{backgroundColor: isDarkMode ? '#041325' : '#FFFFFF'}}>
+            style={{backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF'}}>
             <StyledText40 style={contentStyle.semibold}>JD</StyledText40>
           </ProfileCircle>
           <StyledCol style={{marginBottom: 25}}>

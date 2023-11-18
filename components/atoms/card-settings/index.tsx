@@ -15,7 +15,7 @@ function CardSettings({isDarkMode, setIsDarkMode, icon, text, rightIcon}) {
   const toggleSwitch = () => setIsDarkMode(previousState => !previousState);
 
   return (
-    <SettingsCard style={{backgroundColor: isDarkMode ? '#041325' : '#FFFFFF'}}>
+    <SettingsCard style={{backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF'}}>
       {rightIcon ? (
         <>
           <SettingsCardLeft>
@@ -24,12 +24,12 @@ function CardSettings({isDarkMode, setIsDarkMode, icon, text, rightIcon}) {
                 width: 40,
                 height: 40,
                 resizeMode: 'contain',
-                paddingRight: 50,
+                marginRight: 10,
               }}
               source={icon}
               alt={'Dark Mode'}
             />
-            <StyledText16 style={contentStyle.medium}> {text}</StyledText16>
+            <StyledText16 style={contentStyle.medium}>{text}</StyledText16>
           </SettingsCardLeft>
           <SettingsCardRight>
             <Switch
@@ -47,12 +47,12 @@ function CardSettings({isDarkMode, setIsDarkMode, icon, text, rightIcon}) {
               width: 40,
               height: 40,
               resizeMode: 'contain',
-              paddingRight: 50,
+              marginRight: 10,
             }}
             source={icon}
             alt={'Dark Mode'}
           />
-          <StyledText16 style={contentStyle.medium}> {text}</StyledText16>
+          <StyledText16 style={contentStyle.medium}>{text}</StyledText16>
         </SettingsCardCenter>
       )}
     </SettingsCard>
