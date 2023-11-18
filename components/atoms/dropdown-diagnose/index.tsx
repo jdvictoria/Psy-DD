@@ -48,7 +48,12 @@ function DropdownComponent({isDarkMode, label}) {
         valueField="value"
         searchPlaceholder="Search..."
         inputSearchStyle={styles.inputSearchStyle}
-        placeholderStyle={styles.placeholderStyle}
+        placeholderStyle={[
+          styles.placeholderStyle,
+          {
+            color: isDarkMode ? '#FFFFFF' : '#041325',
+          },
+        ]}
         selectedTextStyle={[
           styles.selectedTextStyle,
           {

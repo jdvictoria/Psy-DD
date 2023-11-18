@@ -21,6 +21,10 @@ function HomeDiagnose({isDarkMode}) {
 
   const [bigCardCount, setBigCardCount] = useState(0);
 
+  const clearBigCard = () => {
+    setBigCardCount(0);
+  };
+
   const addBigCard = () => {
     setBigCardCount(prevCount => prevCount + 1);
   };
@@ -49,7 +53,11 @@ function HomeDiagnose({isDarkMode}) {
           style={{width: '100%'}}
           showsVerticalScrollIndicator={false}>
           <CardDiagnoseResult isDarkMode={isDarkMode} result={result} />
-          <CardDiagnoseSmall isDarkMode={isDarkMode} addBigCard={addBigCard} />
+          <CardDiagnoseSmall
+            isDarkMode={isDarkMode}
+            clearBigCard={clearBigCard}
+            addBigCard={addBigCard}
+          />
           {[...Array(bigCardCount)].map((_, index) => (
             <CardDiagnoseBig key={index} isDarkMode={isDarkMode} />
           ))}
