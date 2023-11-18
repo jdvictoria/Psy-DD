@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {ScrollView} from 'react-native';
+import {ScrollView, Image} from 'react-native';
 
 import {
   BodyContainer,
@@ -33,6 +33,7 @@ function HomeDiagnose({isDarkMode}) {
           contentContainerStyle={{
             justifyContent: 'center',
             alignItems: 'center',
+            marginTop: 25,
           }}
           style={{width: '100%'}}
           showsVerticalScrollIndicator={false}>
