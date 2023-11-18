@@ -10,7 +10,7 @@ function CardDiagnoseResult({isDarkMode, result}) {
 
   return (
     <DiagnoseResultCard
-      style={{backgroundColor: isDarkMode ? '#041325' : '#FFFFFF'}}>
+      style={{backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF'}}>
       <StyledText24 style={contentStyle.bold}>Result: {result}</StyledText24>
     </DiagnoseResultCard>
   );

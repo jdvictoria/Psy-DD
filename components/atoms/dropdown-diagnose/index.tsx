@@ -21,8 +21,8 @@ function DropdownComponent({isDarkMode, label}) {
           style={[
             styles.label,
             {
-              backgroundColor: isDarkMode ? '#041325' : '#FFFFFF',
-              color: isDarkMode ? '#FFFFFF' : '#041325',
+              backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF',
+              color: isDarkMode ? '#FFFFFF' : '#1A2230',
             },
           ]}>
           {label}

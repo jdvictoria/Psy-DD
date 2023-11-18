@@ -9,7 +9,7 @@ function CardDiagnoseBig({isDarkMode}) {
   return (
     <DiagnoseSymptomCard
       style={{
-        backgroundColor: isDarkMode ? '#041325' : '#FFFFFF',
+        backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF',
       }}>
       <StyledRow>
         <DropdownComponent isDarkMode={isDarkMode} label={'Symptom'} />
