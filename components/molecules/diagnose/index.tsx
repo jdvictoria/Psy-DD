@@ -19,11 +19,21 @@ function HomeDiagnose({isDarkMode}) {
 
   const [result, setResult] = useState('');
 
+  const [bigCardCount, setBigCardCount] = useState(0);
+
+  const addBigCard = () => {
+    setBigCardCount(prevCount => prevCount + 1);
+  };
+
   return (
     <StyledView>
       <HeaderContainer
         style={{backgroundColor: isDarkMode ? '#010919' : '#EFEFEF'}}>
-        <StyledText20 style={[{alignSelf: 'flex-end'}, contentStyle.semibold]}>
+        <StyledText20
+          style={[
+            {alignSelf: 'flex-end', paddingBottom: 15},
+            contentStyle.semibold,
+          ]}>
           DIAGNOSE
         </StyledText20>
       </HeaderContainer>
@@ -34,12 +44,15 @@ function HomeDiagnose({isDarkMode}) {
             justifyContent: 'center',
             alignItems: 'center',
             marginTop: 25,
+            paddingBottom: 125,
           }}
           style={{width: '100%'}}
           showsVerticalScrollIndicator={false}>
           <CardDiagnoseResult isDarkMode={isDarkMode} result={result} />
-          <CardDiagnoseSmall isDarkMode={isDarkMode} />
-          <CardDiagnoseBig isDarkMode={isDarkMode} />
+          <CardDiagnoseSmall isDarkMode={isDarkMode} addBigCard={addBigCard} />
+          {[...Array(bigCardCount)].map((_, index) => (
+            <CardDiagnoseBig key={index} isDarkMode={isDarkMode} />
+          ))}
         </ScrollView>
       </BodyContainer>
     </StyledView>

@@ -11,7 +11,7 @@ import {
 import {contentText, StyledText20} from '../../../styles/form-text';
 
 // @ts-ignore
-function CardDiagnoseSmall({isDarkMode}) {
+function CardDiagnoseSmall({isDarkMode, addBigCard}) {
   const contentStyle = contentText(isDarkMode);
 
   return (
@@ -25,7 +25,9 @@ function CardDiagnoseSmall({isDarkMode}) {
         }}>
         <StyledText20 style={contentStyle.semibold}>Clear</StyledText20>
       </DiagnoseResultLeft>
-      <DiagnoseResultCenter style={{backgroundColor: '#45A4FF'}}>
+      <DiagnoseResultCenter
+        onPress={addBigCard}
+        style={{backgroundColor: '#45A4FF'}}>
         <Image
           style={{
             width: 40,

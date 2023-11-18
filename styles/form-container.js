@@ -54,7 +54,7 @@ export const ProfileCircle = styled.View`
   justify-content: center;
   align-items: center;
 
-  margin-top: 50px;
+  margin-top: 25px;
   margin-bottom: 25px;
 
   width: 100px;
