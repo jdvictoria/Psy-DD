@@ -1,11 +1,14 @@
-import React, {Image} from 'react-native';
+import React, {useState} from 'react';
+import {Image, StyleSheet, Text, View} from 'react-native';
 
 import {
   DiagnoseSymptomAdd,
   DiagnoseSymptomCard,
+  StyledRow,
 } from '../../../styles/form-container';
 
 import {contentText, StyledText20} from '../../../styles/form-text';
+import DropdownComponent from '../dropdown-diagnose';
 
 // @ts-ignore
 function CardDiagnoseBig({isDarkMode}) {
@@ -16,6 +19,17 @@ function CardDiagnoseBig({isDarkMode}) {
       style={{
         backgroundColor: isDarkMode ? '#041325' : '#FFFFFF',
       }}>
+      <StyledRow>
+        <DropdownComponent />
+      </StyledRow>
+      <StyledRow>
+        <DropdownComponent />
+        <DropdownComponent />
+      </StyledRow>
+      <StyledRow>
+        <DropdownComponent />
+        <DropdownComponent />
+      </StyledRow>
       <DiagnoseSymptomAdd>
         <Image
           style={{

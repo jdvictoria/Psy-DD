@@ -168,7 +168,7 @@ export const DiagnoseResultRight = styled.TouchableOpacity`
 export const DiagnoseSymptomCard = styled.View`
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 
   margin-top: 10px;
   margin-bottom: 10px;
