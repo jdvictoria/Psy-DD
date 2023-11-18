@@ -7,21 +7,25 @@ const data = [
   {label: 'Item 2', value: '2'},
   {label: 'Item 3', value: '3'},
   {label: 'Item 4', value: '4'},
-  {label: 'Item 5', value: '5'},
-  {label: 'Item 6', value: '6'},
-  {label: 'Item 7', value: '7'},
-  {label: 'Item 8', value: '8'},
 ];
 
-function DropdownComponent() {
+// @ts-ignore
+function DropdownComponent({isDarkMode, label}) {
   const [value, setValue] = useState(null);
   const [isFocus, setIsFocus] = useState(true);
 
   const renderLabel = () => {
     if (value || isFocus) {
       return (
-        <Text style={[styles.label, isFocus && {color: 'blue'}]}>
-          Dropdown label
+        <Text
+          style={[
+            styles.label,
+            {
+              backgroundColor: isDarkMode ? '#041325' : '#FFFFFF',
+              color: isDarkMode ? '#FFFFFF' : '#041325',
+            },
+          ]}>
+          {label}
         </Text>
       );
     }
@@ -29,25 +33,38 @@ function DropdownComponent() {
   };
 
   return (
-    <View style={styles.container}>
+    <View
+      style={[
+        styles.container,
+        {width: label === 'Symptom' ? '95%' : '47.5%'},
+      ]}>
       {renderLabel()}
       <Dropdown
-        style={[styles.dropdown, isFocus && {borderColor: 'blue'}]}
-        placeholderStyle={styles.placeholderStyle}
-        selectedTextStyle={styles.selectedTextStyle}
-        inputSearchStyle={styles.inputSearchStyle}
-        iconStyle={styles.iconStyle}
         data={data}
-        search
+        value={value}
+        search={label === 'Symptom'}
         maxHeight={300}
         labelField="label"
         valueField="value"
-        placeholder={!isFocus ? 'Select item' : '...'}
         searchPlaceholder="Search..."
-        value={value}
+        inputSearchStyle={styles.inputSearchStyle}
+        placeholderStyle={styles.placeholderStyle}
+        selectedTextStyle={[
+          styles.selectedTextStyle,
+          {
+            color: isDarkMode ? '#FFFFFF' : '#041325',
+          },
+        ]}
+        style={[
+          styles.dropdown,
+          {borderColor: isDarkMode ? '#FFFFFF' : '#041325'},
+        ]}
+        placeholder={!isFocus ? 'Select item' : '...'}
+        // iconStyle={styles.iconStyle}
         // onFocus={() => setIsFocus(true)}
         // onBlur={() => setIsFocus(false)}
         onChange={item => {
+          // @ts-ignore
           setValue(item.value);
           setIsFocus(false);
         }}
@@ -60,16 +77,18 @@ export default DropdownComponent;
 
 const styles = StyleSheet.create({
   container: {
-    width: '50%',
-    padding: 16,
+    paddingTop: 16,
+    paddingBottom: 8,
+    paddingLeft: 5,
+    paddingRight: 5,
   },
   dropdown: {
-    height: 50,
-    backgroundColor: 'white',
+    height: 52.5,
     borderColor: 'gray',
-    borderWidth: 0.5,
-    borderRadius: 8,
-    paddingHorizontal: 8,
+    borderWidth: 1.5,
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    // backgroundColor: 'white',
   },
   icon: {
     marginRight: 5,
@@ -77,17 +96,20 @@ const styles = StyleSheet.create({
   label: {
     position: 'absolute',
     backgroundColor: 'white',
-    left: 22,
     top: 8,
+    left: 16,
     zIndex: 999,
     paddingHorizontal: 8,
     fontSize: 14,
+    color: 'white',
+    fontFamily: 'Inter-Medium',
   },
   placeholderStyle: {
     fontSize: 16,
   },
   selectedTextStyle: {
     fontSize: 16,
+    fontFamily: 'Inter-SemiBold',
   },
   iconStyle: {
     width: 20,

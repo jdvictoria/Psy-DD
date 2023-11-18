@@ -166,15 +166,16 @@ export const DiagnoseResultRight = styled.TouchableOpacity`
 `;
 
 export const DiagnoseSymptomCard = styled.View`
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-top: 16px;
 
   width: 90%;
-  height: 240px;
+  height: 300px;
 
   border-radius: 20px;
 `;

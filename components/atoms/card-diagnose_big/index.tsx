@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import {Image} from 'react-native';
 
 import {
   DiagnoseSymptomAdd,
@@ -20,15 +20,15 @@ function CardDiagnoseBig({isDarkMode}) {
         backgroundColor: isDarkMode ? '#041325' : '#FFFFFF',
       }}>
       <StyledRow>
-        <DropdownComponent />
+        <DropdownComponent isDarkMode={isDarkMode} label={'Symptom'} />
       </StyledRow>
       <StyledRow>
-        <DropdownComponent />
-        <DropdownComponent />
+        <DropdownComponent isDarkMode={isDarkMode} label={'Duration'} />
+        <DropdownComponent isDarkMode={isDarkMode} label={'Severity'} />
       </StyledRow>
       <StyledRow>
-        <DropdownComponent />
-        <DropdownComponent />
+        <DropdownComponent isDarkMode={isDarkMode} label={'Drug Influenced?'} />
+        <DropdownComponent isDarkMode={isDarkMode} label={'Causes Distress?'} />
       </StyledRow>
       <DiagnoseSymptomAdd>
         <Image
