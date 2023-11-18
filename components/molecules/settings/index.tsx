@@ -21,13 +21,15 @@ import CardSettings from '../../atoms/card-settings';
 function HomeSettings({isDarkMode, setIsDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
-  const toggleSwitch = () => setIsDarkMode(previousState => !previousState);
-
   return (
     <StyledView>
       <HeaderContainer
         style={{backgroundColor: isDarkMode ? '#010919' : '#EFEFEF'}}>
-        <StyledText20 style={[{alignSelf: 'flex-end'}, contentStyle.semibold]}>
+        <StyledText20
+          style={[
+            {alignSelf: 'flex-end', paddingBottom: 15},
+            contentStyle.semibold,
+          ]}>
           SETTINGS
         </StyledText20>
       </HeaderContainer>
