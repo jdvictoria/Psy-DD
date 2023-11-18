@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+
 import {Dropdown} from 'react-native-element-dropdown';
 
-const data = [
+import {drugData, distressData} from '../../../utils/dsmData';
+
+const dummyData = [
   {label: 'Item 1', value: '1'},
   {label: 'Item 2', value: '2'},
   {label: 'Item 3', value: '3'},
@@ -31,6 +34,16 @@ function DropdownComponent({isDarkMode, label}) {
     }
     return null;
   };
+
+  let data;
+
+  if (label === 'Drug Influenced?') {
+    data = distressData;
+  } else if (label === 'Causes Distress?') {
+    data = distressData;
+  } else {
+    data = dummyData;
+  }
 
   return (
     <View
