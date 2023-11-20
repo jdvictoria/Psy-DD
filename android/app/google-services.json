@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "724731949183",
+    "project_id": "psy-dd",
+    "storage_bucket": "psy-dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724731949183:android:2e3ad8a0e6c65835b48f4a",
+        "android_client_info": {
+          "package_name": "com.dsm5"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_9NGA_MNmdPStdzQo_EqRBxOQYG4K7hg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
