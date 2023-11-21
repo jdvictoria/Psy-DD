@@ -9,8 +9,8 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
-    <UserAuth isDarkMode={isDarkMode} />
-    // <HomeNavigation isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+    // <UserAuth isDarkMode={isDarkMode} />
+    <HomeNavigation isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
   );
 }
 
