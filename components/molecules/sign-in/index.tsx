@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import auth, {firebase} from '@react-native-firebase/auth';
+import {firebase} from '@react-native-firebase/auth';
 
 import {StyledCol} from '../../../styles/input-container';
 

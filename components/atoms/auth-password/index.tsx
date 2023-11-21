@@ -36,7 +36,7 @@ function AuthPassword({isDarkMode, password, setPassword}) {
       <StyledCol style={{width: '100%', paddingBottom: 20}}>
         <StyledText17
           style={[{position: 'absolute', left: 0}, inputStyle.semibold]}>
-          Password / PIN
+          Password
         </StyledText17>
         {hasCapitalLetter && hasNumber && !isLengthValid && (
           <StyledText12

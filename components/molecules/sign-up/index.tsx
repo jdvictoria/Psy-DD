@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Image, TouchableOpacity} from 'react-native';
+import {firebase} from '@react-native-firebase/auth';
 
 import {StyledCol, StyledRow} from '../../../styles/input-container';
 
@@ -33,6 +34,24 @@ function SignUpComponent({isDarkMode}) {
   const [password, setPassword] = useState('');
   const [license, setLicense] = useState('');
   const [date, setDate] = useState(new Date());
+
+  const handleSignUp = () => {
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then(() => {
+        console.log('User account created & signed in!');
+      })
+      .catch(error => {
+        if (error.code === 'auth/email-already-in-use') {
+          console.log('That email address is already in use!');
+        } else if (error.code === 'auth/invalid-email') {
+          console.log('That email address is invalid!');
+        } else {
+          console.error(error);
+        }
+      });
+  };
 
   return (
     <FormBox
@@ -102,7 +121,7 @@ function SignUpComponent({isDarkMode}) {
               setLicense={setLicense}
             />
           </FormInput>
-          <FormButton>
+          <FormButton onPress={handleSignUp}>
             <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
               Submit
             </StyledText16>
