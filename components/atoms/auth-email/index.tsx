@@ -40,10 +40,11 @@ function AuthEmail({isDarkMode, email, setEmail}) {
       </StyledCol>
       <FormTextInput
         style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}
-        value={email.toLowerCase()}
+        value={email}
         onChangeText={handleEmailChange}
         placeholder="useless placeholder"
         placeholderTextColor="#9fa4ac"
+        autoCapitalize="none"
       />
     </>
   );

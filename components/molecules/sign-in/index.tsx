@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import auth, {firebase} from '@react-native-firebase/auth';
 
 import {StyledCol} from '../../../styles/input-container';
 
@@ -23,6 +24,24 @@ function SignInComponent({isDarkMode}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const handleSignIn = () => {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(() => {
+        console.log('User account created & signed in!');
+      })
+      .catch(error => {
+        if (error.code === 'auth/email-already-in-use') {
+          console.log('That email address is already in use!');
+        } else if (error.code === 'auth/invalid-email') {
+          console.log('That email address is invalid!');
+        } else {
+          console.error(error);
+        }
+      });
+  };
+
   return (
     <FormBox
       style={{
@@ -42,7 +61,7 @@ function SignInComponent({isDarkMode}) {
           setPassword={setPassword}
         />
       </FormInput>
-      <FormButton>
+      <FormButton onPress={handleSignIn}>
         <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
           Sign In
         </StyledText16>
