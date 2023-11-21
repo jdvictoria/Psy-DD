@@ -43,6 +43,7 @@ function HomeProfile({isDarkMode}) {
           contentContainerStyle={{
             justifyContent: 'center',
             alignItems: 'center',
+            paddingBottom: 125,
             // backgroundColor: 'red',
           }}
           style={{width: '100%'}}

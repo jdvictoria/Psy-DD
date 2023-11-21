@@ -25,8 +25,7 @@ import SignUpComponent from '../../molecules/sign-up';
 function UserAuth({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
-  const [isSignIn, setIsSignIn] = useState(true);
-
+  const [isSignIn, setIsSignIn] = useState(false);
   const [isKeyboardOn, setIsKeyboardOn] = useState(false);
 
   useEffect(() => {
@@ -80,7 +79,7 @@ function UserAuth({isDarkMode}) {
             <SignUpComponent isDarkMode={isDarkMode} />
           )}
           {isSignIn && (
-            <StyledRow style={{marginBottom: 25}}>
+            <StyledRow style={{marginBottom: 20}}>
               <TouchableOpacity>
                 <StyledText16 style={[contentStyle.bold, {color: 'white'}]}>
                   Forgot Password?
@@ -88,7 +87,7 @@ function UserAuth({isDarkMode}) {
               </TouchableOpacity>
             </StyledRow>
           )}
-          <StyledRow style={{marginTop: 50}}>
+          <StyledRow style={{marginTop: 30}}>
             <StyledText16 style={[contentStyle.medium, {color: 'white'}]}>
               {isSignIn
                 ? "Don't have any Account?"
