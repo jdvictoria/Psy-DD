@@ -33,7 +33,7 @@ export const StyledText12 = styled.Text`
   align-self: center;
   text-align: center;
 
-  font-size: 14px;
+  font-size: 12px;
 `;
 
 export const contentText = isDarkMode => {
@@ -114,6 +114,38 @@ export const inputText = isDarkMode => {
     thin: {
       fontFamily: 'Inter-Thin',
       color: isDarkMode ? 'white' : '#001133',
+    },
+  });
+};
+
+export const errorText = () => {
+  return StyleSheet.create({
+    black: {
+      fontFamily: 'Inter-Black',
+    },
+    bold: {
+      fontFamily: 'Inter-Bold',
+    },
+    extrabold: {
+      fontFamily: 'Inter-ExtraBold',
+    },
+    extralight: {
+      fontFamily: 'Inter-ExtraLight',
+    },
+    light: {
+      fontFamily: 'Inter-Light',
+    },
+    medium: {
+      fontFamily: 'Inter-Medium',
+    },
+    regular: {
+      fontFamily: 'Inter-Regular',
+    },
+    semibold: {
+      fontFamily: 'Inter-SemiBold',
+    },
+    thin: {
+      fontFamily: 'Inter-Thin',
     },
   });
 };

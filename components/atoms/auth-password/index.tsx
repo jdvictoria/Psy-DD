@@ -1,70 +1,112 @@
 import React, {useState} from 'react';
-import {StyledCol} from '../../../styles/input-container';
+import {Image, TouchableOpacity} from 'react-native';
+
 import {
+  errorText,
   inputText,
   StyledText12,
   StyledText17,
 } from '../../../styles/input-text';
+
 import {FormTextInput} from '../../../styles/input-forms';
+
+import {StyledCol} from '../../../styles/input-container';
 
 // @ts-ignore
 function AuthPassword({isDarkMode, password, setPassword}) {
   const inputStyle = inputText(isDarkMode);
+  const errorStyle = errorText();
 
   // Regular expression for password validation
-  const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
   const isLengthValid = password.length >= 8;
   const hasCapitalLetter = /[A-Z]/.test(password);
   const hasNumber = /\d/.test(password);
 
-  const [isValidPassword, setIsValidPassword] = useState(false);
-
-  const handlePasswordChange = text => {
+  const handlePasswordChange = (text: string) => {
     setPassword(text);
+  };
 
-    // Update validity based on separate conditions
-    setIsValidPassword(
-      isLengthValid &&
-        hasCapitalLetter &&
-        hasNumber &&
-        passwordRegex.test(text),
-    );
+  const [isMasked, setIsMasked] = useState(false);
+
+  const handleShowHide = () => {
+    setIsMasked(prevState => !prevState);
   };
 
   return (
     <>
-      <StyledCol style={{width: '100%', paddingBottom: 20}}>
+      <StyledCol style={{width: '100%', marginTop: 6, paddingBottom: 25}}>
         <StyledText17
           style={[{position: 'absolute', left: 0}, inputStyle.semibold]}>
-          Password / PIN
+          Password
         </StyledText17>
         {hasCapitalLetter && hasNumber && !isLengthValid && (
           <StyledText12
-            style={[{position: 'absolute', right: 0}, inputStyle.regular]}>
+            style={[
+              {position: 'absolute', right: 0, color: '#FF5656'},
+              errorStyle.regular,
+            ]}>
             Must be at least 8 characters
           </StyledText12>
         )}
         {isLengthValid && hasNumber && !hasCapitalLetter && (
           <StyledText12
-            style={[{position: 'absolute', right: 0}, inputStyle.regular]}>
+            style={[
+              {position: 'absolute', right: 0, color: '#FF5656'},
+              errorStyle.regular,
+            ]}>
             Must have 1 Capital letter
           </StyledText12>
         )}
         {isLengthValid && hasCapitalLetter && !hasNumber && (
           <StyledText12
-            style={[{position: 'absolute', right: 0}, inputStyle.regular]}>
+            style={[
+              {position: 'absolute', right: 0, color: '#FF5656'},
+              errorStyle.regular,
+            ]}>
             Must have 1 Number
           </StyledText12>
         )}
       </StyledCol>
-      <FormTextInput
-        style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}
-        value={password}
-        onChangeText={handlePasswordChange}
-        placeholder="useless placeholder"
-        placeholderTextColor="#9fa4ac"
-        autoCapitalize="none"
-      />
+      <StyledCol
+        style={{
+          width: '100%',
+          height: '25%',
+          justifyContent: 'center',
+          alignItems: 'flex-end',
+        }}>
+        <FormTextInput
+          style={{
+            backgroundColor: isDarkMode ? '#1a2230' : '#f8faff',
+          }}
+          secureTextEntry={isMasked}
+          value={password}
+          onChangeText={handlePasswordChange}
+          placeholder="•••••••••••"
+          placeholderTextColor="#9fa4ac"
+          autoCapitalize="none"
+        />
+        <TouchableOpacity
+          onPress={handleShowHide}
+          style={{position: 'absolute', right: 15}}>
+          <Image
+            style={{
+              resizeMode: 'contain',
+              width: 25,
+              height: 25,
+            }}
+            source={
+              isDarkMode
+                ? isMasked
+                  ? require('../../../assets/icons/show-icon_dark.png')
+                  : require('../../../assets/icons/hide-icon_dark.png')
+                : isMasked
+                ? require('../../../assets/icons/show-icon.png')
+                : require('../../../assets/icons/hide-icon.png')
+            }
+            alt={'ShowHide'}
+          />
+        </TouchableOpacity>
+      </StyledCol>
     </>
   );
 }

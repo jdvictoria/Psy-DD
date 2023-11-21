@@ -31,7 +31,7 @@ export const FormButton = styled.TouchableOpacity`
 
 export const FormInput = styled.View`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 
@@ -44,11 +44,9 @@ export const FormTextInput = styled.TextInput`
   justify-content: center;
   align-items: center;
 
-  height: 22.5%;
+  height: 100%;
   width: 100%;
 
-  margin-top: 7.5px;
-  margin-bottom: 15px;
   padding-left: 25px;
 
   border-radius: 10px;
