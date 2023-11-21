@@ -1,13 +1,16 @@
 import React, {useState} from 'react';
-import {StyledCol} from '../../../styles/input-container';
+import {Image, TouchableOpacity} from 'react-native';
+
 import {
   errorText,
   inputText,
   StyledText12,
   StyledText17,
 } from '../../../styles/input-text';
+
 import {FormTextInput} from '../../../styles/input-forms';
-import {Image, TouchableOpacity, View} from 'react-native';
+
+import {StyledCol} from '../../../styles/input-container';
 
 // @ts-ignore
 function AuthPassword({isDarkMode, password, setPassword}) {

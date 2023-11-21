@@ -25,9 +25,8 @@ import SignUpComponent from '../../molecules/sign-up';
 function UserAuth({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
-  const [isSignIn, setIsSignIn] = useState(true);
+  const [isSignIn, setIsSignIn] = useState(false);
   const [isKeyboardOn, setIsKeyboardOn] = useState(false);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const showSubscription = Keyboard.addListener('keyboardDidShow', () => {
@@ -75,16 +74,7 @@ function UserAuth({isDarkMode}) {
             </StyledText40>
           </StyledCol>
           {isSignIn ? (
-            <>
-              <SignInComponent isDarkMode={isDarkMode} setError={setError} />
-              {error && (
-                <StyledRow style={{marginBottom: 20}}>
-                  <StyledText16 style={[contentStyle.bold, {color: 'red'}]}>
-                    {error}
-                  </StyledText16>
-                </StyledRow>
-              )}
-            </>
+            <SignInComponent isDarkMode={isDarkMode} />
           ) : (
             <SignUpComponent isDarkMode={isDarkMode} />
           )}

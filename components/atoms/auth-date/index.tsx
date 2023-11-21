@@ -1,26 +1,24 @@
-import React, {useState} from 'react';
-import {Image, TouchableOpacity} from 'react-native';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
+import {Image, TouchableOpacity} from 'react-native';
 
 import {
   inputText,
   StyledText16,
   StyledText17,
 } from '../../../styles/input-text';
+
+import {StyledCol} from '../../../styles/input-container';
+
 import DatePicker from 'react-native-date-picker';
 
 const DatePlaceholder = styled.View`
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 
-  height: 22.5%;
+  height: 100%;
   width: 100%;
-
-  margin-top: 7.5px;
-  margin-bottom: 15px;
-  padding-left: 25px;
 
   border-radius: 10px;
 `;
@@ -35,46 +33,63 @@ function AuthDate({isDarkMode, date, setDate}) {
   const birthdayMaxData = new Date(birthdayMinDate);
   birthdayMaxData.setFullYear(birthdayMinDate.getFullYear() - 18);
 
+  const year = date.getFullYear();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
+  const dateString = `${year}-${month}-${day}`;
+
   return (
     <>
-      <StyledText17 style={inputStyle.semibold}>Date Of Birth</StyledText17>
-      <DatePlaceholder
-        style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}>
-        <StyledText16
-          style={{
-            color: '#94a4ac',
-            display: 'flex',
-            position: 'absolute',
-            justifyContent: 'center',
-            alignItems: 'center',
-            left: 25,
-          }}>
-          useless placeholder
-        </StyledText16>
-        <TouchableOpacity
-          style={{
-            display: 'flex',
-            position: 'absolute',
-            justifyContent: 'center',
-            alignItems: 'center',
-            right: 25,
-          }}
-          onPress={() => setOpen(true)}>
-          <Image
+      <StyledCol style={{width: '100%', marginTop: 2.5, paddingBottom: 1.5}}>
+        <StyledText17 style={inputStyle.semibold}>Date Of Birth</StyledText17>
+      </StyledCol>
+      <StyledCol
+        style={{
+          width: '100%',
+          height: '25%',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginBottom: 6,
+        }}>
+        <DatePlaceholder
+          style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}>
+          <StyledText16
             style={{
-              width: 30,
-              height: 30,
-              resizeMode: 'contain',
+              color: '#94a4ac',
+              display: 'flex',
+              position: 'absolute',
+              justifyContent: 'center',
+              alignItems: 'center',
+              left: 25,
+            }}>
+            {dateString}
+          </StyledText16>
+          <TouchableOpacity
+            style={{
+              display: 'flex',
+              position: 'absolute',
+              justifyContent: 'center',
+              alignItems: 'center',
+              right: 25,
             }}
-            source={
-              isDarkMode
-                ? require('../../../assets/icons/calendar-button_dark.png')
-                : require('../../../assets/icons/calendar-button.png')
-            }
-            alt={'Calendar'}
-          />
-        </TouchableOpacity>
-      </DatePlaceholder>
+            onPress={() => setOpen(true)}>
+            <Image
+              style={{
+                width: 30,
+                height: 30,
+                resizeMode: 'contain',
+              }}
+              source={
+                isDarkMode
+                  ? require('../../../assets/icons/calendar-button_dark.png')
+                  : require('../../../assets/icons/calendar-button.png')
+              }
+              alt={'Calendar'}
+            />
+          </TouchableOpacity>
+        </DatePlaceholder>
+      </StyledCol>
+
       <DatePicker
         modal
         mode={'date'}

@@ -6,7 +6,7 @@ import HomeNavigation from './components/organism/2_home';
 import UserAuth from './components/organism/1_user-auth';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   return (
     <UserAuth isDarkMode={isDarkMode} />
