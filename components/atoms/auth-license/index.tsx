@@ -32,7 +32,7 @@ function AuthLicense({isDarkMode, license, setLicense}) {
           style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}
           value={license}
           onChangeText={handleLicenseChange}
-          placeholder="useless placeholder"
+          placeholder="000000"
           placeholderTextColor="#9fa4ac"
           keyboardType="numeric"
         />

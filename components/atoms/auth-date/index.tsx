@@ -1,6 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import styled from 'styled-components';
+import React, {useState} from 'react';
 import {Image, TouchableOpacity} from 'react-native';
+
+// @ts-ignore
+import styled from 'styled-components';
 
 import {
   inputText,

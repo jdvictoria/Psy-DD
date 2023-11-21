@@ -42,7 +42,9 @@ function SignUpComponent({isDarkMode}) {
     const day = date.getDate().toString().padStart(2, '0');
     const dateString = `${year}-${month}-${day}`;
 
-    console.log(dateString);
+    // console.log(dateString);
+
+    // TODO: Hook GovChecks Axios
 
     firebase
       .auth()
