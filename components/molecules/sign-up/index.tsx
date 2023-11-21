@@ -59,7 +59,7 @@ function SignUpComponent({isDarkMode}) {
         backgroundColor: isDarkMode ? '#010919' : '#ffffff',
         borderColor: isDarkMode ? '#010919' : '#ffffff',
         marginTop: 25,
-        marginBottom: 25,
+        marginBottom: 15,
       }}>
       {formStep === 1 && (
         <>

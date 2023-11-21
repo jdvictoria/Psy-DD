@@ -14,9 +14,10 @@ import {FormBox, FormInput, FormButton} from '../../../styles/input-forms';
 
 import AuthEmail from '../../atoms/auth-email';
 import AuthPassword from '../../atoms/auth-password';
+import {View} from 'react-native';
 
 // @ts-ignore
-function SignInComponent({isDarkMode}) {
+function SignInComponent({isDarkMode, setError}) {
   // TODO: Connect Firebase
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
@@ -32,13 +33,8 @@ function SignInComponent({isDarkMode}) {
         console.log('User account created & signed in!');
       })
       .catch(error => {
-        if (error.code === 'auth/email-already-in-use') {
-          console.log('That email address is already in use!');
-        } else if (error.code === 'auth/invalid-email') {
-          console.log('That email address is invalid!');
-        } else {
-          console.error(error);
-        }
+        // Update the error state with the specific error message
+        setError('Error: Invalid Email / Password');
       });
   };
 
@@ -48,7 +44,7 @@ function SignInComponent({isDarkMode}) {
         backgroundColor: isDarkMode ? '#010919' : '#ffffff',
         borderColor: isDarkMode ? '#010919' : '#ffffff',
         marginTop: 25,
-        marginBottom: 25,
+        marginBottom: 15,
       }}>
       <StyledCol style={{marginTop: 0}}>
         <StyledText30 style={inputStyle.semibold}>Sign In</StyledText30>

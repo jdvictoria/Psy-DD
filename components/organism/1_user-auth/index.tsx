@@ -26,8 +26,8 @@ function UserAuth({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
   const [isSignIn, setIsSignIn] = useState(true);
-
   const [isKeyboardOn, setIsKeyboardOn] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const showSubscription = Keyboard.addListener('keyboardDidShow', () => {
@@ -75,12 +75,21 @@ function UserAuth({isDarkMode}) {
             </StyledText40>
           </StyledCol>
           {isSignIn ? (
-            <SignInComponent isDarkMode={isDarkMode} />
+            <>
+              <SignInComponent isDarkMode={isDarkMode} setError={setError} />
+              {error && (
+                <StyledRow style={{marginBottom: 20}}>
+                  <StyledText16 style={[contentStyle.bold, {color: 'red'}]}>
+                    {error}
+                  </StyledText16>
+                </StyledRow>
+              )}
+            </>
           ) : (
             <SignUpComponent isDarkMode={isDarkMode} />
           )}
           {isSignIn && (
-            <StyledRow style={{marginBottom: 25}}>
+            <StyledRow style={{marginBottom: 20}}>
               <TouchableOpacity>
                 <StyledText16 style={[contentStyle.bold, {color: 'white'}]}>
                   Forgot Password?
@@ -88,7 +97,7 @@ function UserAuth({isDarkMode}) {
               </TouchableOpacity>
             </StyledRow>
           )}
-          <StyledRow style={{marginTop: 50}}>
+          <StyledRow style={{marginTop: 30}}>
             <StyledText16 style={[contentStyle.medium, {color: 'white'}]}>
               {isSignIn
                 ? "Don't have any Account?"
