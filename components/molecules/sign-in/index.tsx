@@ -58,7 +58,7 @@ function SignInComponent({isDarkMode}) {
         <StyledCol style={{marginTop: 0}}>
           <StyledText30 style={inputStyle.semibold}>Sign In</StyledText30>
         </StyledCol>
-        <FormInput style={{marginBottom: 17.5, marginTop: 5}}>
+        <FormInput style={{marginBottom: 15, marginTop: 15}}>
           <AuthEmail
             isDarkMode={isDarkMode}
             email={email}
