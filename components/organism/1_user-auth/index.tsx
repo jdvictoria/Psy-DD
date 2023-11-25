@@ -20,26 +20,10 @@ import {
 
 import SignInComponent from '../../molecules/sign-in';
 import SignUpComponent from '../../molecules/sign-up';
+import {WebView} from 'react-native-webview';
 
 // @ts-ignore
-function UserAuth({
-  isDarkMode,
-  setIsLoggedIn,
-  setIsDarkMode,
-  setOpenWeb,
-  byLicense,
-  setByLicense,
-  license,
-  setLicense,
-  date,
-  setDate,
-  dateString,
-  setDateString,
-  firstName,
-  setFirstName,
-  lastName,
-  setLastName,
-}) {
+function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
   const [isSignIn, setIsSignIn] = useState(false);
@@ -118,22 +102,7 @@ function UserAuth({
               setIsLoggedIn={setIsLoggedIn}
             />
           ) : (
-            <SignUpComponent
-              isDarkMode={isDarkMode}
-              setOpenWeb={setOpenWeb}
-              byLicense={byLicense}
-              setByLicense={setByLicense}
-              license={license}
-              setLicense={setLicense}
-              date={date}
-              setDate={setDate}
-              dateString={dateString}
-              setDateString={setDateString}
-              firstName={firstName}
-              setFirstName={setFirstName}
-              lastName={lastName}
-              setLastName={setLastName}
-            />
+            <SignUpComponent isDarkMode={isDarkMode} />
           )}
           {isSignIn && (
             <StyledRow style={{marginBottom: 20}}>

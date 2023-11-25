@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {Image, TouchableOpacity} from 'react-native';
 import {firebase} from '@react-native-firebase/auth';
 
@@ -20,28 +20,14 @@ import AuthLicense from '../../atoms/auth-license';
 import AuthFirstName from '../../atoms/auth-fname';
 import AuthLastName from '../../atoms/auth-lname';
 
+import {WebView, WebViewMessageEvent} from 'react-native-webview';
+
 // @ts-ignore
-function SignUpComponent({
-  isDarkMode,
-  setOpenWeb,
-  byLicense,
-  setByLicense,
-  license,
-  setLicense,
-  date,
-  setDate,
-  dateString,
-  setDateString,
-  firstName,
-  setFirstName,
-  lastName,
-  setLastName,
-}) {
-  // TODO: Firebase Auth
+function SignUpComponent({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
-  // const [byLicense, setByLicense] = useState(true);
+  const [byLicense, setByLicense] = useState(true);
   const [formStep, setFormStep] = useState(1);
 
   const handleNextStep = () => {
@@ -52,28 +38,17 @@ function SignUpComponent({
     setByLicense((prevState: any) => !prevState);
   };
 
+  const [isValid, setIsValid] = useState(false);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // const [date, setDate] = useState(new Date());
-  // const [license, setLicense] = useState('');
-  // const [firstName, setFirstName] = useState('');
-  // const [lastName, setLastName] = useState('');
-
-  const fetchData = () => {
-    setOpenWeb(true);
-  };
+  const [date, setDate] = useState(new Date());
+  const [dateString, setDateString] = useState('');
+  const [license, setLicense] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
 
   const handleSignUp = () => {
-    // Date
-    const year = date.getFullYear();
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const day = date.getDate().toString().padStart(2, '0');
-    const dateString = `${month}-${day}-${year}`;
-
-    // console.log(dateString);
-
-    // TODO: Hook GovChecks Axios
-
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
@@ -89,6 +64,111 @@ function SignUpComponent({
           console.error(error);
         }
       });
+  };
+
+  // Web View
+  const webViewRef = useRef(null);
+  const [openWeb, setOpenWeb] = useState(false);
+
+  const handleVerify = () => {
+    setOpenWeb(true);
+  };
+
+  const handleWebViewLoad = () => {
+    if (webViewRef.current) {
+      const injectScript = byLicense
+        ? `
+        document.querySelector('a[href="#messages"]').click();
+
+        setTimeout(() => {
+          const selectElement = document.querySelector('.form-control.ddselect.profs.select2-hidden-accessible#verLProf');
+          if (selectElement) {
+            // Simulate selecting the option with value "57"
+            const optionToSelect = selectElement.querySelector('option[value="57"][data-select2-id="214"]');
+            if (optionToSelect) {
+              optionToSelect.selected = true;
+              selectElement.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+          }
+          
+          var licenseInput = document.getElementById('verLLicense');
+          licenseInput.value = '${license}';
+          
+          var dateInput = document.getElementById('verLBdate');
+          dateInput.value = '${dateString}';
+          
+          setTimeout(() => {
+            var verifyButton = document.getElementById('verifyNAbtn');
+            if (verifyButton) {
+              verifyButton.click();
+            }
+          }, 500);
+        }, 500);
+        
+        const targetDiv = document.getElementById('myModalVerify');
+        const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'style' && targetDiv.style.display === 'block') {
+              window.ReactNativeWebView.postMessage('myModalVerifyDisplayChanged');
+            }
+          });
+        });
+        observer.observe(targetDiv, { attributes: true });
+  `
+        : `
+        document.querySelector('a[href="#profile"]').click();
+    
+        setTimeout(() => {
+          const selectElement = document.querySelector('.form-control.ddselect.profs.select2-hidden-accessible#verNaProf');
+          if (selectElement) {
+          // Simulate selecting the option with value "57"
+            const optionToSelect = selectElement.querySelector('option[value="57"][data-select2-id="140"]');
+            if (optionToSelect) {
+              optionToSelect.selected = true;
+              selectElement.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+          }
+      
+        var fnameInput = document.getElementById('verNaFname');
+        fnameInput.value = '${firstName}';
+      
+        var lnameInput = document.getElementById('verNaLname');
+        lnameInput.value = '${lastName}';
+      
+          setTimeout(() => {
+            var verifyButton = document.getElementById('verifyNAbtn');
+            if (verifyButton) {
+              verifyButton.click();
+            }
+          }, 500);
+        }, 500);
+
+        const targetDiv = document.getElementById('myModalVerify');
+        const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'style' && targetDiv.style.display === 'block') {
+              window.ReactNativeWebView.postMessage('myModalVerifyDisplayChanged');
+            }
+          });
+        });
+        observer.observe(targetDiv, { attributes: true });
+  `;
+
+      webViewRef.current.injectJavaScript(injectScript);
+    }
+  };
+
+  // Debugger
+  useEffect(() => {
+    if (isValid) {
+      console.log(isValid);
+    }
+  }, [isValid]);
+
+  const handleWebViewMessage = (event: WebViewMessageEvent) => {
+    if (event.nativeEvent.data === 'myModalVerifyDisplayChanged') {
+      setIsValid(true);
+    }
   };
 
   return (
@@ -211,10 +291,22 @@ function SignUpComponent({
                 </>
               )}
             </FormInput>
-            <FormButton onPress={fetchData}>
-              <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
-                Submit
+            <FormButton onPress={!isValid ? handleVerify : handleSignUp}>
+              <StyledText16
+                style={[
+                  contentStyle.semibold,
+                  {color: 'white', paddingTop: openWeb ? 12.5 : 0},
+                ]}>
+                {!isValid ? 'Verify' : 'Submit'}
               </StyledText16>
+              {openWeb && (
+                <WebView
+                  ref={webViewRef}
+                  source={{uri: 'https://online.prc.gov.ph/Verification'}}
+                  onLoad={handleWebViewLoad}
+                  onMessage={handleWebViewMessage}
+                />
+              )}
             </FormButton>
           </>
         )}
