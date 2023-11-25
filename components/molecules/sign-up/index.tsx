@@ -69,15 +69,40 @@ function SignUpComponent({isDarkMode}) {
         style={{
           backgroundColor: isDarkMode ? '#010919' : '#ffffff',
           borderColor: isDarkMode ? '#010919' : '#ffffff',
-          marginTop: 25,
+          marginTop: 15,
           marginBottom: 15,
         }}>
+        <StyledRow style={{width: '100%', marginBottom: 24}}>
+          {formStep == 2 && (
+            <TouchableOpacity
+              style={{
+                display: 'flex',
+                position: 'absolute',
+                justifyContent: 'center',
+                alignItems: 'center',
+                left: 20,
+              }}
+              onPress={() => setFormStep(formStep - 1)}>
+              <Image
+                style={{
+                  width: 20,
+                  height: 20,
+                  resizeMode: 'contain',
+                }}
+                source={
+                  isDarkMode
+                    ? require('../../../assets/icons/back-button_dark.png')
+                    : require('../../../assets/icons/back-button.png')
+                }
+                alt={'Calendar'}
+              />
+            </TouchableOpacity>
+          )}
+          <StyledText30 style={inputStyle.semibold}>Sign Up</StyledText30>
+        </StyledRow>
         {formStep === 1 && (
           <>
-            <StyledCol style={{marginTop: 0}}>
-              <StyledText30 style={inputStyle.semibold}>Sign Up</StyledText30>
-            </StyledCol>
-            <FormInput style={{marginBottom: 7.5, marginTop: 7.5}}>
+            <FormInput>
               <AuthEmail
                 isDarkMode={isDarkMode}
                 email={email}
@@ -98,40 +123,6 @@ function SignUpComponent({isDarkMode}) {
         )}
         {formStep === 2 && (
           <>
-            <StyledRow style={{marginTop: 0, width: '100%'}}>
-              <TouchableOpacity
-                style={{
-                  display: 'flex',
-                  position: 'absolute',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  left: 25,
-                }}
-                onPress={() => setFormStep(formStep - 1)}>
-                <Image
-                  style={{
-                    width: 20,
-                    height: 20,
-                    resizeMode: 'contain',
-                  }}
-                  source={
-                    isDarkMode
-                      ? require('../../../assets/icons/back-button_dark.png')
-                      : require('../../../assets/icons/back-button.png')
-                  }
-                  alt={'Calendar'}
-                />
-              </TouchableOpacity>
-              <StyledText30 style={inputStyle.semibold}>Sign Up</StyledText30>
-            </StyledRow>
-            <FormInput style={{marginBottom: 7.5, marginTop: 7.5}}>
-              <AuthDate isDarkMode={isDarkMode} date={date} setDate={setDate} />
-              <AuthLicense
-                isDarkMode={isDarkMode}
-                license={license}
-                setLicense={setLicense}
-              />
-            </FormInput>
             <FormButton onPress={handleSignUp}>
               <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
                 Submit

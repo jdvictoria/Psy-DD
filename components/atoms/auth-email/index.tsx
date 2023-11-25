@@ -28,7 +28,7 @@ function AuthEmail({isDarkMode, email, setEmail}) {
 
   return (
     <>
-      <StyledCol style={{width: '100%', paddingBottom: 25}}>
+      <StyledCol style={{width: '100%', marginBottom: 12}}>
         <StyledText17
           style={[{position: 'absolute', left: 0}, inputStyle.semibold]}>
           Email
@@ -45,11 +45,12 @@ function AuthEmail({isDarkMode, email, setEmail}) {
       </StyledCol>
       <StyledCol
         style={{
+          marginTop: 6,
           width: '100%',
           height: '25%',
           justifyContent: 'center',
           alignItems: 'center',
-          marginBottom: 6,
+          marginBottom: 12,
         }}>
         <FormTextInput
           style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}

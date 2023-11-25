@@ -42,7 +42,7 @@ function AuthDate({isDarkMode, date, setDate}) {
 
   return (
     <>
-      <StyledCol style={{width: '100%', marginTop: 2.5, paddingBottom: 1.5}}>
+      <StyledCol style={{width: '100%', marginBottom: 6}}>
         <StyledText17 style={inputStyle.semibold}>Date Of Birth</StyledText17>
       </StyledCol>
       <StyledCol
@@ -51,7 +51,7 @@ function AuthDate({isDarkMode, date, setDate}) {
           height: '25%',
           justifyContent: 'center',
           alignItems: 'center',
-          marginBottom: 6,
+          marginBottom: 12,
         }}>
         <DatePlaceholder
           style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}>
