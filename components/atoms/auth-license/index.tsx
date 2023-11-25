@@ -16,13 +16,15 @@ function AuthLicense({isDarkMode, license, setLicense}) {
 
   return (
     <>
-      <StyledCol style={{width: '100%', marginTop: 6, paddingBottom: 6}}>
-        <StyledText17 style={inputStyle.semibold}>
-          Registration No.
+      <StyledCol style={{width: '100%', marginTop: 12, marginBottom: 12}}>
+        <StyledText17
+          style={[{position: 'absolute', left: 0}, inputStyle.semibold]}>
+          License No.
         </StyledText17>
       </StyledCol>
       <StyledCol
         style={{
+          marginTop: 6,
           width: '100%',
           height: '25%',
           justifyContent: 'center',

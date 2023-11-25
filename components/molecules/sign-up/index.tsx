@@ -125,6 +125,11 @@ function SignUpComponent({isDarkMode}) {
           <>
             <FormInput>
               <AuthDate isDarkMode={isDarkMode} date={date} setDate={setDate} />
+              <AuthLicense
+                isDarkMode={isDarkMode}
+                license={license}
+                setLicense={setLicense}
+              />
             </FormInput>
             <FormButton onPress={handleSignUp}>
               <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
