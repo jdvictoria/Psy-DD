@@ -32,6 +32,10 @@ function SignUpComponent({
   setDate,
   dateString,
   setDateString,
+  firstName,
+  setFirstName,
+  lastName,
+  setLastName,
 }) {
   // TODO: Firebase Auth
   const contentStyle = contentText(isDarkMode);
@@ -52,8 +56,8 @@ function SignUpComponent({
   const [password, setPassword] = useState('');
   // const [date, setDate] = useState(new Date());
   // const [license, setLicense] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  // const [firstName, setFirstName] = useState('');
+  // const [lastName, setLastName] = useState('');
 
   const fetchData = () => {
     setOpenWeb(true);

@@ -28,6 +28,8 @@ function App() {
   const [license, setLicense] = useState('');
   const [date, setDate] = useState(new Date());
   const [dateString, setDateString] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
 
   const webViewRef = useRef(null);
   const [openWeb, setOpenWeb] = useState(false);
@@ -54,8 +56,8 @@ function App() {
           var licenseInput = document.getElementById('verLLicense');
           licenseInput.value = '${license}';
           
-          var licenseInput = document.getElementById('verLBdate');
-          licenseInput.value = '${dateString}';
+          var dateInput = document.getElementById('verLBdate');
+          dateInput.value = '${dateString}';
         }, 500);
       `
         : `
@@ -71,6 +73,12 @@ function App() {
               selectElement.dispatchEvent(new Event('change', { bubbles: true }));
             }
           }
+          
+          var fnameInput = document.getElementById('verNaFname');
+          fnameInput.value = '${firstName}';
+          
+          var lnameInput = document.getElementById('verNaLname');
+          lnameInput.value = '${lastName}';
         }, 500);
       `;
 
@@ -93,6 +101,10 @@ function App() {
         setDate={setDate}
         dateString={dateString}
         setDateString={setDateString}
+        firstName={firstName}
+        setFirstName={setFirstName}
+        lastName={lastName}
+        setLastName={setLastName}
       />
       {openWeb && (
         <WebView

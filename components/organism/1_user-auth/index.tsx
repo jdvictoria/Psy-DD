@@ -35,6 +35,10 @@ function UserAuth({
   setDate,
   dateString,
   setDateString,
+  firstName,
+  setFirstName,
+  lastName,
+  setLastName,
 }) {
   const contentStyle = contentText(isDarkMode);
 
@@ -125,6 +129,10 @@ function UserAuth({
               setDate={setDate}
               dateString={dateString}
               setDateString={setDateString}
+              firstName={firstName}
+              setFirstName={setFirstName}
+              lastName={lastName}
+              setLastName={setLastName}
             />
           )}
           {isSignIn && (
