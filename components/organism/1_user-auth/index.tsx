@@ -33,6 +33,8 @@ function UserAuth({
   setLicense,
   date,
   setDate,
+  dateString,
+  setDateString,
 }) {
   const contentStyle = contentText(isDarkMode);
 
@@ -121,6 +123,8 @@ function UserAuth({
               setLicense={setLicense}
               date={date}
               setDate={setDate}
+              dateString={dateString}
+              setDateString={setDateString}
             />
           )}
           {isSignIn && (

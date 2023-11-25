@@ -30,6 +30,8 @@ function SignUpComponent({
   setLicense,
   date,
   setDate,
+  dateString,
+  setDateString,
 }) {
   // TODO: Firebase Auth
   const contentStyle = contentText(isDarkMode);
@@ -181,6 +183,8 @@ function SignUpComponent({
                     isDarkMode={isDarkMode}
                     date={date}
                     setDate={setDate}
+                    dateString={dateString}
+                    setDateString={setDateString}
                   />
                   <AuthLicense
                     isDarkMode={isDarkMode}

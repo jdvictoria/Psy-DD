@@ -27,6 +27,7 @@ function App() {
   const [byLicense, setByLicense] = useState(true);
   const [license, setLicense] = useState('');
   const [date, setDate] = useState(new Date());
+  const [dateString, setDateString] = useState('');
 
   const webViewRef = useRef(null);
   const [openWeb, setOpenWeb] = useState(false);
@@ -52,6 +53,9 @@ function App() {
           
           var licenseInput = document.getElementById('verLLicense');
           licenseInput.value = '${license}';
+          
+          var licenseInput = document.getElementById('verLBdate');
+          licenseInput.value = '${dateString}';
         }, 500);
       `
         : 'document.querySelector(\'a[href="#profile"]\').click();';
@@ -73,6 +77,8 @@ function App() {
         setLicense={setLicense}
         date={date}
         setDate={setDate}
+        dateString={dateString}
+        setDateString={setDateString}
       />
       {openWeb && (
         <WebView
