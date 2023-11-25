@@ -22,10 +22,21 @@ import SignInComponent from '../../molecules/sign-in';
 import SignUpComponent from '../../molecules/sign-up';
 
 // @ts-ignore
-function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
+function UserAuth({
+  isDarkMode,
+  setIsLoggedIn,
+  setIsDarkMode,
+  setOpenWeb,
+  byLicense,
+  setByLicense,
+  license,
+  setLicense,
+  date,
+  setDate,
+}) {
   const contentStyle = contentText(isDarkMode);
 
-  const [isSignIn, setIsSignIn] = useState(true);
+  const [isSignIn, setIsSignIn] = useState(false);
   const [isKeyboardOn, setIsKeyboardOn] = useState(false);
 
   useEffect(() => {
@@ -50,11 +61,14 @@ function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
     setIsSignIn(true);
   };
 
-  const toggleSwitch = () => setIsDarkMode(previousState => !previousState);
+  const toggleSwitch = () =>
+    setIsDarkMode((previousState: any) => !previousState);
 
   return (
     <StyledKeyboardView
-      style={{marginBottom: isKeyboardOn ? (isSignIn ? 90 : 135) : 0}}>
+      style={{
+        marginBottom: isKeyboardOn ? (isSignIn ? 90 : 135) : 0,
+      }}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <>
           <TouchableOpacity
@@ -98,7 +112,16 @@ function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
               setIsLoggedIn={setIsLoggedIn}
             />
           ) : (
-            <SignUpComponent isDarkMode={isDarkMode} />
+            <SignUpComponent
+              isDarkMode={isDarkMode}
+              setOpenWeb={setOpenWeb}
+              byLicense={byLicense}
+              setByLicense={setByLicense}
+              license={license}
+              setLicense={setLicense}
+              date={date}
+              setDate={setDate}
+            />
           )}
           {isSignIn && (
             <StyledRow style={{marginBottom: 20}}>

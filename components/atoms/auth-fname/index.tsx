@@ -7,7 +7,7 @@ import {inputText, StyledText17} from '../../../styles/input-text';
 import {FormTextInput} from '../../../styles/input-forms';
 
 // @ts-ignore
-function AuthFirstName({isDarkMode, mode, name, setName}) {
+function AuthFirstName({isDarkMode, name, setName}) {
   const inputStyle = inputText(isDarkMode);
 
   const handleNameChange = (text: string) => {
