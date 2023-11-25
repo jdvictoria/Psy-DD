@@ -26,7 +26,7 @@ function AuthPassword({isDarkMode, password, setPassword}) {
     setPassword(text);
   };
 
-  const [isMasked, setIsMasked] = useState(false);
+  const [isMasked, setIsMasked] = useState(true);
 
   const handleShowHide = () => {
     setIsMasked(prevState => !prevState);

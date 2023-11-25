@@ -22,10 +22,10 @@ import SignInComponent from '../../molecules/sign-in';
 import SignUpComponent from '../../molecules/sign-up';
 
 // @ts-ignore
-function UserAuth({isDarkMode}) {
+function UserAuth({isDarkMode, setIsLoggedIn}) {
   const contentStyle = contentText(isDarkMode);
 
-  const [isSignIn, setIsSignIn] = useState(false);
+  const [isSignIn, setIsSignIn] = useState(true);
   const [isKeyboardOn, setIsKeyboardOn] = useState(false);
 
   useEffect(() => {
@@ -74,7 +74,10 @@ function UserAuth({isDarkMode}) {
             </StyledText40>
           </StyledCol>
           {isSignIn ? (
-            <SignInComponent isDarkMode={isDarkMode} />
+            <SignInComponent
+              isDarkMode={isDarkMode}
+              setIsLoggedIn={setIsLoggedIn}
+            />
           ) : (
             <SignUpComponent isDarkMode={isDarkMode} />
           )}

@@ -16,7 +16,7 @@ import AuthEmail from '../../atoms/auth-email';
 import AuthPassword from '../../atoms/auth-password';
 
 // @ts-ignore
-function SignInComponent({isDarkMode}) {
+function SignInComponent({isDarkMode, setIsLoggedIn}) {
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
@@ -30,6 +30,7 @@ function SignInComponent({isDarkMode}) {
       .signInWithEmailAndPassword(email, password)
       .then(() => {
         console.log('User account created & signed in!');
+        setIsLoggedIn(true);
       })
       .catch(error => {
         // Update the error state with the specific error message
