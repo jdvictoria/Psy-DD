@@ -49,7 +49,7 @@ function SignUpComponent({
   };
 
   const handleChangeMode = () => {
-    setByLicense(prevState => !prevState);
+    setByLicense((prevState: any) => !prevState);
   };
 
   const [email, setEmail] = useState('');

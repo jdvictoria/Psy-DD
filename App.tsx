@@ -120,6 +120,7 @@ function App() {
       console.log(isValid);
     }
   }, [isValid]);
+
   return !isLoggedIn ? (
     <>
       <UserAuth

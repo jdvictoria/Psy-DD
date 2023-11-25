@@ -33,11 +33,10 @@ function AuthFirstName({isDarkMode, name, setName}) {
         }}>
         <FormTextInput
           style={{backgroundColor: isDarkMode ? '#1a2230' : '#EFEFEF'}}
-          value={name}
+          value={name.toUpperCase()}
           onChangeText={handleNameChange}
           placeholder="Juan"
           placeholderTextColor="#9fa4ac"
-          autoCapitalize="none"
         />
       </StyledCol>
     </>
