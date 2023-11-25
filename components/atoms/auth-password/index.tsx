@@ -34,7 +34,7 @@ function AuthPassword({isDarkMode, password, setPassword}) {
 
   return (
     <>
-      <StyledCol style={{width: '100%', marginTop: 6, paddingBottom: 25}}>
+      <StyledCol style={{width: '100%', marginTop: 12, marginBottom: 12}}>
         <StyledText17
           style={[{position: 'absolute', left: 0}, inputStyle.semibold]}>
           Password
@@ -69,6 +69,7 @@ function AuthPassword({isDarkMode, password, setPassword}) {
       </StyledCol>
       <StyledCol
         style={{
+          marginTop: 6,
           width: '100%',
           height: '25%',
           justifyContent: 'center',

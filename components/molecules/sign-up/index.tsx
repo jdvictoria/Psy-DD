@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Image, TouchableOpacity} from 'react-native';
 import {firebase} from '@react-native-firebase/auth';
 
-import {StyledCol, StyledRow} from '../../../styles/input-container';
+import {StyledRow} from '../../../styles/input-container';
 
 import {
   contentText,
@@ -17,6 +17,8 @@ import AuthEmail from '../../atoms/auth-email';
 import AuthPassword from '../../atoms/auth-password';
 import AuthDate from '../../atoms/auth-date';
 import AuthLicense from '../../atoms/auth-license';
+import AuthFirstName from '../../atoms/auth-fname';
+import AuthLastName from '../../atoms/auth-lname';
 
 // @ts-ignore
 function SignUpComponent({isDarkMode}) {
@@ -25,15 +27,22 @@ function SignUpComponent({isDarkMode}) {
   const inputStyle = inputText(isDarkMode);
 
   const [formStep, setFormStep] = useState(1);
+  const [byLicense, setByLicense] = useState(true);
 
   const handleNextStep = () => {
     setFormStep(formStep + 1);
+  };
+
+  const handleChangeMode = () => {
+    setByLicense(prevState => !prevState);
   };
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [license, setLicense] = useState('');
   const [date, setDate] = useState(new Date());
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
 
   const handleSignUp = () => {
     // Date
@@ -69,15 +78,69 @@ function SignUpComponent({isDarkMode}) {
         style={{
           backgroundColor: isDarkMode ? '#010919' : '#ffffff',
           borderColor: isDarkMode ? '#010919' : '#ffffff',
-          marginTop: 25,
+          marginTop: 15,
           marginBottom: 15,
         }}>
+        <StyledRow style={{width: '100%', marginBottom: 24}}>
+          {formStep == 2 && (
+            <>
+              <TouchableOpacity
+                style={{
+                  display: 'flex',
+                  position: 'absolute',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  left: 20,
+                }}
+                onPress={() => setFormStep(formStep - 1)}>
+                <Image
+                  style={{
+                    width: 20,
+                    height: 20,
+                    resizeMode: 'contain',
+                  }}
+                  source={
+                    isDarkMode
+                      ? require('../../../assets/icons/back-button_dark.png')
+                      : require('../../../assets/icons/back-button.png')
+                  }
+                  alt={'Calendar'}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  display: 'flex',
+                  position: 'absolute',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  right: 20,
+                }}
+                onPress={handleChangeMode}>
+                <Image
+                  style={{
+                    width: 25,
+                    height: 25,
+                    resizeMode: 'contain',
+                  }}
+                  source={
+                    byLicense
+                      ? isDarkMode
+                        ? require('../../../assets/icons/byname-icon_dark.png')
+                        : require('../../../assets/icons/byname-icon.png')
+                      : isDarkMode
+                      ? require('../../../assets/icons/bylicense-icon_dark.png')
+                      : require('../../../assets/icons/bylicense-icon.png')
+                  }
+                  alt={'Calendar'}
+                />
+              </TouchableOpacity>
+            </>
+          )}
+          <StyledText30 style={inputStyle.semibold}>Sign Up</StyledText30>
+        </StyledRow>
         {formStep === 1 && (
           <>
-            <StyledCol style={{marginTop: 0}}>
-              <StyledText30 style={inputStyle.semibold}>Sign Up</StyledText30>
-            </StyledCol>
-            <FormInput style={{marginBottom: 7.5, marginTop: 7.5}}>
+            <FormInput>
               <AuthEmail
                 isDarkMode={isDarkMode}
                 email={email}
@@ -98,39 +161,34 @@ function SignUpComponent({isDarkMode}) {
         )}
         {formStep === 2 && (
           <>
-            <StyledRow style={{marginTop: 0, width: '100%'}}>
-              <TouchableOpacity
-                style={{
-                  display: 'flex',
-                  position: 'absolute',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  left: 25,
-                }}
-                onPress={() => setFormStep(formStep - 1)}>
-                <Image
-                  style={{
-                    width: 20,
-                    height: 20,
-                    resizeMode: 'contain',
-                  }}
-                  source={
-                    isDarkMode
-                      ? require('../../../assets/icons/back-button_dark.png')
-                      : require('../../../assets/icons/back-button.png')
-                  }
-                  alt={'Calendar'}
-                />
-              </TouchableOpacity>
-              <StyledText30 style={inputStyle.semibold}>Sign Up</StyledText30>
-            </StyledRow>
-            <FormInput style={{marginBottom: 7.5, marginTop: 7.5}}>
-              <AuthDate isDarkMode={isDarkMode} date={date} setDate={setDate} />
-              <AuthLicense
-                isDarkMode={isDarkMode}
-                license={license}
-                setLicense={setLicense}
-              />
+            <FormInput>
+              {byLicense ? (
+                <>
+                  <AuthDate
+                    isDarkMode={isDarkMode}
+                    date={date}
+                    setDate={setDate}
+                  />
+                  <AuthLicense
+                    isDarkMode={isDarkMode}
+                    license={license}
+                    setLicense={setLicense}
+                  />
+                </>
+              ) : (
+                <>
+                  <AuthFirstName
+                    isDarkMode={isDarkMode}
+                    name={firstName}
+                    setName={setFirstName}
+                  />
+                  <AuthLastName
+                    isDarkMode={isDarkMode}
+                    name={lastName}
+                    setName={setLastName}
+                  />
+                </>
+              )}
             </FormInput>
             <FormButton onPress={handleSignUp}>
               <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
