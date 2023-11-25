@@ -22,7 +22,7 @@ import SignInComponent from '../../molecules/sign-in';
 import SignUpComponent from '../../molecules/sign-up';
 
 // @ts-ignore
-function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
+function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode, setOpenWeb}) {
   const contentStyle = contentText(isDarkMode);
 
   const [isSignIn, setIsSignIn] = useState(true);
@@ -50,11 +50,15 @@ function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
     setIsSignIn(true);
   };
 
-  const toggleSwitch = () => setIsDarkMode(previousState => !previousState);
+  const toggleSwitch = () =>
+    setIsDarkMode((previousState: any) => !previousState);
 
   return (
     <StyledKeyboardView
-      style={{marginBottom: isKeyboardOn ? (isSignIn ? 90 : 135) : 0}}>
+      style={{
+        marginBottom: isKeyboardOn ? (isSignIn ? 90 : 135) : 0,
+        zIndex: 1,
+      }}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <>
           <TouchableOpacity
@@ -98,7 +102,7 @@ function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
               setIsLoggedIn={setIsLoggedIn}
             />
           ) : (
-            <SignUpComponent isDarkMode={isDarkMode} />
+            <SignUpComponent isDarkMode={isDarkMode} setOpenWeb={setOpenWeb} />
           )}
           {isSignIn && (
             <StyledRow style={{marginBottom: 20}}>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {Image, TouchableOpacity} from 'react-native';
 import {firebase} from '@react-native-firebase/auth';
 
@@ -21,7 +21,7 @@ import AuthFirstName from '../../atoms/auth-fname';
 import AuthLastName from '../../atoms/auth-lname';
 
 // @ts-ignore
-function SignUpComponent({isDarkMode}) {
+function SignUpComponent({isDarkMode, setOpenWeb}) {
   // TODO: Firebase Auth
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
@@ -43,6 +43,10 @@ function SignUpComponent({isDarkMode}) {
   const [date, setDate] = useState(new Date());
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+
+  const fetchData = () => {
+    setOpenWeb(true);
+  };
 
   const handleSignUp = () => {
     // Date
@@ -190,7 +194,7 @@ function SignUpComponent({isDarkMode}) {
                 </>
               )}
             </FormInput>
-            <FormButton onPress={handleSignUp}>
+            <FormButton onPress={fetchData}>
               <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
                 Submit
               </StyledText16>
