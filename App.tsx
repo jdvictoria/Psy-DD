@@ -79,6 +79,13 @@ function App() {
           
           var lnameInput = document.getElementById('verNaLname');
           lnameInput.value = '${lastName}';
+          
+          setTimeout(() => {
+            var verifyButton = document.getElementById('verifyNAbtn');
+            if (verifyButton) {
+              verifyButton.click();
+            }
+          }, 500);
         }, 500);
       `;
 
