@@ -26,7 +26,7 @@ function AuthPassword({isDarkMode, password, setPassword}) {
     setPassword(text);
   };
 
-  const [isMasked, setIsMasked] = useState(false);
+  const [isMasked, setIsMasked] = useState(true);
 
   const handleShowHide = () => {
     setIsMasked(prevState => !prevState);
@@ -77,7 +77,7 @@ function AuthPassword({isDarkMode, password, setPassword}) {
         }}>
         <FormTextInput
           style={{
-            backgroundColor: isDarkMode ? '#1a2230' : '#f8faff',
+            backgroundColor: isDarkMode ? '#1a2230' : '#EFEFEF',
           }}
           secureTextEntry={isMasked}
           value={password}

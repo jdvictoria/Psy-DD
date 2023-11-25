@@ -31,7 +31,7 @@ function AuthLicense({isDarkMode, license, setLicense}) {
           alignItems: 'flex-end',
         }}>
         <FormTextInput
-          style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}
+          style={{backgroundColor: isDarkMode ? '#1a2230' : '#EFEFEF'}}
           value={license}
           onChangeText={handleLicenseChange}
           placeholder="0000000"
