@@ -21,6 +21,7 @@
     "react-native-progress": "^5.0.1",
     "react-native-screens": "^3.27.0",
     "react-native-svg": "^14.0.0",
+    "react-native-webview": "^13.6.3",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {

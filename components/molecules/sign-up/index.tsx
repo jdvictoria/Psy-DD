@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {Image, TouchableOpacity} from 'react-native';
 import {firebase} from '@react-native-firebase/auth';
 
@@ -21,13 +21,22 @@ import AuthFirstName from '../../atoms/auth-fname';
 import AuthLastName from '../../atoms/auth-lname';
 
 // @ts-ignore
-function SignUpComponent({isDarkMode}) {
+function SignUpComponent({
+  isDarkMode,
+  setOpenWeb,
+  byLicense,
+  setByLicense,
+  license,
+  setLicense,
+  date,
+  setDate,
+}) {
   // TODO: Firebase Auth
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
+  // const [byLicense, setByLicense] = useState(true);
   const [formStep, setFormStep] = useState(1);
-  const [byLicense, setByLicense] = useState(true);
 
   const handleNextStep = () => {
     setFormStep(formStep + 1);
@@ -39,17 +48,21 @@ function SignUpComponent({isDarkMode}) {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [license, setLicense] = useState('');
-  const [date, setDate] = useState(new Date());
+  // const [date, setDate] = useState(new Date());
+  // const [license, setLicense] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+
+  const fetchData = () => {
+    setOpenWeb(true);
+  };
 
   const handleSignUp = () => {
     // Date
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
     const day = date.getDate().toString().padStart(2, '0');
-    const dateString = `${year}-${month}-${day}`;
+    const dateString = `${month}-${day}-${year}`;
 
     // console.log(dateString);
 
@@ -190,7 +203,7 @@ function SignUpComponent({isDarkMode}) {
                 </>
               )}
             </FormInput>
-            <FormButton onPress={handleSignUp}>
+            <FormButton onPress={fetchData}>
               <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
                 Submit
               </StyledText16>
