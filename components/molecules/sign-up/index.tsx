@@ -25,9 +25,14 @@ function SignUpComponent({isDarkMode}) {
   const inputStyle = inputText(isDarkMode);
 
   const [formStep, setFormStep] = useState(1);
+  const [byLicense, setByLicense] = useState(true);
 
   const handleNextStep = () => {
     setFormStep(formStep + 1);
+  };
+
+  const handleChangeMode = () => {
+    setByLicense(prevState => !prevState);
   };
 
   const [email, setEmail] = useState('');
@@ -74,29 +79,58 @@ function SignUpComponent({isDarkMode}) {
         }}>
         <StyledRow style={{width: '100%', marginBottom: 24}}>
           {formStep == 2 && (
-            <TouchableOpacity
-              style={{
-                display: 'flex',
-                position: 'absolute',
-                justifyContent: 'center',
-                alignItems: 'center',
-                left: 20,
-              }}
-              onPress={() => setFormStep(formStep - 1)}>
-              <Image
+            <>
+              <TouchableOpacity
                 style={{
-                  width: 20,
-                  height: 20,
-                  resizeMode: 'contain',
+                  display: 'flex',
+                  position: 'absolute',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  left: 20,
                 }}
-                source={
-                  isDarkMode
-                    ? require('../../../assets/icons/back-button_dark.png')
-                    : require('../../../assets/icons/back-button.png')
-                }
-                alt={'Calendar'}
-              />
-            </TouchableOpacity>
+                onPress={() => setFormStep(formStep - 1)}>
+                <Image
+                  style={{
+                    width: 20,
+                    height: 20,
+                    resizeMode: 'contain',
+                  }}
+                  source={
+                    isDarkMode
+                      ? require('../../../assets/icons/back-button_dark.png')
+                      : require('../../../assets/icons/back-button.png')
+                  }
+                  alt={'Calendar'}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  display: 'flex',
+                  position: 'absolute',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  right: 20,
+                }}
+                onPress={handleChangeMode}>
+                <Image
+                  style={{
+                    width: 25,
+                    height: 25,
+                    resizeMode: 'contain',
+                  }}
+                  source={
+                    byLicense
+                      ? isDarkMode
+                        ? require('../../../assets/icons/byname-icon_dark.png')
+                        : require('../../../assets/icons/byname-icon.png')
+                      : isDarkMode
+                      ? require('../../../assets/icons/bylicense-icon_dark.png')
+                      : require('../../../assets/icons/bylicense-icon.png')
+                  }
+                  alt={'Calendar'}
+                />
+              </TouchableOpacity>
+            </>
           )}
           <StyledText30 style={inputStyle.semibold}>Sign Up</StyledText30>
         </StyledRow>
