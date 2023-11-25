@@ -14,7 +14,7 @@ import HomeProfile from '../../molecules/profile';
 import HomeSettings from '../../molecules/settings';
 
 // @ts-ignore
-function HomeNavigation({isDarkMode, setIsDarkMode}) {
+function HomeNavigation({isDarkMode, setIsDarkMode, setIsLoggedIn}) {
   const Tabs = AnimatedTabBarNavigator();
 
   return (
@@ -96,6 +96,7 @@ function HomeNavigation({isDarkMode, setIsDarkMode}) {
               {...props}
               isDarkMode={isDarkMode}
               setIsDarkMode={setIsDarkMode}
+              setIsLoggedIn={setIsLoggedIn}
             />
           )}
         </Tabs.Screen>

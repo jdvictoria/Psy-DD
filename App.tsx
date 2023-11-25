@@ -17,6 +17,8 @@ function App() {
         setIsLoading(false);
       }, 1500);
       return () => clearTimeout(loadingTimeout);
+    } else if (!isLoggedIn) {
+      setIsLoading(true);
     }
   }, [isLoggedIn]);
 
@@ -29,7 +31,11 @@ function App() {
           <Loading />
         </StyledSafeView>
       ) : (
-        <HomeNavigation isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+        <HomeNavigation
+          isDarkMode={isDarkMode}
+          setIsDarkMode={setIsDarkMode}
+          setIsLoggedIn={setIsLoggedIn}
+        />
       )}
     </>
   );
