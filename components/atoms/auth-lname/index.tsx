@@ -32,7 +32,7 @@ function AuthLastName({isDarkMode, name, setName}) {
           marginBottom: 12,
         }}>
         <FormTextInput
-          style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}
+          style={{backgroundColor: isDarkMode ? '#1a2230' : '#EFEFEF'}}
           value={name}
           onChangeText={handleNameChange}
           placeholder="Dela Cruz"

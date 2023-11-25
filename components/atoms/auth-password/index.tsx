@@ -77,7 +77,7 @@ function AuthPassword({isDarkMode, password, setPassword}) {
         }}>
         <FormTextInput
           style={{
-            backgroundColor: isDarkMode ? '#1a2230' : '#f8faff',
+            backgroundColor: isDarkMode ? '#1a2230' : '#EFEFEF',
           }}
           secureTextEntry={isMasked}
           value={password}

@@ -23,7 +23,11 @@ function App() {
   }, [isLoggedIn]);
 
   return !isLoggedIn ? (
-    <UserAuth isDarkMode={isDarkMode} setIsLoggedIn={setIsLoggedIn} />
+    <UserAuth
+      isDarkMode={isDarkMode}
+      setIsLoggedIn={setIsLoggedIn}
+      setIsDarkMode={setIsDarkMode}
+    />
   ) : (
     <>
       {isLoading ? (

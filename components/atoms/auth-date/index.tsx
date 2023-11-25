@@ -58,7 +58,7 @@ function AuthDate({isDarkMode, date, setDate}) {
           marginBottom: 12,
         }}>
         <DatePlaceholder
-          style={{backgroundColor: isDarkMode ? '#1a2230' : '#f8faff'}}>
+          style={{backgroundColor: isDarkMode ? '#1a2230' : '#EFEFEF'}}>
           <StyledText16
             style={{
               color: '#94a4ac',
