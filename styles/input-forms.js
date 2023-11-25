@@ -7,7 +7,7 @@ export const FormBox = styled.View`
   flex-direction: column;
 
   width: 85%;
-  height: 42.5%;
+  height: 310px;
 
   border: 1px;
   border-radius: 25px;
@@ -44,7 +44,7 @@ export const FormTextInput = styled.TextInput`
   justify-content: center;
   align-items: center;
 
-  height: 100%;
+  height: 60px;
   width: 100%;
 
   padding-left: 25px;
