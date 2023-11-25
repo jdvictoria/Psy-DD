@@ -19,7 +19,7 @@ const DatePlaceholder = styled.View`
   align-items: center;
   flex-direction: row;
 
-  height: 100%;
+  height: 60px;
   width: 100%;
 
   border-radius: 10px;
@@ -42,11 +42,15 @@ function AuthDate({isDarkMode, date, setDate}) {
 
   return (
     <>
-      <StyledCol style={{width: '100%', marginBottom: 6}}>
-        <StyledText17 style={inputStyle.semibold}>Date Of Birth</StyledText17>
+      <StyledCol style={{width: '100%', marginBottom: 12}}>
+        <StyledText17
+          style={[{position: 'absolute', left: 0}, inputStyle.semibold]}>
+          Date Of Birth
+        </StyledText17>
       </StyledCol>
       <StyledCol
         style={{
+          marginTop: 6,
           width: '100%',
           height: '25%',
           justifyContent: 'center',
@@ -72,7 +76,7 @@ function AuthDate({isDarkMode, date, setDate}) {
               position: 'absolute',
               justifyContent: 'center',
               alignItems: 'center',
-              right: 25,
+              right: 15,
             }}
             onPress={() => setOpen(true)}>
             <Image
@@ -91,7 +95,6 @@ function AuthDate({isDarkMode, date, setDate}) {
           </TouchableOpacity>
         </DatePlaceholder>
       </StyledCol>
-
       <DatePicker
         modal
         mode={'date'}

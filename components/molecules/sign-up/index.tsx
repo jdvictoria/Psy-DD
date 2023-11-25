@@ -123,6 +123,9 @@ function SignUpComponent({isDarkMode}) {
         )}
         {formStep === 2 && (
           <>
+            <FormInput>
+              <AuthDate isDarkMode={isDarkMode} date={date} setDate={setDate} />
+            </FormInput>
             <FormButton onPress={handleSignUp}>
               <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
                 Submit
