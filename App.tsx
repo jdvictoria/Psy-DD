@@ -58,7 +58,21 @@ function App() {
           licenseInput.value = '${dateString}';
         }, 500);
       `
-        : 'document.querySelector(\'a[href="#profile"]\').click();';
+        : `
+        document.querySelector('a[href="#profile"]').click();
+        
+        setTimeout(() => {
+          const selectElement = document.querySelector('.form-control.ddselect.profs.select2-hidden-accessible#verNaProf');
+          if (selectElement) {
+            // Simulate selecting the option with value "57"
+            const optionToSelect = selectElement.querySelector('option[value="57"][data-select2-id="140"]');
+            if (optionToSelect) {
+              optionToSelect.selected = true;
+              selectElement.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+          }
+        }, 500);
+      `;
 
       webViewRef.current.injectJavaScript(injectScript);
     }
