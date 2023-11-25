@@ -35,10 +35,12 @@ function AuthDate({isDarkMode, date, setDate}) {
   const birthdayMaxData = new Date(birthdayMinDate);
   birthdayMaxData.setFullYear(birthdayMinDate.getFullYear() - 18);
 
-  const year = date.getFullYear();
-  const month = (date.getMonth() + 1).toString().padStart(2, '0');
-  const day = date.getDate().toString().padStart(2, '0');
-  const dateString = `${day}/${month}/${year}`;
+  const year = new Date(date).getFullYear();
+  const month = new Date(date).getMonth() + 1;
+  const day = new Date(date).getDate();
+  const formattedMonth = month.toString().padStart(2, '0');
+  const formattedDay = day.toString().padStart(2, '0');
+  const dateString = `${formattedMonth}/${formattedDay}/${year}`;
 
   return (
     <>

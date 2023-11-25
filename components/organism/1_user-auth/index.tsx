@@ -29,6 +29,10 @@ function UserAuth({
   setOpenWeb,
   byLicense,
   setByLicense,
+  license,
+  setLicense,
+  date,
+  setDate,
 }) {
   const contentStyle = contentText(isDarkMode);
 
@@ -113,6 +117,10 @@ function UserAuth({
               setOpenWeb={setOpenWeb}
               byLicense={byLicense}
               setByLicense={setByLicense}
+              license={license}
+              setLicense={setLicense}
+              date={date}
+              setDate={setDate}
             />
           )}
           {isSignIn && (

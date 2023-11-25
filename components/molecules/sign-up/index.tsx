@@ -21,11 +21,21 @@ import AuthFirstName from '../../atoms/auth-fname';
 import AuthLastName from '../../atoms/auth-lname';
 
 // @ts-ignore
-function SignUpComponent({isDarkMode, setOpenWeb, byLicense, setByLicense}) {
+function SignUpComponent({
+  isDarkMode,
+  setOpenWeb,
+  byLicense,
+  setByLicense,
+  license,
+  setLicense,
+  date,
+  setDate,
+}) {
   // TODO: Firebase Auth
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
+  // const [byLicense, setByLicense] = useState(true);
   const [formStep, setFormStep] = useState(1);
 
   const handleNextStep = () => {
@@ -38,8 +48,8 @@ function SignUpComponent({isDarkMode, setOpenWeb, byLicense, setByLicense}) {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [license, setLicense] = useState('');
-  const [date, setDate] = useState(new Date());
+  // const [date, setDate] = useState(new Date());
+  // const [license, setLicense] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 
@@ -52,7 +62,7 @@ function SignUpComponent({isDarkMode, setOpenWeb, byLicense, setByLicense}) {
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
     const day = date.getDate().toString().padStart(2, '0');
-    const dateString = `${year}-${month}-${day}`;
+    const dateString = `${month}-${day}-${year}`;
 
     // console.log(dateString);
 

@@ -25,6 +25,8 @@ function App() {
 
   // Testing
   const [byLicense, setByLicense] = useState(true);
+  const [license, setLicense] = useState('');
+  const [date, setDate] = useState(new Date());
 
   const webViewRef = useRef(null);
   const [openWeb, setOpenWeb] = useState(false);
@@ -47,6 +49,9 @@ function App() {
               selectElement.dispatchEvent(new Event('change', { bubbles: true }));
             }
           }
+          
+          var licenseInput = document.getElementById('verLLicense');
+          licenseInput.value = '${license}';
         }, 500);
       `
         : 'document.querySelector(\'a[href="#profile"]\').click();';
@@ -64,6 +69,10 @@ function App() {
         setOpenWeb={setOpenWeb}
         byLicense={byLicense}
         setByLicense={setByLicense}
+        license={license}
+        setLicense={setLicense}
+        date={date}
+        setDate={setDate}
       />
       {openWeb && (
         <WebView
