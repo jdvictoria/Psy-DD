@@ -21,13 +21,12 @@ import AuthFirstName from '../../atoms/auth-fname';
 import AuthLastName from '../../atoms/auth-lname';
 
 // @ts-ignore
-function SignUpComponent({isDarkMode, setOpenWeb}) {
+function SignUpComponent({isDarkMode, setOpenWeb, byLicense, setByLicense}) {
   // TODO: Firebase Auth
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
   const [formStep, setFormStep] = useState(1);
-  const [byLicense, setByLicense] = useState(true);
 
   const handleNextStep = () => {
     setFormStep(formStep + 1);

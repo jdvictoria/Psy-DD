@@ -24,33 +24,36 @@ function App() {
   }, [isLoggedIn]);
 
   // Testing
+  const [byLicense, setByLicense] = useState(true);
+
   const webViewRef = useRef(null);
   const [openWeb, setOpenWeb] = useState(false);
 
-  const injectScript = `
-    document.querySelector('a[href="#messages"]').click();
-  `;
-
   const handleWebViewLoad = () => {
     if (webViewRef.current) {
+      const injectScript = byLicense
+        ? 'document.querySelector(\'a[href="#messages"]\').click();'
+        : 'document.querySelector(\'a[href="#profile"]\').click();';
+
       webViewRef.current.injectJavaScript(injectScript);
     }
   };
 
   return !isLoggedIn ? (
     <>
-      {!openWeb ? (
-        <UserAuth
-          isDarkMode={isDarkMode}
-          setIsLoggedIn={setIsLoggedIn}
-          setIsDarkMode={setIsDarkMode}
-          setOpenWeb={setOpenWeb}
-        />
-      ) : (
+      <UserAuth
+        isDarkMode={isDarkMode}
+        setIsLoggedIn={setIsLoggedIn}
+        setIsDarkMode={setIsDarkMode}
+        setOpenWeb={setOpenWeb}
+        byLicense={byLicense}
+        setByLicense={setByLicense}
+      />
+      {openWeb && (
         <WebView
           ref={webViewRef}
           source={{uri: 'https://online.prc.gov.ph/Verification'}}
-          style={{flex: 1}}
+          style={{bottom: 0}}
           onLoad={handleWebViewLoad}
         />
       )}
