@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Image, TouchableOpacity} from 'react-native';
 import {firebase} from '@react-native-firebase/auth';
 
-import {StyledCol, StyledRow} from '../../../styles/input-container';
+import {StyledRow} from '../../../styles/input-container';
 
 import {
   contentText,
@@ -17,6 +17,8 @@ import AuthEmail from '../../atoms/auth-email';
 import AuthPassword from '../../atoms/auth-password';
 import AuthDate from '../../atoms/auth-date';
 import AuthLicense from '../../atoms/auth-license';
+import AuthFirstName from '../../atoms/auth-fname';
+import AuthLastName from '../../atoms/auth-lname';
 
 // @ts-ignore
 function SignUpComponent({isDarkMode}) {
@@ -39,6 +41,8 @@ function SignUpComponent({isDarkMode}) {
   const [password, setPassword] = useState('');
   const [license, setLicense] = useState('');
   const [date, setDate] = useState(new Date());
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
 
   const handleSignUp = () => {
     // Date
@@ -158,12 +162,33 @@ function SignUpComponent({isDarkMode}) {
         {formStep === 2 && (
           <>
             <FormInput>
-              <AuthDate isDarkMode={isDarkMode} date={date} setDate={setDate} />
-              <AuthLicense
-                isDarkMode={isDarkMode}
-                license={license}
-                setLicense={setLicense}
-              />
+              {byLicense ? (
+                <>
+                  <AuthDate
+                    isDarkMode={isDarkMode}
+                    date={date}
+                    setDate={setDate}
+                  />
+                  <AuthLicense
+                    isDarkMode={isDarkMode}
+                    license={license}
+                    setLicense={setLicense}
+                  />
+                </>
+              ) : (
+                <>
+                  <AuthFirstName
+                    isDarkMode={isDarkMode}
+                    name={firstName}
+                    setName={setFirstName}
+                  />
+                  <AuthLastName
+                    isDarkMode={isDarkMode}
+                    name={lastName}
+                    setName={setLastName}
+                  />
+                </>
+              )}
             </FormInput>
             <FormButton onPress={handleSignUp}>
               <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
