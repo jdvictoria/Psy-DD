@@ -1,25 +1,29 @@
-import React, {useState} from 'react';
-import {Image, ScrollView, Switch} from 'react-native';
+import React from 'react';
+import {ScrollView} from 'react-native';
 
 import {
   BodyContainer,
   HeaderContainer,
-  SettingsCard,
-  SettingsCardLeft,
-  SettingsCardRight,
   StyledView,
 } from '../../../styles/form-container';
 
-import {
-  contentText,
-  StyledText20,
-  StyledText16,
-} from '../../../styles/form-text';
+import {contentText, StyledText20} from '../../../styles/form-text';
 import CardSettings from '../../atoms/card-settings';
+import {firebase} from '@react-native-firebase/auth';
 
 // @ts-ignore
-function HomeSettings({isDarkMode, setIsDarkMode}) {
+function HomeSettings({isDarkMode, setIsDarkMode, setIsLoggedIn}) {
   const contentStyle = contentText(isDarkMode);
+
+  const handleLogOut = () => {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        console.log('User signed out!');
+        setIsLoggedIn(false);
+      });
+  };
 
   return (
     <StyledView>
@@ -46,6 +50,7 @@ function HomeSettings({isDarkMode, setIsDarkMode}) {
           <CardSettings
             isDarkMode={isDarkMode}
             setIsDarkMode={setIsDarkMode}
+            handleLogOut={null}
             icon={
               isDarkMode
                 ? require('../../../assets/icons/darkmode-icon_dark.png')
@@ -57,6 +62,7 @@ function HomeSettings({isDarkMode, setIsDarkMode}) {
           <CardSettings
             isDarkMode={isDarkMode}
             setIsDarkMode={null}
+            handleLogOut={handleLogOut}
             icon={
               isDarkMode
                 ? require('../../../assets/icons/logout-icon_dark.png')

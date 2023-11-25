@@ -9,7 +9,14 @@ import {Image, Switch} from 'react-native';
 import {contentText, StyledText16} from '../../../styles/form-text';
 
 // @ts-ignore
-function CardSettings({isDarkMode, setIsDarkMode, icon, text, rightIcon}) {
+function CardSettings({
+  isDarkMode,
+  setIsDarkMode,
+  icon,
+  text,
+  rightIcon,
+  handleLogOut,
+}) {
   const contentStyle = contentText(isDarkMode);
 
   const toggleSwitch = () => setIsDarkMode(previousState => !previousState);
@@ -21,8 +28,8 @@ function CardSettings({isDarkMode, setIsDarkMode, icon, text, rightIcon}) {
           <SettingsCardLeft>
             <Image
               style={{
-                width: 40,
-                height: 40,
+                width: 35,
+                height: 35,
                 resizeMode: 'contain',
                 marginRight: 10,
               }}
@@ -41,11 +48,11 @@ function CardSettings({isDarkMode, setIsDarkMode, icon, text, rightIcon}) {
           </SettingsCardRight>
         </>
       ) : (
-        <SettingsCardCenter>
+        <SettingsCardCenter onPress={handleLogOut}>
           <Image
             style={{
-              width: 40,
-              height: 40,
+              width: 35,
+              height: 35,
               resizeMode: 'contain',
               marginRight: 10,
             }}
