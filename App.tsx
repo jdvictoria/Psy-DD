@@ -41,10 +41,8 @@ function App() {
     if (webViewRef.current) {
       const injectScript = byLicense
         ? `
-        // Click on the first element after 0ms
         document.querySelector('a[href="#messages"]').click();
 
-        // Click on the second element after 500ms
         setTimeout(() => {
           const selectElement = document.querySelector('.form-control.ddselect.profs.select2-hidden-accessible#verLProf');
           if (selectElement) {
@@ -61,48 +59,62 @@ function App() {
           
           var dateInput = document.getElementById('verLBdate');
           dateInput.value = '${dateString}';
+          
+          setTimeout(() => {
+            var verifyButton = document.getElementById('verifyNAbtn');
+            if (verifyButton) {
+              verifyButton.click();
+            }
+          }, 500);
         }, 500);
-      `
+        
+        const targetDiv = document.getElementById('myModalVerify');
+        const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'style' && targetDiv.style.display === 'block') {
+              window.ReactNativeWebView.postMessage('myModalVerifyDisplayChanged');
+            }
+          });
+        });
+        observer.observe(targetDiv, { attributes: true });
+  `
         : `
-    document.querySelector('a[href="#profile"]').click();
+        document.querySelector('a[href="#profile"]').click();
     
-    setTimeout(() => {
-      const selectElement = document.querySelector('.form-control.ddselect.profs.select2-hidden-accessible#verNaProf');
-      if (selectElement) {
-        // Simulate selecting the option with value "57"
-        const optionToSelect = selectElement.querySelector('option[value="57"][data-select2-id="140"]');
-        if (optionToSelect) {
-          optionToSelect.selected = true;
-          selectElement.dispatchEvent(new Event('change', { bubbles: true }));
-        }
-      }
+        setTimeout(() => {
+          const selectElement = document.querySelector('.form-control.ddselect.profs.select2-hidden-accessible#verNaProf');
+          if (selectElement) {
+          // Simulate selecting the option with value "57"
+            const optionToSelect = selectElement.querySelector('option[value="57"][data-select2-id="140"]');
+            if (optionToSelect) {
+              optionToSelect.selected = true;
+              selectElement.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+          }
       
-      var fnameInput = document.getElementById('verNaFname');
-      fnameInput.value = '${firstName}';
+        var fnameInput = document.getElementById('verNaFname');
+        fnameInput.value = '${firstName}';
       
-      var lnameInput = document.getElementById('verNaLname');
-      lnameInput.value = '${lastName}';
+        var lnameInput = document.getElementById('verNaLname');
+        lnameInput.value = '${lastName}';
       
-      setTimeout(() => {
-        var verifyButton = document.getElementById('verifyNAbtn');
-        if (verifyButton) {
-          verifyButton.click();
-        }
-      }, 500);
-    }, 500);
+          setTimeout(() => {
+            var verifyButton = document.getElementById('verifyNAbtn');
+            if (verifyButton) {
+              verifyButton.click();
+            }
+          }, 500);
+        }, 500);
 
-    // Watch for changes in the display of the modal
-    const targetDiv = document.getElementById('myModalVerify');
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.attributeName === 'style' && targetDiv.style.display === 'block') {
-          // Send a message to indicate that the display has changed to "block"
-          window.ReactNativeWebView.postMessage('myModalVerifyDisplayChanged');
-        }
-      });
-    });
-
-    observer.observe(targetDiv, { attributes: true });
+        const targetDiv = document.getElementById('myModalVerify');
+        const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'style' && targetDiv.style.display === 'block') {
+              window.ReactNativeWebView.postMessage('myModalVerifyDisplayChanged');
+            }
+          });
+        });
+        observer.observe(targetDiv, { attributes: true });
   `;
 
       webViewRef.current.injectJavaScript(injectScript);
