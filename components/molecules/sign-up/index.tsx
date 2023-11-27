@@ -1,6 +1,9 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Image, TouchableOpacity} from 'react-native';
+
+import * as Progress from 'react-native-progress';
 import {firebase} from '@react-native-firebase/auth';
+import {WebView, WebViewMessageEvent} from 'react-native-webview';
 
 import {StyledRow} from '../../../styles/input-container';
 
@@ -20,8 +23,6 @@ import AuthLicense from '../../atoms/auth-license';
 import AuthFirstName from '../../atoms/auth-fname';
 import AuthLastName from '../../atoms/auth-lname';
 
-import {WebView, WebViewMessageEvent} from 'react-native-webview';
-
 // @ts-ignore
 function SignUpComponent({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
@@ -30,14 +31,15 @@ function SignUpComponent({isDarkMode}) {
   const [byLicense, setByLicense] = useState(true);
   const [formStep, setFormStep] = useState(1);
 
-  const handleNextStep = () => {
-    setFormStep(formStep + 1);
-  };
-
   const handleChangeMode = () => {
     setByLicense((prevState: any) => !prevState);
   };
 
+  const handleNextStep = () => {
+    setFormStep(formStep + 1);
+  };
+
+  const [verifyClick, setVerifyClick] = useState(false);
   const [isValid, setIsValid] = useState(false);
 
   const [email, setEmail] = useState('');
@@ -71,6 +73,7 @@ function SignUpComponent({isDarkMode}) {
   const [openWeb, setOpenWeb] = useState(false);
 
   const handleVerify = () => {
+    setVerifyClick(true);
     setOpenWeb(true);
   };
 
@@ -158,16 +161,11 @@ function SignUpComponent({isDarkMode}) {
     }
   };
 
-  // Debugger
-  useEffect(() => {
-    if (isValid) {
-      console.log(isValid);
-    }
-  }, [isValid]);
-
   const handleWebViewMessage = (event: WebViewMessageEvent) => {
     if (event.nativeEvent.data === 'myModalVerifyDisplayChanged') {
       setIsValid(true);
+      setVerifyClick(false);
+      setOpenWeb(false);
     }
   };
 
@@ -181,84 +179,63 @@ function SignUpComponent({isDarkMode}) {
           marginBottom: 15,
         }}>
         <StyledRow style={{width: '100%', marginBottom: 24}}>
-          {formStep == 2 && (
-            <>
-              <TouchableOpacity
+          {formStep === 1 && (
+            <TouchableOpacity
+              style={{
+                display: 'flex',
+                position: 'absolute',
+                justifyContent: 'center',
+                alignItems: 'center',
+                right: 20,
+              }}
+              onPress={handleChangeMode}>
+              <Image
                 style={{
-                  display: 'flex',
-                  position: 'absolute',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  left: 20,
+                  width: 25,
+                  height: 25,
+                  resizeMode: 'contain',
                 }}
-                onPress={() => setFormStep(formStep - 1)}>
-                <Image
-                  style={{
-                    width: 20,
-                    height: 20,
-                    resizeMode: 'contain',
-                  }}
-                  source={
-                    isDarkMode
-                      ? require('../../../assets/icons/back-button_dark.png')
-                      : require('../../../assets/icons/back-button.png')
-                  }
-                  alt={'Calendar'}
-                />
-              </TouchableOpacity>
-              <TouchableOpacity
+                source={
+                  byLicense
+                    ? isDarkMode
+                      ? require('../../../assets/icons/byname-icon_dark.png')
+                      : require('../../../assets/icons/byname-icon.png')
+                    : isDarkMode
+                    ? require('../../../assets/icons/bylicense-icon_dark.png')
+                    : require('../../../assets/icons/bylicense-icon.png')
+                }
+                alt={'Calendar'}
+              />
+            </TouchableOpacity>
+          )}
+          {formStep === 2 && (
+            <TouchableOpacity
+              style={{
+                display: 'flex',
+                position: 'absolute',
+                justifyContent: 'center',
+                alignItems: 'center',
+                left: 20,
+              }}
+              onPress={() => setFormStep(formStep - 1)}>
+              <Image
                 style={{
-                  display: 'flex',
-                  position: 'absolute',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  right: 20,
+                  width: 20,
+                  height: 20,
+                  resizeMode: 'contain',
                 }}
-                onPress={handleChangeMode}>
-                <Image
-                  style={{
-                    width: 25,
-                    height: 25,
-                    resizeMode: 'contain',
-                  }}
-                  source={
-                    byLicense
-                      ? isDarkMode
-                        ? require('../../../assets/icons/byname-icon_dark.png')
-                        : require('../../../assets/icons/byname-icon.png')
-                      : isDarkMode
-                      ? require('../../../assets/icons/bylicense-icon_dark.png')
-                      : require('../../../assets/icons/bylicense-icon.png')
-                  }
-                  alt={'Calendar'}
-                />
-              </TouchableOpacity>
-            </>
+                source={
+                  isDarkMode
+                    ? require('../../../assets/icons/back-button_dark.png')
+                    : require('../../../assets/icons/back-button.png')
+                }
+                alt={'Calendar'}
+              />
+            </TouchableOpacity>
           )}
           <StyledText30 style={inputStyle.semibold}>Sign Up</StyledText30>
         </StyledRow>
         {formStep === 1 && (
-          <>
-            <FormInput>
-              <AuthEmail
-                isDarkMode={isDarkMode}
-                email={email}
-                setEmail={setEmail}
-              />
-              <AuthPassword
-                isDarkMode={isDarkMode}
-                password={password}
-                setPassword={setPassword}
-              />
-            </FormInput>
-            <FormButton onPress={handleNextStep}>
-              <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
-                Next
-              </StyledText16>
-            </FormButton>
-          </>
-        )}
-        {formStep === 2 && (
           <>
             <FormInput>
               {byLicense ? (
@@ -291,14 +268,26 @@ function SignUpComponent({isDarkMode}) {
                 </>
               )}
             </FormInput>
-            <FormButton onPress={!isValid ? handleVerify : handleSignUp}>
-              <StyledText16
-                style={[
-                  contentStyle.semibold,
-                  {color: 'white', paddingTop: openWeb ? 12.5 : 0},
-                ]}>
-                {!isValid ? 'Verify' : 'Submit'}
-              </StyledText16>
+            <FormButton onPress={!isValid ? handleVerify : handleNextStep}>
+              {(!verifyClick || isValid) && (
+                <StyledText16
+                  style={[
+                    contentStyle.semibold,
+                    {color: 'white', paddingTop: openWeb ? 12.5 : 0},
+                  ]}>
+                  {!isValid ? 'Verify' : 'Next'}
+                </StyledText16>
+              )}
+              {verifyClick && (
+                <Progress.Circle
+                  style={{paddingTop: openWeb ? 12.5 : 0}}
+                  size={20}
+                  indeterminate={true}
+                  indeterminateAnimationDuration={1750}
+                  color={'white'}
+                  borderWidth={2.5}
+                />
+              )}
               {openWeb && (
                 <WebView
                   ref={webViewRef}
@@ -307,6 +296,27 @@ function SignUpComponent({isDarkMode}) {
                   onMessage={handleWebViewMessage}
                 />
               )}
+            </FormButton>
+          </>
+        )}
+        {formStep === 2 && (
+          <>
+            <FormInput>
+              <AuthEmail
+                isDarkMode={isDarkMode}
+                email={email}
+                setEmail={setEmail}
+              />
+              <AuthPassword
+                isDarkMode={isDarkMode}
+                password={password}
+                setPassword={setPassword}
+              />
+            </FormInput>
+            <FormButton>
+              <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
+                Sign Up
+              </StyledText16>
             </FormButton>
           </>
         )}
