@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Image, TouchableOpacity} from 'react-native';
 
 // @ts-ignore
@@ -26,7 +26,7 @@ const DatePlaceholder = styled.View`
 `;
 
 // @ts-ignore
-function AuthDate({isDarkMode, date, setDate}) {
+function AuthDate({isDarkMode, date, setDate, dateString, setDateString}) {
   const inputStyle = inputText(isDarkMode);
 
   const [open, setOpen] = useState(false);
@@ -34,13 +34,6 @@ function AuthDate({isDarkMode, date, setDate}) {
   const birthdayMinDate = new Date();
   const birthdayMaxData = new Date(birthdayMinDate);
   birthdayMaxData.setFullYear(birthdayMinDate.getFullYear() - 18);
-
-  const year = new Date(date).getFullYear();
-  const month = new Date(date).getMonth() + 1;
-  const day = new Date(date).getDate();
-  const formattedMonth = month.toString().padStart(2, '0');
-  const formattedDay = day.toString().padStart(2, '0');
-  const dateString = `${formattedMonth}/${formattedDay}/${year}`;
 
   return (
     <>
@@ -70,7 +63,7 @@ function AuthDate({isDarkMode, date, setDate}) {
               alignItems: 'center',
               left: 25,
             }}>
-            {dateString}
+            {dateString === '' ? 'MM-DD-YYYY' : dateString}
           </StyledText16>
           <TouchableOpacity
             style={{
@@ -105,11 +98,19 @@ function AuthDate({isDarkMode, date, setDate}) {
         date={date}
         onConfirm={date => {
           setOpen(false);
+          const year = new Date(date).getFullYear();
+          const month = new Date(date).getMonth() + 1;
+          const day = new Date(date).getDate();
+          const formattedMonth = month.toString().padStart(2, '0');
+          const formattedDay = day.toString().padStart(2, '0');
+          const finalDate = `${formattedMonth}/${formattedDay}/${year}`;
+          setDateString(finalDate);
           setDate(date);
         }}
         onCancel={() => {
           setOpen(false);
         }}
+        theme={isDarkMode ? 'dark' : 'light'}
       />
     </>
   );
