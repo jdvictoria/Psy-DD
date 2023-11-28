@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+
 import {
   Image,
   Keyboard,
@@ -20,7 +21,6 @@ import {
 
 import SignInComponent from '../../molecules/sign-in';
 import SignUpComponent from '../../molecules/sign-up';
-import {WebView} from 'react-native-webview';
 
 // @ts-ignore
 function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
