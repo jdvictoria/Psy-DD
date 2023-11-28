@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
-import {Image, TouchableOpacity} from 'react-native';
+import {Alert, Image, TouchableOpacity} from 'react-native';
 
 import * as Progress from 'react-native-progress';
 import {firebase} from '@react-native-firebase/auth';
@@ -24,7 +24,14 @@ import AuthFirstName from '../../atoms/auth-fname';
 import AuthLastName from '../../atoms/auth-lname';
 
 // @ts-ignore
-function SignUpComponent({isDarkMode}) {
+function SignUpComponent({isDarkMode, setIsSignIn}) {
+  const alertEmailVerification = () =>
+    Alert.alert(
+      'Email Verification Sent',
+      'Check your email and verify your account.',
+      [{text: 'OK', onPress: () => console.log('OK Pressed')}],
+    );
+
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
@@ -89,12 +96,15 @@ function SignUpComponent({isDarkMode}) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 
-  const handleSignUp = () => {
-    firebase
+  const handleSignUp = async () => {
+    await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .then(() => {
-        console.log('User account created & signed in!');
+      .then(async () => {
+        await firebase.auth().currentUser?.sendEmailVerification();
+        alertEmailVerification();
+        // console.log('User account created & signed in!');
+        setIsSignIn(true);
       })
       .catch(error => {
         // Update the error state with the specific error message
@@ -201,7 +211,6 @@ function SignUpComponent({isDarkMode}) {
       setIsValid(true);
       setVerifyClick(false);
       setOpenWeb(false);
-      console.log('true');
     }
   };
 
@@ -217,6 +226,7 @@ function SignUpComponent({isDarkMode}) {
         <StyledRow style={{width: '100%', marginBottom: 24}}>
           {formStep === 1 && (
             <TouchableOpacity
+              disabled={isValid}
               style={{
                 display: 'flex',
                 position: 'absolute',
@@ -349,7 +359,7 @@ function SignUpComponent({isDarkMode}) {
                 setPassword={setPassword}
               />
             </FormInput>
-            <FormButton>
+            <FormButton onPress={handleSignUp}>
               <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
                 Sign Up
               </StyledText16>

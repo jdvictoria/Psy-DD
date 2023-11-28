@@ -24,13 +24,16 @@ function SignInComponent({isDarkMode, setIsLoggedIn}) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
 
-  const handleSignIn = () => {
-    firebase
+  const handleSignIn = async () => {
+    await firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => {
-        console.log('User account created & signed in!');
-        setIsLoggedIn(true);
+        if (firebase.auth().currentUser?.emailVerified) {
+          setIsLoggedIn(true);
+        } else {
+          setError('Error: Email Unverified');
+        }
       })
       .catch(error => {
         // Update the error state with the specific error message
