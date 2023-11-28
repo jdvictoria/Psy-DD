@@ -1,4 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
+import {Alert, TouchableOpacity} from 'react-native';
 import {firebase} from '@react-native-firebase/auth';
 
 import {StyledRow, StyledCol} from '../../../styles/input-container';
@@ -20,24 +21,52 @@ function SignInComponent({isDarkMode, setIsLoggedIn}) {
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
+  const alertEmailVerification = () =>
+    Alert.alert(
+      'Unverified Email',
+      'Check your email to verify your account.',
+      [{text: 'OK', onPress: () => console.log('OK Pressed')}],
+    );
+
+  const alertPasswordReset = () =>
+    Alert.alert(
+      'Password Reset Link',
+      'Check your email and reset your password.',
+      [{text: 'OK', onPress: () => console.log('OK Pressed')}],
+    );
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
 
   const handleSignIn = async () => {
+    await firebase.auth().currentUser?.reload();
     await firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .then(() => {
+      .then(async () => {
         if (firebase.auth().currentUser?.emailVerified) {
           setIsLoggedIn(true);
         } else {
-          setError('Error: Email Unverified');
+          await firebase.auth().currentUser?.sendEmailVerification();
+          alertEmailVerification();
         }
       })
       .catch(error => {
-        // Update the error state with the specific error message
-        setError('Error: Invalid Email / Password');
+        setError('Error: Email Does Not Exist.');
+      });
+  };
+
+  const handleForgotPass = async () => {
+    await firebase.auth().currentUser?.reload();
+    await firebase
+      .auth()
+      .sendPasswordResetEmail(email)
+      .then(async () => {
+        alertPasswordReset();
+      })
+      .catch(error => {
+        setError('Error: Unverified / Invalid Email.');
       });
   };
 
@@ -87,6 +116,13 @@ function SignInComponent({isDarkMode, setIsLoggedIn}) {
           </StyledText16>
         </StyledRow>
       )}
+      <StyledRow style={{marginBottom: 20}}>
+        <TouchableOpacity onPress={handleForgotPass}>
+          <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
+            Forgot Password?
+          </StyledText16>
+        </TouchableOpacity>
+      </StyledRow>
     </>
   );
 }

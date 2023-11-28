@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+
 import {
   Image,
   Keyboard,
@@ -20,13 +21,12 @@ import {
 
 import SignInComponent from '../../molecules/sign-in';
 import SignUpComponent from '../../molecules/sign-up';
-import {WebView} from 'react-native-webview';
 
 // @ts-ignore
 function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
-  const [isSignIn, setIsSignIn] = useState(false);
+  const [isSignIn, setIsSignIn] = useState(true);
   const [isKeyboardOn, setIsKeyboardOn] = useState(false);
 
   useEffect(() => {
@@ -106,15 +106,6 @@ function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
               isDarkMode={isDarkMode}
               setIsSignIn={setIsSignIn}
             />
-          )}
-          {isSignIn && (
-            <StyledRow style={{marginBottom: 20}}>
-              <TouchableOpacity>
-                <StyledText16 style={[contentStyle.bold, {color: 'white'}]}>
-                  Forgot Password?
-                </StyledText16>
-              </TouchableOpacity>
-            </StyledRow>
           )}
           <StyledRow style={{marginTop: 30}}>
             <StyledText16 style={[contentStyle.medium, {color: 'white'}]}>
