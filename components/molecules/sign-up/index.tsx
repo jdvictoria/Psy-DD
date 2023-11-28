@@ -63,6 +63,24 @@ function SignUpComponent({isDarkMode}) {
   const [verifyClick, setVerifyClick] = useState(false);
   const [isValid, setIsValid] = useState(false);
 
+  useEffect(() => {
+    let timeoutId: string | number | NodeJS.Timeout | undefined;
+
+    if (verifyClick && !isValid) {
+      timeoutId = setTimeout(() => {
+        setVerifyError('Error: PRC Authentication Failed');
+        setVerifyClick(false);
+        setOpenWeb(false);
+      }, 5000);
+    } else {
+      clearTimeout(timeoutId);
+    }
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [verifyClick, isValid]);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [date, setDate] = useState(new Date());
@@ -104,6 +122,7 @@ function SignUpComponent({isDarkMode}) {
           if (selectElement) {
             // Simulate selecting the option with value "57"
             const optionToSelect = selectElement.querySelector('option[value="57"][data-select2-id="214"]');
+            if (optionToSelect) {
             if (optionToSelect) {
               optionToSelect.selected = true;
               selectElement.dispatchEvent(new Event('change', { bubbles: true }));
@@ -182,6 +201,7 @@ function SignUpComponent({isDarkMode}) {
       setIsValid(true);
       setVerifyClick(false);
       setOpenWeb(false);
+      console.log('true');
     }
   };
 
@@ -337,17 +357,17 @@ function SignUpComponent({isDarkMode}) {
           </>
         )}
       </FormBox>
+      {verifyError && (
+        <StyledRow style={{marginBottom: 10}}>
+          <StyledText16 style={[contentStyle.semibold, {color: 'red'}]}>
+            {verifyError}
+          </StyledText16>
+        </StyledRow>
+      )}
       {signUpError && (
         <StyledRow style={{marginBottom: 10}}>
           <StyledText16 style={[contentStyle.semibold, {color: 'red'}]}>
             {signUpError}
-          </StyledText16>
-        </StyledRow>
-      )}
-      {verifyError && (
-        <StyledRow style={{marginBottom: 10}}>
-          <StyledText16 style={[contentStyle.semibold, {color: 'red'}]}>
-            Error: Invalid PRC Authentication
           </StyledText16>
         </StyledRow>
       )}
