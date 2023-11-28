@@ -66,7 +66,7 @@ function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
             style={{
               position: 'absolute',
               right: 30,
-              top: 35,
+              top: 60,
             }}>
             <Image
               style={{
