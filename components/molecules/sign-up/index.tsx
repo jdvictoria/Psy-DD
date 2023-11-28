@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {Image, TouchableOpacity} from 'react-native';
 
 import * as Progress from 'react-native-progress';
@@ -31,6 +31,27 @@ function SignUpComponent({isDarkMode}) {
   const [byLicense, setByLicense] = useState(true);
   const [formStep, setFormStep] = useState(1);
 
+  const [verifyError, setVerifyError] = useState(null);
+  const [signUpError, setSignUpError] = useState(null);
+
+  const clearVerifyError = useCallback(() => {
+    setVerifyError(null);
+  }, []);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(clearVerifyError, 3000);
+    return () => clearTimeout(timeoutId);
+  }, [verifyError, clearVerifyError]);
+
+  const clearSignUpError = useCallback(() => {
+    setSignUpError(null);
+  }, []);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(clearSignUpError, 3000);
+    return () => clearTimeout(timeoutId);
+  }, [signUpError, clearSignUpError]);
+
   const handleChangeMode = () => {
     setByLicense((prevState: any) => !prevState);
   };
@@ -58,13 +79,8 @@ function SignUpComponent({isDarkMode}) {
         console.log('User account created & signed in!');
       })
       .catch(error => {
-        if (error.code === 'auth/email-already-in-use') {
-          console.log('That email address is already in use!');
-        } else if (error.code === 'auth/invalid-email') {
-          console.log('That email address is invalid!');
-        } else {
-          console.error(error);
-        }
+        // Update the error state with the specific error message
+        setSignUpError('Error: Invalid Email / Password');
       });
   };
 
@@ -321,6 +337,20 @@ function SignUpComponent({isDarkMode}) {
           </>
         )}
       </FormBox>
+      {signUpError && (
+        <StyledRow style={{marginBottom: 10}}>
+          <StyledText16 style={[contentStyle.semibold, {color: 'red'}]}>
+            {signUpError}
+          </StyledText16>
+        </StyledRow>
+      )}
+      {verifyError && (
+        <StyledRow style={{marginBottom: 10}}>
+          <StyledText16 style={[contentStyle.semibold, {color: 'red'}]}>
+            Error: Invalid PRC Authentication
+          </StyledText16>
+        </StyledRow>
+      )}
     </>
   );
 }
