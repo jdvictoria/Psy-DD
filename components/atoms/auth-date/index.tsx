@@ -63,7 +63,7 @@ function AuthDate({isDarkMode, date, setDate, dateString, setDateString}) {
               alignItems: 'center',
               left: 25,
             }}>
-            {dateString === '' ? 'MM-DD-YYYY' : dateString}
+            {dateString === '' ? 'MM/DD/YYYY' : dateString}
           </StyledText16>
           <TouchableOpacity
             style={{
