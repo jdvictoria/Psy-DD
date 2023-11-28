@@ -217,6 +217,7 @@ function SignUpComponent({isDarkMode}) {
         <StyledRow style={{width: '100%', marginBottom: 24}}>
           {formStep === 1 && (
             <TouchableOpacity
+              disabled={isValid}
               style={{
                 display: 'flex',
                 position: 'absolute',
