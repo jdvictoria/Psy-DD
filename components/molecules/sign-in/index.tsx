@@ -30,10 +30,9 @@ function SignInComponent({isDarkMode, setIsLoggedIn}) {
       .signInWithEmailAndPassword(email, password)
       .then(() => {
         if (firebase.auth().currentUser?.emailVerified) {
-          console.log('User account created & signed in!');
           setIsLoggedIn(true);
         } else {
-          console.log('Verify your email');
+          setError('Error: Email Unverified');
         }
       })
       .catch(error => {
