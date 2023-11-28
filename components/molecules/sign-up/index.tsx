@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
-import {Image, TouchableOpacity} from 'react-native';
+import {Alert, Image, TouchableOpacity} from 'react-native';
 
 import * as Progress from 'react-native-progress';
 import {firebase} from '@react-native-firebase/auth';
@@ -25,6 +25,13 @@ import AuthLastName from '../../atoms/auth-lname';
 
 // @ts-ignore
 function SignUpComponent({isDarkMode, setIsSignIn}) {
+  const alertEmailVerification = () =>
+    Alert.alert(
+      'Email Verification Sent',
+      'Check your email and verify your account.',
+      [{text: 'OK', onPress: () => console.log('OK Pressed')}],
+    );
+
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
@@ -95,7 +102,8 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
       .createUserWithEmailAndPassword(email, password)
       .then(async () => {
         await firebase.auth().currentUser?.sendEmailVerification();
-        console.log('User account created & signed in!');
+        alertEmailVerification();
+        // console.log('User account created & signed in!');
         setIsSignIn(true);
       })
       .catch(error => {
@@ -203,7 +211,6 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
       setIsValid(true);
       setVerifyClick(false);
       setOpenWeb(false);
-      console.log('true');
     }
   };
 
