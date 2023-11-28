@@ -97,17 +97,16 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
   const [lastName, setLastName] = useState('');
 
   const handleSignUp = async () => {
+    await firebase.auth().currentUser?.reload();
     await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then(async () => {
         await firebase.auth().currentUser?.sendEmailVerification();
         alertEmailVerification();
-        // console.log('User account created & signed in!');
         setIsSignIn(true);
       })
       .catch(error => {
-        // Update the error state with the specific error message
         setSignUpError('Error: Invalid Email / Password');
       });
   };
