@@ -107,7 +107,7 @@ function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
               setIsSignIn={setIsSignIn}
             />
           )}
-          <StyledRow style={{marginTop: 30}}>
+          <StyledRow style={{position: 'absolute', bottom: 35}}>
             <StyledText16 style={[contentStyle.medium, {color: 'white'}]}>
               {isSignIn
                 ? "Don't have any Account?"
