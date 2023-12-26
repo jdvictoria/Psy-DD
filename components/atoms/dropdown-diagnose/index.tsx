@@ -49,13 +49,13 @@ function DropdownComponent({isDarkMode, label}) {
     <View
       style={[
         styles.container,
-        {width: label === 'Symptom' ? '95%' : '47.5%'},
+        {width: label === 'Symptom' || label === 'Category' ? '95%' : '47.5%'},
       ]}>
       {renderLabel()}
       <Dropdown
         data={data}
         value={value}
-        search={label === 'Symptom'}
+        search={label === 'Symptom' || label === 'Category'}
         maxHeight={300}
         labelField="label"
         valueField="value"

@@ -12,12 +12,14 @@ import {contentText, StyledText20} from '../../../styles/form-text';
 import CardDiagnoseResult from '../../atoms/card-diagnose_result';
 import CardDiagnoseSmall from '../../atoms/card-diagnose_small';
 import CardDiagnoseBig from '../../atoms/card-diagnose_big';
+import CardDiagnoseFilter from "../../atoms/card-diagnose-filter";
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
   const [result, setResult] = useState('');
+  const [filter, setFilter] = useState('');
 
   const [bigCardCount, setBigCardCount] = useState(0);
 
@@ -58,6 +60,7 @@ function HomeDiagnose({isDarkMode}) {
             clearBigCard={clearBigCard}
             addBigCard={addBigCard}
           />
+          <CardDiagnoseFilter isDarkMode={isDarkMode} setFilter={setFilter} />
           {[...Array(bigCardCount)].map((_, index) => (
             <CardDiagnoseBig key={index} isDarkMode={isDarkMode} />
           ))}

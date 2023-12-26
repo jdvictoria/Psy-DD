@@ -1,6 +1,6 @@
 import React from 'react-native';
 
-import {contentText, StyledText24} from '../../../styles/form-text';
+import {contentText, StyledText16, StyledText24} from '../../../styles/form-text';
 
 import {DiagnoseResultCard} from '../../../styles/form-container';
 
@@ -9,10 +9,13 @@ function CardDiagnoseResult({isDarkMode, result}) {
   const contentStyle = contentText(isDarkMode);
 
   return (
-    <DiagnoseResultCard
-      style={{backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF'}}>
-      <StyledText24 style={contentStyle.bold}>Result: {result}</StyledText24>
-    </DiagnoseResultCard>
+    <>
+        <StyledText16 style={contentStyle.bold}>Result:</StyledText16>
+        <DiagnoseResultCard
+            style={{backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF'}}>
+            <StyledText24 style={contentStyle.bold}>{result}</StyledText24>
+        </DiagnoseResultCard>
+    </>
   );
 }
 
