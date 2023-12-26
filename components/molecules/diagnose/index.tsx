@@ -21,6 +21,7 @@ function HomeDiagnose({isDarkMode}) {
   const [result, setResult] = useState('');
   const [filter, setFilter] = useState('');
 
+  console.log(filter);
   const [bigCardCount, setBigCardCount] = useState(0);
 
   const clearBigCard = () => {
@@ -59,10 +60,11 @@ function HomeDiagnose({isDarkMode}) {
             isDarkMode={isDarkMode}
             clearBigCard={clearBigCard}
             addBigCard={addBigCard}
+            filter={filter}
           />
           <CardDiagnoseFilter isDarkMode={isDarkMode} setFilter={setFilter} />
           {[...Array(bigCardCount)].map((_, index) => (
-            <CardDiagnoseBig key={index} isDarkMode={isDarkMode} />
+            <CardDiagnoseBig key={index} isDarkMode={isDarkMode} filter={filter}/>
           ))}
         </ScrollView>
       </BodyContainer>

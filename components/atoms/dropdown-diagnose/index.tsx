@@ -3,20 +3,9 @@ import {StyleSheet, Text, View} from 'react-native';
 
 import {Dropdown} from 'react-native-element-dropdown';
 
-import {categData} from '../../../utils/categories';
-
-import {traumaSymptoms} from '../../../utils/trauma';
-
-const dummyData = [
-  {label: 'Item 1', value: '1'},
-  {label: 'Item 2', value: '2'},
-  {label: 'Item 3', value: '3'},
-  {label: 'Item 4', value: '4'},
-];
-
 // @ts-ignore
-function DropdownComponent({isDarkMode, label}) {
-  const [value, setValue] = useState(null);
+function DropdownComponent({isDarkMode, data, label, value, setValue}) {
+  // const [value, setValue] = useState(null);
   const [isFocus, setIsFocus] = useState(true);
 
   const renderLabel = () => {
@@ -36,16 +25,6 @@ function DropdownComponent({isDarkMode, label}) {
     }
     return null;
   };
-
-  let data;
-
-  if (label === 'Category') {
-    data = categData;
-  } else if (label === 'Symptom/s') {
-    data = traumaSymptoms;
-  } else {
-    data = dummyData;
-  }
 
   return (
     <View
