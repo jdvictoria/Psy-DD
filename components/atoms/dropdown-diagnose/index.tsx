@@ -3,7 +3,9 @@ import {StyleSheet, Text, View} from 'react-native';
 
 import {Dropdown} from 'react-native-element-dropdown';
 
-import {drugData, distressData} from '../../../utils/dsmData';
+import {categData} from '../../../utils/categories';
+
+import {traumaSymptoms} from '../../../utils/trauma';
 
 const dummyData = [
   {label: 'Item 1', value: '1'},
@@ -37,10 +39,10 @@ function DropdownComponent({isDarkMode, label}) {
 
   let data;
 
-  if (label === 'Drug Influenced?') {
-    data = distressData;
-  } else if (label === 'Causes Distress?') {
-    data = distressData;
+  if (label === 'Category') {
+    data = categData;
+  } else if (label === 'Symptom/s') {
+    data = traumaSymptoms;
   } else {
     data = dummyData;
   }
@@ -49,13 +51,13 @@ function DropdownComponent({isDarkMode, label}) {
     <View
       style={[
         styles.container,
-        {width: label === 'Symptom' || label === 'Category' ? '95%' : '47.5%'},
+        {width: label === 'Symptom/s' || label === 'Category' ? '95%' : '47.5%'},
       ]}>
       {renderLabel()}
       <Dropdown
         data={data}
         value={value}
-        search={label === 'Symptom' || label === 'Category'}
+        search={label === 'Symptom/s' || label === 'Category'}
         maxHeight={300}
         labelField="label"
         valueField="value"
