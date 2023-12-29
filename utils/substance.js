@@ -3,10 +3,10 @@ export const substanceSymptoms = [
     // 12 month period
     {label: 'Alcohol is often taken in larger amounts', value: 1},
     {label: 'Persistent desire or unsuccessful efforts to cut down or control alcohol use', value: 2},
-    {label: 'A great deal of time is spent in activities necessary to obtain alcohol, use alcohol, or recover from its effects' +, value: 3},
+    {label: 'A great deal of time is spent in activities necessary to obtain alcohol, use alcohol, or recover from its effects', value: 3},
     {label: 'Craving, or a strong desire or urge to use alcohol', value: 4},
     {label: 'Recurrent alcohol use resulting in a failure to fulfill major role obligations at work, school, or home', value: 5},
-    {label: '"Continued alcohol use, value: 6},
+    {label: 'Continued alcohol use', value: 6},
     {label: 'Important social, occupational, or recreational activities are given up or reduced because of alcohol use', value: 7},
     {label: 'Recurrent alcohol use in situations in which it is physically hazardous', value: 8},
     {label: 'Alcohol use is continued despite knowledge of having a persistent or recurrent physical or psychological problemAlcohol use is continued despite knowledge of having a persistent or recurrent physical or psychological problem', value: 9},
@@ -464,5 +464,5 @@ export const substanceSymptoms = [
     {label: 'After losing money gambling, often returns another day to get even', value: 248},
     {label: 'Lies to conceal the extent of involvement with gambling', value: 249},
     {label: 'Has jeopardized or lost a significant relationship, job, or educational or career opportunity because of gambling', value: 250},
-    {label: 'Relies on others to provide money to relieve desperate financial situations caused by gambling', value: 251c},
+    {label: 'Relies on others to provide money to relieve desperate financial situations caused by gambling', value: 251},
 ]
