@@ -1,4 +1,4 @@
-export const obsessive = [
+export const obsessiveSymptoms = [
     // Obsessive-Compulsive Disorder
     // Criteria A
     {label: 'Recurrent and persistent thoughts, urges, or images that are experienced, at some time during the disturbance, as intrusive and unwanted, and that in most individuals cause marked anxiety or distress', value: 1},
@@ -108,10 +108,6 @@ export const obsessive = [
 
     // Criteria E
     {label: 'The disturbance causes clinically significant distress or impairment in social, occupational, or other important areas of functioning', value: 37},
-
-    {label: 'Nystagmus', value: 38},
-    {label: 'Nystagmus', value: 39},
-    {label: 'Nystagmus', value: 40},
 
     // Unspecified Obsessive-Compulsive and Related Disorder
     // This category applies to presentations in which symptoms characteristic of an obsessive-compulsive and related disorder that cause clinically significant distress or impairment in social, occupational, or other important areas of functioning predominate but do not meet the full criteria for any of the disorders in the obsessive-compulsive and related disorders diagnostic class.
