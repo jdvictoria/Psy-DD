@@ -187,13 +187,39 @@ export const neurodevelopmentalSymptoms = [
 
     // Criteria D
     {label: 'The disturbance is not attributable to the physiological effects of a substance', value: 79},
-    {label: 'Anxiety', value: 80},
-    {label: 'Anxiety', value: 81},
-    {label: 'Anxiety', value: 82},
-    {label: 'Anxiety', value: 83},
-    {label: 'Anxiety', value: 84},
-    {label: 'Anxiety', value: 84},
 
+    // Persistent (Chronic) Motor or Vocal Tic Disorder
+    // specify if motor / vocal
+    // Criteria A
+    {label: 'Single or multiple motor or vocal tics have been present during the illness, but not both motor and vocal', value: 80},
+
+    // Criteria B
+    {label: 'The tics may wax and wane in frequency but have persisted for more than 1 year since first tic onset', value: 81},
+
+    // Criteria C
+    {label: 'Onset is before age 18 years', value: 82},
+
+    // Criteria D
+    {label: 'The disturbance is not attributable to the physiological effects of a substance or another medical condition', value: 83},
+
+    // Criteria E
+    {label: 'Criteria have never been met for Tourette’s disorder', value: 84},
+
+    // Provisional Tic Disorder
+    // Criteria A
+    {label: 'Single or multiple motor and/or vocal tics', value: 85},
+
+    // Criteria B
+    {label: 'The tics have been present for less than 1 year since first tic onset', value: 86},
+
+    // Criteria C
+    {label: 'Onset is before age 18 years', value: 87},
+
+    // Criteria D
+    {label: 'The disturbance is not attributable to the physiological effects of a substance or another medical condition', value: 88},
+
+    // Criteria E
+    {label: 'Criteria have never been met for Tourette’s disorder or persistent (chronic) motor or vocal tic disorder', value: 89},
 
     // Other Specified Tic Disorder
     // The other specified tic disorder category is used in situations in which the clinician chooses to communicate the specific reason that the presentation does not meet the criteria for a tic disorder or any specific neurodevelopmental disorder. This is done by recording “other specified tic disorder” followed by the specific reason
