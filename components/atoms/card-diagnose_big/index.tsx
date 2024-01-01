@@ -128,38 +128,6 @@ function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
               }}
             />
           </StyledRow>
-          <StyledRow>
-            <DropdownComponent
-              isDarkMode={isDarkMode}
-              data={durationData}
-              label={'Duration'}
-              value={null}
-              setValue={null}
-            />
-            <DropdownComponent
-              isDarkMode={isDarkMode}
-              data={severityData}
-              label={'Severity'}
-              value={null}
-              setValue={null}
-            />
-          </StyledRow>
-          <StyledRow>
-            <DropdownComponent
-              isDarkMode={isDarkMode}
-              data={drugData}
-              label={'Drug Influenced?'}
-              value={null}
-              setValue={null}
-            />
-            <DropdownComponent
-              isDarkMode={isDarkMode}
-              data={distressData}
-              label={'Causes Distress?'}
-              value={null}
-              setValue={null}
-            />
-          </StyledRow>
         </DiagnoseSymptomCard>,
       );
     }
