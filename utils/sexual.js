@@ -49,7 +49,7 @@ export const sexualSymptoms = [
     // Criteria A ( three symptoms
     {label: 'Absent/reduced interest in sexual activity', value: 17},
     {label: 'Absent/reduced sexual/erotic thoughts or fantasies', value: 18},
-    {label: 'Reduced initiation of sexual activity | Typically unreceptive to a partner’s attempts to initiate', value: 19},
+    {label: '•Reduced initiation of sexual activity \n•Typically unreceptive to a partner’s attempts to initiate', value: 19},
     {label: 'Reduced sexual excitement/pleasure during sexual activity in almost all or all (approximately 75%–100%) sexual encounters', value: 20},
 
     // Criteria B

@@ -1,12 +1,12 @@
 export const sleepSymptoms = [
     // Insomia Disorder
     // Criteria A: One or more symptom
-    {label: 'Difficulty initiating sleep | In children, this may manifest as difficulty initiating sleep without caregiver intervention', value: 1},
-    {label: 'Difficulty maintaining sleep | Frequent awakenings | Problems returning to sleep after awakening\tIn children, this may manifest as difficulty returning to sleep without caregiver intervention', value: 2},
+    {label: '•Difficulty initiating sleep \n•In children, this may manifest as difficulty initiating sleep without caregiver intervention', value: 1},
+    {label: '•Difficulty maintaining sleep \n•Frequent awakenings \n•Problems returning to sleep after awakening\tIn children, this may manifest as difficulty returning to sleep without caregiver intervention', value: 2},
     {label: 'Early-morning awakening with inability to return to sleep', value: 3},
 
     // Criteria B
-    {label: 'Causes Clinically Significant Distress | Impairement in social / occupational / educational / academic / behavioral / other functioning', value: 4},
+    {label: '•Causes Clinically Significant Distress \n•Impairement in social / occupational / educational / academic / behavioral / other functioning', value: 4},
 
     // Criteria C
     {label: 'The sleep difficulty occurs at least 3 nights per week', value: 5},
@@ -26,8 +26,8 @@ export const sleepSymptoms = [
     // Hypersomnolence Disorder
     // Criteria A (at least one symptom)
     // Three times a week for 3 months
-    {label: 'Recurrent periods of sleep | Lapses into sleep within the same day ', value: 10},
-    {label: 'Prolonged main sleep more than 9 hours | Unrefreshing sleep', value: 11},
+    {label: '•Recurrent periods of sleep \n•Lapses into sleep within the same day ', value: 10},
+    {label: '•Prolonged main sleep more than 9 hours \n•Unrefreshing sleep', value: 11},
     {label: 'Difficulty being fully awake', value: 12},
 
     // Criteria B
@@ -49,19 +49,19 @@ export const sleepSymptoms = [
     // Criteria A
     // 3 months
     // Three times per week
-    {label: 'Recurrent periods of irrepressible need to sleep | Lapsing into sleep | Napping occuring within the same day', value: 18},
+    {label: '•Recurrent periods of irrepressible need to sleep \n•Lapsing into sleep \n•Napping occuring within the same day', value: 18},
 
     // Criteria B ( at l.east one of the following
     // Few times per month
-    {label: 'Episodes of Cataplexy | Brief episodes of sudden bilateral loss of muscle tone | Spontaneous grimaces or jaw-opening episodes with tongue thrusting or a global hypotonia,', value: 19},
+    {label: '•Episodes of Cataplexy \n•Brief episodes of sudden bilateral loss of muscle tone \n•Spontaneous grimaces or jaw-opening episodes with tongue thrusting or a global hypotonia,', value: 19},
     {label: 'Hypocretin deficiency', value: 21},
-    {label: 'Nocturnal sleep | Polysomnography showing rapid eye movement | Two or more sleep-onset REM periods', value: 22},
+    {label: '•Nocturnal sleep \n•Polysomnography showing rapid eye movement \n•Two or more sleep-onset REM periods', value: 22},
 
     // Obstructive Sleep Apnea Hypopnea
     // Criteria A: Either 1 or 2
     // per hour of sleep
-    {label: 'Evidence by polysomnography of at least five obstructive apneas | Nocturnal breathing disturbances | Snoring | Snorting | Gasping | Pause of breathing durring sleep | Daytime sleepiness | Fatigue | Unrefreshing sleep', value: 23},
-    {label: 'Evidence by polysomnography of 15 or more obstructive apneas | Hypopneas per hour of sleep regardless of accompanying symptoms', value: 24},
+    {label: '•Evidence by polysomnography of at least five obstructive apneas \n•Nocturnal breathing disturbances \n•Snoring \n•Snorting \n•Gasping \n•Pause of breathing durring sleep \n•Daytime sleepiness \n•Fatigue \n•Unrefreshing sleep', value: 23},
+    {label: '•Evidence by polysomnography of 15 or more obstructive apneas \n•Hypopneas per hour of sleep regardless of accompanying symptoms', value: 24},
 
     // Central Sleep Apnea
     // Criteria A

@@ -83,15 +83,15 @@ export const neurodevelopmentalSymptoms = [
 
     // Autism Spectrum Disorder
     // Criteria A
-    {label: 'Deficits in social-emotional reciprocity | Abnormal social approach | Failure of normal back-and-forth conversation | Reduced sharing of interests, emotions, or affect | Failure to initiate or respond to social interactions.', value: 31},
-    {label: 'Deficits in nonverbal communicative behaviors used for social interaction | Poorly integrated verbal and nonverbal communication | Abnormalities in eye contact and body language | Deficits in understanding and use of gestures; to a total lack of facial expressions and nonverbal communication', value: 32},
-    {label: 'Deficits in developing, maintaining, and understanding relationships | Difficulties adjusting behavior to suit various social contexts | Difficulties in sharing imaginative play or in making friends; to absence of interest in peers.', value: 33},
+    {label: '•Deficits in social-emotional reciprocity \n• Abnormal social approach \n• Failure of normal back-and-forth conversation \n• Reduced sharing of interests, emotions, or affect \n• Failure to initiate or respond to social interactions.', value: 31},
+    {label: '•Deficits in nonverbal communicative behaviors used for social interaction \n• Poorly integrated verbal and nonverbal communication \n• Abnormalities in eye contact and body language \n• Deficits in understanding and use of gestures; to a total lack of facial expressions and nonverbal communication', value: 32},
+    {label: '•Deficits in developing, maintaining, and understanding relationships \n• Difficulties adjusting behavior to suit various social contexts \n• Difficulties in sharing imaginative play or in making friends; to absence of interest in peers.', value: 33},
 
     // Criteria B
-    {label: 'Stereotyped or repetitive motor movements, use of objects, or speech | Motor stereotypes | Lining up toys | Flipping objects | Echolalia | Idiosyncratic phrases', value: 34},
-    {label: 'Insistence on sameness, inflexible adherence to routines, or ritualized patterns of verbal or nonverbal behavior | Extreme distress at small changes | Difficulty with transition | Rigid thinking pattern | Greeting rituals | Need to take same route or eat same food every day', value: 35},
-    {label: 'Highly restricted, fixated interests that are abnormal in intensity or focus | Strong attachment | Preoccupation with unusual objects | Excessively circumscribed or perseverative interests', value: 36},
-    {label: 'Hyper- or hyporeactivity to sensory input or unusual interest in sensory aspects of the environment | Parent indifference to pain/temperature | Adverse response to specific sounds | Excessive smelling or touching of objects | Visual fascination with lights or movement', value: 37},
+    {label: '•Stereotyped or repetitive motor movements, use of objects, or speech \n• Motor stereotypes \n• Lining up toys \n• Flipping objects \n• Echolalia \n• Idiosyncratic phrases', value: 34},
+    {label: '•Insistence on sameness, inflexible adherence to routines, or ritualized patterns of verbal or nonverbal behavior \n• Extreme distress at small changes \n• Difficulty with transition \n• Rigid thinking pattern \n• Greeting rituals \n• Need to take same route or eat same food every day', value: 35},
+    {label: '•Highly restricted, fixated interests that are abnormal in intensity or focus \n• Strong attachment \n• Preoccupation with unusual objects \n• Excessively circumscribed or perseverative interests', value: 36},
+    {label: '•Hyper- or hyporeactivity to sensory input or unusual interest in sensory aspects of the environment \n• Parent indifference to pain/temperature \n• Adverse response to specific sounds \n• Excessive smelling or touching of objects \n• Visual fascination with lights or movement', value: 37},
 
     // Criteria C
     {label: 'Symptoms must be present in the early developmental period', value: 38},
@@ -108,8 +108,8 @@ export const neurodevelopmentalSymptoms = [
     {label: 'Often fails to give close attention to details or makes careless mistakes in schoolwork, at work, or during other activities', value: 41},
     {label: 'Has difficulty sustaining attention in tasks or play activities ', value: 42},
     {label: 'Often does not seem to listen when spoken to directly', value: 43},
-    {label: 'Often does not follow through on instructions and fails to finish schoolwork, chores, or duties in the workplace | Starts tasks but quickly loses focus and is easily sidetracked', value: 44},
-    {label: 'Often has difficulty organizing tasks and activities | Difficulty managing sequntial tasks | Difficulty keeping materials and belongings | Messy disorganized work | Poor time management | Fail to meet deadlines', value: 45},
+    {label: 'Often does not follow through on instructions and fails to finish schoolwork, chores, or duties in the workplace \n• Starts tasks but quickly loses focus and is easily sidetracked', value: 44},
+    {label: '•Often has difficulty organizing tasks and activities \n• Difficulty managing sequntial tasks \n• Difficulty keeping materials and belongings \n• Messy disorganized work \n• Poor time management \n• Fail to meet deadlines', value: 45},
     {label: 'Often avoids, dislikes, or is reluctant to engage in tasks that require sustained mental effort', value: 46},
     {label: 'Often loses things necessary for tasks or activities', value: 47},
     {label: 'Is often easily distracted by extraneous stimuli ', value: 48},

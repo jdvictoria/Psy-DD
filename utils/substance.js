@@ -10,7 +10,7 @@ export const substanceSymptoms = [
     {label: 'Important social, occupational, or recreational activities are given up or reduced because of alcohol use', value: 7},
     {label: 'Recurrent alcohol use in situations in which it is physically hazardous', value: 8},
     {label: 'Alcohol use is continued despite knowledge of having a persistent or recurrent physical or psychological problemAlcohol use is continued despite knowledge of having a persistent or recurrent physical or psychological problem', value: 9},
-    {label: 'Need for markedly increased amounts of alcohol to achieve intoxication or desired effect. | Diminished effect with continued use of the same amount of alcohol', value: 10},
+    {label: '•Need for markedly increased amounts of alcohol to achieve intoxication or desired effect. \n•Diminished effect with continued use of the same amount of alcohol', value: 10},
     {label: 'Withdrawal', value: 11},
 
     // Alcohol Intoxication
@@ -18,7 +18,7 @@ export const substanceSymptoms = [
     {label: 'Recent ingestion of alcohol', value: 12},
 
     // Criteria B
-    {label: 'Clinically significant problematic behavioral or psychological changes developed shortly after alcohol ingestion | Inappropriate sexual or aggressive behavior | Mood lability | Impaired judgment', value: 13},
+    {label: 'Clinically significant problematic behavioral or psychological changes developed shortly after alcohol ingestion \n•Inappropriate sexual or aggressive behavior \n•Mood lability \n•Impaired judgment', value: 13},
 
     // Criteria C (one or more symptoms)
     // during and after
@@ -27,7 +27,7 @@ export const substanceSymptoms = [
     {label: 'Unsteady gait', value: 16},
     {label: 'Nystagmus', value: 17},
     {label: 'Impairment in attention or memory', value: 18},
-    {label: 'Stupor | Coma', value: 19},
+    {label: '•Stupor \n•Coma', value: 19},
 
     // Criteria D: "The signs or symptoms are not attributable to another medical condition and are not better explained by another mental disorder, including intoxication with another substance.
 
@@ -101,8 +101,8 @@ export const substanceSymptoms = [
     {label: 'Important social, occupational, or recreational activities are given up or reduced because of cannabis use', value: 54},
     {label: 'Recurrent cannabis use in situations in which it is physically hazardous', value: 55},
     {label: 'Cannabis use is continued despite knowledge of having a persistent or recurrent physical or psychological problem that is likely to have been caused or exacerbated by cannabis', value: 56},
-    {label: 'A need for markedly increased amounts of cannabis to achieve intoxication or desired effect | Markedly diminished effect with continued use of the same amount of cannabis', value: 57},
-    {label: 'The characteristic withdrawal syndrome for cannabis | Cannabis is taken to relieve or avoid withdrawal symptoms', value: 58},
+    {label: '•A need for markedly increased amounts of cannabis to achieve intoxication or desired effect \n•Markedly diminished effect with continued use of the same amount of cannabis', value: 57},
+    {label: '•The characteristic withdrawal syndrome for cannabis \n•Cannabis is taken to relieve or avoid withdrawal symptoms', value: 58},
 
     // Cannabis Intoxication
     // Criteria A:
@@ -127,8 +127,8 @@ export const substanceSymptoms = [
     {label: 'Cessation of cannabis use that has been heavy and prolonged (i.e., usually daily or almost daily use over a period of at least a few months)', value: 65},
 
     // Criteria B (three or more symptom)
-    {label: 'Irritability | Anger | Agression', value: 66},
-    {label: 'Nervousness | Anxiety', value: 67},
+    {label: '•Irritability \n•Anger \n•Agression', value: 66},
+    {label: '•Nervousness \n•Anxiety', value: 67},
     {label: 'Sleep Difficulty', value: 68},
     {label: 'Decreased Appetite or weight loss', value: 69},
     {label: 'Restlesness', value: 70},
@@ -150,7 +150,7 @@ export const substanceSymptoms = [
     {label: 'Important social, occupational, or recreational activities are given up or reduced because of phencyclidine use', value: 79},
     {label: 'Recurrent phencyclidine use in situations in which it is physically hazardous (e.g., driving an automobile or operating a machine when impaired by a phencyclidine)', value: 80},
     {label: 'Phencyclidine use is continued despite knowledge of having a persistent or recurrent physical or psychological problem that is likely to have been caused or exacerbated by the phencyclidine', value: 81},
-    {label: 'A need for markedly increased amounts of the phencyclidine to achieve intoxication or desired effect | "A markedly diminished effect with continued use of the same amount of the phencyclidine', value: 82},
+    {label: '•A need for markedly increased amounts of the phencyclidine to achieve intoxication or desired effect \n•"A markedly diminished effect with continued use of the same amount of the phencyclidine', value: 82},
 
     // Other Hallucinogen Intoxication
     // Criteria A
@@ -188,7 +188,7 @@ export const substanceSymptoms = [
     {label: 'Important social, occupational, or recreational activities are given up or reduced because of use of the inhalant substance', value: 99},
     {label: 'Recurrent use of the inhalant substance in situations in which it is physically hazardous', value: 100},
     {label: 'Use of the inhalant substance is continued despite knowledge of having a persistent or recurrent physical or psychological problem that is likely to have been caused or exacerbated by the substance', value: 101},
-    {label: 'A need for markedly increased amounts of the inhalant substance to achieve intoxication or desired effect | A markedly diminished effect with continued use of the same amount of the inhalant substance', value: 102},
+    {label: 'A need for markedly increased amounts of the inhalant substance to achieve intoxication or desired effect \n•A markedly diminished effect with continued use of the same amount of the inhalant substance', value: 102},
 
     // Inhalant Intoxication
     // Criteria A
@@ -210,7 +210,7 @@ export const substanceSymptoms = [
     {label: 'Tremor', value: 113},
     {label: 'Generalized muscle weakness', value: 114},
     {label: 'Blurred Vision or Diplopia', value: 115},
-    {label: 'Stupor | Coma', value: 116},
+    {label: 'Stupor \n•Coma', value: 116},
     {label: 'Euphoria', value: 117},
 
     // Criteria D
@@ -228,7 +228,7 @@ export const substanceSymptoms = [
     {label: 'Continued opioid use despite having persistent or recurrent social or interpersonal problems caused or exacerbated by the effects of opioids', value: 124},
     {label: 'Recurrent opioid use in situations in which it is physically hazardous', value: 125},
     {label: 'Continued opioid use despite knowledge of having a persistent or recurrent physical or psychological problem', value: 126},
-    {label: 'A need for markedly increased amounts of opioids to achieve intoxication or desired effect | A markedly diminished effect with continued use of the same amount of an opioid', value: 127},
+    {label: '•A need for markedly increased amounts of opioids to achieve intoxication or desired effect \n•A markedly diminished effect with continued use of the same amount of an opioid', value: 127},
 
     // Opioid Intoxication
     // Criteria A
@@ -253,7 +253,7 @@ export const substanceSymptoms = [
     // Criteria B
     // within minutes to several days after adminiter of opiod
     {label: 'Dysphoric Mood', value: 136},
-    {label: 'Nausea | Vomiting', value: 137},
+    {label: 'Nausea \n•Vomiting', value: 137},
     {label: 'Muscle aches', value: 138},
     {label: 'Lacrimation', value: 139},
     {label: 'Puppilary Dilation', value: 140},
@@ -284,7 +284,7 @@ export const substanceSymptoms = [
     {label: 'Sedative, hypnotic, or anxiolytic use is continued despite knowledge of having a persistent or recurrent physical or psychological problem', value: 154},
     {label: 'Need for markedly increased amounts of the sedative, hypnotic, or anxiolytic to achieve intoxication or desired effect', value: 155},
     {label: 'Markedly diminished effect with continued use of the same amount of the sedative, hypnotic, or anxiolytic', value: 156},
-    {label: 'Withdrawal syndrome for sedatives, hypnotics, or anxiolytics | Sedatives, hypnotics, or anxiolytics are taken to relieve or avoid withdrawal symptoms', value: 157},
+    {label: '•Withdrawal syndrome for sedatives, hypnotics, or anxiolytics \n•Sedatives, hypnotics, or anxiolytics are taken to relieve or avoid withdrawal symptoms', value: 157},
 
     // Sedative, Hypnotic, or Anxiolytic Intoxication
     // Criteria A
@@ -300,7 +300,7 @@ export const substanceSymptoms = [
     {label: 'Unsteady gait', value: 162},
     {label: 'Nystagmus', value: 163},
     {label: 'Impairment in cognition', value: 164},
-    {label: 'Stupor | Coma', value: 165},
+    {label: '•Stupor \n•Coma', value: 165},
 
     // Criteria D
     {label: 'The signs or symptoms are not attributable to another medical condition and are not better explained by another mental disorder, including intoxication with another substance', value: 166},
@@ -314,7 +314,7 @@ export const substanceSymptoms = [
     {label: 'Autonomic Hyperactivity', value: 168},
     {label: 'Hand Tremor', value: 169},
     {label: 'Insomia', value: 170},
-    {label: 'Nausea | Vomiting', value: 171},
+    {label: '•Nausea \n•Vomiting', value: 171},
     {label: 'Transient Visual', value: 172},
     {label: 'Psychomotor agitation', value: 173},
     {label: 'Anxiety', value: 174},
@@ -340,8 +340,8 @@ export const substanceSymptoms = [
     {label: 'Important social, occupational, or recreational activities are given up or reduced because of stimulant use.\n', value: 184},
     {label: 'Recurrent stimulant use in situations in which it is physically hazardous', value: 185},
     {label: 'Stimulant use is continued despite knowledge of having a persistent or recurrent physical or psychological problem that is likely to have been caused or exacerbated by the stimulant', value: 186},
-    {label: 'A need for markedly increased amounts of the stimulant to achieve intoxication or desired effect | A markedly diminished effect with continued use of the same amount of the stimulant', value: 187},
-    {label: 'The characteristic withdrawal syndrome for stimulant | The stimulant  (or a closely related substance) are taken to relieve or avoid withdrawal symptoms', value: 188},
+    {label: '•A need for markedly increased amounts of the stimulant to achieve intoxication or desired effect \n•A markedly diminished effect with continued use of the same amount of the stimulant', value: 187},
+    {label: '•The characteristic withdrawal syndrome for stimulant \n•The stimulant  (or a closely related substance) are taken to relieve or avoid withdrawal symptoms', value: 188},
 
     // Stimulant Intoxication
     // Criteria A
@@ -356,10 +356,10 @@ export const substanceSymptoms = [
     {label: 'Puppilary Dilation', value: 192},
     {label: 'Elevated or lowered blood pressure', value: 193},
     {label: 'Perspiration or chill', value: 194},
-    {label: 'Nausea | Vomiting', value: 195},
+    {label: '•Nausea \n•Vomiting', value: 195},
     {label: 'Evidence of weight loss', value: 196},
     {label: 'Psychomotor agitation', value: 197},
-    {label: 'Muscular weakness | Respiratory depression | Chest pain | Cardiac arrhytmias', value: 198},
+    {label: '•Muscular weakness \n•Respiratory depression \n•Chest pain \n•Cardiac arrhytmias', value: 198},
 
     // Criteria D
     // The signs or symptoms are not attributable to another medical condition and are not better explained by another mental disorder, including intoxication with another substance.
@@ -372,7 +372,7 @@ export const substanceSymptoms = [
     // few hours to several days
     {label: 'Fatigue', value: 200},
     {label: 'Unpleasant vivid dreams', value: 201},
-    {label: 'Insomia | Hypersomia', value: 202},
+    {label: '•Insomia \n•Hypersomia', value: 202},
     {label: 'Increased Appetite', value: 203},
     {label: 'Psychomotor retardation', value: 204},
 
@@ -396,15 +396,15 @@ export const substanceSymptoms = [
     {label: 'Important social, occupational, or recreational activities are given up or reduced because of tobacco use', value: 213},
     {label: 'Recurrent tobacco use', value: 214},
     {label: 'Tobacco use is continued despite knowledge of having a persistent or recurrent physical or psychological problem', value: 215},
-    {label: 'A need for markedly increased amounts of tobacco to achieve the desired effect | A markedly diminished effect with continued use of the same amount of tobacco', value: 216},
-    {label: 'The characteristic withdrawal syndrome for tobacco | Tobacco  is taken to relieve or avoid withdrawal symptoms', value: 217},
+    {label: '•A need for markedly increased amounts of tobacco to achieve the desired effect \n•A markedly diminished effect with continued use of the same amount of tobacco', value: 216},
+    {label: '•The characteristic withdrawal syndrome for tobacco \n•Tobacco  is taken to relieve or avoid withdrawal symptoms', value: 217},
 
     // Tobacco Withdrawal
     // Criteria A
     {label: 'Daily use of tobacco for at least several weeks', value: 218},
 
     // Criteria B (TWO OR MORE SYMPTOMS
-    {label: 'Irritability | Frustration | Anger', value: 219},
+    {label: '•Irritability \n•Frustration \n•Anger', value: 219},
     {label: 'Difficulty Concentrating', value: 220},
     {label: 'Increased Appetite', value: 221},
     {label: 'Restlesness', value: 222},
@@ -431,8 +431,8 @@ export const substanceSymptoms = [
     {label: 'Important social, occupational, or recreational activities are given up or reduced because of use of the substance', value: 233},
     {label: 'Recurrent use of the substance in situations in which it is physically hazardous', value: 234},
     {label: 'Use of the substance is continued despite knowledge of having a persistent or recurrent physical or psychological problem that is likely to have been caused or exacerbated by the substance', value: 235},
-    {label: 'A need for markedly increased amounts of the substance to achieve intoxication or desired effect | A markedly diminished effect with continued use of the same amount of the substance', value: 236},
-    {label: 'The characteristic withdrawal syndrome for other substance withdrawal) | The substance (or a closely related substance) is taken to relieve or avoid withdrawal symptoms', value: 237},
+    {label: '•A need for markedly increased amounts of the substance to achieve intoxication or desired effect \n•A markedly diminished effect with continued use of the same amount of the substance', value: 236},
+    {label: '•The characteristic withdrawal syndrome for other substance withdrawal) \n•The substance (or a closely related substance) is taken to relieve or avoid withdrawal symptoms', value: 237},
 
     // Other (or Unknown) Substance Withdrawal
     // Criteria A

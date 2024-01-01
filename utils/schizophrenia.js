@@ -2,11 +2,11 @@ export const schizophreniaSymptoms = [
     // Schizotypal (Personality) Disorder
     // Criteria A
     {label: 'Ideas of reference', value: 1},
-    {label: 'Odd beliefs that is inconsistent with subcultural norms | Magical Thinking', value: 2},
+    {label: '•Odd beliefs that is inconsistent with subcultural norms \n•Magical Thinking', value: 2},
     {label: 'Unusual perceptual experiences', value: 3},
     {label: 'Odd thinking and speech', value: 4},
-    {label: 'Suspiciousness | Paranoid ideation', value: 5},
-    {label: 'Inappropriate affect | Constricted affect', value: 6},
+    {label: '•Suspiciousness \n•Paranoid ideation', value: 5},
+    {label: '•Inappropriate affect \n•Constricted affect', value: 6},
     {label: 'Behavior or appearance is odd / eccentric / peculiar', value: 7},
     {label: 'Lack of close friends or confidants other than first-degree relatives', value: 8},
     {label: 'Excessive social anxiety that does not diminish with familiarity and tends to be associated with paranoid fears rather than negative judgments about self', value: 9},
@@ -36,7 +36,7 @@ export const schizophreniaSymptoms = [
     {label: 'Delusion', value: 16},
     {label: 'Hallucination', value: 17},
     {label: 'Disorganized Speech', value: 18},
-    {label: 'Grossly Disorganized | Catatonic Behavior', value: 19},
+    {label: '•Grossly Disorganized \n•Catatonic Behavior', value: 19},
 
     // Criteria B
     {label: 'Duration of an episode of the disturbance is at least 1 day but less than 1 month, with eventual full return to premorbid level of functioning', value: 20},
@@ -50,8 +50,8 @@ export const schizophreniaSymptoms = [
     {label: 'Delusion', value: 22},
     {label: 'Hallucination', value: 23},
     {label: 'Disorganized Speech', value: 24},
-    {label: 'Grossly Disorganized | Catatonic Behavior', value: 25},
-    {label: 'Negative Symptoms | Diminished emotional expression | Avolition', value: 26},
+    {label: '•Grossly Disorganized \n•Catatonic Behavior', value: 25},
+    {label: '•Negative Symptoms \n•Diminished emotional expression \n•Avolition', value: 26},
 
     // Criteria B
     {label: 'An episode of the disorder lasts at least 1 month but less than 6 months. When the diagnosis must be made without waiting for recovery, it should be qualified as “provisional"', value: 27},
@@ -68,8 +68,8 @@ export const schizophreniaSymptoms = [
     {label: 'Delusion', value: 30},
     {label: 'Hallucination', value: 31},
     {label: 'Disorganized Speech', value: 32},
-    {label: 'Grossly Disorganized | Catatonic Behavior', value: 33},
-    {label: 'Negative Symptoms | Diminished emotional expression | Avolition', value: 34},
+    {label: '•Grossly Disorganized \n•Catatonic Behavior', value: 33},
+    {label: '•Negative Symptoms \n•Diminished emotional expression \n•Avolition', value: 34},
 
     // Criteria B
     {label: 'For a significant portion of the time since the onset of the disturbance, level of functioning in one or more major areas, such as work, interpersonal relations, or self-care, is markedly below the level achieved prior to the onset', value: 35},
@@ -136,7 +136,7 @@ export const schizophreniaSymptoms = [
 
     // Catatonia Associated With Another Mental Disorder
     // Criteria A
-    {label: 'Stupor | No psychomotor activity | Not relating to environment', value: 56},
+    {label: '•Stupor \n•No psychomotor activity \n•Not relating to environment', value: 56},
     {label: 'Catalepsy', value: 57},
     {label: 'Waxy flexibility', value: 58},
     {label: 'Mutism', value: 59},
@@ -146,7 +146,7 @@ export const schizophreniaSymptoms = [
     {label: 'Stereotypy', value: 63},
     {label: 'Agitation', value: 64},
     {label: 'Grimacing', value: 65},
-    {label: 'Echolalia | Mimicking anothers speech', value: 66},
+    {label: '•Echolalia \n•Mimicking anothers speech', value: 66},
     {label: 'Echopraxia', value: 67},
 
     // Catatonic Disorder Due to Another Medical Condition

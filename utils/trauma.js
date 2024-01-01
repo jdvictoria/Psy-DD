@@ -7,10 +7,10 @@ export const traumaSymptoms = [
     // Criteria B (Atleast 1)
     {label: 'Minimal social / emotional response to others', value: 2},
     {label: 'Limited positive effect', value: 3},
-    {label: 'Unexplained irritability | Sadness | Fearfulness', value: 4},
+    {label: '•Unexplained irritability \n•Sadness \n•Fearfulness', value: 4},
 
     // Criteria C (Atleast 1)
-    {label: 'Social Neglect | Lack of stimulation / affection / basic emotional needs for comfort', value: 5},
+    {label: '•Social Neglect \n•Lack of stimulation / affection / basic emotional needs for comfort', value: 5},
     {label: 'Repeated changes of caregiver', value: 6},
     {label: 'Unusual setting (Foster Cares)', value: 7},
 
@@ -33,10 +33,10 @@ export const traumaSymptoms = [
     {label: 'Willingness to go with unfamiliar adults with no hesitation ', value: 14},
 
     // Criteria B
-    {label: 'The behavior in Criterian A not limited to impulsivity | Include Socially Disinhibited Behavior ', value: 15},
+    {label: '•The behavior in Criterian A not limited to impulsivity \n•Include Socially Disinhibited Behavior ', value: 15},
 
     // Criteria C (Atleast 1)
-    {label: 'Social Neglect | Lack of stimulation / affection / basic emotional needs for comfort', value: 16},
+    {label: '•Social Neglect \n•Lack of stimulation / affection / basic emotional needs for comfort', value: 16},
     // {label: 'Repeated changes of caregiver', value: 17},
     // {label: 'Unusual Setting (Foster Care)', value: 18},
 
@@ -46,7 +46,7 @@ export const traumaSymptoms = [
     // Criteria A (one or more)
     {label: 'Direct experience of traumatic events', value: 19},
     {label: 'Witnessing in person the event ', value: 20},
-    {label: 'The traumatic event occured to a family member / close friend | Actual or threathened death of family / friends | The event is violent / accidental', value: 21},
+    {label: '•The traumatic event occured to a family member / close friend \n•Actual or threathened death of family / friends \n•The event is violent / accidental', value: 21},
     {label: 'Extreme exposure to details of traumatic events', value: 22},
 
     // Criteria B (one or more)
@@ -61,7 +61,7 @@ export const traumaSymptoms = [
     {label: 'Avoiding external reminders / people / places / conversations / activities / objects / situations', value: 29},
 
     // Criteria D (?)
-    {label: 'Inability to remember important aspect of the traumatic event | Disscoacitive amnesia', value: 30},
+    {label: '•Inability to remember important aspect of the traumatic event \n•Disscoacitive amnesia', value: 30},
     {label: 'Exegerated beliefs about oneself', value: 31},
     {label: 'Blames himself / herself', value: 32},
     {label: 'Persistant negative emotional state / fear / horror / anger / guilt / shame', value: 33},
@@ -70,12 +70,12 @@ export const traumaSymptoms = [
     {label: 'Inability to experience happiness / satisfaction / loving feelings', value: 36},
 
     // Critera E (2 or more)
-    {label: 'Irritable Behavior | Angry Outburst | Physical agression to people / objects', value: 37},
-    {label: 'Recklesness | Self-Destructive Behavior', value: 38},
+    {label: '•Irritable Behavior \n•Angry Outburst \n•Physical agression to people / objects', value: 37},
+    {label: '•Recklesness \n•Self-Destructive Behavior', value: 38},
     {label: 'Hypervigilance', value: 39},
     {label: 'Exaggerated Startle Response', value: 40},
     {label: 'Concentration Problems', value: 41},
-    {label: 'Sleep Disturbance | Difficulty falling / staying asleep | Restless sleep', value: 42},
+    {label: '•Sleep Disturbance \n•Difficulty falling / staying asleep \n•Restless sleep', value: 42},
 
     // Criteria F (Disturbance for Criteria B, C, D, and E is more than 1 month)
 
@@ -89,7 +89,7 @@ export const traumaSymptoms = [
     // Posttraumatic Stress Disorder in Children 6 Years and Younger
     // Criteria A: One or more Symptoms
     {label: 'Directly experiencing the traumatic event', value: 46},
-    {label: 'Witnessing in person | Learning that the traumatic event happened to the parent or caregiver', value: 47},
+    {label: '•Witnessing in person \n•Learning that the traumatic event happened to the parent or caregiver', value: 47},
 
     // Criteria B: one or more symptom
     {label: 'Recurrent / Involuntary / Intrusive Distressing / Play Reenactment of the traumatic Event', value: 48},
@@ -99,19 +99,19 @@ export const traumaSymptoms = [
     {label: 'Physiological Reactions when reminded of the traumatic event', value: 52},
 
     // Criteria C: One or more symptoms
-    {label: 'Avoidance to activities / places that reminds the traumatic event | Avoidance to physical reminders of the traumatic event', value: 53},
+    {label: 'Avoidance to activities / places that reminds the traumatic event \n•Avoidance to physical reminders of the traumatic event', value: 53},
     {label: 'Avoidance to people / conversations / interpersonal situations about the traumatic event', value: 54},
-    {label: 'Fear | Guilt | Sadness | Shame | Confusion', value: 55},
-    {label: 'Diminishes Interest to activities | Constriction of play', value: 56},
+    {label: '•Fear \n•Guilt \n•Sadness \n•Shame \n•Confusion', value: 55},
+    {label: 'Diminishes Interest to activities \n•Constriction of play', value: 56},
     {label: 'Socially Withdrawn Behavior', value: 57},
     {label: 'Socially Withdrawn Behavior', value: 58},
 
     // Criteria D: Two or more symptoms
-    {label: 'Irritable Behavior | Angry Outburst | Physical agression to people / objects', value: 59},
+    {label: '•Irritable Behavior \n•Angry Outburst \n•Physical agression to people / objects', value: 59},
     {label: 'Hypervigilance', value: 60},
     {label: 'Exaggerated Startle Response', value: 61},
     {label: 'Concentration Problems', value: 62},
-    {label: 'Sleep Disturbance | Difficulty falling / staying asleep | Restless sleep', value: 63},
+    {label: '•Sleep Disturbance \n•Difficulty falling / staying asleep \n•Restless sleep', value: 63},
 
     // Criteria E: The duration of the disturbance is more than 1 month
     // Criteria F: The disturbance causes clinically significant distress or impairment in relationships with parents, siblings, peers, or other caregivers or with school behavior.
@@ -121,7 +121,7 @@ export const traumaSymptoms = [
     // Criteria A: one or more symptoms
     {label: 'Directly experiencing the traumatic Event', value: 64},
     {label: 'Witnessing in person', value: 65},
-    {label: 'Learning that the event(s) occurred to a close family member or close friend. | Exterme expsoure to aversive details of the traumatic event', value: 66},
+    {label: 'Learning that the event(s) occurred to a close family member or close friend. \n•Exterme expsoure to aversive details of the traumatic event', value: 66},
 
     // Criteria B: 9 or more symptoms
     // Duration 3 days to 1 month
@@ -129,12 +129,12 @@ export const traumaSymptoms = [
     {label: 'Recurrent distressing dreams related to the traumatic event', value: 68},
     {label: 'Intense / Prolonged distress', value: 69},
     {label: 'Inability to experience happiness / satisfaction / loving feelings', value: 70},
-    {label: 'Dissociative | Seeing oneself from another perspective | Being in a Daze | Time slowing', value: 71},
-    {label: 'Inability to remember important aspect of the traumatic event | Disscoacitive amnesia', value: 72},
+    {label: '•Dissociative \n•Seeing oneself from another perspective \n•Being in a Daze \n•Time slowing', value: 71},
+    {label: 'Inability to remember important aspect of the traumatic event \n•Disscoacitive amnesia', value: 72},
     {label: 'Avoidance to distressing memories / thoughts / feelings / closely associated with the traumatic event', value: 73},
     {label: 'Avoiding external reminders / people / places / conversations / activities / objects / situations', value: 74},
-    {label: 'Sleep Disturbance | Difficulty falling / staying asleep | Restless sleep', value: 75},
-    {label: 'Irritable Behavior | Angry Outburst | Physical agression to people / objects', value: 76},
+    {label: '•Sleep Disturbance \n•Difficulty falling / staying asleep \n•Restless sleep', value: 75},
+    {label: '•Irritable Behavior \n•Angry Outburst \n•Physical agression to people / objects', value: 76},
     {label: 'Hypervigilance', value: 77},
     {label: 'Concentration Problems', value: 78},
     {label: 'Exaggerated Startle Response', value: 79},
@@ -171,7 +171,7 @@ export const traumaSymptoms = [
     {label: 'Identity Disruption', value: 86},
     {label: 'Sense of Disbelief about the death', value: 87},
     {label: 'Avoidance of reminders that the person is dead', value: 88},
-    {label: 'Intense emotional pain | Anger | Bitterness | Sorrow', value: 89},
+    {label: '•Intense emotional pain \n•Anger \n•Bitterness \n•Sorrow', value: 89},
     {label: 'Problem engaging with friends / pursuing interest / planning of the future', value: 90},
     {label: 'Emotional numbness', value: 90},
 

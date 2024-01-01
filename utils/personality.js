@@ -48,11 +48,11 @@ export const personalitySymptoms = [
     // Schizotypal Personality Disorder
     // Criteria A (fiveor more symptoms)
     {label: 'Ideas of reference', value: 24},
-    {label: 'Odd beliefs that is inconsistent with subcultural norms | Magical Thinking that influences behavior inconsitent with subcultural norm', value: 25},
+    {label: '•Odd beliefs that is inconsistent with subcultural norms \n•Magical Thinking that influences behavior inconsitent with subcultural norm', value: 25},
     {label: 'Unusual perceptual experiences', value: 26},
     {label: 'Odd thinking and speech', value: 27},
-    {label: 'Suspiciousness | Paranoid ideation', value: 28},
-    {label: 'Inappropriate affect | Constricted affect', value: 29},
+    {label: '•Suspiciousness \n•Paranoid ideation', value: 28},
+    {label: '•Inappropriate affect \n•Constricted affect', value: 29},
     {label: 'Behavior or appearance is odd / eccentric / peculiar', value: 30},
     {label: 'Lack of close friends or confidants other than first-degree relatives', value: 30},
     {label: 'Excessive social anxiety that does not diminish with familiarity and tends to be associated with paranoid fears rather than negative judgments about self', value: 31},
@@ -64,23 +64,23 @@ export const personalitySymptoms = [
     // Criteria A (Five or more symptoms)
     {label: 'Efforts to avoid real or imagined abandonment', value: 33},
     {label: 'Unstable and intense interpersonal relationships characterized by alternating between extremes of idealization and devaluation', value: 34},
-    {label: 'Identity disturbance | Markedly and persistently unstable selfimage or sense of self', value: 35},
+    {label: '•Identity disturbance \n•Markedly and persistently unstable selfimage or sense of self', value: 35},
     {label: 'Impulsivity that are self-damaging', value: 36},
     {label: 'Recurrent suicidal behavior, gestures, or threats, or selfmutilating behavior', value: 37},
     {label: 'Affective instability due to a marked reactivity of mood', value: 38},
     {label: 'Chronic feelings of emptiness', value: 39},
-    {label: 'Inappropriate, intense anger | Difficulty controlling anger', value: 40},
-    {label: 'Transient, stress-related paranoid ideation | Dissociative symptoms', value: 41}, // severe
+    {label: '•Inappropriate, intense anger \n•Difficulty controlling anger', value: 40},
+    {label: '•Transient, stress-related paranoid ideation \n•Dissociative symptoms', value: 41}, // severe
 
     // Histrionic Personality Disorder
     // Criteria A (Five or more symptoms)
     {label: 'Uncomfortable in situations in which he or she is not the center of attention', value: 42},
     {label: 'Interaction with others is often inappropriate sexually seductive or provocative behavior', value: 43},
-    {label: 'Displays rapidly shifting | Shallow expression of emotions' , value: 44},
+    {label: '•Displays rapidly shifting \n•Shallow expression of emotions' , value: 44},
     {label: 'Uses physical appearance to draw attention to self', value: 45},
     {label: 'Has a style of speech that is excessively impressionistic and lacking in detail', value: 46},
-    {label: 'Shows self-dramatization, theatricality | Exaggerated expression of emotion', value: 47},
-    {label: 'Is suggestible | Easily Influenced', value: 48},
+    {label: '•Shows self-dramatization, theatricality \n•Exaggerated expression of emotion', value: 47},
+    {label: '•Is suggestible \n•Easily Influenced', value: 48},
     {label: 'Considers relationships to be more intimate than they actually are', value: 49},
 
     // Narcissistic Personality Disorder

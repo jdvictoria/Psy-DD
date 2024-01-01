@@ -2,7 +2,7 @@ export const obsessiveSymptoms = [
     // Obsessive-Compulsive Disorder
     // Criteria A
     {label: 'Recurrent and persistent thoughts, urges, or images that are experienced, at some time during the disturbance, as intrusive and unwanted, and that in most individuals cause marked anxiety or distress', value: 1},
-    {label: 'Attempts to ignore or suppress such thoughts, urges, or images, or to neutralize them with some other thought or action | Performing compulsion', value: 2},
+    {label: '•Attempts to ignore or suppress such thoughts, urges, or images, or to neutralize them with some other thought or action \n•Performing compulsion', value: 2},
     {label: 'Repetitive behaviors', value: 3},
     {label: 'The behaviors aimed at preventing or reducing anxiety or distress, or preventing some dreaded event or situation', value: 4},
 
