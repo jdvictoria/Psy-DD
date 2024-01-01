@@ -185,8 +185,4 @@ export const sleepSymptoms = [
 
     // Criteria E
     {label: 'Clinically significant distress or impairment in social, occupational, or other important areas of functioning', value: 66},
-    {label: 'Withdrawal', value: 67},
-    {label: 'Withdrawal', value: 68},
-    {label: 'Withdrawal', value: 69},
-    {label: 'Withdrawal', value: 70},
 ]
