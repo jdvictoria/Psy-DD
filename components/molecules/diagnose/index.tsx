@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {ScrollView, Image} from 'react-native';
+import {ScrollView} from 'react-native';
 
 import {
   BodyContainer,
@@ -12,7 +12,7 @@ import {contentText, StyledText20} from '../../../styles/form-text';
 import CardDiagnoseResult from '../../atoms/card-diagnose_result';
 import CardDiagnoseSmall from '../../atoms/card-diagnose_small';
 import CardDiagnoseBig from '../../atoms/card-diagnose_big';
-import CardDiagnoseFilter from "../../atoms/card-diagnose-filter";
+import CardDiagnoseFilter from '../../atoms/card-diagnose-filter';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -20,17 +20,20 @@ function HomeDiagnose({isDarkMode}) {
 
   const [result, setResult] = useState('');
   const [filter, setFilter] = useState('');
-
-  // console.log(filter);
-  const [bigCardCount, setBigCardCount] = useState(0);
+  const [criteriaInstance, setCriteriaInstance] = useState(0);
 
   const clearBigCard = () => {
-    setBigCardCount(0);
+    setCriteriaInstance(0);
   };
 
   const addBigCard = () => {
-    setBigCardCount(prevCount => prevCount + 1);
+    setCriteriaInstance(prevCount => prevCount + 1);
   };
+
+  // Handle Results
+  const [numbers, setNumbers] = useState([]);
+
+  console.log(numbers);
 
   return (
     <StyledView>
@@ -63,8 +66,14 @@ function HomeDiagnose({isDarkMode}) {
             filter={filter}
           />
           <CardDiagnoseFilter isDarkMode={isDarkMode} setFilter={setFilter} />
-          {[...Array(bigCardCount)].map((_, index) => (
-            <CardDiagnoseBig key={index} isDarkMode={isDarkMode} filter={filter} bigCardCount={String.fromCharCode('A'.charCodeAt(0) + index)} />
+          {[...Array(criteriaInstance)].map((_, index) => (
+            <CardDiagnoseBig
+              key={index}
+              isDarkMode={isDarkMode}
+              filter={filter}
+              setNumbers={setNumbers}
+              bigCardCount={String.fromCharCode('A'.charCodeAt(0) + index)}
+            />
           ))}
         </ScrollView>
       </BodyContainer>
