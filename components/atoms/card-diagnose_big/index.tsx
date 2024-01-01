@@ -6,6 +6,15 @@ import {contentText, StyledText16} from "../../../styles/form-text";
 import DropdownComponent from '../dropdown-diagnose';
 
 import {traumaSymptoms} from '../../../utils/trauma';
+import {somaticSymptoms} from "../../../utils/somatic";
+import {sleepSymptoms} from "../../../utils/sleep";
+import {sexualSymptoms} from "../../../utils/sexual";
+import {schizophreniaSymptoms} from "../../../utils/schizophrenia";
+import {personalitySymptoms} from "../../../utils/personality";
+import {paraphilicSymptoms} from "../../../utils/paraphilic";
+import {obsessiveSymptoms} from "../../../utils/obsessive";
+import {neurodevelopmentalSymptoms} from "../../../utils/neurodevelopmental";
+import {substanceSymptoms} from "../../../utils/substance";
 
 const dummyData = [
     {label: 'Item 1', value: '1'},
@@ -26,14 +35,47 @@ function CardDiagnoseBig({isDarkMode, filter, bigCardCount}) {
     let drugData: { label: string; value: string; }[] | { label: string; value: number; }[];
     let distressData: { label: string; value: string; }[] | { label: string; value: number; }[];
 
+    switch (filter) {
+        case 'a':
+            symptomData = traumaSymptoms;
+            break;
+        case 'b':
+            symptomData = somaticSymptoms;
+            break;
+        case 'c':
+            symptomData = sleepSymptoms;
+            break;
+        case 'd':
+            symptomData = sexualSymptoms;
+            break;
+        case 'e':
+            symptomData = schizophreniaSymptoms;
+            break;
+        case 'f':
+            symptomData = personalitySymptoms;
+            break;
+        case 'g':
+            symptomData = paraphilicSymptoms;
+            break;
+        case 'h':
+            symptomData = obsessiveSymptoms;
+            break;
+        case 'i':
+            symptomData = neurodevelopmentalSymptoms;
+            break;
+        case 'j':
+            symptomData = substanceSymptoms;
+            break;
+        default:
+            break;
+    }
+
     if (filter === 'a') {
-        symptomData = traumaSymptoms;
         durationData = dummyData;
         severityData = dummyData;
         drugData = dummyData;
         distressData = dummyData;
     } else {
-        symptomData = dummyData;
         durationData = dummyData;
         severityData = dummyData;
         drugData = dummyData;
