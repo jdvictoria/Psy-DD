@@ -20,6 +20,13 @@ export const StyledRow = styled.View`
   flex-direction: row;
 `;
 
+export const StyledTouchableRow = styled.TouchableOpacity`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+`;
+
 export const StyledCol = styled.View`
   display: flex;
   justify-content: center;

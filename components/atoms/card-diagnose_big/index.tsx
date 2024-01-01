@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {DiagnoseSymptomCard, StyledRow} from '../../../styles/form-container';
+import {DiagnoseSymptomCard, StyledRow, StyledTouchableRow} from '../../../styles/form-container';
 import {contentText, StyledText16} from "../../../styles/form-text";
 
 import DropdownComponent from '../dropdown-diagnose';
@@ -59,6 +59,9 @@ function CardDiagnoseBig({isDarkMode, filter, bigCardCount}) {
                 <DropdownComponent isDarkMode={isDarkMode} data={distressData} label={'Causes Distress?'} value={null} setValue={null} />
             </StyledRow>
         </DiagnoseSymptomCard>
+        <StyledTouchableRow style={{width: '90%', marginTop: 5, marginBottom: 10}}>
+            <StyledText16 style={[contentStyle.bold, {color: "#959595"}]}>Add Symptom</StyledText16>
+        </StyledTouchableRow>
     </>
   );
 }
