@@ -18,10 +18,10 @@ export const traumaSymptoms = [
   {label: 'Repeated changes of caregiver', value: 6},
   {label: 'Unusual setting (Foster Cares)', value: 7},
 
-  // Criteria D =  The care in Criterion C is presumed to be responsible for the disturbed behavior in Criterion A (
+  // Criteria D
   {
     label:
-      ' The care in Criterion C is presumed to be responsible for the disturbed behavior in Criterion A',
+      'The care in Criterion C is presumed to be responsible for the disturbed behavior in Criterion A',
     value: 8,
   },
 
