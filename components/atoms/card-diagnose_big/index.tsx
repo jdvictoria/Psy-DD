@@ -17,13 +17,14 @@ const dummyData = [
 // @ts-ignore
 function CardDiagnoseBig({isDarkMode, filter, bigCardCount}) {
     const contentStyle = contentText(isDarkMode);
+
     const [additionalCardCount, setAdditionalCardCount] = useState(1);
 
-    let symptomData;
-    let durationData;
-    let severityData;
-    let drugData;
-    let distressData;
+    let symptomData: { label: string; value: string; }[] | { label: string; value: number; }[];
+    let durationData: { label: string; value: string; }[] | { label: string; value: number; }[];
+    let severityData: { label: string; value: string; }[] | { label: string; value: number; }[];
+    let drugData: { label: string; value: string; }[] | { label: string; value: number; }[];
+    let distressData: { label: string; value: string; }[] | { label: string; value: number; }[];
 
     if (filter === 'a') {
         symptomData = traumaSymptoms;
@@ -51,7 +52,7 @@ function CardDiagnoseBig({isDarkMode, filter, bigCardCount}) {
                     key={`additionalCard-${i}`}
                     style={{
                         backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF',
-                        marginTop: 10, // Adjust the spacing as needed
+                        marginTop: 10,
                     }}
                 >
                     <StyledRow>
