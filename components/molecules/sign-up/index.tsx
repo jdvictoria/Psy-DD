@@ -2,11 +2,12 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {Alert, Image, TouchableOpacity} from 'react-native';
 
 import * as Progress from 'react-native-progress';
-import {firebase} from '@react-native-firebase/auth';
 import {WebView, WebViewMessageEvent} from 'react-native-webview';
 
-import {StyledRow} from '../../../styles/input-container';
+import {firebase} from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore';
 
+import {StyledRow} from '../../../styles/input-container';
 import {
   contentText,
   inputText,
@@ -29,14 +30,22 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
     Alert.alert(
       'Email Verification Sent',
       'Check your email and verify your account.',
-      [{text: 'OK', onPress: () => console.log('OK Pressed')}],
+      [
+        {
+          text: 'OK',
+          onPress: () => {
+            console.log('OK Pressed');
+            setIsSignIn(true);
+          },
+        },
+      ],
     );
 
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
-  const [byLicense, setByLicense] = useState(true);
-  const [formStep, setFormStep] = useState(1);
+  const [byLicense, setByLicense] = useState(false);
+  const [formStep, setFormStep] = useState(0);
 
   const [verifyError, setVerifyError] = useState(null);
   const [signUpError, setSignUpError] = useState(null);
@@ -58,10 +67,6 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
     const timeoutId = setTimeout(clearSignUpError, 3000);
     return () => clearTimeout(timeoutId);
   }, [signUpError, clearSignUpError]);
-
-  const handleChangeMode = () => {
-    setByLicense((prevState: any) => !prevState);
-  };
 
   const handleNextStep = () => {
     setFormStep(formStep + 1);
@@ -97,18 +102,38 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
   const [lastName, setLastName] = useState('');
 
   const handleSignUp = async () => {
-    await firebase.auth().currentUser?.reload();
-    await firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then(async () => {
-        await firebase.auth().currentUser?.sendEmailVerification();
-        alertEmailVerification();
-        setIsSignIn(true);
-      })
-      .catch(error => {
-        setSignUpError('Error: Invalid Email / Password');
-      });
+    try {
+      // Create user using Firebase Authentication
+      const userCredential = await firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password);
+
+      // Send email verification
+      await userCredential.user?.sendEmailVerification();
+      alertEmailVerification();
+
+      console.log(firebase.auth().currentUser?.uid);
+      // Add user data to Firestore
+      await firestore()
+        .collection('Users')
+        .doc(firebase.auth().currentUser?.uid)
+        .set({
+          FirstName: firstName,
+          LastName: lastName,
+          Birthday: dateString,
+          License: license,
+        });
+
+      console.log('User added!');
+    } catch (error) {
+      if (error.code === 'auth/email-already-in-use') {
+        setSignUpError('Error: Email Already In Use');
+      } else if (error.code === 'auth/invalid-email') {
+        setSignUpError('Error: Invalid Email');
+      } else {
+        console.error('Error creating user:', error);
+      }
+    }
   };
 
   // Web View
@@ -223,37 +248,7 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
           marginBottom: 15,
         }}>
         <StyledRow style={{width: '100%', marginBottom: 24}}>
-          {formStep === 1 && (
-            <TouchableOpacity
-              disabled={isValid}
-              style={{
-                display: 'flex',
-                position: 'absolute',
-                justifyContent: 'center',
-                alignItems: 'center',
-                right: 20,
-              }}
-              onPress={handleChangeMode}>
-              <Image
-                style={{
-                  width: 25,
-                  height: 25,
-                  resizeMode: 'contain',
-                }}
-                source={
-                  byLicense
-                    ? isDarkMode
-                      ? require('../../../assets/icons/byname-icon_dark.png')
-                      : require('../../../assets/icons/byname-icon.png')
-                    : isDarkMode
-                    ? require('../../../assets/icons/bylicense-icon_dark.png')
-                    : require('../../../assets/icons/bylicense-icon.png')
-                }
-                alt={'Calendar'}
-              />
-            </TouchableOpacity>
-          )}
-          {formStep === 2 && (
+          {(formStep === 1 || formStep === 2) && (
             <TouchableOpacity
               style={{
                 display: 'flex',
@@ -280,38 +275,46 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
           )}
           <StyledText30 style={inputStyle.semibold}>Sign Up</StyledText30>
         </StyledRow>
+        {formStep === 0 && (
+          <>
+            <FormInput>
+              <AuthFirstName
+                isDarkMode={isDarkMode}
+                name={firstName}
+                setName={setFirstName}
+              />
+              <AuthLastName
+                isDarkMode={isDarkMode}
+                name={lastName}
+                setName={setLastName}
+              />
+            </FormInput>
+            <FormButton onPress={handleNextStep}>
+              <StyledText16
+                style={[
+                  contentStyle.semibold,
+                  {color: 'white', paddingTop: 0},
+                ]}>
+                Next
+              </StyledText16>
+            </FormButton>
+          </>
+        )}
         {formStep === 1 && (
           <>
             <FormInput>
-              {byLicense ? (
-                <>
-                  <AuthDate
-                    isDarkMode={isDarkMode}
-                    date={date}
-                    setDate={setDate}
-                    dateString={dateString}
-                    setDateString={setDateString}
-                  />
-                  <AuthLicense
-                    isDarkMode={isDarkMode}
-                    license={license}
-                    setLicense={setLicense}
-                  />
-                </>
-              ) : (
-                <>
-                  <AuthFirstName
-                    isDarkMode={isDarkMode}
-                    name={firstName}
-                    setName={setFirstName}
-                  />
-                  <AuthLastName
-                    isDarkMode={isDarkMode}
-                    name={lastName}
-                    setName={setLastName}
-                  />
-                </>
-              )}
+              <AuthDate
+                isDarkMode={isDarkMode}
+                date={date}
+                setDate={setDate}
+                dateString={dateString}
+                setDateString={setDateString}
+              />
+              <AuthLicense
+                isDarkMode={isDarkMode}
+                license={license}
+                setLicense={setLicense}
+              />
             </FormInput>
             <FormButton onPress={!isValid ? handleVerify : handleNextStep}>
               {(!verifyClick || isValid) && (
