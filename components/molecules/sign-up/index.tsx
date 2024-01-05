@@ -5,7 +5,6 @@ import * as Progress from 'react-native-progress';
 import {WebView, WebViewMessageEvent} from 'react-native-webview';
 
 import {firebase} from '@react-native-firebase/auth';
-import firestore from '@react-native-firebase/firestore';
 
 import {StyledRow} from '../../../styles/input-container';
 import {
@@ -44,7 +43,7 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
-  const [byLicense, setByLicense] = useState(false);
+  const [byLicense, setByLicense] = useState(true);
   const [formStep, setFormStep] = useState(0);
 
   const [verifyError, setVerifyError] = useState(null);
@@ -82,7 +81,7 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
       timeoutId = setTimeout(() => {
         setVerifyError('Error: PRC Authentication Failed');
         setVerifyClick(false);
-        setOpenWeb(false);
+        // setOpenWeb(false);
       }, 5000);
     } else {
       clearTimeout(timeoutId);
@@ -96,8 +95,8 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [date, setDate] = useState(new Date());
-  const [dateString, setDateString] = useState('');
-  const [license, setLicense] = useState('');
+  const [dateString, setDateString] = useState('03/28/1986');
+  const [license, setLicense] = useState('0001444');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 
@@ -114,15 +113,6 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
 
       console.log(firebase.auth().currentUser?.uid);
       // Add user data to Firestore
-      await firestore()
-        .collection('Users')
-        .doc(firebase.auth().currentUser?.uid)
-        .set({
-          FirstName: firstName,
-          LastName: lastName,
-          Birthday: dateString,
-          License: license,
-        });
 
       console.log('User added!');
     } catch (error) {
@@ -149,82 +139,79 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
     if (webViewRef.current) {
       const injectScript = byLicense
         ? `
-        document.querySelector('a[href="#messages"]').click();
+            document.querySelector('a[href="#messages"]').click();
 
-        setTimeout(() => {
-          const selectElement = document.querySelector('.form-control.ddselect.profs.select2-hidden-accessible#verLProf');
-          if (selectElement) {
-            // Simulate selecting the option with value "57"
-            const optionToSelect = selectElement.querySelector('option[value="57"][data-select2-id="214"]');
-            if (optionToSelect) {
-            if (optionToSelect) {
-              optionToSelect.selected = true;
-              selectElement.dispatchEvent(new Event('change', { bubbles: true }));
-            }
-          }
-          
-          var licenseInput = document.getElementById('verLLicense');
-          licenseInput.value = '${license}';
-          
-          var dateInput = document.getElementById('verLBdate');
-          dateInput.value = '${dateString}';
-          
-          setTimeout(() => {
-            var verifyButton = document.getElementById('verifyNAbtn');
-            if (verifyButton) {
-              verifyButton.click();
-            }
-          }, 500);
-        }, 500);
-        
-        const targetDiv = document.getElementById('myModalVerify');
-        const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-            if (mutation.attributeName === 'style' && targetDiv.style.display === 'block') {
-              window.ReactNativeWebView.postMessage('myModalVerifyDisplayChanged');
-            }
-          });
-        });
-        observer.observe(targetDiv, { attributes: true });
-  `
+            setTimeout(() => {
+                const selectElement = document.querySelector('.form-control.ddselect.profs.select2-hidden-accessible#verLProf');
+                if (selectElement) {
+                    const optionToSelect = selectElement.querySelector('option[value="57"][data-select2-id="214"]');
+                    if (optionToSelect) {
+                        optionToSelect.selected = true;
+                        selectElement.dispatchEvent(new Event('change', { bubbles: true }));
+                    }
+                }
+
+                var licenseInput = document.getElementById('verLLicense');
+                licenseInput.value = '${license}';
+
+                var dateInput = document.getElementById('verLBdate');
+                dateInput.value = '${dateString}';
+                
+                setTimeout(() => {
+                    var verifyButton = document.getElementById('verifyLbtn');
+                    if (verifyButton) {
+                        verifyButton.click();
+                    }
+                }, 500);
+               
+                const targetDiv = document.getElementById('myModalVerifySCAN');
+                const observer = new MutationObserver((mutations) => {
+                    mutations.forEach((mutation) => {
+                        if (mutation.attributeName === 'style' && targetDiv.style.display === 'block') {
+                            window.ReactNativeWebView.postMessage('myModalVerifyDisplayChanged');
+                        }
+                    });
+                });
+                observer.observe(targetDiv, { attributes: true });
+            }, 500);
+        `
         : `
-        document.querySelector('a[href="#profile"]').click();
-    
-        setTimeout(() => {
-          const selectElement = document.querySelector('.form-control.ddselect.profs.select2-hidden-accessible#verNaProf');
-          if (selectElement) {
-          // Simulate selecting the option with value "57"
-            const optionToSelect = selectElement.querySelector('option[value="57"][data-select2-id="140"]');
-            if (optionToSelect) {
-              optionToSelect.selected = true;
-              selectElement.dispatchEvent(new Event('change', { bubbles: true }));
-            }
-          }
-      
-        var fnameInput = document.getElementById('verNaFname');
-        fnameInput.value = '${firstName}';
-      
-        var lnameInput = document.getElementById('verNaLname');
-        lnameInput.value = '${lastName}';
-      
-          setTimeout(() => {
-            var verifyButton = document.getElementById('verifyNAbtn');
-            if (verifyButton) {
-              verifyButton.click();
-            }
-          }, 500);
-        }, 500);
+            document.querySelector('a[href="#profile"]').click();
 
-        const targetDiv = document.getElementById('myModalVerify');
-        const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-            if (mutation.attributeName === 'style' && targetDiv.style.display === 'block') {
-              window.ReactNativeWebView.postMessage('myModalVerifyDisplayChanged');
-            }
-          });
-        });
-        observer.observe(targetDiv, { attributes: true });
-  `;
+            setTimeout(() => {
+                const selectElement = document.querySelector('.form-control.ddselect.profs.select2-hidden-accessible#verNaProf');
+                if (selectElement) {
+                    const optionToSelect = selectElement.querySelector('option[value="57"][data-select2-id="140"]');
+                    if (optionToSelect) {
+                        optionToSelect.selected = true;
+                        selectElement.dispatchEvent(new Event('change', { bubbles: true }));
+                    }
+                }
+
+                var fnameInput = document.getElementById('verNaFname');
+                fnameInput.value = '${firstName}';
+
+                var lnameInput = document.getElementById('verNaLname');
+                lnameInput.value = '${lastName}';
+
+                setTimeout(() => {
+                    var verifyButton = document.getElementById('verifyNAbtn');
+                    if (verifyButton) {
+                        verifyButton.click();
+                    }
+                }, 500);
+
+                const targetDiv = document.getElementById('myModalVerify');
+                const observer = new MutationObserver((mutations) => {
+                    mutations.forEach((mutation) => {
+                        if (mutation.attributeName === 'style' && targetDiv.style.display === 'block') {
+                            window.ReactNativeWebView.postMessage('myModalVerifyDisplayChanged');
+                        }
+                    });
+                });
+                observer.observe(targetDiv, { attributes: true });
+            }, 500);
+        `;
 
       webViewRef.current.injectJavaScript(injectScript);
     }
@@ -234,7 +221,6 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
     if (event.nativeEvent.data === 'myModalVerifyDisplayChanged') {
       setIsValid(true);
       setVerifyClick(false);
-      setOpenWeb(false);
     }
   };
 
@@ -342,6 +328,7 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
                   source={{uri: 'https://online.prc.gov.ph/Verification'}}
                   onLoad={handleWebViewLoad}
                   onMessage={handleWebViewMessage}
+                  style={{flex: 1}}
                 />
               )}
             </FormButton>

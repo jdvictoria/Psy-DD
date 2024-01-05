@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* dsm5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* dsm5Tests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-dsm5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-dsm5.a */; };
 		0ED2FDE12B0BBF2200614399 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ED2FDE02B0BBF2200614399 /* GoogleService-Info.plist */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -16,14 +15,15 @@
 		3CCF3CAC3BD441DDBF913968 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFB532C0ED524C36900DA913 /* Inter-ExtraLight.ttf */; };
 		50096FBBE8344EE69E2C1872 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5A24CAE28584B89931A1798 /* Inter-Medium.ttf */; };
 		6DF975D1AD5A4B70BB79AA64 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A321B2BF2224C3F8A337F3E /* Inter-Thin.ttf */; };
-		7699B88040F8A987B510C191 /* libPods-dsm5-dsm5Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-dsm5-dsm5Tests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8A2A6603E117A7898BA35DB3 /* Pods_dsm5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B598680CFC0EC1E968CC47 /* Pods_dsm5.framework */; };
 		9117F568F38C4460A9F7F07E /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46FC320E7F894B32A4813755 /* Inter-Bold.ttf */; };
 		916D39FECFB045988E574B85 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6852D32760EF444CB163B65A /* Inter-Light.ttf */; };
 		995FE9AE0D9B490E96C33787 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9722AFFFE1E544F9B898F7B4 /* Inter-Black.ttf */; };
 		A6193D34C4CC4F7D95F8AC47 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15DC2E39BCBD4257A3C453AE /* Inter-SemiBold.ttf */; };
 		CBDC81DF36234D73AD3A371B /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 304087DCB2B546B19501BB5C /* Inter-ExtraBold.ttf */; };
 		DC5937CFE14F4A15B0690143 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 604220BAA8454EAEA8A6CC8F /* Inter-Regular.ttf */; };
+		E57703B331D7050062454ED2 /* Pods_dsm5_dsm5Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26064B61C7A9D83E1287CDB3 /* Pods_dsm5_dsm5Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,16 +49,16 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = dsm5/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = dsm5/main.m; sourceTree = "<group>"; };
 		15DC2E39BCBD4257A3C453AE /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-SemiBold.ttf"; path = "../assets/fonts/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-dsm5-dsm5Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dsm5-dsm5Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26064B61C7A9D83E1287CDB3 /* Pods_dsm5_dsm5Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dsm5_dsm5Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		304087DCB2B546B19501BB5C /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-ExtraBold.ttf"; path = "../assets/fonts/Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-dsm5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsm5.debug.xcconfig"; path = "Target Support Files/Pods-dsm5/Pods-dsm5.debug.xcconfig"; sourceTree = "<group>"; };
 		46FC320E7F894B32A4813755 /* Inter-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Bold.ttf"; path = "../assets/fonts/Inter-Bold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-dsm5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsm5.release.xcconfig"; path = "Target Support Files/Pods-dsm5/Pods-dsm5.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-dsm5-dsm5Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsm5-dsm5Tests.debug.xcconfig"; path = "Target Support Files/Pods-dsm5-dsm5Tests/Pods-dsm5-dsm5Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-dsm5.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dsm5.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		604220BAA8454EAEA8A6CC8F /* Inter-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Regular.ttf"; path = "../assets/fonts/Inter-Regular.ttf"; sourceTree = "<group>"; };
 		6852D32760EF444CB163B65A /* Inter-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Light.ttf"; path = "../assets/fonts/Inter-Light.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = dsm5/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84B598680CFC0EC1E968CC47 /* Pods_dsm5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dsm5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-dsm5-dsm5Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsm5-dsm5Tests.release.xcconfig"; path = "Target Support Files/Pods-dsm5-dsm5Tests/Pods-dsm5-dsm5Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9722AFFFE1E544F9B898F7B4 /* Inter-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Black.ttf"; path = "../assets/fonts/Inter-Black.ttf"; sourceTree = "<group>"; };
 		A5A24CAE28584B89931A1798 /* Inter-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Medium.ttf"; path = "../assets/fonts/Inter-Medium.ttf"; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-dsm5-dsm5Tests.a in Frameworks */,
+				E57703B331D7050062454ED2 /* Pods_dsm5_dsm5Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-dsm5.a in Frameworks */,
+				8A2A6603E117A7898BA35DB3 /* Pods_dsm5.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,8 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-dsm5.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-dsm5-dsm5Tests.a */,
+				84B598680CFC0EC1E968CC47 /* Pods_dsm5.framework */,
+				26064B61C7A9D83E1287CDB3 /* Pods_dsm5_dsm5Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -643,6 +643,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -718,6 +726,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
