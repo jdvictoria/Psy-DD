@@ -43,12 +43,8 @@ function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
     };
   }, []);
 
-  const changeToSignUp = () => {
-    setIsSignIn(false);
-  };
-
-  const changeToSignIn = () => {
-    setIsSignIn(true);
+  const handleChangeMode = () => {
+    setIsSignIn(prevState => !prevState);
   };
 
   const toggleSwitch = () =>
@@ -113,8 +109,7 @@ function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
                 ? "Don't have any Account?"
                 : 'Already have an Account?'}
             </StyledText16>
-            <TouchableOpacity
-              onPress={isSignIn ? changeToSignUp : changeToSignIn}>
+            <TouchableOpacity onPress={handleChangeMode}>
               <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
                 {' '}
                 {isSignIn ? 'Sign Up' : 'Sign In'}

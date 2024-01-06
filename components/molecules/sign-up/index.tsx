@@ -5,6 +5,7 @@ import * as Progress from 'react-native-progress';
 import {WebView, WebViewMessageEvent} from 'react-native-webview';
 
 import {firebase} from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore';
 
 import {StyledRow} from '../../../styles/input-container';
 import {
@@ -113,6 +114,15 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
 
       console.log(firebase.auth().currentUser?.uid);
       // Add user data to Firestore
+      await firestore()
+        .collection('Users')
+        .doc(firebase.auth().currentUser?.uid)
+        .set({
+          FirstName: firstName,
+          LastName: lastName,
+          Birthday: dateString,
+          License: license,
+        });
 
       console.log('User added!');
     } catch (error) {
