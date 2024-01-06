@@ -25,8 +25,6 @@ function HomeProfile({isDarkMode, profile}) {
   const contentStyle = contentText(isDarkMode);
   const subcontentStyle = subcontentText();
 
-  console.log(profile.FirstName);
-
   return (
     <StyledView>
       <HeaderContainer
