@@ -21,9 +21,11 @@ import {
 import CardProfile from '../../atoms/card-profile';
 
 // @ts-ignore
-function HomeProfile({isDarkMode}) {
+function HomeProfile({isDarkMode, profile}) {
   const contentStyle = contentText(isDarkMode);
   const subcontentStyle = subcontentText();
+
+  console.log(profile.FirstName);
 
   return (
     <StyledView>
@@ -65,13 +67,13 @@ function HomeProfile({isDarkMode}) {
             <CardProfile
               isDarkMode={isDarkMode}
               label={'Name'}
-              value={'Juan A. Dela Cruz'}
+              value={profile.FirstName + ' ' + profile.LastName}
               icon={require('../../../assets/icons/name-icon.png')}
             />
             <CardProfile
               isDarkMode={isDarkMode}
-              label={'Age'}
-              value={'August 12, 2001'}
+              label={'Birthday'}
+              value={profile.Birthday}
               icon={require('../../../assets/icons/age-icon.png')}
             />
           </StyledRow>
@@ -79,7 +81,7 @@ function HomeProfile({isDarkMode}) {
             <CardProfile
               isDarkMode={isDarkMode}
               label={'PRC No.'}
-              value={'200000'}
+              value={profile.License}
               icon={require('../../../assets/icons/code-icon.png')}
             />
             <CardProfile

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Image} from 'react-native';
+
+import firestore from '@react-native-firebase/firestore';
 
 import {
   AnimatedTabBarNavigator,
@@ -17,7 +19,24 @@ import HomeSettings from '../../molecules/settings';
 function HomeNavigation({isDarkMode, userID, setIsDarkMode, setIsLoggedIn}) {
   const Tabs = AnimatedTabBarNavigator();
 
-  console.log(userID);
+  const [profile, setProfile] = useState({});
+
+  useEffect(() => {
+    const subscriber = firestore()
+      .collection('Users')
+      .doc(userID)
+      .onSnapshot(documentSnapshot => {
+        if (documentSnapshot.exists) {
+          const userData = documentSnapshot.data();
+          // @ts-ignore
+          setProfile(userData);
+        } else {
+          console.log('Document does not exist');
+        }
+      });
+
+    return () => subscriber();
+  }, [userID]);
 
   return (
     <NavigationContainer>
@@ -72,7 +91,9 @@ function HomeNavigation({isDarkMode, userID, setIsDarkMode, setIsLoggedIn}) {
               />
             ),
           }}>
-          {props => <HomeProfile {...props} isDarkMode={isDarkMode} />}
+          {props => (
+            <HomeProfile {...props} isDarkMode={isDarkMode} profile={profile} />
+          )}
         </Tabs.Screen>
         <Tabs.Screen
           name="Settings"
