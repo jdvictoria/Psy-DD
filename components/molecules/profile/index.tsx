@@ -56,7 +56,7 @@ function HomeProfile({isDarkMode, profile}) {
           </ProfileCircle>
           <StyledCol style={{marginBottom: 25}}>
             <StyledText20 style={contentStyle.semibold}>
-              Juan A. Dela Cruz
+              {profile.FirstName + ' ' + profile.LastName}
             </StyledText20>
             <StyledText16
               style={[{color: '#7C818C'}, subcontentStyle.semibold]}>
@@ -87,22 +87,8 @@ function HomeProfile({isDarkMode, profile}) {
             <CardProfile
               isDarkMode={isDarkMode}
               label={'Profession'}
-              value={'Psychologist'}
+              value={'PSYCHOLOGIST'}
               icon={require('../../../assets/icons/work-icon.png')}
-            />
-          </StyledRow>
-          <StyledRow>
-            <CardProfile
-              isDarkMode={isDarkMode}
-              label={'Reg. Date'}
-              value={'2009-01-01'}
-              icon={require('../../../assets/icons/reg-icon.png')}
-            />
-            <CardProfile
-              isDarkMode={isDarkMode}
-              label={'Exp. Date'}
-              value={'2025-01-01'}
-              icon={require('../../../assets/icons/exp-icon.png')}
             />
           </StyledRow>
         </ScrollView>
