@@ -8,6 +8,8 @@ import Loading from './components/organism/3_loading';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
+
+  const [userID, setUserID] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -26,6 +28,7 @@ function App() {
     <>
       <UserAuth
         isDarkMode={isDarkMode}
+        setUserID={setUserID}
         setIsLoggedIn={setIsLoggedIn}
         setIsDarkMode={setIsDarkMode}
       />
@@ -39,6 +42,7 @@ function App() {
       ) : (
         <HomeNavigation
           isDarkMode={isDarkMode}
+          userID={userID}
           setIsDarkMode={setIsDarkMode}
           setIsLoggedIn={setIsLoggedIn}
         />
