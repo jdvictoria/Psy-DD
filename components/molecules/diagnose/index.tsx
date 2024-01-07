@@ -43,6 +43,8 @@ function HomeDiagnose({isDarkMode}) {
   useEffect(() => {
     if (filter === 'a') {
       setResult(traumaDiagnosis(numbers));
+    } else if (filter === 'b') {
+      setResult();
     }
   }, [filter, numbers]);
 
