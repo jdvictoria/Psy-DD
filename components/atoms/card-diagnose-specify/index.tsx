@@ -11,6 +11,11 @@ import {
   disorderSpecificationC,
 } from '../../../utils/somatic';
 
+import {
+  disorderSpecificationD,
+  disorderSpecificationE,
+} from '../../../utils/sleep';
+
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
   let additionalData;
@@ -23,6 +28,10 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = disorderSpecificationB;
   } else if (result === 'Factitious Disorder') {
     additionalData = disorderSpecificationC;
+  } else if (result === 'Insomnia Disorder') {
+    additionalData = disorderSpecificationD;
+  } else if (result === 'Hypersomnolence Disorder') {
+    additionalData = disorderSpecificationE;
   }
 
   return (

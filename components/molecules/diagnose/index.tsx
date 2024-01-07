@@ -17,14 +17,19 @@ import CardDiagnoseSpecify from '../../atoms/card-diagnose-specify';
 
 import {traumaDiagnosis} from '../../../utils/trauma';
 import {somaticDiagnosis} from '../../../utils/somatic';
+import {sleepDiagnosis} from '../../../utils/sleep';
+import CardDiagnoseSeverity from '../../atoms/card-diagnose-severity';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
   const [result, setResult] = useState('');
+
   const [duration, setDuration] = useState('');
   const [specification, setSpecification] = useState('');
+  const [severity, setSeverity] = useState('');
+
   const [filter, setFilter] = useState('');
   const [numbers, setNumbers] = useState([]);
   const [showResult, setShowResult] = useState(false);
@@ -36,6 +41,7 @@ function HomeDiagnose({isDarkMode}) {
     setResult('');
     setDuration('');
     setSpecification('');
+    setSeverity('');
     setNumbers([]);
   };
 
@@ -56,6 +62,12 @@ function HomeDiagnose({isDarkMode}) {
   useEffect(() => {
     if (filter === 'b' && showResult) {
       setResult(somaticDiagnosis(numbers));
+    }
+  }, [filter, numbers, showResult]);
+
+  useEffect(() => {
+    if (filter === 'c' && showResult) {
+      setResult(sleepDiagnosis(numbers));
     }
   }, [filter, numbers, showResult]);
 
@@ -95,6 +107,7 @@ function HomeDiagnose({isDarkMode}) {
             <CardDiagnoseResult
               isDarkMode={isDarkMode}
               result={result}
+              severity={severity}
               duration={duration}
               specification={specification}
               showResult={showResult}
@@ -103,7 +116,9 @@ function HomeDiagnose({isDarkMode}) {
           {(result === 'Conversion Disorder' ||
             result ===
               'Psychological Factors Affecting Other Medical Conditions' ||
-            result === 'Factitious Disorder') && (
+            result === 'Factitious Disorder' ||
+            result === 'Insomnia Disorder' ||
+            result === 'Hypersomnolence Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}
@@ -113,14 +128,22 @@ function HomeDiagnose({isDarkMode}) {
           {(result === 'Somatic Symptom Disorder' ||
             result === 'Illness Anxiety Disorder' ||
             result === 'Conversion Disorder' ||
-            result === 'Factitious Disorder') && (
+            result === 'Factitious Disorder' ||
+            result === 'Insomnia Disorder' ||
+            result === 'Hypersomnolence Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}
               result={result}
             />
           )}
-
+          {result === 'Hypersomnolence Disorder' && (
+            <CardDiagnoseSeverity
+              isDarkMode={isDarkMode}
+              setSeverity={setSeverity}
+              result={result}
+            />
+          )}
           {[...Array(criteriaInstance)].map((_, index) => (
             <CardDiagnoseBig
               key={index}
