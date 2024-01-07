@@ -23,7 +23,7 @@ import SignInComponent from '../../molecules/sign-in';
 import SignUpComponent from '../../molecules/sign-up';
 
 // @ts-ignore
-function UserAuth({isDarkMode, setUserID, setIsLoggedIn, setIsDarkMode}) {
+function UserAuth({navigation, isDarkMode, setUserID, setIsDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
   const [isSignIn, setIsSignIn] = useState(true);
@@ -94,9 +94,9 @@ function UserAuth({isDarkMode, setUserID, setIsLoggedIn, setIsDarkMode}) {
           </StyledCol>
           {isSignIn ? (
             <SignInComponent
+              navigation={navigation}
               isDarkMode={isDarkMode}
               setUserID={setUserID}
-              setIsLoggedIn={setIsLoggedIn}
             />
           ) : (
             <SignUpComponent

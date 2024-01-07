@@ -17,7 +17,7 @@ import AuthEmail from '../../atoms/auth-email';
 import AuthPassword from '../../atoms/auth-password';
 
 // @ts-ignore
-function SignInComponent({isDarkMode, setUserID, setIsLoggedIn}) {
+function SignInComponent({navigation, isDarkMode, setUserID}) {
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
@@ -47,7 +47,7 @@ function SignInComponent({isDarkMode, setUserID, setIsLoggedIn}) {
       .then(async () => {
         if (firebase.auth().currentUser?.emailVerified) {
           setUserID(firebase.auth().currentUser?.uid);
-          setIsLoggedIn(true);
+          navigation.navigate('Loading');
         } else {
           await firebase.auth().currentUser?.sendEmailVerification();
           alertEmailVerification();

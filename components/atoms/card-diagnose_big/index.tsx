@@ -20,13 +20,6 @@ import {obsessiveSymptoms} from '../../../utils/obsessive';
 import {neurodevelopmentalSymptoms} from '../../../utils/neurodevelopmental';
 import {substanceSymptoms} from '../../../utils/substance';
 
-const dummyData = [
-  {label: 'Item 1', value: '1'},
-  {label: 'Item 2', value: '2'},
-  {label: 'Item 3', value: '3'},
-  {label: 'Item 4', value: '4'},
-];
-
 // @ts-ignore
 function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
   const contentStyle = contentText(isDarkMode);
@@ -34,18 +27,6 @@ function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
   const [additionalCardCount, setAdditionalCardCount] = useState(1);
 
   let symptomData:
-    | {label: string; value: string}[]
-    | {label: string; value: number}[];
-  let durationData:
-    | {label: string; value: string}[]
-    | {label: string; value: number}[];
-  let severityData:
-    | {label: string; value: string}[]
-    | {label: string; value: number}[];
-  let drugData:
-    | {label: string; value: string}[]
-    | {label: string; value: number}[];
-  let distressData:
     | {label: string; value: string}[]
     | {label: string; value: number}[];
 
@@ -82,18 +63,6 @@ function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
       break;
     default:
       break;
-  }
-
-  if (filter === 'a') {
-    durationData = dummyData;
-    severityData = dummyData;
-    drugData = dummyData;
-    distressData = dummyData;
-  } else {
-    durationData = dummyData;
-    severityData = dummyData;
-    drugData = dummyData;
-    distressData = dummyData;
   }
 
   const handleAddSymptomPress = () => {

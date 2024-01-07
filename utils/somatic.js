@@ -254,7 +254,23 @@ export const somaticDiagnosis = numbers => {
   }
 };
 
-export const disorderABAdditional = [
-  {label: 'Duration of symptoms is less than 6 months', value: 0},
-  {label: 'Duration of symptoms is 6 months or more than', value: 1},
+export const disorderDurationA = [
+  {label: 'Less than 6 months', value: 0},
+  {label: 'Greater or Equal to 6 months', value: 1},
+];
+
+export const disorderSpecificationA = [
+  {label: 'With weakness or paralysis', value: 2},
+  {label: 'With abnormal movement (Tremor)', value: 3},
+  {label: 'With abnormal movement (Dystonia)', value: 4},
+  {label: 'With abnormal movement (Myoclonus)', value: 5},
+  {label: 'With abnormal movement (Gait)', value: 6},
+  {label: 'With speech symptom (Dysphonia)', value: 7},
+  {label: 'With speech symptom (Slurred Speech)', value: 8},
+  {label: 'With Attach Seizure', value: 9},
+  {label: 'With Anesthesia or Sensory Loss', value: 10},
+  {label: 'With special sensory symptom (Visual)', value: 11},
+  {label: 'With special sensory symptom (Olfactory)', value: 12},
+  {label: 'With special sensory symptom (Hearing Disturbance)', value: 13},
+  {label: 'With Mixed Symptoms', value: 10},
 ];

@@ -12,7 +12,7 @@ import CardSettings from '../../atoms/card-settings';
 import {firebase} from '@react-native-firebase/auth';
 
 // @ts-ignore
-function HomeSettings({isDarkMode, setIsDarkMode, setIsLoggedIn}) {
+function HomeSettings({navigation, isDarkMode, setIsDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
   const handleLogOut = () => {
@@ -21,7 +21,7 @@ function HomeSettings({isDarkMode, setIsDarkMode, setIsLoggedIn}) {
       .signOut()
       .then(() => {
         console.log('User signed out!');
-        setIsLoggedIn(false);
+        navigation.navigate('Auth');
       });
   };
 

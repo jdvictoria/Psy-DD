@@ -5,14 +5,18 @@ import {DiagnoseResultCard} from '../../../styles/form-container';
 // @ts-ignore
 import DropdownComponent from '../dropdown-diagnose';
 
-import {disorderSpecificationA} from '../../../utils/somatic';
+import {disorderDurationA} from '../../../utils/somatic';
 
 // @ts-ignore
-function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
+function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
   let additionalData;
 
-  if (result === 'Conversion') {
-    additionalData = disorderSpecificationA;
+  if (
+    result === 'Somatic Symptom Disorder' ||
+    result === 'Illness Anxiety Disorder' ||
+    result === 'Conversion Disorder'
+  ) {
+    additionalData = disorderDurationA;
   }
 
   return (
@@ -25,12 +29,12 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
       <DropdownComponent
         isDarkMode={isDarkMode}
         data={additionalData}
-        label={'Specification'}
+        label={'Duration'}
         value={null}
-        setValue={setSpecification}
+        setValue={setDuration}
       />
     </DiagnoseResultCard>
   );
 }
 
-export default CardDiagnoseSpecify;
+export default CardDiagnoseDuration;

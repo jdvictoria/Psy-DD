@@ -25,7 +25,11 @@ function HomeProfile({isDarkMode, profile}) {
   const contentStyle = contentText(isDarkMode);
   const subcontentStyle = subcontentText();
 
-  // console.log(profile);
+  const FirstName = profile.FirstName || '';
+  const LastName = profile.LastName || '';
+  const Birthday = profile.Birthday || '';
+  const License = profile.License || '';
+
   return (
     <StyledView>
       <HeaderContainer
@@ -66,13 +70,13 @@ function HomeProfile({isDarkMode, profile}) {
             <CardProfile
               isDarkMode={isDarkMode}
               label={'Name'}
-              value={profile.FirstName + ' ' + profile.LastName}
+              value={FirstName + ' ' + LastName}
               icon={require('../../../assets/icons/name-icon.png')}
             />
             <CardProfile
               isDarkMode={isDarkMode}
               label={'Birthday'}
-              value={profile.Birthday}
+              value={Birthday}
               icon={require('../../../assets/icons/age-icon.png')}
             />
           </StyledRow>
@@ -80,7 +84,7 @@ function HomeProfile({isDarkMode, profile}) {
             <CardProfile
               isDarkMode={isDarkMode}
               label={'PRC No.'}
-              value={profile.License}
+              value={License}
               icon={require('../../../assets/icons/code-icon.png')}
             />
             <CardProfile

@@ -9,14 +9,26 @@ import {
 import {DiagnoseResultCard} from '../../../styles/form-container';
 
 // @ts-ignore
-function CardDiagnoseResult({isDarkMode, result, additional, showResult}) {
+function CardDiagnoseResult({
+  isDarkMode,
+  result,
+  duration,
+  specification,
+  showResult,
+}) {
   const contentStyle = contentText(isDarkMode);
 
   let string;
-  if (additional === 0) {
+  let code;
+
+  if (duration === 0) {
     string = 'Brief';
   } else {
     string = '';
+  }
+
+  if (specification >= 2 && specification <= 8) {
+    code = '(F44.4)';
   }
 
   return (
@@ -26,7 +38,7 @@ function CardDiagnoseResult({isDarkMode, result, additional, showResult}) {
         style={{backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF'}}>
         {showResult && (
           <StyledText20 style={contentStyle.bold}>
-            {string + ' ' + result}
+            {string + ' ' + result + ' ' + code}
           </StyledText20>
         )}
       </DiagnoseResultCard>

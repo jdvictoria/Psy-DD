@@ -12,6 +12,7 @@ import CardDiagnoseResult from '../../atoms/card-diagnose_result';
 import CardDiagnoseSmall from '../../atoms/card-diagnose_small';
 import CardDiagnoseBig from '../../atoms/card-diagnose_big';
 import CardDiagnoseFilter from '../../atoms/card-diagnose-filter';
+import CardDiagnoseDuration from '../../atoms/card-diagnose-duration';
 import CardDiagnoseSpecify from '../../atoms/card-diagnose-specify';
 
 import {traumaDiagnosis} from '../../../utils/trauma';
@@ -22,7 +23,8 @@ function HomeDiagnose({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
   const [result, setResult] = useState('');
-  const [additional, setAdditional] = useState('');
+  const [duration, setDuration] = useState('');
+  const [specification, setSpecification] = useState('');
   const [filter, setFilter] = useState('');
 
   const [numbers, setNumbers] = useState([]);
@@ -32,7 +34,8 @@ function HomeDiagnose({isDarkMode}) {
   const clearBigCard = () => {
     setCriteriaInstance(0);
     setResult('');
-    setAdditional('');
+    setDuration('');
+    setSpecification('');
     setNumbers([]);
   };
 
@@ -54,7 +57,7 @@ function HomeDiagnose({isDarkMode}) {
     }
   }, [filter, numbers]);
 
-  // console.log(numbers);
+  console.log(numbers);
   return (
     <StyledView>
       <HeaderContainer
@@ -78,12 +81,6 @@ function HomeDiagnose({isDarkMode}) {
           }}
           style={{width: '100%'}}
           showsVerticalScrollIndicator={false}>
-          <CardDiagnoseResult
-            isDarkMode={isDarkMode}
-            result={result}
-            additional={additional}
-            showResult={showResult}
-          />
           <CardDiagnoseSmall
             isDarkMode={isDarkMode}
             clearBigCard={clearBigCard}
@@ -91,11 +88,27 @@ function HomeDiagnose({isDarkMode}) {
             handleDiagnose={handleDiagnose}
             filter={filter}
           />
-          {(result === 'Somatic Symptom Disorder' ||
-            result === 'Illness Anxiety Disorder') && (
+          {result !== '' && (
+            <CardDiagnoseResult
+              isDarkMode={isDarkMode}
+              result={result}
+              duration={duration}
+              specification={specification}
+              showResult={showResult}
+            />
+          )}
+          {result === 'Conversion Disorder' && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
-              setAdditional={setAdditional}
+              setSpecification={setSpecification}
+              result={result}
+            />
+          )}
+          {(result === 'Somatic Symptom Disorder' ||
+            result === 'Illness Anxiety Disorder') && (
+            <CardDiagnoseDuration
+              isDarkMode={isDarkMode}
+              setDuration={setDuration}
               result={result}
             />
           )}

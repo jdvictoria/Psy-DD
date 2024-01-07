@@ -1,53 +1,46 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 
-import {StyledSafeView} from './styles/input-container';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
 import UserAuth from './components/organism/1_user-auth';
 import HomeNavigation from './components/organism/2_home';
 import Loading from './components/organism/3_loading';
 
 function App() {
+  const Stack = createStackNavigator();
+
   const [isDarkMode, setIsDarkMode] = useState(true);
-
   const [userID, setUserID] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    if (isLoggedIn) {
-      const loadingTimeout = setTimeout(() => {
-        setIsLoading(false);
-      }, 1500);
-      return () => clearTimeout(loadingTimeout);
-    } else if (!isLoggedIn) {
-      setIsLoading(true);
-    }
-  }, [isLoggedIn]);
-
-  return !isLoggedIn ? (
-    <>
-      <UserAuth
-        isDarkMode={isDarkMode}
-        setUserID={setUserID}
-        setIsLoggedIn={setIsLoggedIn}
-        setIsDarkMode={setIsDarkMode}
-      />
-    </>
-  ) : (
-    <>
-      {isLoading ? (
-        <StyledSafeView>
-          <Loading />
-        </StyledSafeView>
-      ) : (
-        <HomeNavigation
-          isDarkMode={isDarkMode}
-          userID={userID}
-          setIsDarkMode={setIsDarkMode}
-          setIsLoggedIn={setIsLoggedIn}
-        />
-      )}
-    </>
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Auth" options={{headerShown: false}}>
+          {props => (
+            <UserAuth
+              {...props}
+              isDarkMode={isDarkMode}
+              setUserID={setUserID}
+              setIsDarkMode={setIsDarkMode}
+            />
+          )}
+        </Stack.Screen>
+        <Stack.Screen name="Loading" options={{headerShown: false}}>
+          {props => <Loading {...props} />}
+        </Stack.Screen>
+        <Stack.Screen name="Home" options={{headerShown: false}}>
+          {props => (
+            <HomeNavigation
+              {...props}
+              isDarkMode={isDarkMode}
+              userID={userID}
+              setIsDarkMode={setIsDarkMode}
+            />
+          )}
+        </Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

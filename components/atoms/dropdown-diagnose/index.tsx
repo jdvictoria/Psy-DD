@@ -34,6 +34,7 @@ function DropdownComponent({isDarkMode, data, label, value, setValue}) {
           width:
             label === 'Symptom/s' ||
             label === 'Category' ||
+            label === 'Duration' ||
             label === 'Specification'
               ? '95%'
               : '47.5%',

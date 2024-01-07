@@ -16,7 +16,6 @@ function CardDiagnoseSmall({
   clearBigCard,
   addBigCard,
   handleDiagnose,
-  filter,
 }) {
   const contentStyle = contentText(isDarkMode);
 
