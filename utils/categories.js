@@ -9,7 +9,7 @@ export const categData = [
   {label: 'Obsessive-Compulsive and Related Disorders', value: 'h'},
   {label: 'Neurodevelopmental Disorders', value: 'i'},
   {label: 'Substance and Related Disorders', value: 'j'},
-]
+];
 
 export const drugData = [
   {label: 'Yes', value: '1'},

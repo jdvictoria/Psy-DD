@@ -1,359 +1,373 @@
 export const traumaSymptoms = [
-  // Reactive Attachment Disorder
-  // Criteria A (Both)
-  {label: 'Rarely or minimally seeks comfort when distressed', value: 0},
-  {label: 'Rarely or minimally responds to comfort when distressed', value: 1},
-
-  // Criteria B (Atleast 1)
-  {label: 'Minimal social / emotional response to others', value: 2},
-  {label: 'Limited positive effect', value: 3},
-  {label: '•Unexplained irritability \n•Sadness \n•Fearfulness', value: 4},
-
-  // Criteria C (Atleast 1)
+  // Common Symptoms
+  // 0
+  {label: 'Direct experience of traumatic events', value: 0},
+  // 1
   {
     label:
       '•Social Neglect \n•Lack of stimulation / affection / basic emotional needs for comfort',
+    value: 1,
+  },
+  // 2
+  {label: 'Repeated changes of caregiver', value: 2},
+  // 3
+  {label: 'Unusual setting (Foster Cares)', value: 3},
+  // 4
+  {label: 'Witnessing in person the event', value: 4},
+  // 5
+  {
+    label:
+      'Recurrent / Involuntary / Intrusive Distressing memories of the traumatic event',
     value: 5,
   },
-  {label: 'Repeated changes of caregiver', value: 6},
-  {label: 'Unusual setting (Foster Cares)', value: 7},
+  // 6
+  {
+    label: 'Recurrent distressing dreams related to the traumatic event',
+    value: 6,
+  },
+  // 7
+  {label: 'Flashbacks', value: 7},
+  // 8
+  {
+    label:
+      'Intense psychological distress to cues that symbolize the traumatic event',
+    value: 8,
+  },
+  // 9
+  {
+    label: 'Physiological reactions when reminded of the traumatic event',
+    value: 9,
+  },
+  // 10
+  {
+    label:
+      '•Irritable Behavior \n•Angry Outburst \n•Physical aggression to people / objects',
+    value: 10,
+  },
+  // 11
+  {label: 'Hyper vigilance', value: 11},
+  // 12
+  {label: 'Exaggerated Startle Response', value: 12},
+  // 13
+  {label: 'Concentration Problems', value: 13},
+  // 14
+  {
+    label:
+      '•Sleep Disturbance \n•Difficulty falling / staying asleep \n•Restless sleep',
+    value: 14,
+  },
+  // 15
+  {
+    label:
+      'The disturbance causes clinically significant distress or impairment in relationships with parents, siblings, peers, or other caregivers or with school behavior',
+    value: 15,
+  },
+  //  16
+  {
+    label:
+      'The disturbance is not attributable to a substance or medical condition',
+    value: 16,
+  },
 
-  // Criteria D
+  // Reactive Attachment
+  // Main
+  {label: 'Rarely or minimally seeks comfort when distressed', value: 17},
+  {label: 'Rarely or minimally responds to comfort when distressed', value: 18},
+  // Optional
+  {label: 'Minimal social / emotional response to others', value: 19},
+  {label: 'Limited positive effect', value: 20},
+  {label: '•Unexplained irritability \n•Sadness \n•Fearfulness', value: 21},
+  // Criteria C
+  // Common Symptom 1
+  // Common Symptom 2
+  // Common Symptom 3
   {
     label:
       'The care in Criterion C is presumed to be responsible for the disturbed behavior in Criterion A',
-    value: 8,
+    value: 22,
   },
-
-  // Criteria E
-  {label: 'The Criteria is not met for Autism Spectrum Disorder', value: 9},
-
-  // Criteria F
-  {label: 'Disturbance is evident before age 5 years old', value: 10},
-
-  // Criteria G
-  {label: 'Has a developmental age of 9 months', value: 11},
+  {label: 'The Criteria is not met for Autism Spectrum Disorder', value: 23},
+  {label: 'Disturbance is evident before age 5 years old', value: 24},
+  {label: 'Has a developmental age of 9 months', value: 25},
 
   // Disinhibited Social Engagement Disorder
   // Criteria A (two of the following)
-  {label: 'Unrestraint approach / interaction to unfamiliar adults', value: 12},
-  {label: 'Familiar verbal / physical behavior', value: 13},
+  {label: 'Unrestraint approach / interaction to unfamiliar adults', value: 26},
+  {label: 'Familiar verbal / physical behavior', value: 27},
   {
     label:
       'Absent checking back with caregivers after venturing away, even in unfamiliar setting',
-    value: 14,
+    value: 28,
   },
   {
     label: 'Willingness to go with unfamiliar adults with no hesitation ',
-    value: 15,
+    value: 29,
   },
 
   // Criteria B
   {
     label:
       '•The behavior in Criterian A not limited to impulsivity \n•Include Socially Disinhibited Behavior ',
-    value: 16,
+    value: 30,
   },
 
-  // Criteria C (Atleast 1)
-  {
-    label:
-      '•Social Neglect \n•Lack of stimulation / affection / basic emotional needs for comfort',
-    value: 17,
-  },
-  // {label: 'Repeated changes of caregiver', value: 17},
-  // {label: 'Unusual Setting (Foster Care)', value: 18},
+  // Criteria C
+  // Common 1
+  // Common 2
+  // Common 3
 
   // Criteria D (Same as 1st disorder)
 
   // Posttraumatic Stress Disorder
   // Criteria A (one or more)
-  {label: 'Direct experience of traumatic events', value: 18},
-  {label: 'Witnessing in person the event ', value: 19},
+  // Common 0
+  // Common Symptom 4
   {
     label:
-      '•The traumatic event occured to a family member / close friend \n•Actual or threathened death of family / friends \n•The event is violent / accidental',
-    value: 20,
+      '•The traumatic event occurred to a family member / close friend \n•Actual or threatened death of family / friends \n•The event is violent / accidental',
+    value: 31,
   },
-  {label: 'Extreme exposure to details of traumatic events', value: 21},
+  {
+    label: 'Extreme exposure to aversive details of the traumatic event',
+    value: 32,
+  },
 
   // Criteria B (one or more)
-  {
-    label:
-      'Recurrent / Involuntary / Intrusive Distressing memories of the traumatic event',
-    value: 22,
-  },
-  {
-    label: 'Recurrent distressing dreams related to the traumatic event',
-    value: 23,
-  },
-  {label: 'Flashbacks', value: 24},
-  {label: 'Intense / Prolonged distress', value: 25},
-  {
-    label: 'Physiological reaction to cues that symbolize the traumatic event',
-    value: 26,
-  },
+  // Common 5
+  // Common 6
+  // Common 7
+  // Common 8
+  // Common 9
 
   // Criteria C (one or both symptoms)
   {
     label:
       'Avoidance to distressing memories / thoughts / feelings / closely associated with the traumatic event',
-    value: 27,
+    value: 33,
   },
   {
     label:
       'Avoiding external reminders / people / places / conversations / activities / objects / situations',
-    value: 28,
+    value: 34,
   },
 
   // Criteria D (?)
   {
     label:
-      '•Inability to remember important aspect of the traumatic event \n•Disscoacitive amnesia',
-    value: 29,
-  },
-  {label: 'Exegerated beliefs about oneself', value: 30},
-  {label: 'Blames himself / herself', value: 31},
-  {
-    label:
-      'Persistant negative emotional state / fear / horror / anger / guilt / shame',
-    value: 32,
-  },
-  {
-    label: 'Diministhed interest / participation in significant activities ',
-    value: 33,
-  },
-  {label: 'Feeling of detachment / estrangement to others', value: 34},
-  {
-    label: 'Inability to experience happiness / satisfaction / loving feelings',
+      '•Inability to remember important aspect of the traumatic event \n•Dissociative amnesia',
     value: 35,
   },
-
-  // Critera E (2 or more)
+  {label: 'Exaggerated beliefs about oneself', value: 36},
+  {label: 'Blames himself / herself', value: 37},
   {
     label:
-      '•Irritable Behavior \n•Angry Outburst \n•Physical agression to people / objects',
-    value: 36,
+      'Persistent negative emotional state / fear / horror / anger / guilt / shame',
+    value: 38,
   },
-  {label: '•Recklesness \n•Self-Destructive Behavior', value: 37},
-  {label: 'Hypervigilance', value: 38},
-  {label: 'Exaggerated Startle Response', value: 39},
-  {label: 'Concentration Problems', value: 40},
   {
-    label:
-      '•Sleep Disturbance \n•Difficulty falling / staying asleep \n•Restless sleep',
+    label: 'Diminished interest / participation in significant activities ',
+    value: 39,
+  },
+  {label: 'Feeling of detachment / estrangement to others', value: 40},
+  {
+    label: 'Inability to experience happiness / satisfaction / loving feelings',
     value: 41,
   },
 
-  // Criteria F (Disturbance for Criteria B, C, D, and E is more than 1 month)
+  // Critera E (2 or more)
+  // Common 10
+  {label: '•Recklessness \n•Self-Destructive Behavior', value: 42},
+  // Common 11
+  // Common 12
+  // Common 13
+  // Common 14
+
+  // Criteria 4
+  {
+    label: 'Disturbance for Criteria B, C, D, and E is more than 1 month',
+    value: 43,
+  },
 
   // Criteria G
-  {label: 'Causes Clinically Significant Distress', value: 42},
-  {label: 'Impairment in social and other functioning', value: 43},
+  // Common 15
 
   // Criteria H
-  {
-    label:
-      'The disturbance is not attributable to a susbtance or medical condition',
-    value: 44,
-  },
+  // Common 16
 
   // Posttraumatic Stress Disorder in Children 6 Years and Younger
   // Criteria A: One or more Symptoms
-  {label: 'Directly experiencing the traumatic event', value: 45},
+  {
+    label: 'Direct experience of traumatic events (6 Years & Younger)',
+    value: 44,
+  },
   {
     label:
-      '•Witnessing in person \n•Learning that the traumatic event happened to the parent or caregiver',
-    value: 46,
+      '•Witnessing in person the event \n•Learning that the traumatic event happened to the parent or caregiver (6 Years & Younger)',
+    value: 45,
   },
 
   // Criteria B: one or more symptom
-  {
-    label:
-      'Recurrent / Involuntary / Intrusive Distressing / Play Reenactment of the traumatic Event',
-    value: 47,
-  },
-  {label: 'Recurrent Distressing Dreams', value: 48},
-  {label: 'Flashbacks', value: 49},
-  {
-    label:
-      'Intense Psychological Distress to cues that symbolize the traumatic event',
-    value: 50,
-  },
-  {
-    label: 'Physiological Reactions when reminded of the traumatic event',
-    value: 51,
-  },
+  // Common 5
+  // Common 6
+  // Common 7
+  // Common 8
+  // Common 9
 
   // Criteria C: One or more symptoms
   {
     label:
       'Avoidance to activities / places that reminds the traumatic event \n•Avoidance to physical reminders of the traumatic event',
-    value: 52,
+    value: 46,
   },
   {
     label:
       'Avoidance to people / conversations / interpersonal situations about the traumatic event',
-    value: 53,
+    value: 47,
   },
-  {label: '•Fear \n•Guilt \n•Sadness \n•Shame \n•Confusion', value: 55},
+  {label: '•Fear \n•Guilt \n•Sadness \n•Shame \n•Confusion', value: 48},
   {
-    label: 'Diminishes Interest to activities \n•Constriction of play',
-    value: 54,
+    label: 'Diminished interest to activities \n•Constriction of play',
+    value: 49,
   },
-  {label: 'Socially Withdrawn Behavior', value: 55},
-  {label: 'Socially Withdrawn Behavior', value: 56},
+  {label: 'Socially withdrawn behavior', value: 50},
+  {label: 'Reduction of positive emotions', value: 51},
 
   // Criteria D: Two or more symptoms
-  {
-    label:
-      '•Irritable Behavior \n•Angry Outburst \n•Physical agression to people / objects',
-    value: 57,
-  },
-  {label: 'Hypervigilance', value: 58},
-  {label: 'Exaggerated Startle Response', value: 59},
-  {label: 'Concentration Problems', value: 60},
-  {
-    label:
-      '•Sleep Disturbance \n•Difficulty falling / staying asleep \n•Restless sleep',
-    value: 61,
-  },
+  // Common 10
+  // Common 11
+  // Common 12
+  // Common 13
+  // Common 14
 
   // Criteria E
-  {label: 'The duration of the disturbance is more than 1 month', value: 62},
+  {
+    label:
+      'The duration of the disturbance (symptoms in Criteria B) is more than 1 month',
+    value: 52,
+  },
 
   // Criteria F
-  {
-    label:
-      'The disturbance causes clinically significant distress or impairment in relationships with parents, siblings, peers, or other caregivers or with school behavior',
-    value: 63,
-  },
+  // Common 15
   // Criteria G
-  {
-    label:
-      'The disturbance is not attributable to a susbtance or medical condition',
-    value: 64,
-  },
+  // Common 16
 
   // Acute Stress Disorder
   // Criteria A: one or more symptoms
-  {label: 'Directly experiencing the traumatic Event', value: 65},
-  {label: 'Witnessing in person', value: 66},
+  // Common 0
+  // Common 4
   {
     label:
-      'Learning that the event(s) occurred to a close family member or close friend. \n•Exterme expsoure to aversive details of the traumatic event',
-    value: 67,
+      'Learning that the event(s) occurred to a close family member or close friend. \n•Extreme exposure to aversive details of the traumatic event',
+    value: 53,
   },
 
   // Criteria B: 9 or more symptoms
   // Duration 3 days to 1 month
   {
     label:
-      'Recurrent / Involuntary / Intru999sive Distressing memories of the traumatic event',
-    value: 68,
-  },
-  {
-    label: 'Recurrent distressing dreams related to the traumatic event',
-    value: 69,
-  },
-  {label: 'Intense / Prolonged distress', value: 69},
-  {
-    label: 'Inability to experience happiness / satisfaction / loving feelings',
-    value: 70,
+      'Recurrent / Involuntary / Intrusive Distressing memories of the traumatic event (3 days to 1 month)',
+    value: 55,
   },
   {
     label:
-      '•Dissociative \n•Seeing oneself from another perspective \n•Being in a Daze \n•Time slowing',
-    value: 71,
+      'Recurrent distressing dreams related to the traumatic event (3 days to 1 month)',
+    value: 56,
   },
   {
     label:
-      'Inability to remember important aspect of the traumatic event \n•Disscoacitive amnesia',
-    value: 72,
+      'Intense psychological distress to cues that symbolize the traumatic event (3 days to 1 month)',
+    value: 57,
   },
   {
     label:
-      'Avoidance to distressing memories / thoughts / feelings / closely associated with the traumatic event',
-    value: 73,
+      'Inability to experience happiness / satisfaction / loving feelings (3 days to 1 month)',
+    value: 58,
   },
   {
     label:
-      'Avoiding external reminders / people / places / conversations / activities / objects / situations',
-    value: 74,
+      '•Dissociative \n•Seeing oneself from another perspective \n•Being in a Daze \n•Time slowing (3 days to 1 month)',
+    value: 59,
   },
   {
     label:
-      '•Sleep Disturbance \n•Difficulty falling / staying asleep \n•Restless sleep',
-    value: 75,
+      'Inability to remember important aspect of the traumatic event \n•Dissociative amnesia (3 days to 1 month)',
+    value: 60,
   },
   {
     label:
-      '•Irritable Behavior \n•Angry Outburst \n•Physical agression to people / objects',
-    value: 76,
+      'Avoidance to distressing memories / thoughts / feelings / closely associated with the traumatic event (3 days to 1 month)',
+    value: 61,
   },
-  {label: 'Hypervigilance', value: 77},
-  {label: 'Concentration Problems', value: 78},
-  {label: 'Exaggerated Startle Response', value: 79},
+  {
+    label:
+      'Avoiding external reminders / people / places / conversations / activities / objects / situations (3 days to 1 month)',
+    value: 62,
+  },
+  {
+    label:
+      '•Sleep Disturbance \n•Difficulty falling / staying asleep \n•Restless sleep (3 days to 1 month)',
+    value: 63,
+  },
+  {
+    label:
+      '•Irritable Behavior \n•Angry Outburst \n•Physical aggression to people / objects (3 days to 1 month)',
+    value: 64,
+  },
+  {label: 'Hyper vigilance (3 days to 1 month)', value: 65},
+  {label: 'Concentration Problems (3 days to 1 month)', value: 67},
+  {label: 'Exaggerated Startle Response (3 days to 1 month)', value: 66},
 
   // Criteria C
   {
     label:
       'Duration of the disturbance (symptoms in Criterion B) is 3 days to 1 month after trauma exposure',
-    value: 80,
+    value: 67,
   },
   // Criteria D
-  {
-    label:
-      'The disturbance causes clinically significant distress or impairment in relationships with parents, siblings, peers, or other caregivers or with school behavior',
-    value: 81,
-  },
+  // Common 15
   // Criteria E
-  {
-    label:
-      'The disturbance is not attributable to a susbtance or medical condition',
-    value: 82,
-  },
+  // Common 16
 
   // Adjustment Disorder
   // Occuring 3 months Onset
   // Criteria A
   {
     label:
-      'The development of emotional or behavioral symptoms in response to an identifiable stressor',
-    value: 83,
+      'The development of emotional or behavioral symptoms in response to an identifiable stressor (Occuring 3 months onset)',
+    value: 68,
   },
 
   // Criteria B
   {
     label:
-      'Marked Distress that is out of proportion to the intensity of stressor',
-    value: 84,
+      'Marked distress that is out of proportion to the intensity of stressor',
+    value: 69,
   },
   {
     label:
       'Impairment in Social Functioning / Occupational Functioning / Other areas of Functioning',
-    value: 85,
+    value: 70,
   },
 
   // Criteria C
   {
     label:
       'The stress related disturbance does not meet the criteria for another mental disorder or preexisting mental disorder',
-    value: 86,
+    value: 71,
   },
 
   // Criteria D
   {
     label:
       'The symptoms do not represent normal bereavement and are not better explained by prolonged grief disorder',
-    value: 87,
+    value: 72,
   },
 
   // Criteria E
   {
     label:
       'Once the stressor or its consequences have terminated, the symptoms do not persist for more than an additional 6 months',
-    value: 88,
+    value: 73,
   },
 
   // Prolonged Grief Disorder
@@ -361,46 +375,66 @@ export const traumaSymptoms = [
   {
     label:
       'The death, at least 12 months ago, of a person who was close to the bereaved individual (for children and adolescents, at least 6 months ago)',
-    value: 89,
+    value: 74,
   },
 
   // Criteria B: Symptoms occured nearly everyday
-  {label: 'Intensed yearning / longing for the deceased person', value: 84},
   {
-    label: 'Preoccupied with thoughts / memories of the deceased person',
-    value: 90,
+    label:
+      'Intense yearning / longing for the deceased person (Occurs Everyday)',
+    value: 75,
+  },
+  {
+    label:
+      'Preoccupied with thoughts / memories of the deceased person (Occurs Everyday)',
+    value: 76,
   },
   // Frequency: Everyday
 
   // Criteria C: 3 or more symptoms
   // Atleast a month
   // Frequency: Everyday
-  {label: 'Identity Disruption', value: 86},
-  {label: 'Sense of Disbelief about the death', value: 87},
-  {label: 'Avoidance of reminders that the person is dead', value: 88},
   {
-    label: '•Intense emotional pain \n•Anger \n•Bitterness \n•Sorrow',
-    value: 91,
+    label: 'Identity Disruption (Since Last Month | Occurs Nearly Everyday)',
+    value: 77,
   },
   {
     label:
-      'Problem engaging with friends / pursuing interest / planning of the future',
-    value: 92,
+      'Sense of Disbelief about the death (Since Last Month | Occurs Nearly Everyday)',
+    value: 78,
   },
-  {label: 'Emotional numbness', value: 93},
+  {
+    label:
+      'Avoidance of reminders that the person is dead (Since Last Month | Occurs Nearly Everyday)',
+    value: 79,
+  },
+  {
+    label:
+      '•Intense emotional pain \n•Anger \n•Bitterness \n•Sorrow (Since Last Month | Occurs Nearly Everyday)',
+    value: 80,
+  },
+  {
+    label:
+      'Problem engaging with friends / pursuing interest / planning of the future (Since Last Month | Occurs Nearly Everyday)',
+    value: 81,
+  },
+  {
+    label: 'Emotional numbness (Since Last Month | Occurs Nearly Everyday)',
+    value: 82,
+  },
 
   // Criteria D
   {
     label:
       'The duration and severity of the bereavement reaction clearly exceed expected social, cultural, or religious norms for the individual’s culture and context',
-    value: 94,
+    value: 83,
   },
 
   // Criteria E
   {
     label:
-      'Not better explained by another mental disorder, such as major depressive disorder or posttraumatic stress disorder, and are not attributable to the physiological effects of a substance or another medical condition.',
-    value: 95,
+      'Not better explained by another mental disorder, such as major depressive disorder or post traumatic stress disorder, and are not attributable to the physiological effects of a substance or another medical condition.',
+    value: 84,
   },
 
   // "Other Specified Trauma- and StressorRelated Disorder
@@ -409,3 +443,155 @@ export const traumaSymptoms = [
   // Unspecified Trauma- and Stressor-Related Disorder
   // 	This category applies to presentations in which symptoms characteristic of a trauma- and stressor-related disorder that cause clinically significant distress or impairment in social, occupational, or other important areas of functioning predominate but do not meet the full criteria for any of the disorders in the trauma- and stressor-related disorders diagnostic class.
 ];
+
+const mainDisorderA = numbers => {
+  return numbers.includes(17) && numbers.includes(18);
+};
+
+const optionalDisorderA = numbers => {
+  const criteriaB = [19, 20, 21];
+  const criteriaC = [1, 2, 3];
+  const matchingCriteriaB = criteriaB.filter(value => numbers.includes(value));
+  const matchingCriteriaC = criteriaC.filter(value => numbers.includes(value));
+  return (
+    matchingCriteriaB.length >= 2 ||
+    matchingCriteriaC.length >= 1 ||
+    numbers.includes(22) ||
+    numbers.includes(23) ||
+    numbers.includes(24) ||
+    25
+  );
+};
+
+export const mainDisorderB = numbers => {
+  const criteriaValues = [26, 27, 28, 29];
+  const matchingCriteria = criteriaValues.filter(value =>
+    numbers.includes(value),
+  );
+  return matchingCriteria.length >= 2;
+};
+
+export const optionalDisorderB = numbers => {
+  const criteriaC = [1, 2, 3];
+  const matchingCriteriaC = criteriaC.filter(value => numbers.includes(value));
+  return numbers.includes(30) || matchingCriteriaC || numbers.includes(22);
+};
+
+export const mainDisorderC = numbers => {
+  const criteriaValues = [0, 4, 31, 32];
+  const matchingCriteria = criteriaValues.filter(value =>
+    numbers.includes(value),
+  );
+  return matchingCriteria.length >= 1;
+};
+
+export const optionalDisorderC = numbers => {
+  const criteriaB = [5, 6, 7, 8, 9];
+  const criteriaC = [33, 34];
+  const criteriaD = [35, 36, 37, 38, 38, 40, 41];
+  const criteriaE = [10, 42, 11, 12, 13, 14];
+  const matchingCriteriaB = criteriaB.filter(value => numbers.includes(value));
+  const matchingCriteriaC = criteriaC.filter(value => numbers.includes(value));
+  const matchingCriteriaD = criteriaD.filter(value => numbers.includes(value));
+  const matchingCriteriaE = criteriaE.filter(value => numbers.includes(value));
+  return (
+    matchingCriteriaB.length >= 1 ||
+    matchingCriteriaC.length >= 1 ||
+    matchingCriteriaD.length >= 7 ||
+    matchingCriteriaE.length >= 2 ||
+    numbers.includes(43) ||
+    numbers.includes(15) ||
+    numbers.includes(16)
+  );
+};
+
+export const mainDisorderD = numbers => {
+  const criteriaValues = [44, 45];
+  const matchingCriteria = criteriaValues.filter(value =>
+    numbers.includes(value),
+  );
+  return matchingCriteria.length >= 1;
+};
+
+export const optionalDisorderD = numbers => {
+  const criteriaB = [5, 6, 7, 8, 9];
+  const criteriaC = [46, 47, 48, 49, 50, 51];
+  const criteriaD = [10, 11, 12, 13, 14];
+  const matchingCriteriaB = criteriaB.filter(value => numbers.includes(value));
+  const matchingCriteriaC = criteriaC.filter(value => numbers.includes(value));
+  const matchingCriteriaD = criteriaD.filter(value => numbers.includes(value));
+  return (
+    matchingCriteriaB.length >= 1 ||
+    matchingCriteriaC.length >= 1 ||
+    matchingCriteriaD.length >= 2 ||
+    numbers.includes(52) ||
+    numbers.includes(15) ||
+    numbers.includes(16)
+  );
+};
+
+export const mainDisorderE = numbers => {
+  const criteriaValues = [0, 4, 53];
+  const matchingCriteria = criteriaValues.filter(value =>
+    numbers.includes(value),
+  );
+  return matchingCriteria.length >= 1;
+};
+
+export const optionalDisorderE = numbers => {
+  const criteriaB = [55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66];
+  const matchingCriteriaB = criteriaB.filter(value => numbers.includes(value));
+  return (
+    matchingCriteriaB.length >= 2 ||
+    numbers.includes(67) ||
+    numbers.includes(15) ||
+    numbers.includes(16)
+  );
+};
+
+const mainDisorderF = numbers => {
+  return numbers.includes(68);
+};
+
+const optionalDisorderF = numbers => {
+  const criteriaB = [69, 70];
+  const matchingCriteriaB = criteriaB.filter(value => numbers.includes(value));
+  return (
+    matchingCriteriaB.length >= 2 ||
+    numbers.includes(71) ||
+    numbers.includes(72) ||
+    numbers.includes(73)
+  );
+};
+
+const mainDisorderG = numbers => {
+  return numbers.includes(74);
+};
+
+const optionalDisorderG = numbers => {
+  const criteriaB = [75, 75];
+  const criteriaC = [77, 78, 79, 80, 81, 82];
+  const matchingCriteriaB = criteriaB.filter(value => numbers.includes(value));
+  const matchingCriteriaC = criteriaC.filter(value => numbers.includes(value));
+  return matchingCriteriaB.length >= 2 || matchingCriteriaC.length >= 3;
+};
+
+export const traumaDiagnosis = numbers => {
+  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+    return 'Reactive Attachment Disorder';
+  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+    return 'Disinhibited Social Engagement Disorder';
+  } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
+    return 'Post traumatic Stress Disorder';
+  } else if (mainDisorderD(numbers) || optionalDisorderD(numbers)) {
+    return 'Post Traumatic Stress Disorder in Children (6 Years & Younger)';
+  } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
+    return 'Acute Stress Disorder';
+  } else if (mainDisorderF(numbers) || optionalDisorderF(numbers)) {
+    return 'Adjustment Disorder';
+  } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
+    return 'Prolonged Grief Disorder';
+  } else {
+    return 'Other Specified / Unspecified Trauma- and StressorRelated Disorder';
+  }
+};

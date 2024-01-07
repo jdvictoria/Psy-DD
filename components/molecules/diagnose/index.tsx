@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {ScrollView} from 'react-native';
 
 import {
@@ -14,26 +14,39 @@ import CardDiagnoseSmall from '../../atoms/card-diagnose_small';
 import CardDiagnoseBig from '../../atoms/card-diagnose_big';
 import CardDiagnoseFilter from '../../atoms/card-diagnose-filter';
 
+import {traumaDiagnosis} from '../../../utils/trauma';
+
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
   const [result, setResult] = useState('');
   const [filter, setFilter] = useState('');
+  const [showResult, setShowResult] = useState(false);
   const [criteriaInstance, setCriteriaInstance] = useState(0);
 
   const clearBigCard = () => {
     setCriteriaInstance(0);
+    setResult('');
+    setFilter('');
   };
 
   const addBigCard = () => {
     setCriteriaInstance(prevCount => prevCount + 1);
   };
 
+  const handleDiagnose = () => {
+    setShowResult(true);
+  };
+
   // Handle Results
   const [numbers, setNumbers] = useState([]);
 
-  console.log(numbers);
+  useEffect(() => {
+    if (filter === 'a') {
+      setResult(traumaDiagnosis(numbers));
+    }
+  }, [filter, numbers]);
 
   return (
     <StyledView>
@@ -58,11 +71,16 @@ function HomeDiagnose({isDarkMode}) {
           }}
           style={{width: '100%'}}
           showsVerticalScrollIndicator={false}>
-          <CardDiagnoseResult isDarkMode={isDarkMode} result={result} />
+          <CardDiagnoseResult
+            isDarkMode={isDarkMode}
+            result={result}
+            showResult={showResult}
+          />
           <CardDiagnoseSmall
             isDarkMode={isDarkMode}
             clearBigCard={clearBigCard}
             addBigCard={addBigCard}
+            handleDiagnose={handleDiagnose}
             filter={filter}
           />
           <CardDiagnoseFilter isDarkMode={isDarkMode} setFilter={setFilter} />

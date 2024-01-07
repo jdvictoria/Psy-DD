@@ -131,7 +131,8 @@ export const DiagnoseResultCard = styled.View`
   margin-bottom: 10px;
 
   width: 90%;
-  height: 60px;
+  min-height: 60px;
+  height: auto;
 
   border-radius: 20px;
 `;
