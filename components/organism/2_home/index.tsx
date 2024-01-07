@@ -34,7 +34,6 @@ function HomeNavigation({isDarkMode, userID, setIsDarkMode, setIsLoggedIn}) {
           console.log('Document does not exist');
         }
       });
-
     return () => subscriber();
   }, [userID]);
 

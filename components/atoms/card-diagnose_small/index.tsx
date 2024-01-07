@@ -34,8 +34,7 @@ function CardDiagnoseSmall({
       </DiagnoseResultLeft>
       <DiagnoseResultCenter
         onPress={addBigCard}
-        style={{backgroundColor: '#45A4FF'}}
-        disabled={filter === ''}>
+        style={{backgroundColor: '#45A4FF'}}>
         <Image
           style={{
             width: 40,

@@ -6,7 +6,6 @@ import {
   HeaderContainer,
   StyledView,
 } from '../../../styles/form-container';
-
 import {contentText, StyledText20} from '../../../styles/form-text';
 
 import CardDiagnoseResult from '../../atoms/card-diagnose_result';
@@ -28,7 +27,6 @@ function HomeDiagnose({isDarkMode}) {
   const clearBigCard = () => {
     setCriteriaInstance(0);
     setResult('');
-    setFilter('');
   };
 
   const addBigCard = () => {
