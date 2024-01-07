@@ -12,21 +12,28 @@ import CardDiagnoseResult from '../../atoms/card-diagnose_result';
 import CardDiagnoseSmall from '../../atoms/card-diagnose_small';
 import CardDiagnoseBig from '../../atoms/card-diagnose_big';
 import CardDiagnoseFilter from '../../atoms/card-diagnose-filter';
+import CardDiagnoseSpecify from '../../atoms/card-diagnose-specify';
 
 import {traumaDiagnosis} from '../../../utils/trauma';
+import {somaticDiagnosis} from '../../../utils/somatic';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
   const [result, setResult] = useState('');
+  const [additional, setAdditional] = useState('');
   const [filter, setFilter] = useState('');
+
+  const [numbers, setNumbers] = useState([]);
   const [showResult, setShowResult] = useState(false);
   const [criteriaInstance, setCriteriaInstance] = useState(0);
 
   const clearBigCard = () => {
     setCriteriaInstance(0);
     setResult('');
+    setAdditional('');
+    setNumbers([]);
   };
 
   const addBigCard = () => {
@@ -38,16 +45,16 @@ function HomeDiagnose({isDarkMode}) {
   };
 
   // Handle Results
-  const [numbers, setNumbers] = useState([]);
 
   useEffect(() => {
     if (filter === 'a') {
       setResult(traumaDiagnosis(numbers));
     } else if (filter === 'b') {
-      setResult();
+      setResult(somaticDiagnosis(numbers));
     }
   }, [filter, numbers]);
 
+  // console.log(numbers);
   return (
     <StyledView>
       <HeaderContainer
@@ -74,6 +81,7 @@ function HomeDiagnose({isDarkMode}) {
           <CardDiagnoseResult
             isDarkMode={isDarkMode}
             result={result}
+            additional={additional}
             showResult={showResult}
           />
           <CardDiagnoseSmall
@@ -83,6 +91,14 @@ function HomeDiagnose({isDarkMode}) {
             handleDiagnose={handleDiagnose}
             filter={filter}
           />
+          {(result === 'Somatic Symptom Disorder' ||
+            result === 'Illness Anxiety Disorder') && (
+            <CardDiagnoseSpecify
+              isDarkMode={isDarkMode}
+              setAdditional={setAdditional}
+              result={result}
+            />
+          )}
           <CardDiagnoseFilter isDarkMode={isDarkMode} setFilter={setFilter} />
           {[...Array(criteriaInstance)].map((_, index) => (
             <CardDiagnoseBig

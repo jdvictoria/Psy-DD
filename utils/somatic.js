@@ -200,9 +200,6 @@ export const somaticSymptoms = [
       'A false belief of being pregnant that is associated with objective signs and reported symptoms of pregnancy',
     value: 30,
   },
-
-  // "Unspecified Somatic Symptom and Related Disorder
-  // This category applies to presentations in which symptoms characteristic of a somatic symptom and related disorder that cause clinically significant distress or impairment in social, occupational, or other important areas of functioning predominate but do not meet the full criteria for any of the disorders in the somatic symptom and related disorders diagnostic class. The unspecified somatic symptom and related disorder category should not be used unless there are decidedly unusual situations where there is insufficient information to make a more specific diagnosis.
 ];
 
 const mainDisorderA = numbers => {
@@ -250,7 +247,14 @@ export const somaticDiagnosis = numbers => {
     return 'Illness Anxiety Disorder';
   } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
     return 'Conversion Disorder';
+  } else if (numbers.length > 1) {
+    return 'Other Specified / Unspecified Somatic Symptom and Related Disorder';
   } else {
-    return 'Unspecified Somatic Symptom and Related Disorder';
+    return '';
   }
 };
+
+export const disorderABAdditional = [
+  {label: 'Duration of symptoms is less than 6 months', value: 0},
+  {label: 'Duration of symptoms is 6 months or more than', value: 1},
+];

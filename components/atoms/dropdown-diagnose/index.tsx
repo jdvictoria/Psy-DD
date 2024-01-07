@@ -11,64 +11,71 @@ function DropdownComponent({isDarkMode, data, label, value, setValue}) {
   const renderLabel = () => {
     if (value || isFocus) {
       return (
-          <Text
-              style={[
-                styles.label,
-                {
-                  backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF',
-                  color: isDarkMode ? '#FFFFFF' : '#1A2230',
-                },
-              ]}>
-            {label}
-          </Text>
+        <Text
+          style={[
+            styles.label,
+            {
+              backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF',
+              color: isDarkMode ? '#FFFFFF' : '#1A2230',
+            },
+          ]}>
+          {label}
+        </Text>
       );
     }
     return null;
   };
 
   return (
-      <View
-          style={[
-            styles.container,
-            {width: label === 'Symptom/s' || label === 'Category' ? '95%' : '47.5%'},
-          ]}>
-        {renderLabel()}
-        <Dropdown
-            data={data}
-            value={value}
-            search={label === 'Symptom/s' || label === 'Category'}
-            maxHeight={300}
-            labelField="label"
-            valueField="value"
-            searchPlaceholder="Search..."
-            inputSearchStyle={styles.inputSearchStyle}
-            placeholderStyle={[
-              styles.placeholderStyle,
-              {
-                color: isDarkMode ? '#FFFFFF' : '#041325',
-              },
-            ]}
-            selectedTextStyle={[
-              styles.selectedTextStyle,
-              {
-                color: isDarkMode ? '#FFFFFF' : '#041325',
-              },
-            ]}
-            style={[
-              styles.dropdown,
-              {borderColor: isDarkMode ? '#FFFFFF' : '#041325'},
-            ]}
-            placeholder={!isFocus ? 'Select item' : '...'}
-            // iconStyle={styles.iconStyle}
-            // onFocus={() => setIsFocus(true)}
-            // onBlur={() => setIsFocus(false)}
-            onChange={item => {
-              // @ts-ignore
-              setValue(item.value);
-              setIsFocus(false);
-            }}
-        />
-      </View>
+    <View
+      style={[
+        styles.container,
+        {
+          width:
+            label === 'Symptom/s' ||
+            label === 'Category' ||
+            label === 'Specification'
+              ? '95%'
+              : '47.5%',
+        },
+      ]}>
+      {renderLabel()}
+      <Dropdown
+        data={data}
+        value={value}
+        search={label === 'Symptom/s' || label === 'Category'}
+        maxHeight={300}
+        labelField="label"
+        valueField="value"
+        searchPlaceholder="Search..."
+        inputSearchStyle={styles.inputSearchStyle}
+        placeholderStyle={[
+          styles.placeholderStyle,
+          {
+            color: isDarkMode ? '#FFFFFF' : '#041325',
+          },
+        ]}
+        selectedTextStyle={[
+          styles.selectedTextStyle,
+          {
+            color: isDarkMode ? '#FFFFFF' : '#041325',
+          },
+        ]}
+        style={[
+          styles.dropdown,
+          {borderColor: isDarkMode ? '#FFFFFF' : '#041325'},
+        ]}
+        placeholder={!isFocus ? 'Select item' : '...'}
+        // iconStyle={styles.iconStyle}
+        // onFocus={() => setIsFocus(true)}
+        // onBlur={() => setIsFocus(false)}
+        onChange={item => {
+          // @ts-ignore
+          setValue(item.value);
+          setIsFocus(false);
+        }}
+      />
+    </View>
   );
 }
 
