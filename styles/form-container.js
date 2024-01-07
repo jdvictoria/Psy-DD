@@ -127,8 +127,8 @@ export const DiagnoseResultCard = styled.View`
   align-items: center;
   flex-direction: row;
 
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 
   width: 90%;
   min-height: 60px;

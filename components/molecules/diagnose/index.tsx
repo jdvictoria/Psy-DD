@@ -59,6 +59,7 @@ function HomeDiagnose({isDarkMode}) {
     }
   }, [filter, numbers, showResult]);
 
+  console.log(numbers);
   return (
     <StyledView>
       <HeaderContainer
@@ -82,11 +83,13 @@ function HomeDiagnose({isDarkMode}) {
           }}
           style={{width: '100%'}}
           showsVerticalScrollIndicator={false}>
+          <CardDiagnoseFilter isDarkMode={isDarkMode} setFilter={setFilter} />
           <CardDiagnoseSmall
             isDarkMode={isDarkMode}
             clearBigCard={clearBigCard}
             addBigCard={addBigCard}
             handleDiagnose={handleDiagnose}
+            disabled={numbers.length === 0}
           />
           {result !== '' && showResult && (
             <CardDiagnoseResult
@@ -113,7 +116,7 @@ function HomeDiagnose({isDarkMode}) {
               result={result}
             />
           )}
-          <CardDiagnoseFilter isDarkMode={isDarkMode} setFilter={setFilter} />
+
           {[...Array(criteriaInstance)].map((_, index) => (
             <CardDiagnoseBig
               key={index}

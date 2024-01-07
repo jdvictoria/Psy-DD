@@ -29,6 +29,8 @@ function CardDiagnoseResult({
 
   if (specification >= 2 && specification <= 8) {
     code = '(F44.4)';
+  } else {
+    code = '';
   }
 
   return (

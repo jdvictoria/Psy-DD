@@ -16,6 +16,7 @@ function CardDiagnoseSmall({
   clearBigCard,
   addBigCard,
   handleDiagnose,
+  disabled,
 }) {
   const contentStyle = contentText(isDarkMode);
 
@@ -52,7 +53,8 @@ function CardDiagnoseSmall({
         style={{
           backgroundColor: '#00A911',
         }}
-        onPress={handleDiagnose}>
+        onPress={handleDiagnose}
+        disabled={disabled}>
         <StyledText20 style={contentStyle.semibold}>Diagnose</StyledText20>
       </DiagnoseResultRight>
     </DiagnoseResultCard>
