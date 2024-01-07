@@ -11,7 +11,7 @@ import {disorderSpecificationA} from '../../../utils/somatic';
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
   let additionalData;
 
-  if (result === 'Conversion') {
+  if (result === 'Conversion Disorder') {
     additionalData = disorderSpecificationA;
   }
 

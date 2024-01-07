@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {ScrollView} from 'react-native';
 
 import {
@@ -26,13 +26,13 @@ function HomeDiagnose({isDarkMode}) {
   const [duration, setDuration] = useState('');
   const [specification, setSpecification] = useState('');
   const [filter, setFilter] = useState('');
-
   const [numbers, setNumbers] = useState([]);
   const [showResult, setShowResult] = useState(false);
   const [criteriaInstance, setCriteriaInstance] = useState(0);
 
   const clearBigCard = () => {
     setCriteriaInstance(0);
+    setShowResult(false);
     setResult('');
     setDuration('');
     setSpecification('');
@@ -47,17 +47,18 @@ function HomeDiagnose({isDarkMode}) {
     setShowResult(true);
   };
 
-  // Handle Results
+  useEffect(() => {
+    if (filter === 'a' && showResult) {
+      setResult(traumaDiagnosis(numbers));
+    }
+  }, [filter, numbers, showResult]);
 
   useEffect(() => {
-    if (filter === 'a') {
-      setResult(traumaDiagnosis(numbers));
-    } else if (filter === 'b') {
+    if (filter === 'b' && showResult) {
       setResult(somaticDiagnosis(numbers));
     }
-  }, [filter, numbers]);
+  }, [filter, numbers, showResult]);
 
-  console.log(numbers);
   return (
     <StyledView>
       <HeaderContainer
@@ -86,9 +87,8 @@ function HomeDiagnose({isDarkMode}) {
             clearBigCard={clearBigCard}
             addBigCard={addBigCard}
             handleDiagnose={handleDiagnose}
-            filter={filter}
           />
-          {result !== '' && (
+          {result !== '' && showResult && (
             <CardDiagnoseResult
               isDarkMode={isDarkMode}
               result={result}
@@ -105,7 +105,8 @@ function HomeDiagnose({isDarkMode}) {
             />
           )}
           {(result === 'Somatic Symptom Disorder' ||
-            result === 'Illness Anxiety Disorder') && (
+            result === 'Illness Anxiety Disorder' ||
+            result === 'Conversion Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}

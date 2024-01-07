@@ -35,8 +35,8 @@ function SignInComponent({navigation, isDarkMode, setUserID}) {
       [{text: 'OK', onPress: () => console.log('OK Pressed')}],
     );
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('vjoshuaarlo12@gmail.com');
+  const [password, setPassword] = useState('psyApp12');
   const [error, setError] = useState(null);
 
   const handleSignIn = async () => {

@@ -7,7 +7,7 @@ import {
 } from '../../../styles/form-container';
 import {contentText, StyledText16} from '../../../styles/form-text';
 
-import DropdownComponent from '../dropdown-diagnose';
+import DropdownSymptoms from '../dropdown-symptoms';
 
 import {traumaSymptoms} from '../../../utils/trauma';
 import {somaticSymptoms} from '../../../utils/somatic';
@@ -81,7 +81,7 @@ function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
             marginTop: 5,
           }}>
           <StyledRow>
-            <DropdownComponent
+            <DropdownSymptoms
               isDarkMode={isDarkMode}
               data={symptomData}
               label={'Symptom/s'}

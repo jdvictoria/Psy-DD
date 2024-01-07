@@ -578,6 +578,7 @@ const optionalDisorderG = numbers => {
 
 export const traumaDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+    console.log('went');
     return 'Reactive Attachment Disorder';
   } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
     return 'Disinhibited Social Engagement Disorder';
@@ -591,7 +592,9 @@ export const traumaDiagnosis = numbers => {
     return 'Adjustment Disorder';
   } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
     return 'Prolonged Grief Disorder';
+  } else if (numbers.length > 1) {
+    return 'Other Specified / Unspecified Trauma and Stressor Related Disorder';
   } else {
-    return 'Other Specified / Unspecified Trauma- and StressorRelated Disorder';
+    return '';
   }
 };
