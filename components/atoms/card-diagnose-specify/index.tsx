@@ -5,7 +5,11 @@ import {DiagnoseResultCard} from '../../../styles/form-container';
 // @ts-ignore
 import DropdownComponent from '../dropdown-diagnose';
 
-import {disorderSpecificationA} from '../../../utils/somatic';
+import {
+  disorderSpecificationA,
+  disorderSpecificationB,
+  disorderSpecificationC,
+} from '../../../utils/somatic';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -13,6 +17,12 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
 
   if (result === 'Conversion Disorder') {
     additionalData = disorderSpecificationA;
+  } else if (
+    result === 'Psychological Factors Affecting Other Medical Conditions'
+  ) {
+    additionalData = disorderSpecificationB;
+  } else if (result === 'Factitious Disorder') {
+    additionalData = disorderSpecificationC;
   }
 
   return (

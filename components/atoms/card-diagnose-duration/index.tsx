@@ -5,7 +5,7 @@ import {DiagnoseResultCard} from '../../../styles/form-container';
 // @ts-ignore
 import DropdownComponent from '../dropdown-diagnose';
 
-import {disorderDurationA} from '../../../utils/somatic';
+import {disorderDurationA, disorderDurationB} from '../../../utils/somatic';
 
 // @ts-ignore
 function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
@@ -17,6 +17,8 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     result === 'Conversion Disorder'
   ) {
     additionalData = disorderDurationA;
+  } else if (result === 'Factitious Disorder') {
+    additionalData = disorderDurationB;
   }
 
   return (

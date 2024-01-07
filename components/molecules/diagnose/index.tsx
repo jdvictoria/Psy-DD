@@ -59,7 +59,7 @@ function HomeDiagnose({isDarkMode}) {
     }
   }, [filter, numbers, showResult]);
 
-  console.log(numbers);
+  // console.log(numbers);
   return (
     <StyledView>
       <HeaderContainer
@@ -100,7 +100,10 @@ function HomeDiagnose({isDarkMode}) {
               showResult={showResult}
             />
           )}
-          {result === 'Conversion Disorder' && (
+          {(result === 'Conversion Disorder' ||
+            result ===
+              'Psychological Factors Affecting Other Medical Conditions' ||
+            result === 'Factitious Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}
@@ -109,7 +112,8 @@ function HomeDiagnose({isDarkMode}) {
           )}
           {(result === 'Somatic Symptom Disorder' ||
             result === 'Illness Anxiety Disorder' ||
-            result === 'Conversion Disorder') && (
+            result === 'Conversion Disorder' ||
+            result === 'Factitious Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}

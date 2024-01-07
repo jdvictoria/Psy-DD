@@ -107,7 +107,7 @@ export const somaticSymptoms = [
   // Criteria B (1 symptom)
   {
     label:
-      '•Psychological Factor have influenced the course of medical condition \n•Behavioral Factor have influenced the course of medical condition',
+      '•Psychological factor have influenced the course of medical condition \n•Behavioral Factor have influenced the course of medical condition',
     value: 17,
   },
   {
@@ -162,43 +162,16 @@ export const somaticSymptoms = [
     value: 25,
   },
 
-  // Factitious Disorder Imposed on Another
-  // Criteria A
   {
-    label:
-      '•Falsification of physical symptom \n•Falsification of Psychological symptom \n•Falsification of Disease \n•Falsification of injury',
+    label: 'Criterion D for illness anxiety disorder is not met',
     value: 26,
   },
-
-  // Criteria B
-  {
-    label:
-      '•Presents himself as ill to others \n•Presents himself as impaired to others \n•Presents himself as injuredto others',
-    value: 27,
-  },
-
-  // Criteria C
-  {
-    label:
-      'The deceptive behavior is evident even in the absence of obvious external rewards',
-    value: 28,
-  },
-
-  // Criteria D
-  {
-    label:
-      'The behavior is not better explained by another mental disorder, such as delusional disorder or another psychotic disorder',
-    value: 29,
-  },
-
-  // Other Specified Somatic Symptom and Related Disorder
-  // This category applies to presentations in which symptoms characteristic of a somatic symptom and related disorder that cause clinically significant distress or impairment in social, occupational, or other important areas of functioning predominate but do not meet the full criteria for any of the disorders in the somatic symptom and related disorders diagnostic class.
 
   // Pseudocyesis
   {
     label:
       'A false belief of being pregnant that is associated with objective signs and reported symptoms of pregnancy',
-    value: 30,
+    value: 27,
   },
 ];
 
@@ -240,6 +213,32 @@ const optionalDisorderC = numbers => {
   );
 };
 
+const mainDisorderD = numbers => {
+  const criteriaA = [17, 18, 19, 20];
+  const matchingCriteriaA = criteriaA.filter(value => numbers.includes(value));
+  return matchingCriteriaA.length >= 1;
+};
+
+const optionalDisorderD = numbers => {
+  return numbers.includes(16) || numbers.includes(21);
+};
+
+const mainDisorderE = numbers => {
+  return numbers.includes(22);
+};
+
+const optionalDisorderE = numbers => {
+  return numbers.includes(23) || numbers.includes(24) || numbers.includes(25);
+};
+
+const mainDisorderF = numbers => {
+  return numbers.includes(26);
+};
+
+const mainDisorderG = numbers => {
+  return numbers.includes(27);
+};
+
 export const somaticDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
     return 'Somatic Symptom Disorder';
@@ -247,6 +246,14 @@ export const somaticDiagnosis = numbers => {
     return 'Illness Anxiety Disorder';
   } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
     return 'Conversion Disorder';
+  } else if (mainDisorderD(numbers) || optionalDisorderD(numbers)) {
+    return 'Psychological Factors Affecting Other Medical Conditions';
+  } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
+    return 'Factitious Disorder';
+  } else if (mainDisorderF(numbers)) {
+    return 'Maladaptive Avoidance';
+  } else if (mainDisorderG(numbers)) {
+    return 'Pseudocyesis';
   } else if (numbers.length > 1) {
     return 'Other Specified / Unspecified Somatic Symptom and Related Disorder';
   } else {
@@ -257,6 +264,18 @@ export const somaticDiagnosis = numbers => {
 export const disorderDurationA = [
   {label: 'Less than 6 months', value: 0},
   {label: 'Greater or Equal to 6 months', value: 1},
+];
+
+export const disorderDurationB = [
+  {
+    label: 'One event of falsification of illness and/or induction of injury',
+    value: 2,
+  },
+  {
+    label:
+      'Two or more events of falsification of illness and/or induction of injury',
+    value: 3,
+  },
 ];
 
 export const disorderSpecificationA = [
@@ -272,5 +291,31 @@ export const disorderSpecificationA = [
   {label: 'With special sensory symptom (Visual)', value: 11},
   {label: 'With special sensory symptom (Olfactory)', value: 12},
   {label: 'With special sensory symptom (Hearing Disturbance)', value: 13},
-  {label: 'With Mixed Symptoms', value: 10},
+  {label: 'With Mixed Symptoms', value: 14},
+];
+
+export const disorderSpecificationB = [
+  {
+    label:
+      'Increases medical risk (e.g., inconsistent adherence with antihypertension treatment)',
+    value: 15,
+  },
+  {label: 'Aggravates underlying medical condition', value: 16},
+  {
+    label: 'Results in medical hospitalization or emergency room visit',
+    value: 17,
+  },
+  {
+    label:
+      '•Results in severe, life-threatening risk \n•Ignoring heart attack symptoms',
+    value: 18,
+  },
+];
+
+export const disorderSpecificationC = [
+  {
+    label: 'Inflicted to himself / herself',
+    value: 19,
+  },
+  {label: 'Inflicted to other', value: 20},
 ];
