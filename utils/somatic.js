@@ -296,26 +296,26 @@ export const disorderSpecificationA = [
 
 export const disorderSpecificationB = [
   {
-    label:
-      'Increases medical risk (e.g., inconsistent adherence with antihypertension treatment)',
+    label: 'Inflicted to himself / herself',
     value: 15,
   },
-  {label: 'Aggravates underlying medical condition', value: 16},
+  {label: 'Inflicted to other', value: 16},
+];
+
+export const disorderSeverityA = [
+  {
+    label:
+      'Increases medical risk (e.g., inconsistent adherence with antihypertension treatment)',
+    value: 0,
+  },
+  {label: 'Aggravates underlying medical condition', value: 1},
   {
     label: 'Results in medical hospitalization or emergency room visit',
-    value: 17,
+    value: 2,
   },
   {
     label:
       '•Results in severe, life-threatening risk \n•Ignoring heart attack symptoms',
-    value: 18,
+    value: 3,
   },
-];
-
-export const disorderSpecificationC = [
-  {
-    label: 'Inflicted to himself / herself',
-    value: 19,
-  },
-  {label: 'Inflicted to other', value: 20},
 ];

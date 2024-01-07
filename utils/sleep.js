@@ -452,21 +452,21 @@ export const disorderDurationD = [
   {label: 'Duration of more than 3 months', value: 9},
 ];
 
+export const disorderSpecificationC = [
+  {
+    label: 'With Medical Condition',
+    value: 17,
+  },
+  {label: 'With Mental Disorder', value: 18},
+];
+
 export const disorderSpecificationD = [
   {
     label: 'With Medical Condition',
-    value: 21,
+    value: 19,
   },
-  {label: 'With Mental Disorder', value: 22},
-];
-
-export const disorderSpecificationE = [
-  {
-    label: 'With Medical Condition',
-    value: 23,
-  },
-  {label: 'With Mental Disorder', value: 24},
-  {label: 'With Another Sleep Disorder', value: 25},
+  {label: 'With Mental Disorder', value: 20},
+  {label: 'With Another Sleep Disorder', value: 21},
 ];
 
 export const disorderSeverityB = [

@@ -114,8 +114,6 @@ function HomeDiagnose({isDarkMode}) {
             />
           )}
           {(result === 'Conversion Disorder' ||
-            result ===
-              'Psychological Factors Affecting Other Medical Conditions' ||
             result === 'Factitious Disorder' ||
             result === 'Insomnia Disorder' ||
             result === 'Hypersomnolence Disorder') && (
@@ -137,7 +135,9 @@ function HomeDiagnose({isDarkMode}) {
               result={result}
             />
           )}
-          {result === 'Hypersomnolence Disorder' && (
+          {(result ===
+            'Psychological Factors Affecting Other Medical Conditions' ||
+            result === 'Hypersomnolence Disorder') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}

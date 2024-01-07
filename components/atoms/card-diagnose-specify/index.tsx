@@ -8,12 +8,11 @@ import DropdownComponent from '../dropdown-diagnose';
 import {
   disorderSpecificationA,
   disorderSpecificationB,
-  disorderSpecificationC,
 } from '../../../utils/somatic';
 
 import {
+  disorderSpecificationC,
   disorderSpecificationD,
-  disorderSpecificationE,
 } from '../../../utils/sleep';
 
 // @ts-ignore
@@ -22,16 +21,12 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
 
   if (result === 'Conversion Disorder') {
     additionalData = disorderSpecificationA;
-  } else if (
-    result === 'Psychological Factors Affecting Other Medical Conditions'
-  ) {
-    additionalData = disorderSpecificationB;
   } else if (result === 'Factitious Disorder') {
-    additionalData = disorderSpecificationC;
+    additionalData = disorderSpecificationB;
   } else if (result === 'Insomnia Disorder') {
-    additionalData = disorderSpecificationD;
+    additionalData = disorderSpecificationC;
   } else if (result === 'Hypersomnolence Disorder') {
-    additionalData = disorderSpecificationE;
+    additionalData = disorderSpecificationD;
   }
 
   return (

@@ -23,60 +23,54 @@ function CardDiagnoseResult({
   let string;
   let code;
 
-  if (severity === 4) {
-    severe = 'Mild';
-  } else if (severity === 5) {
-    severe = 'Moderate';
-  } else if (severity === 6) {
-    severe = 'Severe';
+  if (severity === 0 || severity === 4) {
+    severe = 'Mild ';
+  } else if (severity === 1 || severity === 5) {
+    severe = 'Moderate ';
+  } else if (severity === 2 || severity === 6) {
+    severe = 'Severe ';
+  } else if (severity === 3) {
+    severe = 'Extreme ';
   } else {
     severe = '';
   }
 
   if (duration === 0) {
-    string = 'Brief';
+    string = 'Brief ';
   } else if (duration === 2) {
-    string = 'Single';
+    string = 'Single ';
   } else if (duration === 3 || duration === 6) {
-    string = 'Recurrent';
+    string = 'Recurrent ';
   } else if (duration === 4) {
-    string = 'Episodic';
+    string = 'Episodic ';
   } else if (duration === 7) {
-    string = 'Acute';
+    string = 'Acute ';
   } else if (duration === 8) {
-    string = 'Subacute';
+    string = 'Subacute ';
   } else if (duration === 5 || duration === 9) {
-    string = 'Persistent';
+    string = 'Persistent ';
   } else {
     string = '';
   }
 
   if (specification >= 2 && specification <= 8) {
-    code = '(F44.4)';
+    code = ' (F44.4)';
   } else if (specification === 9) {
-    code = '(F44.5)';
+    code = ' (F44.5)';
   } else if (specification >= 10 && specification <= 13) {
-    code = '(F44.6)';
+    code = ' (F44.6)';
   } else if (specification === 14) {
-    code = '(F44.7)';
+    code = ' (F44.7)';
   } else if (specification === 15) {
-    code = '(Mild)';
+    code = ' by Self';
   } else if (specification === 16) {
-    code = '(Moderate)';
-  } else if (specification === 17) {
-    code = '(Severe)';
-  } else if (specification === 18) {
-    code = '(Extreme)';
-  } else if (specification === 19) {
-    code = 'by Self';
-  } else if (specification === 20) {
-    code = 'by Proxy';
-  } else if (specification === 21 || specification === 23) {
-    code = '(w/ Medical Condition)';
-  } else if (specification === 22 || specification === 24) {
-    code = '(w/ Mental Disorder Condition)';
-  } else if (specification === 25) {
-    code = '(w/ Another Sleep Disorder)';
+    code = ' by Proxy';
+  } else if (specification === 17 || specification === 19) {
+    code = ' (w/ Medical Condition)';
+  } else if (specification === 18 || specification === 20) {
+    code = ' (w/ Mental Disorder Condition)';
+  } else if (specification === 21) {
+    code = ' (w/ Another Sleep Disorder)';
   } else {
     code = '';
   }
@@ -91,7 +85,7 @@ function CardDiagnoseResult({
         }}>
         {showResult && (
           <StyledText20 style={contentStyle.bold}>
-            {severe + ' ' + string + ' ' + result + ' ' + code}
+            {severe + string + result + ' ' + code}
           </StyledText20>
         )}
       </DiagnoseResultCard>
