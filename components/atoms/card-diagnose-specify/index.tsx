@@ -18,6 +18,7 @@ import {
   disorderSpecificationG,
   disorderSpecificationH,
   disorderSpecificationI,
+  disorderSpecificationJ,
 } from '../../../utils/sleep';
 
 // @ts-ignore
@@ -42,6 +43,8 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = disorderSpecificationH;
   } else if (result === 'Non–Rapid Eye Movement Sleep Arousal Disorder') {
     additionalData = disorderSpecificationI;
+  } else if (result === 'Nightmare Disorder') {
+    additionalData = disorderSpecificationJ;
   }
 
   return (

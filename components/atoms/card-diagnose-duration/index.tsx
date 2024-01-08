@@ -11,6 +11,7 @@ import {
   disorderDurationD,
   disorderDurationE,
   disorderDurationF,
+  disorderDurationG,
 } from '../../../utils/sleep';
 
 // @ts-ignore
@@ -33,6 +34,8 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     additionalData = disorderDurationE;
   } else if (result === 'Circadian Rhythm Sleep-Wake Disorder') {
     additionalData = disorderDurationF;
+  } else if (result === 'Nightmare Disorder') {
+    additionalData = disorderDurationG;
   }
 
   return (

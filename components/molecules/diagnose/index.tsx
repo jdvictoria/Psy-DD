@@ -121,7 +121,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Central Sleep Apnea' ||
             result === 'Sleep-Related Hypoventilation' ||
             result === 'Circadian Rhythm Sleep-Wake Disorder' ||
-            result === 'Non–Rapid Eye Movement Sleep Arousal Disorder') && (
+            result === 'Non–Rapid Eye Movement Sleep Arousal Disorder' ||
+            result === 'Nightmare Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}
@@ -135,7 +136,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Insomnia Disorder' ||
             result === 'Hypersomnolence Disorder' ||
             result === 'Narcolepsy' ||
-            result === 'Circadian Rhythm Sleep-Wake Disorder') && (
+            result === 'Circadian Rhythm Sleep-Wake Disorder' ||
+            result === 'Nightmare Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}
@@ -146,7 +148,8 @@ function HomeDiagnose({isDarkMode}) {
             'Psychological Factors Affecting Other Medical Conditions' ||
             result === 'Hypersomnolence Disorder' ||
             result === 'Narcolepsy' ||
-            result === 'Obstructive Sleep Apnea Hypoapnea') && (
+            result === 'Obstructive Sleep Apnea Hypoapnea' ||
+            result === 'Nightmare Disorder') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}

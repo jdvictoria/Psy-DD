@@ -23,20 +23,28 @@ function CardDiagnoseResult({
   let string;
   let code;
 
-  if (severity === 0 || severity === 4 || severity === 7 || severity === 10) {
+  if (
+    severity === 0 ||
+    severity === 4 ||
+    severity === 7 ||
+    severity === 10 ||
+    severity === 13
+  ) {
     severe = 'Mild ';
   } else if (
     severity === 1 ||
     severity === 5 ||
     severity === 8 ||
-    severity === 11
+    severity === 11 ||
+    severity === 14
   ) {
     severe = 'Moderate ';
   } else if (
     severity === 2 ||
     severity === 6 ||
     severity === 9 ||
-    severity === 12
+    severity === 12 ||
+    severity === 15
   ) {
     severe = 'Severe ';
   } else if (severity === 3) {
@@ -53,11 +61,16 @@ function CardDiagnoseResult({
     string = 'Recurrent ';
   } else if (duration === 4 || duration === 12) {
     string = 'Episodic ';
-  } else if (duration === 7) {
+  } else if (duration === 7 || duration === 15) {
     string = 'Acute ';
-  } else if (duration === 8) {
+  } else if (duration === 8 || duration === 16) {
     string = 'Subacute ';
-  } else if (duration === 5 || duration === 9 || duration === 13) {
+  } else if (
+    duration === 5 ||
+    duration === 9 ||
+    duration === 13 ||
+    duration === 17
+  ) {
     string = 'Persistent ';
   } else if (duration === 10) {
     string = '(NT1) ';
@@ -79,12 +92,22 @@ function CardDiagnoseResult({
     code = ' by Self';
   } else if (specification === 16) {
     code = ' by Proxy';
-  } else if (specification === 17 || specification === 19) {
+  } else if (
+    specification === 17 ||
+    specification === 19 ||
+    specification === 44
+  ) {
     code = ' (w/ Medical Condition)';
-  } else if (specification === 18 || specification === 20) {
+  } else if (
+    specification === 18 ||
+    specification === 20 ||
+    specification === 43
+  ) {
     code = ' (w/ Mental Disorder Condition)';
-  } else if (specification === 21) {
+  } else if (specification === 21 || specification === 45) {
     code = ' (w/ Another Sleep Disorder)';
+  } else if (specification === 45) {
+    code = ' (During Sleep Onset)';
   } else if (specification === 22) {
     code = ' (G47.411)';
   } else if (specification === 23) {

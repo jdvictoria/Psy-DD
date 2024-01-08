@@ -484,6 +484,19 @@ const optionalDisorderH = numbers => {
   );
 };
 
+const mainDisorderI = numbers => {
+  return numbers.includes(39);
+};
+
+const optionalDisorderI = numbers => {
+  return (
+    numbers.includes(40) ||
+    (numbers.includes(41) && numbers.includes(42)) ||
+    numbers.includes(43) ||
+    numbers.includes(44)
+  );
+};
+
 export const sleepDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
     return 'Insomnia Disorder';
@@ -501,6 +514,8 @@ export const sleepDiagnosis = numbers => {
     return 'Circadian Rhythm Sleep-Wake Disorder';
   } else if (mainDisorderH(numbers) || optionalDisorderH(numbers)) {
     return 'Non–Rapid Eye Movement Sleep Arousal Disorder';
+  } else if (mainDisorderI(numbers) || optionalDisorderI(numbers)) {
+    return 'Nightmare Disorder';
   } else if (numbers.length > 1) {
     return 'Other Specified / Unspecified Sleep Symptom and Related Disorder';
   } else {
@@ -545,6 +560,22 @@ export const disorderDurationF = [
   {
     label: '"Two or more episodes occur within the space of 1 year',
     value: 14,
+  },
+];
+
+export const disorderDurationG = [
+  {
+    label: 'Duration of period of nightmares is 1 month or less',
+    value: 15,
+  },
+  {
+    label:
+      'Duration of period of nightmares is greater than 1 month but less than 6 months',
+    value: 16,
+  },
+  {
+    label: 'Duration of period of nightmares is 6 months or greater',
+    value: 17,
   },
 ];
 
@@ -677,6 +708,25 @@ export const disorderSpecificationI = [
   },
 ];
 
+export const disorderSpecificationJ = [
+  {
+    label: 'During Sleep Onset',
+    value: 42,
+  },
+  {
+    label: 'With Mental Disorder',
+    value: 43,
+  },
+  {
+    label: 'With Medical Condition',
+    value: 44,
+  },
+  {
+    label: 'With Another Sleep Disorder',
+    value: 45,
+  },
+];
+
 export const disorderSeverityB = [
   {
     label: 'Difficulty maintaining daytime alertness 1–2 days/week',
@@ -715,5 +765,20 @@ export const disorderSeverityD = [
   {
     label: 'Apnea hypopnea index is greater than 30',
     value: 12,
+  },
+];
+
+export const disorderSeverityE = [
+  {
+    label: 'Less than one episode per week on average',
+    value: 13,
+  },
+  {
+    label: 'One or more episodes per week but less than nightly',
+    value: 14,
+  },
+  {
+    label: 'Episodes Nightly',
+    value: 15,
   },
 ];
