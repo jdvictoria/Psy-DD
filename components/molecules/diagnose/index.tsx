@@ -122,7 +122,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Sleep-Related Hypoventilation' ||
             result === 'Circadian Rhythm Sleep-Wake Disorder' ||
             result === 'Non–Rapid Eye Movement Sleep Arousal Disorder' ||
-            result === 'Nightmare Disorder') && (
+            result === 'Nightmare Disorder' ||
+            result === 'Substance/Medication-Induced Sleep Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}
@@ -149,7 +150,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Hypersomnolence Disorder' ||
             result === 'Narcolepsy' ||
             result === 'Obstructive Sleep Apnea Hypoapnea' ||
-            result === 'Nightmare Disorder') && (
+            result === 'Nightmare Disorder' ||
+            result === 'Substance/Medication-Induced Sleep Disorder') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}

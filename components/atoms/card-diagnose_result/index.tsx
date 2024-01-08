@@ -49,6 +49,50 @@ function CardDiagnoseResult({
     severe = 'Severe ';
   } else if (severity === 3) {
     severe = 'Extreme ';
+  } else if (severity === 16) {
+    severe = '(F10.182) ';
+  } else if (severity === 17) {
+    severe = '(F10.282) ';
+  } else if (severity === 19) {
+    severe = '(F15.982) ';
+  } else if (severity === 20) {
+    severe = '(F12.188) ';
+  } else if (severity === 21) {
+    severe = '(F12.288) ';
+  } else if (severity === 22) {
+    severe = '(F12.988) ';
+  } else if (severity === 23) {
+    severe = '(F11.182) ';
+  } else if (severity === 24) {
+    severe = '(F11.282) ';
+  } else if (severity === 25) {
+    severe = '(F11.982) ';
+  } else if (severity === 26) {
+    severe = '(F13.182) ';
+  } else if (severity === 27) {
+    severe = '(F13.282) ';
+  } else if (severity === 28) {
+    severe = '(F13.982) ';
+  } else if (severity === 29) {
+    severe = '(F15.182) ';
+  } else if (severity === 30) {
+    severe = '(F15.282) ';
+  } else if (severity === 31) {
+    severe = '(F15.982) ';
+  } else if (severity === 32) {
+    severe = '(F14.182) ';
+  } else if (severity === 33) {
+    severe = '(F14.282) ';
+  } else if (severity === 34) {
+    severe = '(F14.982) ';
+  } else if (severity === 35) {
+    severe = '(F17.208) ';
+  } else if (severity === 36) {
+    severe = '(F19.182) ';
+  } else if (severity === 37) {
+    severe = '(F19.282) ';
+  } else if (severity === 38) {
+    severe = '(F19.982) ';
   } else {
     severe = '';
   }
@@ -148,6 +192,20 @@ function CardDiagnoseResult({
     code = ' (F51.3)';
   } else if (specification === 41) {
     code = ' (F51.4)';
+  } else if (specification === 46) {
+    code = ' (Insomnia type)';
+  } else if (specification === 47) {
+    code = ' (Daytime sleepiness type)';
+  } else if (specification === 48) {
+    code = ' (Parasomnia type)';
+  } else if (specification === 49) {
+    code = ' (Mixed type)';
+  } else if (specification === 50) {
+    code = ' (w/ Onset During Intoxication)';
+  } else if (specification === 51) {
+    code = ' (w/ Onset During Withdrawal)';
+  } else if (specification === 52) {
+    code = ' (w/ Onset After Medication Use)';
   } else {
     code = '';
   }

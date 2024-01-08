@@ -512,6 +512,20 @@ const optionalDisorderK = numbers => {
   );
 };
 
+const mainDisorderL = numbers => {
+  return numbers.includes(61);
+};
+
+const optionalDisorderL = numbers => {
+  return (
+    numbers.includes(62) ||
+    numbers.includes(63) ||
+    numbers.includes(64) ||
+    numbers.includes(65) ||
+    numbers.includes(66)
+  );
+};
+
 export const sleepDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
     return 'Insomnia Disorder';
@@ -535,6 +549,8 @@ export const sleepDiagnosis = numbers => {
     return 'Rapid Eye Movement Sleep Behavior Disorder';
   } else if (mainDisorderK(numbers) || optionalDisorderK(numbers)) {
     return 'Restless Legs Syndrome';
+  } else if (mainDisorderL(numbers) || optionalDisorderL(numbers)) {
+    return 'Substance/Medication-Induced Sleep Disorder';
   } else if (numbers.length > 1) {
     return 'Other Specified / Unspecified Sleep Symptom and Related Disorder';
   } else {
@@ -746,6 +762,43 @@ export const disorderSpecificationJ = [
   },
 ];
 
+export const disorderSpecificationK = [
+  {
+    label:
+      'Characterized by difficulty falling asleep or maintaining sleep, frequent nocturnal awakenings, or nonrestorative sleep',
+    value: 46,
+  },
+  {
+    label:
+      'Characterized by predominant complaint of excessive sleepiness/fatigue during waking hours or, less commonly, a long sleep period',
+    value: 47,
+  },
+  {
+    label: 'Characterized by abnormal behavioral events during sleep',
+    value: 48,
+  },
+  {
+    label:
+      'Characterized by a substance/medication induced sleep problem characterized by multiple types of sleep symptoms, but no symptom clearly predominates',
+    value: 49,
+  },
+  {
+    label:
+      'If criteria are met for intoxication with the substance and the symptoms develop during the intoxication',
+    value: 50,
+  },
+  {
+    label:
+      'If criteria are met for withdrawal from the substance and the symptoms develop during, or shortly after, withdrawal',
+    value: 51,
+  },
+  {
+    label:
+      'If symptoms developed at initiation of medication, with a change in use of medication, or during withdrawal of medication',
+    value: 52,
+  },
+];
+
 export const disorderSeverityB = [
   {
     label: 'Difficulty maintaining daytime alertness 1–2 days/week',
@@ -799,5 +852,105 @@ export const disorderSeverityE = [
   {
     label: 'Episodes Nightly',
     value: 15,
+  },
+];
+
+export const disorderSeverityF = [
+  {
+    label: 'With mild use disorder (Alcohol)',
+    value: 16,
+  },
+  {
+    label: 'With moderate or severe use disorder (Alcohol)',
+    value: 17,
+  },
+  {
+    label: 'Without use disorder (Alcohol)',
+    value: 18,
+  },
+  {
+    label: 'Without use disorder (Caffeine)',
+    value: 19,
+  },
+  {
+    label: 'With mild use disorder (Cannabis)',
+    value: 20,
+  },
+  {
+    label: 'With moderate or severe use disorder (Cannabis)',
+    value: 21,
+  },
+  {
+    label: 'Without use disorder (Cannabis)',
+    value: 22,
+  },
+  {
+    label: 'With mild use disorder (Opioid)',
+    value: 23,
+  },
+  {
+    label: 'With moderate or severe use disorder (Opioid)',
+    value: 24,
+  },
+  {
+    label: 'Without use disorder (Opioid)',
+    value: 25,
+  },
+  {
+    label: 'With mild use disorder (Sedative, Hypnotic, or Anxiolytic)',
+    value: 26,
+  },
+  {
+    label:
+      'With moderate or severe use disorder (Sedative, Hypnotic, or Anxiolytic)',
+    value: 27,
+  },
+  {
+    label: 'Without use disorder (Sedative, Hypnotic, or Anxiolytic)',
+    value: 28,
+  },
+  {
+    label:
+      'With mild use disorder (Amphetamine-type substance (or other stimulant))',
+    value: 29,
+  },
+  {
+    label:
+      'With moderate or severe use disorder (Amphetamine-type substance (or other stimulant))',
+    value: 30,
+  },
+  {
+    label:
+      'Without use disorder (Amphetamine-type substance (or other stimulant))',
+    value: 31,
+  },
+  {
+    label: 'With mild use disorder (Cocaine)',
+    value: 32,
+  },
+  {
+    label: 'With moderate or severe use disorder (Cocaine)',
+    value: 33,
+  },
+  {
+    label: 'Without use disorder (Cocaine)',
+    value: 34,
+  },
+  {
+    label: 'With moderate or severe use disorder (Tobacco)',
+    value: 35,
+  },
+  {
+    label: 'With mild use disorder (Other (or unknown) substance)',
+    value: 36,
+  },
+  {
+    label:
+      'With moderate or severe use disorder (Other (or unknown) substance)',
+    value: 37,
+  },
+  {
+    label: 'Without use disorder (Other (or unknown) substance)',
+    value: 38,
   },
 ];

@@ -11,6 +11,7 @@ import {
   disorderSeverityC,
   disorderSeverityD,
   disorderSeverityE,
+  disorderSeverityF,
 } from '../../../utils/sleep';
 
 // @ts-ignore
@@ -27,6 +28,8 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = disorderSeverityD;
   } else if (result === 'Nightmare Disorder') {
     additionalData = disorderSeverityE;
+  } else if (result === 'Substance/Medication-Induced Sleep Disorder') {
+    additionalData = disorderSeverityF;
   }
 
   return (

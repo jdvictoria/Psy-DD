@@ -19,6 +19,7 @@ import {
   disorderSpecificationH,
   disorderSpecificationI,
   disorderSpecificationJ,
+  disorderSpecificationK,
 } from '../../../utils/sleep';
 
 // @ts-ignore
@@ -45,6 +46,8 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = disorderSpecificationI;
   } else if (result === 'Nightmare Disorder') {
     additionalData = disorderSpecificationJ;
+  } else if (result === 'Substance/Medication-Induced Sleep Disorder') {
+    additionalData = disorderSpecificationK;
   }
 
   return (
