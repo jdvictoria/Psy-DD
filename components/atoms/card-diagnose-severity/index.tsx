@@ -13,11 +13,7 @@ import {
   disorderSeverityE,
   disorderSeverityF,
 } from '../../../utils/sleep';
-import {
-  disorderSeverityG,
-  disorderSeverityH,
-  disorderSeverityI,
-} from '../../../utils/sexual';
+import {disorderSeverityG, disorderSeverityH} from '../../../utils/sexual';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -46,7 +42,7 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
   ) {
     additionalData = disorderSeverityG;
   } else if (result === 'Substance/Medication-Induced Sexual Dysfunction') {
-    additionalData = disorderSeverityI;
+    additionalData = disorderSeverityH;
   }
 
   return (

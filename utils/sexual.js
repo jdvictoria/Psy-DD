@@ -355,7 +355,7 @@ export const disorderSeverityG = [
   },
 ];
 
-export const disorderSeverityI = [
+export const disorderSeverityH = [
   {
     label: 'With mild use disorder (Alcohol)',
     value: 42,
