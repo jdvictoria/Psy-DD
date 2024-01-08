@@ -14,11 +14,12 @@ import CardDiagnoseBig from '../../atoms/card-diagnose_big';
 import CardDiagnoseFilter from '../../atoms/card-diagnose-filter';
 import CardDiagnoseDuration from '../../atoms/card-diagnose-duration';
 import CardDiagnoseSpecify from '../../atoms/card-diagnose-specify';
+import CardDiagnoseSeverity from '../../atoms/card-diagnose-severity';
 
 import {traumaDiagnosis} from '../../../utils/trauma';
 import {somaticDiagnosis} from '../../../utils/somatic';
 import {sleepDiagnosis} from '../../../utils/sleep';
-import CardDiagnoseSeverity from '../../atoms/card-diagnose-severity';
+import {sexualDiagnosis} from '../../../utils/sexual';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -68,6 +69,12 @@ function HomeDiagnose({isDarkMode}) {
   useEffect(() => {
     if (filter === 'c' && showResult) {
       setResult(sleepDiagnosis(numbers));
+    }
+  }, [filter, numbers, showResult]);
+
+  useEffect(() => {
+    if (filter === 'd' && showResult) {
+      setResult(sexualDiagnosis(numbers));
     }
   }, [filter, numbers, showResult]);
 
@@ -123,7 +130,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Circadian Rhythm Sleep-Wake Disorder' ||
             result === 'Non–Rapid Eye Movement Sleep Arousal Disorder' ||
             result === 'Nightmare Disorder' ||
-            result === 'Substance/Medication-Induced Sleep Disorder') && (
+            result === 'Substance/Medication-Induced Sleep Disorder' ||
+            result === 'Substance/Medication-Induced Sexual Dysfunction') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}
@@ -138,7 +146,15 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Hypersomnolence Disorder' ||
             result === 'Narcolepsy' ||
             result === 'Circadian Rhythm Sleep-Wake Disorder' ||
-            result === 'Nightmare Disorder') && (
+            result === 'Nightmare Disorder' ||
+            result === 'Delayed Ejaculation' ||
+            result === 'Erectile Disorder' ||
+            result === 'Female Orgasmic Disorder' ||
+            result === 'Arousal Disorder' ||
+            result === 'Penetration Disorder' ||
+            result === 'Male Hypoactive Sexual Desire Disorder' ||
+            result === 'Premature (Early) Ejaculation' ||
+            result === 'Substance/Medication-Induced Sexual Dysfunction') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}
@@ -151,7 +167,15 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Narcolepsy' ||
             result === 'Obstructive Sleep Apnea Hypoapnea' ||
             result === 'Nightmare Disorder' ||
-            result === 'Substance/Medication-Induced Sleep Disorder') && (
+            result === 'Substance/Medication-Induced Sleep Disorder' ||
+            result === 'Delayed Ejaculation' ||
+            result === 'Erectile Disorder' ||
+            result === 'Female Orgasmic Disorder' ||
+            result === 'Arousal Disorder' ||
+            result === 'Penetration Disorder' ||
+            result === 'Male Hypoactive Sexual Desire Disorder' ||
+            result === 'Premature (Early) Ejaculation' ||
+            result === 'Substance/Medication-Induced Sexual Dysfunction') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}

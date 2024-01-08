@@ -13,6 +13,11 @@ import {
   disorderSeverityE,
   disorderSeverityF,
 } from '../../../utils/sleep';
+import {
+  disorderSeverityG,
+  disorderSeverityH,
+  disorderSeverityI,
+} from '../../../utils/sexual';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -30,6 +35,18 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = disorderSeverityE;
   } else if (result === 'Substance/Medication-Induced Sleep Disorder') {
     additionalData = disorderSeverityF;
+  } else if (
+    result === 'Delayed Ejaculation' ||
+    result === 'Erectile Disorder' ||
+    result === 'Female Orgasmic Disorder' ||
+    result === 'Arousal Disorder' ||
+    result === 'Penetration Disorder' ||
+    result === 'Male Hypoactive Sexual Desire Disorder' ||
+    result === 'Premature (Early) Ejaculation'
+  ) {
+    additionalData = disorderSeverityG;
+  } else if (result === 'Substance/Medication-Induced Sexual Dysfunction') {
+    additionalData = disorderSeverityI;
   }
 
   return (

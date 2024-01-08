@@ -28,7 +28,8 @@ function CardDiagnoseResult({
     severity === 4 ||
     severity === 7 ||
     severity === 10 ||
-    severity === 13
+    severity === 13 ||
+    severity === 39
   ) {
     severe = 'Mild ';
   } else if (
@@ -36,7 +37,8 @@ function CardDiagnoseResult({
     severity === 5 ||
     severity === 8 ||
     severity === 11 ||
-    severity === 14
+    severity === 14 ||
+    severity === 40
   ) {
     severe = 'Moderate ';
   } else if (
@@ -44,7 +46,8 @@ function CardDiagnoseResult({
     severity === 6 ||
     severity === 9 ||
     severity === 12 ||
-    severity === 15
+    severity === 15 ||
+    severity === 41
   ) {
     severe = 'Severe ';
   } else if (severity === 3) {
@@ -93,6 +96,42 @@ function CardDiagnoseResult({
     severe = '(F19.282) ';
   } else if (severity === 38) {
     severe = '(F19.982) ';
+  } else if (severity === 42) {
+    severe = '(F10.181) ';
+  } else if (severity === 43) {
+    severe = '(F10.281) ';
+  } else if (severity === 44) {
+    severe = '(F10.981) ';
+  } else if (severity === 45) {
+    severe = '(F11.181) ';
+  } else if (severity === 46) {
+    severe = '(F11.281) ';
+  } else if (severity === 47) {
+    severe = '(F11.981) ';
+  } else if (severity === 48) {
+    severe = '(F13.181) ';
+  } else if (severity === 49) {
+    severe = '(F13.281) ';
+  } else if (severity === 50) {
+    severe = '(F13.981) ';
+  } else if (severity === 51) {
+    severe = '(F15.181) ';
+  } else if (severity === 52) {
+    severe = '(F15.281) ';
+  } else if (severity === 53) {
+    severe = '(F15.981) ';
+  } else if (severity === 54) {
+    severe = '(F14.181) ';
+  } else if (severity === 55) {
+    severe = '(F14.281) ';
+  } else if (severity === 56) {
+    severe = '(F14.981) ';
+  } else if (severity === 57) {
+    severe = '(F19.181) ';
+  } else if (severity === 58) {
+    severe = '(F19.281) ';
+  } else if (severity === 59) {
+    severe = '(F19.981) ';
   } else {
     severe = '';
   }
@@ -109,6 +148,20 @@ function CardDiagnoseResult({
     string = 'Acute ';
   } else if (duration === 8 || duration === 16) {
     string = 'Subacute ';
+  } else if (duration === 18) {
+    string = 'Lifelong ';
+  } else if (duration === 19) {
+    string = 'Acquired ';
+  } else if (duration === 20) {
+    string = 'Generalized ';
+  } else if (duration === 21) {
+    string = 'Situational ';
+  } else if (duration === 22) {
+    string = 'Mild ';
+  } else if (duration === 23) {
+    string = 'Moderate ';
+  } else if (duration === 23) {
+    string = 'Severe ';
   } else if (
     duration === 5 ||
     duration === 9 ||
@@ -200,11 +253,11 @@ function CardDiagnoseResult({
     code = ' (Parasomnia type)';
   } else if (specification === 49) {
     code = ' (Mixed type)';
-  } else if (specification === 50) {
+  } else if (specification === 50 || specification === 53) {
     code = ' (w/ Onset During Intoxication)';
-  } else if (specification === 51) {
+  } else if (specification === 51 || specification === 54) {
     code = ' (w/ Onset During Withdrawal)';
-  } else if (specification === 52) {
+  } else if (specification === 52 || specification === 55) {
     code = ' (w/ Onset After Medication Use)';
   } else {
     code = '';
