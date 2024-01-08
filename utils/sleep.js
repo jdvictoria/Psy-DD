@@ -132,7 +132,7 @@ export const sleepSymptoms = [
   // per hour of sleep
   {
     label:
-      '•Evidence by polysomnography of at least five obstructive apneas \n•Nocturnal breathing disturbances \n•Snoring \n•Snorting \n•Gasping \n•Pause of breathing durring sleep \n•Daytime sleepiness \n•Fatigue \n•Unrefreshing sleep',
+      '•Evidence by polysomnography of at least five obstructive apneas \n•Nocturnal breathing disturbances \n•Snoring \n•Snorting \n•Gasping \n•Pause of breathing durring sleep \n•Daytime sleepiness \n•Fatigue \n•Unrefreshing sleep \n•(Per hour of sleep)',
     value: 23,
   },
   {
@@ -441,13 +441,19 @@ const optionalDisorderC = numbers => {
   return matchingCriteriaB.length >= 1;
 };
 
+const mainDisorderD = numbers => {
+  return numbers.includes(23) || numbers.includes(24);
+};
+
 export const sleepDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
     return 'Insomnia Disorder';
   } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
     return 'Hypersomnolence Disorder';
-  } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
+  } else if (mainDisorderC(numbers) && optionalDisorderC(numbers)) {
     return 'Narcolepsy';
+  } else if (mainDisorderD(numbers)) {
+    return 'Obstructive Sleep Apnea Hypoapnea';
   } else if (numbers.length > 1) {
     return 'Other Specified / Unspecified Sleep Symptom and Related Disorder';
   } else {
@@ -543,5 +549,20 @@ export const disorderSeverityC = [
     label:
       '•Nearly constant sleepiness and, often \n•Highly disturbed nocturnal sleep \n•Excessive body movement and vivid dreams',
     value: 9,
+  },
+];
+
+export const disorderSeverityD = [
+  {
+    label: 'Apnea hypopnea index is less than 15',
+    value: 10,
+  },
+  {
+    label: 'Apnea hypopnea index is 15–30',
+    value: 11,
+  },
+  {
+    label: 'Apnea hypopnea index is greater than 30',
+    value: 12,
   },
 ];

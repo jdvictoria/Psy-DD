@@ -23,11 +23,21 @@ function CardDiagnoseResult({
   let string;
   let code;
 
-  if (severity === 0 || severity === 4 || severity === 7) {
+  if (severity === 0 || severity === 4 || severity === 7 || severity === 10) {
     severe = 'Mild ';
-  } else if (severity === 1 || severity === 5 || severity === 8) {
+  } else if (
+    severity === 1 ||
+    severity === 5 ||
+    severity === 8 ||
+    severity === 11
+  ) {
     severe = 'Moderate ';
-  } else if (severity === 2 || severity === 6 || severity === 9) {
+  } else if (
+    severity === 2 ||
+    severity === 6 ||
+    severity === 9 ||
+    severity === 12
+  ) {
     severe = 'Severe ';
   } else if (severity === 3) {
     severe = 'Extreme ';

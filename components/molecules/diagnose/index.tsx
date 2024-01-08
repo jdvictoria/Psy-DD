@@ -140,7 +140,8 @@ function HomeDiagnose({isDarkMode}) {
           {(result ===
             'Psychological Factors Affecting Other Medical Conditions' ||
             result === 'Hypersomnolence Disorder' ||
-            result === 'Narcolepsy') && (
+            result === 'Narcolepsy' ||
+            result === 'Obstructive Sleep Apnea Hypoapnea') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
