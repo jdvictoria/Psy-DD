@@ -6,7 +6,11 @@ import {DiagnoseResultCard} from '../../../styles/form-container';
 import DropdownComponent from '../dropdown-diagnose';
 
 import {disorderDurationA, disorderDurationB} from '../../../utils/somatic';
-import {disorderDurationC, disorderDurationD} from '../../../utils/sleep';
+import {
+  disorderDurationC,
+  disorderDurationD,
+  disorderDurationE,
+} from '../../../utils/sleep';
 
 // @ts-ignore
 function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
@@ -24,6 +28,8 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     additionalData = disorderDurationC;
   } else if (result === 'Hypersomnolence Disorder') {
     additionalData = disorderDurationD;
+  } else if (result === 'Narcolepsy') {
+    additionalData = disorderDurationE;
   }
 
   return (

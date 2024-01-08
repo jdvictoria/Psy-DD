@@ -13,6 +13,7 @@ import {
 import {
   disorderSpecificationC,
   disorderSpecificationD,
+  disorderSpecificationE,
 } from '../../../utils/sleep';
 
 // @ts-ignore
@@ -27,6 +28,8 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = disorderSpecificationC;
   } else if (result === 'Hypersomnolence Disorder') {
     additionalData = disorderSpecificationD;
+  } else if (result === 'Narcolepsy') {
+    additionalData = disorderSpecificationE;
   }
 
   return (

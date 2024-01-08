@@ -23,11 +23,11 @@ function CardDiagnoseResult({
   let string;
   let code;
 
-  if (severity === 0 || severity === 4) {
+  if (severity === 0 || severity === 4 || severity === 7) {
     severe = 'Mild ';
-  } else if (severity === 1 || severity === 5) {
+  } else if (severity === 1 || severity === 5 || severity === 8) {
     severe = 'Moderate ';
-  } else if (severity === 2 || severity === 6) {
+  } else if (severity === 2 || severity === 6 || severity === 9) {
     severe = 'Severe ';
   } else if (severity === 3) {
     severe = 'Extreme ';
@@ -49,6 +49,10 @@ function CardDiagnoseResult({
     string = 'Subacute ';
   } else if (duration === 5 || duration === 9) {
     string = 'Persistent ';
+  } else if (duration === 10) {
+    string = '(NT1) ';
+  } else if (duration === 11) {
+    string = '(NT2) ';
   } else {
     string = '';
   }
@@ -71,6 +75,14 @@ function CardDiagnoseResult({
     code = ' (w/ Mental Disorder Condition)';
   } else if (specification === 21) {
     code = ' (w/ Another Sleep Disorder)';
+  } else if (specification === 22) {
+    code = ' (G47.411)';
+  } else if (specification === 23) {
+    code = ' (G47.419)';
+  } else if (specification === 24) {
+    code = ' (G47.421)';
+  } else if (specification === 25) {
+    code = ' (G47.429)';
   } else {
     code = '';
   }

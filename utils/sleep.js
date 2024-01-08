@@ -56,15 +56,18 @@ export const sleepSymptoms = [
   // Criteria A (at least one symptom)
   {
     label:
-      '•Recurrent periods of sleep \n•Lapses into sleep within the same day (3x / Week in 3 Months)',
+      '•Recurrent periods of sleep \n•Lapses into sleep within the same day \n•(3 Times a Week in 3 Months)',
     value: 10,
   },
   {
     label:
-      '•Prolonged main sleep more than 9 hours \n•Unrefreshing sleep (3x / Week in 3 Months)',
+      '•Prolonged main sleep more than 9 hours \n•Unrefreshing sleep \n•(3 Times a Week for 3 Months)',
     value: 11,
   },
-  {label: 'Difficulty being fully awake (3x / Week in 3 Months)', value: 12},
+  {
+    label: 'Difficulty being fully awake \n•(3 Times a Week in 3 Months)',
+    value: 12,
+  },
 
   // Criteria B
   {
@@ -106,7 +109,7 @@ export const sleepSymptoms = [
   // Three times per week
   {
     label:
-      '•Recurrent periods of irrepressible need to sleep \n•Lapsing into sleep \n•Napping occuring within the same day',
+      '•Recurrent periods of irrepressible need to sleep \n•Lapsing into sleep \n•Napping occuring within the same day \n•(3 Times a Week & Over the past 3 months)',
     value: 18,
   },
 
@@ -114,14 +117,14 @@ export const sleepSymptoms = [
   // Few times per month
   {
     label:
-      '•Episodes of Cataplexy \n•Brief episodes of sudden bilateral loss of muscle tone \n•Spontaneous grimaces or jaw-opening episodes with tongue thrusting or a global hypotonia,',
+      '•Episodes of Cataplexy (Few times per Month) \n•Brief episodes of sudden bilateral loss of muscle tone (Few times per Month) \n•Spontaneous grimaces or jaw-opening episodes with tongue thrusting or a global hypotonia (6 months of onset)',
     value: 19,
   },
-  {label: 'Hypocretin deficiency', value: 21},
+  {label: 'Hypocretin deficiency', value: 20},
   {
     label:
-      '•Nocturnal sleep \n•Polysomnography showing rapid eye movement \n•Two or more sleep-onset REM periods',
-    value: 22,
+      '•Nocturnal sleep \n•Polysomnography showing rapid eye movement (15 minutes) \n•Two or more sleep-onset REM periods',
+    value: 21,
   },
 
   // Obstructive Sleep Apnea Hypopnea
@@ -428,11 +431,23 @@ const optionalDisorderB = numbers => {
   );
 };
 
+const mainDisorderC = numbers => {
+  return numbers.includes(18);
+};
+
+const optionalDisorderC = numbers => {
+  const criteriaB = [19, 20, 21];
+  const matchingCriteriaB = criteriaB.filter(value => numbers.includes(value));
+  return matchingCriteriaB.length >= 1;
+};
+
 export const sleepDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
     return 'Insomnia Disorder';
   } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
     return 'Hypersomnolence Disorder';
+  } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
+    return 'Narcolepsy';
   } else if (numbers.length > 1) {
     return 'Other Specified / Unspecified Sleep Symptom and Related Disorder';
   } else {
@@ -452,6 +467,19 @@ export const disorderDurationD = [
   {label: 'Duration of more than 3 months', value: 9},
 ];
 
+export const disorderDurationE = [
+  {
+    label:
+      '(NT1) is most often based on the presence of recurrent sleepiness and cataplexy',
+    value: 10,
+  },
+  {
+    label:
+      'Based on sleepiness and positive multiple sleep latency test (MSLT) findings, only to be reassigned to a diagnosis of NT1 following emergence of cataplexy',
+    value: 11,
+  },
+];
+
 export const disorderSpecificationC = [
   {
     label: 'With Medical Condition',
@@ -469,6 +497,29 @@ export const disorderSpecificationD = [
   {label: 'With Another Sleep Disorder', value: 21},
 ];
 
+export const disorderSpecificationE = [
+  {
+    label:
+      '•Narcolepsy with cataplexy or hypocretin deficiency (Type 1) \n•Criterion B1 (Episodes of Cataplexy) or Criterion B2 (Low CSF Hypocretin-1 levels) is met',
+    value: 22,
+  },
+  {
+    label:
+      '•Narcolepsy without Cataplexy and either without Hypocretin deficiency or Hypocretin unmeasured (Type 2) \n•Criterion B3 (Positive Polysomnography/multiple sleep latency test) is met, but Criterion B1 is not met (i.e., no Cataplexy is present) and Criterion B2 is not met (i.e., CSF Gypocretin-1 levels are not low or have not been measured)',
+    value: 23,
+  },
+  {
+    label:
+      '•Narcolepsy with cataplexy or hypocretin deficiency due to a medical condition',
+    value: 24,
+  },
+  {
+    label:
+      '•Narcolepsy without cataplexy and without hypocretin deficiency due to a medical condition',
+    value: 25,
+  },
+];
+
 export const disorderSeverityB = [
   {
     label: 'Difficulty maintaining daytime alertness 1–2 days/week',
@@ -476,4 +527,21 @@ export const disorderSeverityB = [
   },
   {label: 'Difficulty maintaining daytime alertness 3–4 days/week', value: 5},
   {label: 'Difficulty maintaining daytime alertness 5–7 days/week', value: 6},
+];
+
+export const disorderSeverityC = [
+  {
+    label: '•Sleep disturbance if present, is mild. \n•If present, is mild.',
+    value: 7,
+  },
+  {
+    label:
+      '•Need for multiple naps daily \n•Sleep may be moderately disturbed \n•Cataplexy, when present, occurs daily or every few days.\n',
+    value: 8,
+  },
+  {
+    label:
+      '•Nearly constant sleepiness and, often \n•Highly disturbed nocturnal sleep \n•Excessive body movement and vivid dreams',
+    value: 9,
+  },
 ];
