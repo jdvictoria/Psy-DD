@@ -118,7 +118,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Insomnia Disorder' ||
             result === 'Hypersomnolence Disorder' ||
             result === 'Narcolepsy' ||
-            result === 'Central Sleep Apnea') && (
+            result === 'Central Sleep Apnea' ||
+            result === 'Sleep-Related Hypoventilation') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}

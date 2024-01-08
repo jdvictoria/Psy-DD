@@ -453,6 +453,14 @@ const optionalDisorderE = numbers => {
   return numbers.includes(26);
 };
 
+const mainDisorderF = numbers => {
+  return numbers.includes(27);
+};
+
+const optionalDisorderF = numbers => {
+  return numbers.includes(28);
+};
+
 export const sleepDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
     return 'Insomnia Disorder';
@@ -464,6 +472,8 @@ export const sleepDiagnosis = numbers => {
     return 'Obstructive Sleep Apnea Hypoapnea';
   } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
     return 'Central Sleep Apnea';
+  } else if (mainDisorderF(numbers) || optionalDisorderF(numbers)) {
+    return 'Sleep-Related Hypoventilation';
   } else if (numbers.length > 1) {
     return 'Other Specified / Unspecified Sleep Symptom and Related Disorder';
   } else {
@@ -551,6 +561,24 @@ export const disorderSpecificationF = [
     label:
       '•Central sleep apnea comorbid with opioid use \n•The pathogenesis of this subtype is attributed to the effects of opioids on the respiratory rhythm generators in the medulla as well as the differential effects on hypoxic versus hypercapnic respiratory drive',
     value: 28,
+  },
+];
+
+export const disorderSpecificationG = [
+  {
+    label:
+      '•Idiopathic hypoventilation \n•This subtype is not attributable to any readily identified condition',
+    value: 29,
+  },
+  {
+    label:
+      '•Congenital central alveolar hypoventilation \n•This subtype is a rare congenital disorder in which the individual typically presents in the perinatal period with shallow breathing, or cyanosis and apnea during sleep',
+    value: 30,
+  },
+  {
+    label:
+      '•Comorbid sleep-related hypoventilation \n•This subtype occurs as a consequence of a medical condition, such as a pulmonary disorder \n•Occurs with obesity',
+    value: 31,
   },
 ];
 

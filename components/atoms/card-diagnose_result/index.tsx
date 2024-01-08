@@ -99,6 +99,12 @@ function CardDiagnoseResult({
     code = ' (R06.3)';
   } else if (specification === 28) {
     code = ' (G47.37)';
+  } else if (specification === 29) {
+    code = ' (G47.34)';
+  } else if (specification === 30) {
+    code = ' (G47.35)';
+  } else if (specification === 31) {
+    code = ' (G47.36)';
   } else {
     code = '';
   }
