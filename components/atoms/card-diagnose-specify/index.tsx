@@ -29,6 +29,12 @@ import {
   disorderSpecificationP,
 } from '../../../utils/neurodevelopmental';
 import {disorderSpecificationQ} from '../../../utils/personality';
+import {
+  disorderSpecificationR,
+  disorderSpecificationS,
+  disorderSpecificationT,
+  disorderSpecificationU,
+} from '../../../utils/paraphilic';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -68,6 +74,14 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = disorderSpecificationP;
   } else if (result === 'Personality Change Due to Another Medical Condition') {
     additionalData = disorderSpecificationQ;
+  } else if (result === 'Exhibitionistic Disorder') {
+    additionalData = disorderSpecificationR;
+  } else if (result === 'Pedophilic Disorder') {
+    additionalData = disorderSpecificationS;
+  } else if (result === 'Fetishistic Disorder') {
+    additionalData = disorderSpecificationT;
+  } else if (result === 'Transvestic Disorder') {
+    additionalData = disorderSpecificationU;
   }
 
   return (

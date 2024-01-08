@@ -20,7 +20,9 @@ import {traumaDiagnosis} from '../../../utils/trauma';
 import {somaticDiagnosis} from '../../../utils/somatic';
 import {sleepDiagnosis} from '../../../utils/sleep';
 import {sexualDiagnosis} from '../../../utils/sexual';
+
 import {personalityDiagnosis} from '../../../utils/personality';
+import {paraphilicDiagnosis} from '../../../utils/paraphilic';
 import {neuroDiagnosis} from '../../../utils/neurodevelopmental';
 
 // @ts-ignore
@@ -80,9 +82,17 @@ function HomeDiagnose({isDarkMode}) {
     }
   }, [filter, numbers, showResult]);
 
+  // e
+
   useEffect(() => {
     if (filter === 'f' && showResult) {
       setResult(personalityDiagnosis(numbers));
+    }
+  }, [filter, numbers, showResult]);
+
+  useEffect(() => {
+    if (filter === 'g' && showResult) {
+      setResult(paraphilicDiagnosis(numbers));
     }
   }, [filter, numbers, showResult]);
 
@@ -134,27 +144,35 @@ function HomeDiagnose({isDarkMode}) {
               showResult={showResult}
             />
           )}
-          {(result === 'Conversion Disorder' ||
-            result === 'Factitious Disorder' ||
-            result === 'Insomnia Disorder' ||
+          {(result ===
+            'Psychological Factors Affecting Other Medical Conditions' ||
             result === 'Hypersomnolence Disorder' ||
             result === 'Narcolepsy' ||
-            result === 'Central Sleep Apnea' ||
-            result === 'Sleep-Related Hypoventilation' ||
-            result === 'Circadian Rhythm Sleep-Wake Disorder' ||
-            result === 'Non–Rapid Eye Movement Sleep Arousal Disorder' ||
+            result === 'Obstructive Sleep Apnea Hypoapnea' ||
             result === 'Nightmare Disorder' ||
             result === 'Substance/Medication-Induced Sleep Disorder' ||
+            result === 'Delayed Ejaculation' ||
+            result === 'Erectile Disorder' ||
+            result === 'Female Orgasmic Disorder' ||
+            result === 'Arousal Disorder' ||
+            result === 'Penetration Disorder' ||
+            result === 'Male Hypoactive Sexual Desire Disorder' ||
+            result === 'Premature (Early) Ejaculation' ||
             result === 'Substance/Medication-Induced Sexual Dysfunction' ||
-            result === 'Autism Spectrum Disorder' ||
             result === 'Attention-Deficit/Hyperactivity Disorder' ||
             result === 'Specific Learning Disorder' ||
-            result === 'Persistent (Chronic) Motor or Vocal Tic Disorder' ||
-            result ===
-              'Personality Change Due to Another Medical Condition') && (
-            <CardDiagnoseSpecify
+            result === 'Stereotypic Movement Disorder' ||
+            result === 'Voyeuristic Disorder' ||
+            result === 'Exhibitionistic Disorder' ||
+            result === 'Frotteuristic Disorder' ||
+            result === 'Sexual Masochism Disorder' ||
+            result === 'Sexual Sadism Disorder' ||
+            result === 'Pedophilic Disorder' ||
+            result === 'Fetishistic Disorder' ||
+            result === 'Transvestic Disorder') && (
+            <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
-              setSpecification={setSpecification}
+              setSeverity={setSeverity}
               result={result}
             />
           )}
@@ -181,27 +199,30 @@ function HomeDiagnose({isDarkMode}) {
               result={result}
             />
           )}
-          {(result ===
-            'Psychological Factors Affecting Other Medical Conditions' ||
+          {(result === 'Conversion Disorder' ||
+            result === 'Factitious Disorder' ||
+            result === 'Insomnia Disorder' ||
             result === 'Hypersomnolence Disorder' ||
             result === 'Narcolepsy' ||
-            result === 'Obstructive Sleep Apnea Hypoapnea' ||
+            result === 'Central Sleep Apnea' ||
+            result === 'Sleep-Related Hypoventilation' ||
+            result === 'Circadian Rhythm Sleep-Wake Disorder' ||
+            result === 'Non–Rapid Eye Movement Sleep Arousal Disorder' ||
             result === 'Nightmare Disorder' ||
             result === 'Substance/Medication-Induced Sleep Disorder' ||
-            result === 'Delayed Ejaculation' ||
-            result === 'Erectile Disorder' ||
-            result === 'Female Orgasmic Disorder' ||
-            result === 'Arousal Disorder' ||
-            result === 'Penetration Disorder' ||
-            result === 'Male Hypoactive Sexual Desire Disorder' ||
-            result === 'Premature (Early) Ejaculation' ||
             result === 'Substance/Medication-Induced Sexual Dysfunction' ||
+            result === 'Autism Spectrum Disorder' ||
             result === 'Attention-Deficit/Hyperactivity Disorder' ||
             result === 'Specific Learning Disorder' ||
-            result === 'Stereotypic Movement Disorder') && (
-            <CardDiagnoseSeverity
+            result === 'Persistent (Chronic) Motor or Vocal Tic Disorder' ||
+            result === 'Personality Change Due to Another Medical Condition' ||
+            result === 'Exhibitionistic Disorder' ||
+            result === 'Pedophilic Disorder' ||
+            result === 'Fetishistic Disorder' ||
+            result === 'Transvestic Disorder') && (
+            <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
-              setSeverity={setSeverity}
+              setSpecification={setSpecification}
               result={result}
             />
           )}

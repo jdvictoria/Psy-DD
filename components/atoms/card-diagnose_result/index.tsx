@@ -141,6 +141,16 @@ function CardDiagnoseResult({
     severe = '(F19.281) ';
   } else if (severity === 59) {
     severe = '(F19.981) ';
+  } else if (severity === 69 || severity === 71 || severity === 73) {
+    severe = '(In a Controlled Environment) ';
+  } else if (severity === 70 || severity === 72 || severity === 74) {
+    severe = '(In Full remission) ';
+  } else if (severity === 75) {
+    severe = '(w/ Asphyxiophilia) ';
+  } else if (severity === 76) {
+    severe = '(Exclusive) ';
+  } else if (severity === 77) {
+    severe = '(Nonexclusive) ';
   } else {
     severe = '';
   }
@@ -312,6 +322,32 @@ function CardDiagnoseResult({
     code = ' (Other type)';
   } else if (specification === 76) {
     code = ' (Combined type)';
+  } else if (specification === 77) {
+    code = ' (Sexually aroused by exposing genitals to prepubertal children)';
+  } else if (specification === 78) {
+    code =
+      ' (Sexually aroused by exposing genitals to physically mature individuals)';
+  } else if (specification === 79) {
+    code =
+      ' (Sexually aroused by exposing genitals to prepubertal children and to physically mature individuals)';
+  } else if (specification === 80) {
+    code = ' (Sexually attracted to males)';
+  } else if (specification === 81) {
+    code = ' (Sexually attracted to females)';
+  } else if (specification === 82) {
+    code = ' (Sexually attracted to both)';
+  } else if (specification === 83) {
+    code = ' (Limited to incest)';
+  } else if (specification === 84) {
+    code = ' (Body Parts)';
+  } else if (specification === 85) {
+    code = ' (Non Living Objects)';
+  } else if (specification === 86) {
+    code = ' (Other)';
+  } else if (specification === 87) {
+    code = ' (w/ Fetishism)';
+  } else if (specification === 88) {
+    code = ' (w/ Autogynephilia)';
   } else {
     code = '';
   }

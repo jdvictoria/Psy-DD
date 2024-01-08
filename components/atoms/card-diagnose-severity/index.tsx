@@ -19,6 +19,12 @@ import {
   disorderSeverityJ,
   disorderSeverityK,
 } from '../../../utils/neurodevelopmental';
+import {
+  disorderSeverityL,
+  disorderSeverityM,
+  disorderSeverityO,
+  disorderSeverityP,
+} from '../../../utils/paraphilic';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -54,6 +60,20 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = disorderSeverityJ;
   } else if (result === 'Stereotypic Movement Disorder') {
     additionalData = disorderSeverityK;
+  } else if (
+    result === 'Voyeuristic Disorder' ||
+    result === 'Frotteuristic Disorder' ||
+    result === 'Sexual Sadism Disorder' ||
+    result === 'Fetishistic Disorder' ||
+    result === 'Transvestic Disorder'
+  ) {
+    additionalData = disorderSeverityL;
+  } else if (result === 'Exhibitionistic Disorder') {
+    additionalData = disorderSeverityM;
+  } else if (result === 'Sexual Masochism Disorder') {
+    additionalData = disorderSeverityO;
+  } else if (result === 'Pedophilic Disorder') {
+    additionalData = disorderSeverityP;
   }
 
   return (
