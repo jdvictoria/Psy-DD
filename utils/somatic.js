@@ -254,10 +254,8 @@ export const somaticDiagnosis = numbers => {
     return 'Maladaptive Avoidance';
   } else if (mainDisorderG(numbers)) {
     return 'Pseudocyesis';
-  } else if (numbers.length > 1) {
-    return 'Other Specified / Unspecified Somatic Symptom and Related Disorder';
   } else {
-    return '';
+    return 'Other Specified / Unspecified Somatic Symptom and Related Disorder';
   }
 };
 

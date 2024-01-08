@@ -463,10 +463,8 @@ export const personalityDiagnosis = numbers => {
     return 'Obsessive-Compulsive Personality Disorder';
   } else if (mainDisorderK(numbers)) {
     return 'Personality Change Due to Another Medical Condition';
-  } else if (numbers.length > 1) {
-    return 'Other Specified / Unspecified Personality Disorder';
   } else {
-    return '';
+    return 'Other Specified / Unspecified Personality Disorder';
   }
 };
 

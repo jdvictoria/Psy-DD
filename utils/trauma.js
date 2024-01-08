@@ -592,9 +592,7 @@ export const traumaDiagnosis = numbers => {
     return 'Adjustment Disorder';
   } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
     return 'Prolonged Grief Disorder';
-  } else if (numbers.length > 1) {
-    return 'Other Specified / Unspecified Trauma and Stressor Related Disorder';
   } else {
-    return '';
+    return 'Other Specified / Unspecified Trauma and Stressor Related Disorder';
   }
 };

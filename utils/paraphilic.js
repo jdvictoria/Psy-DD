@@ -218,10 +218,8 @@ export const paraphilicDiagnosis = numbers => {
     return 'Fetishistic Disorder';
   } else if (mainDisorderH(numbers)) {
     return 'Transvestic Disorder';
-  } else if (numbers.length > 1) {
-    return 'Other Specified / Unspecified Paraphilic Disorder';
   } else {
-    return '';
+    return 'Other Specified / Unspecified Paraphilic Disorder';
   }
 };
 

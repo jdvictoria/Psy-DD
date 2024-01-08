@@ -32,8 +32,10 @@ export const schizophreniaSymptoms = [
 
   // Delusional Disorder
   // Criteria A
-  // 1 month or longer
-  {label: 'The presence of one (or more) delusions', value: 11},
+  {
+    label: 'The presence of one (or more) delusions (1 Month or Longer)',
+    value: 11,
+  },
 
   // Criteria B
   {label: 'Criterion A for schizophrenia has never been met', value: 12},
@@ -307,4 +309,37 @@ export const schizophreniaSymptoms = [
   // This category applies to presentations in which symptoms characteristic of a schizophrenia spectrum and other psychotic disorder that cause clinically significant distress or impairment in social, occupational, or other important areas of functioning predominate but do not meet the full criteria for any of the disorders in the schizophrenia spectrum and other psychotic disorders diagnostic class
 ];
 
-export const schizophreniaDiagnosis = numbers => {};
+const mainDisorderA = numbers => {
+  const criteriaValues = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const matchingCriteria = criteriaValues.filter(value =>
+    numbers.includes(value),
+  );
+  return matchingCriteria.length >= 9 || numbers.includes(10);
+};
+
+const optionalDisorderA = numbers => {
+  return numbers.includes(10);
+};
+
+const mainDisorderB = numbers => {
+  return numbers.includes(11);
+};
+
+const optionalDisorderB = numbers => {
+  return (
+    numbers.includes(12) ||
+    numbers.includes(13) ||
+    numbers.includes(14) ||
+    numbers.includes(15)
+  );
+};
+
+export const schizophreniaDiagnosis = numbers => {
+  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+    return 'Schizotypal (Personality) Disorder';
+  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+    return 'Delusional Disorder';
+  } else {
+    return 'Unspecified Schizophrenia Spectrum and Other Psychotic Disorder';
+  }
+};

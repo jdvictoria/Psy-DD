@@ -659,10 +659,8 @@ export const neuroDiagnosis = numbers => {
     return 'Persistent (Chronic) Motor or Vocal Tic Disorder';
   } else if (mainDisorderR(numbers)) {
     return 'Provisional Tic Disorder';
-  } else if (numbers.length > 1) {
-    return 'Unspecified Neurodevelopmental Disorder';
   } else {
-    return '';
+    return 'Unspecified Neurodevelopmental Disorder';
   }
 };
 

@@ -551,10 +551,8 @@ export const sleepDiagnosis = numbers => {
     return 'Restless Legs Syndrome';
   } else if (mainDisorderL(numbers) || optionalDisorderL(numbers)) {
     return 'Substance/Medication-Induced Sleep Disorder';
-  } else if (numbers.length > 1) {
-    return 'Other Specified / Unspecified Sleep Symptom and Related Disorder';
   } else {
-    return '';
+    return 'Other Specified / Unspecified Sleep Symptom and Related Disorder';
   }
 };
 

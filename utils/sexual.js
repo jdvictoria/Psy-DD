@@ -294,10 +294,8 @@ export const sexualDiagnosis = numbers => {
     return 'Premature (Early) Ejaculation';
   } else if (mainDisorderH(numbers) || optionalDisorderH(numbers)) {
     return 'Substance/Medication-Induced Sexual Dysfunction';
-  } else if (numbers.length > 1) {
-    return 'Other Specified / Unspecified Sexual Dysfunction';
   } else {
-    return '';
+    return 'Other Specified / Unspecified Sexual Dysfunction';
   }
 };
 
