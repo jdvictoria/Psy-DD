@@ -20,6 +20,7 @@ import {traumaDiagnosis} from '../../../utils/trauma';
 import {somaticDiagnosis} from '../../../utils/somatic';
 import {sleepDiagnosis} from '../../../utils/sleep';
 import {sexualDiagnosis} from '../../../utils/sexual';
+import {neuroDiagnosis} from '../../../utils/neurodevelopmental';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -78,6 +79,12 @@ function HomeDiagnose({isDarkMode}) {
     }
   }, [filter, numbers, showResult]);
 
+  useEffect(() => {
+    if (filter === 'i' && showResult) {
+      setResult(neuroDiagnosis(numbers));
+    }
+  }, [filter, numbers, showResult]);
+
   // console.log(numbers);
   return (
     <StyledView>
@@ -131,7 +138,11 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Non–Rapid Eye Movement Sleep Arousal Disorder' ||
             result === 'Nightmare Disorder' ||
             result === 'Substance/Medication-Induced Sleep Disorder' ||
-            result === 'Substance/Medication-Induced Sexual Dysfunction') && (
+            result === 'Substance/Medication-Induced Sexual Dysfunction' ||
+            result === 'Autism Spectrum Disorder' ||
+            result === 'Attention-Deficit/Hyperactivity Disorder' ||
+            result === 'Specific Learning Disorder' ||
+            result === 'Persistent (Chronic) Motor or Vocal Tic Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}
@@ -175,7 +186,10 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Penetration Disorder' ||
             result === 'Male Hypoactive Sexual Desire Disorder' ||
             result === 'Premature (Early) Ejaculation' ||
-            result === 'Substance/Medication-Induced Sexual Dysfunction') && (
+            result === 'Substance/Medication-Induced Sexual Dysfunction' ||
+            result === 'Attention-Deficit/Hyperactivity Disorder' ||
+            result === 'Specific Learning Disorder' ||
+            result === 'Stereotypic Movement Disorder') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}

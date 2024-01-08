@@ -29,7 +29,10 @@ function CardDiagnoseResult({
     severity === 7 ||
     severity === 10 ||
     severity === 13 ||
-    severity === 39
+    severity === 39 ||
+    severity === 60 ||
+    severity === 63 ||
+    severity === 66
   ) {
     severe = 'Mild ';
   } else if (
@@ -38,7 +41,10 @@ function CardDiagnoseResult({
     severity === 8 ||
     severity === 11 ||
     severity === 14 ||
-    severity === 40
+    severity === 40 ||
+    severity === 61 ||
+    severity === 64 ||
+    severity === 67
   ) {
     severe = 'Moderate ';
   } else if (
@@ -47,7 +53,10 @@ function CardDiagnoseResult({
     severity === 9 ||
     severity === 12 ||
     severity === 15 ||
-    severity === 41
+    severity === 41 ||
+    severity === 62 ||
+    severity === 65 ||
+    severity === 68
   ) {
     severe = 'Severe ';
   } else if (severity === 3) {
@@ -259,6 +268,42 @@ function CardDiagnoseResult({
     code = ' (w/ Onset During Withdrawal)';
   } else if (specification === 52 || specification === 55) {
     code = ' (w/ Onset After Medication Use)';
+  } else if (specification === 56) {
+    code = ' (Requiring very substantial support)';
+  } else if (specification === 57) {
+    code = ' (Requiring substantial support)';
+  } else if (specification === 58) {
+    code = ' (Requiring support)';
+  } else if (specification === 59) {
+    code = ' (w/ or w/o accompanying intellectual impairment)';
+  } else if (specification === 60) {
+    code = ' (w/ or w/o accompanying language impairment)';
+  } else if (specification === 61) {
+    code =
+      ' (Associated with a known genetic or other medical condition or environmental factor)';
+  } else if (specification === 62) {
+    code =
+      ' (Associated with a neurodevelopmental, mental, or behavioral problem)';
+  } else if (specification === 63) {
+    code = ' (w/ catatonia)';
+  } else if (specification === 64) {
+    code = ' (F90.2 Combined presentation)';
+  } else if (specification === 65) {
+    code = ' (F90.0 Predominantly inattentive presentation)';
+  } else if (specification === 66) {
+    code = ' (F90.1 Predominantly hyperactive/impulsive presentation)';
+  } else if (specification === 67) {
+    code = ' (In partial remission)';
+  } else if (specification === 68) {
+    code = ' (F81.0 w/ impairment in reading)';
+  } else if (specification === 69) {
+    code = ' (F81.81 w/ impairment in written expression)';
+  } else if (specification === 70) {
+    code = ' (F81.2 w/ impairment in mathematics)';
+  } else if (specification === 71) {
+    code = ' (Motor tics only)';
+  } else if (specification === 72) {
+    code = ' (Vocal tics only)';
   } else {
     code = '';
   }

@@ -14,6 +14,11 @@ import {
   disorderSeverityF,
 } from '../../../utils/sleep';
 import {disorderSeverityG, disorderSeverityH} from '../../../utils/sexual';
+import {
+  disorderSeverityI,
+  disorderSeverityJ,
+  disorderSeverityK,
+} from '../../../utils/neurodevelopmental';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -43,6 +48,12 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = disorderSeverityG;
   } else if (result === 'Substance/Medication-Induced Sexual Dysfunction') {
     additionalData = disorderSeverityH;
+  } else if (result === 'Attention-Deficit/Hyperactivity Disorder') {
+    additionalData = disorderSeverityI;
+  } else if (result === 'Specific Learning Disorder') {
+    additionalData = disorderSeverityJ;
+  } else if (result === 'Stereotypic Movement Disorder') {
+    additionalData = disorderSeverityK;
   }
 
   return (

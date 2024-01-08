@@ -22,6 +22,12 @@ import {
   disorderSpecificationK,
 } from '../../../utils/sleep';
 import {disorderSpecificationL} from '../../../utils/sexual';
+import {
+  disorderSpecificationM,
+  disorderSpecificationN,
+  disorderSpecificationO,
+  disorderSpecificationP,
+} from '../../../utils/neurodevelopmental';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -51,6 +57,14 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = disorderSpecificationK;
   } else if (result === 'Substance/Medication-Induced Sexual Dysfunction') {
     additionalData = disorderSpecificationL;
+  } else if (result === 'Autism Spectrum Disorder') {
+    additionalData = disorderSpecificationM;
+  } else if (result === 'Attention-Deficit/Hyperactivity Disorder') {
+    additionalData = disorderSpecificationN;
+  } else if (result === 'Specific Learning Disorder') {
+    additionalData = disorderSpecificationO;
+  } else if (result === 'Persistent (Chronic) Motor or Vocal Tic Disorder') {
+    additionalData = disorderSpecificationP;
   }
 
   return (
