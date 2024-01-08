@@ -204,11 +204,6 @@ export const sleepSymptoms = [
   {label: 'Amnesia for the episodes is present', value: 35},
 
   // Criteria D
-  {
-    label:
-      'clinically significant distress or impairment in social, occupational, or other important areas of functioning',
-    value: 36,
-  },
 
   // Criteria E
   {
@@ -241,11 +236,6 @@ export const sleepSymptoms = [
 
   // Criteria C
   {label: 'Sleep Disturbance cause clinically significant distress', value: 41},
-  {
-    label:
-      'Impairment in social, occupational, or other important areas of functioning',
-    value: 42,
-  },
 
   // Criteria D
   {
@@ -272,7 +262,7 @@ export const sleepSymptoms = [
   // Criteria B
   {
     label:
-      'the behavior arises during REM seep which occur more than 90 minutes onset',
+      'The behavior arises during REM seep which occur more than 90 minutes onset',
     value: 46,
   },
 
@@ -293,11 +283,6 @@ export const sleepSymptoms = [
 
   // Criteria E
   {label: 'The behaviors cause clinically significant distress', value: 50},
-  {
-    label:
-      'Impairment in social, occupational, or other important areas of functioning',
-    value: 51,
-  },
 
   // Criteria F
   {
@@ -477,7 +462,7 @@ const optionalDisorderH = numbers => {
   return (
     numbers.includes(34) ||
     numbers.includes(35) ||
-    numbers.includes(36) ||
+    numbers.includes(3) ||
     numbers.includes(37) ||
     numbers.includes(37) ||
     numbers.includes(38)
@@ -491,9 +476,24 @@ const mainDisorderI = numbers => {
 const optionalDisorderI = numbers => {
   return (
     numbers.includes(40) ||
-    (numbers.includes(41) && numbers.includes(42)) ||
+    (numbers.includes(41) && numbers.includes(3)) ||
     numbers.includes(43) ||
     numbers.includes(44)
+  );
+};
+
+const mainDisorderJ = numbers => {
+  return numbers.includes(45);
+};
+
+const optionalDisorderJ = numbers => {
+  return (
+    numbers.includes(46) ||
+    numbers.includes(47) ||
+    (numbers.includes(48) && numbers.includes(49)) ||
+    (numbers.includes(50) && numbers.includes(3)) ||
+    numbers.includes(52) ||
+    numbers.includes(53)
   );
 };
 
@@ -516,6 +516,8 @@ export const sleepDiagnosis = numbers => {
     return 'Non–Rapid Eye Movement Sleep Arousal Disorder';
   } else if (mainDisorderI(numbers) || optionalDisorderI(numbers)) {
     return 'Nightmare Disorder';
+  } else if (mainDisorderJ(numbers) || optionalDisorderJ(numbers)) {
+    return 'Rapid Eye Movement Sleep Behavior Disorder';
   } else if (numbers.length > 1) {
     return 'Other Specified / Unspecified Sleep Symptom and Related Disorder';
   } else {
