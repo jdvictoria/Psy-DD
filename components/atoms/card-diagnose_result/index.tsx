@@ -49,15 +49,15 @@ function CardDiagnoseResult({
     string = 'Brief ';
   } else if (duration === 2) {
     string = 'Single ';
-  } else if (duration === 3 || duration === 6) {
+  } else if (duration === 3 || duration === 6 || duration === 14) {
     string = 'Recurrent ';
-  } else if (duration === 4) {
+  } else if (duration === 4 || duration === 12) {
     string = 'Episodic ';
   } else if (duration === 7) {
     string = 'Acute ';
   } else if (duration === 8) {
     string = 'Subacute ';
-  } else if (duration === 5 || duration === 9) {
+  } else if (duration === 5 || duration === 9 || duration === 13) {
     string = 'Persistent ';
   } else if (duration === 10) {
     string = '(NT1) ';
@@ -105,6 +105,22 @@ function CardDiagnoseResult({
     code = ' (G47.35)';
   } else if (specification === 31) {
     code = ' (G47.36)';
+  } else if (specification === 32) {
+    code = ' (Familial)';
+  } else if (specification === 33) {
+    code = ' (Overlapping with non-24-hour sleep-wake type)';
+  } else if (specification === 34) {
+    code = ' (G47.21)';
+  } else if (specification === 35) {
+    code = ' (G47.22)';
+  } else if (specification === 36) {
+    code = ' (G47.23)';
+  } else if (specification === 37) {
+    code = ' (G47.24)';
+  } else if (specification === 38) {
+    code = ' (G47.26)';
+  } else if (specification === 38) {
+    code = ' (G47.20)';
   } else {
     code = '';
   }
@@ -119,7 +135,7 @@ function CardDiagnoseResult({
         }}>
         {showResult && (
           <StyledText20 style={contentStyle.bold}>
-            {severe + string + result + ' ' + code}
+            {severe + string + result + code}
           </StyledText20>
         )}
       </DiagnoseResultCard>

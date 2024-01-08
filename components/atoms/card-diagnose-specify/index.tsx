@@ -16,6 +16,7 @@ import {
   disorderSpecificationE,
   disorderSpecificationF,
   disorderSpecificationG,
+  disorderSpecificationH,
 } from '../../../utils/sleep';
 
 // @ts-ignore
@@ -36,6 +37,8 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = disorderSpecificationF;
   } else if (result === 'Sleep-Related Hypoventilation') {
     additionalData = disorderSpecificationG;
+  } else if (result === 'Circadian Rhythm Sleep-Wake Disorder') {
+    additionalData = disorderSpecificationH;
   }
 
   return (

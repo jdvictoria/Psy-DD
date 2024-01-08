@@ -119,7 +119,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Hypersomnolence Disorder' ||
             result === 'Narcolepsy' ||
             result === 'Central Sleep Apnea' ||
-            result === 'Sleep-Related Hypoventilation') && (
+            result === 'Sleep-Related Hypoventilation' ||
+            result === 'Circadian Rhythm Sleep-Wake Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}
@@ -132,7 +133,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Factitious Disorder' ||
             result === 'Insomnia Disorder' ||
             result === 'Hypersomnolence Disorder' ||
-            result === 'Narcolepsy') && (
+            result === 'Narcolepsy' ||
+            result === 'Circadian Rhythm Sleep-Wake Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}

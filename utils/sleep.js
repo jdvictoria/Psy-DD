@@ -461,6 +461,14 @@ const optionalDisorderF = numbers => {
   return numbers.includes(28);
 };
 
+const mainDisorderG = numbers => {
+  return numbers.includes(29);
+};
+
+const optionalDisorderG = numbers => {
+  return numbers.includes(30) || numbers.includes(3);
+};
+
 export const sleepDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
     return 'Insomnia Disorder';
@@ -474,6 +482,8 @@ export const sleepDiagnosis = numbers => {
     return 'Central Sleep Apnea';
   } else if (mainDisorderF(numbers) || optionalDisorderF(numbers)) {
     return 'Sleep-Related Hypoventilation';
+  } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
+    return 'Circadian Rhythm Sleep-Wake Disorder';
   } else if (numbers.length > 1) {
     return 'Other Specified / Unspecified Sleep Symptom and Related Disorder';
   } else {
@@ -503,6 +513,21 @@ export const disorderDurationE = [
     label:
       'Based on sleepiness and positive multiple sleep latency test (MSLT) findings, only to be reassigned to a diagnosis of NT1 following emergence of cataplexy',
     value: 11,
+  },
+];
+
+export const disorderDurationF = [
+  {
+    label: 'Symptoms last at least 1 month but less than 3 months',
+    value: 12,
+  },
+  {
+    label: 'Symptoms last 3 months or longer',
+    value: 13,
+  },
+  {
+    label: '"Two or more episodes occur within the space of 1 year',
+    value: 14,
   },
 ];
 
@@ -579,6 +604,47 @@ export const disorderSpecificationG = [
     label:
       '•Comorbid sleep-related hypoventilation \n•This subtype occurs as a consequence of a medical condition, such as a pulmonary disorder \n•Occurs with obesity',
     value: 31,
+  },
+];
+
+export const disorderSpecificationH = [
+  {
+    label: 'A family history of delayed sleep phase is present',
+    value: 32,
+  },
+  {
+    label:
+      'Delayed sleep phase type may overlap with another circadian rhythm sleep-wake disorder, non-24-hour sleep-wake type',
+    value: 33,
+  },
+  {
+    label:
+      '•Delayed sleep phase type \n•A pattern of delayed sleep onset and awakening times, with an inability to fall asleep and awaken at a desired or conventionally acceptable earlier time',
+    value: 34,
+  },
+  {
+    label:
+      '•Advanced sleep phase type \n•A pattern of advanced sleep onset and awakening times, with an inability to remain awake or asleep until the desired or conventionally acceptable later sleep or wake times',
+    value: 35,
+  },
+  {
+    label:
+      '•Irregular sleep-wake type \n•A temporally disorganized sleep-wake pattern, such that the timing of sleep and wake periods is variable throughout the 24-hour period',
+    value: 36,
+  },
+  {
+    label:
+      '•Non-24-hour sleep-wake type \n•A pattern of sleep wake cycles that is not synchronized to the 24-hour environment, with a consistent daily drift of sleep and wake times',
+    value: 37,
+  },
+  {
+    label:
+      '•Shift work type \n•Insomnia during the major sleep period and/or excessive sleepiness during the major awake period associated with a shift work schedule',
+    value: 38,
+  },
+  {
+    label: '•Unspecified type',
+    value: 39,
   },
 ];
 
