@@ -20,6 +20,7 @@ import {traumaDiagnosis} from '../../../utils/trauma';
 import {somaticDiagnosis} from '../../../utils/somatic';
 import {sleepDiagnosis} from '../../../utils/sleep';
 import {sexualDiagnosis} from '../../../utils/sexual';
+import {personalityDiagnosis} from '../../../utils/personality';
 import {neuroDiagnosis} from '../../../utils/neurodevelopmental';
 
 // @ts-ignore
@@ -76,6 +77,12 @@ function HomeDiagnose({isDarkMode}) {
   useEffect(() => {
     if (filter === 'd' && showResult) {
       setResult(sexualDiagnosis(numbers));
+    }
+  }, [filter, numbers, showResult]);
+
+  useEffect(() => {
+    if (filter === 'f' && showResult) {
+      setResult(personalityDiagnosis(numbers));
     }
   }, [filter, numbers, showResult]);
 
@@ -142,7 +149,9 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Autism Spectrum Disorder' ||
             result === 'Attention-Deficit/Hyperactivity Disorder' ||
             result === 'Specific Learning Disorder' ||
-            result === 'Persistent (Chronic) Motor or Vocal Tic Disorder') && (
+            result === 'Persistent (Chronic) Motor or Vocal Tic Disorder' ||
+            result ===
+              'Personality Change Due to Another Medical Condition') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}

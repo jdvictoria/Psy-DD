@@ -28,6 +28,7 @@ import {
   disorderSpecificationO,
   disorderSpecificationP,
 } from '../../../utils/neurodevelopmental';
+import {disorderSpecificationQ} from '../../../utils/personality';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -65,6 +66,8 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = disorderSpecificationO;
   } else if (result === 'Persistent (Chronic) Motor or Vocal Tic Disorder') {
     additionalData = disorderSpecificationP;
+  } else if (result === 'Personality Change Due to Another Medical Condition') {
+    additionalData = disorderSpecificationQ;
   }
 
   return (

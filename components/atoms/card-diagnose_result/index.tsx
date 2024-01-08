@@ -304,6 +304,14 @@ function CardDiagnoseResult({
     code = ' (Motor tics only)';
   } else if (specification === 72) {
     code = ' (Vocal tics only)';
+  } else if (specification === 73) {
+    code = ' (Apathetic Type)';
+  } else if (specification === 74) {
+    code = ' (Paranoid type)';
+  } else if (specification === 75) {
+    code = ' (Other type)';
+  } else if (specification === 76) {
+    code = ' (Combined type)';
   } else {
     code = '';
   }
