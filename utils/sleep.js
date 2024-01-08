@@ -469,6 +469,21 @@ const optionalDisorderG = numbers => {
   return numbers.includes(30) || numbers.includes(3);
 };
 
+const mainDisorderH = numbers => {
+  return numbers.includes(32) || numbers.includes(33);
+};
+
+const optionalDisorderH = numbers => {
+  return (
+    numbers.includes(34) ||
+    numbers.includes(35) ||
+    numbers.includes(36) ||
+    numbers.includes(37) ||
+    numbers.includes(37) ||
+    numbers.includes(38)
+  );
+};
+
 export const sleepDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
     return 'Insomnia Disorder';
@@ -484,6 +499,8 @@ export const sleepDiagnosis = numbers => {
     return 'Sleep-Related Hypoventilation';
   } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
     return 'Circadian Rhythm Sleep-Wake Disorder';
+  } else if (mainDisorderH(numbers) || optionalDisorderH(numbers)) {
+    return 'Non–Rapid Eye Movement Sleep Arousal Disorder';
   } else if (numbers.length > 1) {
     return 'Other Specified / Unspecified Sleep Symptom and Related Disorder';
   } else {
@@ -645,6 +662,18 @@ export const disorderSpecificationH = [
   {
     label: '•Unspecified type',
     value: 39,
+  },
+];
+
+export const disorderSpecificationI = [
+  {
+    label:
+      '•Sleepwalking type \n•With sleep-related eating \n•With sleep-related sexual behavior (Sexsomnia)',
+    value: 40,
+  },
+  {
+    label: 'Sleep terror type',
+    value: 41,
   },
 ];
 
