@@ -304,17 +304,17 @@ export const sleepSymptoms = [
   // 3 times per week
   {
     label:
-      'Urge to move the legs begins or worsens during periods of rest or inactivity',
+      'Urge to move the legs begins or worsens during periods of rest or inactivity (3 Times a Week & Persisted At Least 3 months)',
     value: 54,
   },
   {
     label:
-      'Urge to move the legs is partially or totally relieved by movement.',
+      'Urge to move the legs is partially or totally relieved by movement (3 Times a Week & Persisted At Least 3 months)',
     value: 55,
   },
   {
     label:
-      'Urge to move the legs is worse in the evening or at night than during the day, or occurs only in the evening or at night',
+      'Urge to move the legs is worse in the evening or at night than during the day, or occurs only in the evening or at night (3 Times a Week & Persisted At Least 3 months)',
     value: 56,
   },
 
@@ -497,6 +497,21 @@ const optionalDisorderJ = numbers => {
   );
 };
 
+const mainDisorderK = numbers => {
+  const criteriaA = [54, 55, 56];
+  const matchingCriteriaA = criteriaA.filter(value => numbers.includes(value));
+  return matchingCriteriaA.length >= 3;
+};
+
+const optionalDisorderK = numbers => {
+  return (
+    numbers.includes(57) ||
+    numbers.includes(58) ||
+    numbers.includes(59) ||
+    numbers.includes(60)
+  );
+};
+
 export const sleepDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
     return 'Insomnia Disorder';
@@ -518,6 +533,8 @@ export const sleepDiagnosis = numbers => {
     return 'Nightmare Disorder';
   } else if (mainDisorderJ(numbers) || optionalDisorderJ(numbers)) {
     return 'Rapid Eye Movement Sleep Behavior Disorder';
+  } else if (mainDisorderK(numbers) || optionalDisorderK(numbers)) {
+    return 'Restless Legs Syndrome';
   } else if (numbers.length > 1) {
     return 'Other Specified / Unspecified Sleep Symptom and Related Disorder';
   } else {
