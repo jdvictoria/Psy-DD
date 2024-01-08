@@ -20,7 +20,7 @@ import {traumaDiagnosis} from '../../../utils/trauma';
 import {somaticDiagnosis} from '../../../utils/somatic';
 import {sleepDiagnosis} from '../../../utils/sleep';
 import {sexualDiagnosis} from '../../../utils/sexual';
-
+import {schizophreniaDiagnosis} from '../../../utils/schizophrenia';
 import {personalityDiagnosis} from '../../../utils/personality';
 import {paraphilicDiagnosis} from '../../../utils/paraphilic';
 import {neuroDiagnosis} from '../../../utils/neurodevelopmental';
@@ -59,46 +59,35 @@ function HomeDiagnose({isDarkMode}) {
   };
 
   useEffect(() => {
-    if (filter === 'a' && showResult) {
-      setResult(traumaDiagnosis(numbers));
-    }
-  }, [filter, numbers, showResult]);
-
-  useEffect(() => {
-    if (filter === 'b' && showResult) {
-      setResult(somaticDiagnosis(numbers));
-    }
-  }, [filter, numbers, showResult]);
-
-  useEffect(() => {
-    if (filter === 'c' && showResult) {
-      setResult(sleepDiagnosis(numbers));
-    }
-  }, [filter, numbers, showResult]);
-
-  useEffect(() => {
-    if (filter === 'd' && showResult) {
-      setResult(sexualDiagnosis(numbers));
-    }
-  }, [filter, numbers, showResult]);
-
-  // e
-
-  useEffect(() => {
-    if (filter === 'f' && showResult) {
-      setResult(personalityDiagnosis(numbers));
-    }
-  }, [filter, numbers, showResult]);
-
-  useEffect(() => {
-    if (filter === 'g' && showResult) {
-      setResult(paraphilicDiagnosis(numbers));
-    }
-  }, [filter, numbers, showResult]);
-
-  useEffect(() => {
-    if (filter === 'i' && showResult) {
-      setResult(neuroDiagnosis(numbers));
+    if (showResult) {
+      switch (filter) {
+        case 'a':
+          setResult(traumaDiagnosis(numbers));
+          break;
+        case 'b':
+          setResult(somaticDiagnosis(numbers));
+          break;
+        case 'c':
+          setResult(sleepDiagnosis(numbers));
+          break;
+        case 'd':
+          setResult(sexualDiagnosis(numbers));
+          break;
+        case 'e':
+          setResult(schizophreniaDiagnosis(numbers));
+          break;
+        case 'f':
+          setResult(personalityDiagnosis(numbers));
+          break;
+        case 'g':
+          setResult(paraphilicDiagnosis(numbers));
+          break;
+        case 'i':
+          setResult(neuroDiagnosis(numbers));
+          break;
+        default:
+          break;
+      }
     }
   }, [filter, numbers, showResult]);
 
