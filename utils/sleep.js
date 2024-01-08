@@ -445,6 +445,14 @@ const mainDisorderD = numbers => {
   return numbers.includes(23) || numbers.includes(24);
 };
 
+const mainDisorderE = numbers => {
+  return numbers.includes(25);
+};
+
+const optionalDisorderE = numbers => {
+  return numbers.includes(26);
+};
+
 export const sleepDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
     return 'Insomnia Disorder';
@@ -454,6 +462,8 @@ export const sleepDiagnosis = numbers => {
     return 'Narcolepsy';
   } else if (mainDisorderD(numbers)) {
     return 'Obstructive Sleep Apnea Hypoapnea';
+  } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
+    return 'Central Sleep Apnea';
   } else if (numbers.length > 1) {
     return 'Other Specified / Unspecified Sleep Symptom and Related Disorder';
   } else {
@@ -523,6 +533,24 @@ export const disorderSpecificationE = [
     label:
       '•Narcolepsy without cataplexy and without hypocretin deficiency due to a medical condition',
     value: 25,
+  },
+];
+
+export const disorderSpecificationF = [
+  {
+    label:
+      '•Idiopathic central sleep apnea \n•Characterized by repeated episodes of apneas and hypopneas during sleep caused by variability in respiratory effort but without evidence of airway obstruction',
+    value: 26,
+  },
+  {
+    label:
+      '•Cheyne-Stokes breathing \n•A pattern of periodic crescendo-decrescendo variation in tidal volume that results in central apneas and hypopneas at a frequency of at least five events per hour, accompanied by frequent arousal',
+    value: 27,
+  },
+  {
+    label:
+      '•Central sleep apnea comorbid with opioid use \n•The pathogenesis of this subtype is attributed to the effects of opioids on the respiratory rhythm generators in the medulla as well as the differential effects on hypoxic versus hypercapnic respiratory drive',
+    value: 28,
   },
 ];
 

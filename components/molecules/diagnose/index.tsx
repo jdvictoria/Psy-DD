@@ -117,7 +117,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Factitious Disorder' ||
             result === 'Insomnia Disorder' ||
             result === 'Hypersomnolence Disorder' ||
-            result === 'Narcolepsy') && (
+            result === 'Narcolepsy' ||
+            result === 'Central Sleep Apnea') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}
