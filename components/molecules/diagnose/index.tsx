@@ -23,6 +23,7 @@ import {sexualDiagnosis} from '../../../utils/sexual';
 import {schizophreniaDiagnosis} from '../../../utils/schizophrenia';
 import {personalityDiagnosis} from '../../../utils/personality';
 import {paraphilicDiagnosis} from '../../../utils/paraphilic';
+import {obsessiveDiagnosis} from '../../../utils/obsessive';
 import {neuroDiagnosis} from '../../../utils/neurodevelopmental';
 
 // @ts-ignore
@@ -81,6 +82,9 @@ function HomeDiagnose({isDarkMode}) {
           break;
         case 'g':
           setResult(paraphilicDiagnosis(numbers));
+          break;
+        case 'h':
+          setResult(obsessiveDiagnosis(numbers));
           break;
         case 'i':
           setResult(neuroDiagnosis(numbers));
@@ -220,7 +224,14 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Schizoaffective Disorder' ||
             result === 'Substance/Medication-Induced Psychotic Disorder' ||
             result ===
-              'Other Specified Schizophrenia Spectrum and Other Psychotic Disorder') && (
+              'Other Specified Schizophrenia Spectrum and Other Psychotic Disorder' ||
+            result === 'Obsessive-Compulsive Disorder' ||
+            result === 'Body Dysmorphic Disorder' ||
+            result === 'Hoarding Disorder' ||
+            result ===
+              'Substance/Medication-Induce Obsessive-Compulsive and Related Disorder' ||
+            result ===
+              'Obsessive-Compulsive and Related Disorder Due to Another Medical Condition') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}

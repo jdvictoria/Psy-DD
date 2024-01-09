@@ -43,6 +43,13 @@ import {
   disorderSpecificationY,
   disorderSpecificationZ,
 } from '../../../utils/schizophrenia';
+import {
+  disorderSpecificationAB,
+  disorderSpecificationAC,
+  disorderSpecificationAD,
+  disorderSpecificationAE,
+  disorderSpecificationAF,
+} from '../../../utils/obsessive';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -105,6 +112,22 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     'Other Specified Schizophrenia Spectrum and Other Psychotic Disorder'
   ) {
     additionalData = disorderSpecificationAA;
+  } else if (result === 'Obsessive-Compulsive Disorder') {
+    additionalData = disorderSpecificationAB;
+  } else if (result === 'Body Dysmorphic Disorder') {
+    additionalData = disorderSpecificationAC;
+  } else if (result === 'Hoarding Disorder') {
+    additionalData = disorderSpecificationAD;
+  } else if (
+    result ===
+    'Substance/Medication-Induce Obsessive-Compulsive and Related Disorder'
+  ) {
+    additionalData = disorderSpecificationAE;
+  } else if (
+    result ===
+    'Obsessive-Compulsive and Related Disorder Due to Another Medical Condition'
+  ) {
+    additionalData = disorderSpecificationAF;
   }
 
   return (

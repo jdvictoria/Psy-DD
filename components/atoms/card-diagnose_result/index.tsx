@@ -146,7 +146,7 @@ function CardDiagnoseResult({
   } else if (severity === 70 || severity === 72 || severity === 74) {
     severe = '(In Full remission) ';
   } else if (severity === 75) {
-    severe = '(w/ Asphyxiophilia) ';
+    severe = '(With Asphyxiophilia) ';
   } else if (severity === 76) {
     severe = '(Exclusive) ';
   } else if (severity === 77) {
@@ -233,15 +233,15 @@ function CardDiagnoseResult({
     specification === 19 ||
     specification === 44
   ) {
-    code = ' (w/ Medical Condition)';
+    code = ' (With Medical Condition)';
   } else if (
     specification === 18 ||
     specification === 20 ||
     specification === 43
   ) {
-    code = ' (w/ Mental Disorder Condition)';
+    code = ' (With Mental Disorder Condition)';
   } else if (specification === 21 || specification === 45) {
-    code = ' (w/ Another Sleep Disorder)';
+    code = ' (With Another Sleep Disorder)';
   } else if (specification === 45) {
     code = ' (During Sleep Onset)';
   } else if (specification === 22) {
@@ -290,14 +290,29 @@ function CardDiagnoseResult({
     code = ' (Daytime sleepiness type)';
   } else if (specification === 48) {
     code = ' (Parasomnia type)';
-  } else if (specification === 49) {
+  } else if (specification === 49 || specification === 94) {
     code = ' (Mixed type)';
-  } else if (specification === 50 || specification === 53) {
-    code = ' (w/ Onset During Intoxication)';
-  } else if (specification === 51 || specification === 54) {
-    code = ' (w/ Onset During Withdrawal)';
-  } else if (specification === 52 || specification === 55) {
-    code = ' (w/ Onset After Medication Use)';
+  } else if (
+    specification === 50 ||
+    specification === 53 ||
+    specification === 106 ||
+    specification === 118
+  ) {
+    code = ' (With Onset During Intoxication)';
+  } else if (
+    specification === 51 ||
+    specification === 54 ||
+    specification === 107 ||
+    specification === 119
+  ) {
+    code = ' (With Onset During Withdrawal)';
+  } else if (
+    specification === 52 ||
+    specification === 55 ||
+    specification === 108 ||
+    specification === 120
+  ) {
+    code = ' (With Onset After Medication Use)';
   } else if (specification === 56) {
     code = ' (Requiring very substantial support)';
   } else if (specification === 57) {
@@ -305,17 +320,21 @@ function CardDiagnoseResult({
   } else if (specification === 58) {
     code = ' (Requiring support)';
   } else if (specification === 59) {
-    code = ' (w/ or w/o accompanying intellectual impairment)';
+    code = ' (With or Without accompanying intellectual impairment)';
   } else if (specification === 60) {
-    code = ' (w/ or w/o accompanying language impairment)';
+    code = ' (With or Without accompanying language impairment)';
   } else if (specification === 61) {
     code =
       ' (Associated with a known genetic or other medical condition or environmental factor)';
   } else if (specification === 62) {
     code =
       ' (Associated with a neurodevelopmental, mental, or behavioral problem)';
-  } else if (specification === 63) {
-    code = ' (w/ Catatonia)';
+  } else if (
+    specification === 63 ||
+    specification === 100 ||
+    specification === 103
+  ) {
+    code = ' (With Catatonia)';
   } else if (specification === 64) {
     code = ' (F90.2 Combined presentation)';
   } else if (specification === 65) {
@@ -325,11 +344,11 @@ function CardDiagnoseResult({
   } else if (specification === 67) {
     code = ' (In partial remission)';
   } else if (specification === 68) {
-    code = ' (F81.0 w/ impairment in reading)';
+    code = ' (F81.0 with impairment in reading)';
   } else if (specification === 69) {
-    code = ' (F81.81 w/ impairment in written expression)';
+    code = ' (F81.81 with impairment in written expression)';
   } else if (specification === 70) {
-    code = ' (F81.2 w/ impairment in mathematics)';
+    code = ' (F81.2 with impairment in mathematics)';
   } else if (specification === 71) {
     code = ' (Motor tics only)';
   } else if (specification === 72) {
@@ -365,9 +384,9 @@ function CardDiagnoseResult({
   } else if (specification === 86) {
     code = ' (Other)';
   } else if (specification === 87) {
-    code = ' (w/ Fetishism)';
+    code = ' (With Fetishism)';
   } else if (specification === 88) {
-    code = ' (w/ Autogynephilia)';
+    code = ' (With Autogynephilia)';
   } else if (specification === 89) {
     code = ' (Erotomanic type)';
   } else if (specification === 90) {
@@ -378,8 +397,6 @@ function CardDiagnoseResult({
     code = ' (Persecutory type)';
   } else if (specification === 93) {
     code = ' (Somatic Type)';
-  } else if (specification === 94) {
-    code = ' (Mixed type)';
   } else if (specification === 95) {
     code = ' (Unspecified type:)';
   } else if (specification === 96) {
@@ -390,30 +407,42 @@ function CardDiagnoseResult({
     code = ' (Without marked stressor(s))';
   } else if (specification === 99) {
     code = ' (With peripartum onset)';
-  } else if (specification === 100) {
-    code = ' (w/ Catatonia)';
   } else if (specification === 101) {
     code = ' (With good prognostic features)';
   } else if (specification === 102) {
     code = ' (Without good prognostic features)';
-  } else if (specification === 103) {
-    code = ' (w/ Catatonia)';
   } else if (specification === 104) {
     code = ' (F25.0 Bipolar type)';
   } else if (specification === 105) {
     code = ' (F25.1 Depressive type)';
-  } else if (specification === 106) {
-    code = ' (With onset during intoxication:)';
-  } else if (specification === 107) {
-    code = ' (With onset during withdrawal)';
-  } else if (specification === 108) {
-    code = ' (With onset after medication use)';
   } else if (specification === 109) {
     code = ' (Persistent auditory hallucinations)';
   } else if (specification === 110) {
     code = ' (Delusions with significant overlapping mood episodes)';
   } else if (specification === 111) {
     code = ' (Attenuated psychosis syndrome)';
+  } else if (specification === 112) {
+    code = ' (With good or fair insight)';
+  } else if (specification === 113) {
+    code = ' (With poor insight)';
+  } else if (specification === 114) {
+    code = ' (With absent insight/delusional beliefs)';
+  } else if (specification === 115) {
+    code = ' (Tic-related)';
+  } else if (specification === 116) {
+    code = ' (With muscle dysmorphia)';
+  } else if (specification === 117) {
+    code = ' (With excessive acquisition)';
+  } else if (specification === 121) {
+    code = ' (With obsessive compulsive disorder-like symptoms)';
+  } else if (specification === 122) {
+    code = ' (With appearance preoccupations)';
+  } else if (specification === 123) {
+    code = ' (With hoarding symptoms)';
+  } else if (specification === 124) {
+    code = ' (With hair-pulling symptoms)';
+  } else if (specification === 125) {
+    code = ' (With skin-picking symptoms)';
   } else {
     code = '';
   }
