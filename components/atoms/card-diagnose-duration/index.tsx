@@ -10,7 +10,7 @@ import {
   factorsDuration,
   factitiousDuration,
 } from '../../../utils/somatic';
-import {insomniaDuration} from '../../../utils/sleep';
+import {hyperDuration, insomniaDuration} from '../../../utils/sleep';
 
 // @ts-ignore
 function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
@@ -26,6 +26,8 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     additionalData = factitiousDuration;
   } else if (result === 'Insomnia Disorder') {
     additionalData = insomniaDuration;
+  } else if (result === 'Hypersomnolence Disorder') {
+    additionalData = hyperDuration;
   }
 
   return (

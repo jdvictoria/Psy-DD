@@ -141,7 +141,8 @@ function HomeDiagnose({isDarkMode}) {
               showResult={showResult}
             />
           )}
-          {result === 'Conversion Disorder' && (
+          {(result === 'Conversion Disorder' ||
+            result === 'Hypersomnolence Disorder') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
@@ -152,7 +153,8 @@ function HomeDiagnose({isDarkMode}) {
             result ===
               'Psychological Factors Affecting Other Medical Conditions' ||
             result === 'Factitious Disorder' ||
-            result === 'Insomnia Disorder') && (
+            result === 'Insomnia Disorder' ||
+            result === 'Hypersomnolence Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}
@@ -161,7 +163,8 @@ function HomeDiagnose({isDarkMode}) {
           )}
           {(result === 'Conversion Disorder' ||
             result === 'Factitious Disorder' ||
-            result === 'Insomnia Disorder') && (
+            result === 'Insomnia Disorder' ||
+            result === 'Hypersomnolence Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}

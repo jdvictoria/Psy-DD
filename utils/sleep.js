@@ -570,10 +570,28 @@ export const insomniaSpecification = [
   {label: 'With mental disorder', value: 5},
 ];
 
-export const disorderDurationD = [
-  {label: 'Duration of less than 1 month', value: 7},
-  {label: 'Duration of 1–3 months', value: 8},
-  {label: 'Duration of more than 3 months', value: 9},
+export const hyperSeverity = [
+  {
+    label: 'Difficulty maintaining daytime alertness 1–2 days/week',
+    value: 4,
+  },
+  {label: 'Difficulty maintaining daytime alertness 3–4 days/week', value: 5},
+  {label: 'Difficulty maintaining daytime alertness 5–7 days/week', value: 6},
+];
+
+export const hyperDuration = [
+  {label: 'Duration of less than 1 month', value: 0},
+  {label: 'Duration of 1–3 months', value: 9},
+  {label: 'Duration of more than 3 months', value: 1},
+];
+
+export const hyperSpecification = [
+  {
+    label: 'With medical condition',
+    value: 4,
+  },
+  {label: 'With mental disorder', value: 5},
+  {label: 'With another sleep disorder', value: 6},
 ];
 
 export const disorderDurationE = [
@@ -618,15 +636,6 @@ export const disorderDurationG = [
     label: 'Duration of period of nightmares is 6 months or greater',
     value: 17,
   },
-];
-
-export const disorderSpecificationD = [
-  {
-    label: 'With Medical Condition',
-    value: 19,
-  },
-  {label: 'With Mental Disorder', value: 20},
-  {label: 'With Another Sleep Disorder', value: 21},
 ];
 
 export const disorderSpecificationE = [
@@ -795,15 +804,6 @@ export const disorderSpecificationK = [
       'If symptoms developed at initiation of medication, with a change in use of medication, or during withdrawal of medication',
     value: 52,
   },
-];
-
-export const disorderSeverityB = [
-  {
-    label: 'Difficulty maintaining daytime alertness 1–2 days/week',
-    value: 4,
-  },
-  {label: 'Difficulty maintaining daytime alertness 3–4 days/week', value: 5},
-  {label: 'Difficulty maintaining daytime alertness 5–7 days/week', value: 6},
 ];
 
 export const disorderSeverityC = [

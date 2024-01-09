@@ -31,6 +31,12 @@ function CardDiagnoseResult({
     severe = '(F44.6) ';
   } else if (severity === 3) {
     severe = '(F44.7) ';
+  } else if (severity === 4) {
+    severe = 'Mild ';
+  } else if (severity === 5) {
+    severe = 'Moderate ';
+  } else if (severity === 6) {
+    severe = 'Severe ';
   } else {
     severe = '';
   }
@@ -53,6 +59,8 @@ function CardDiagnoseResult({
     time = 'Recurrent ';
   } else if (duration === 8) {
     time = 'Episodic ';
+  } else if (duration === 9) {
+    time = 'Subacute ';
   } else {
     time = '';
   }
@@ -69,6 +77,8 @@ function CardDiagnoseResult({
     specs = ' (With medical condition)';
   } else if (specification === 5) {
     specs = ' (With mental disorder)';
+  } else if (specification === 6) {
+    specs = ' (With another sleep disorder)';
   } else {
     specs = '';
   }

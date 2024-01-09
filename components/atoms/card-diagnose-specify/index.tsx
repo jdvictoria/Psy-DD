@@ -9,7 +9,7 @@ import {
   conversionSpecification,
   factitiousSpecification,
 } from '../../../utils/somatic';
-import {insomniaSpecification} from '../../../utils/sleep';
+import {hyperSpecification, insomniaSpecification} from '../../../utils/sleep';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -21,6 +21,8 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = factitiousSpecification;
   } else if (result === 'Insomnia Disorder') {
     additionalData = insomniaSpecification;
+  } else if (result === 'Hypersomnolence Disorder') {
+    additionalData = hyperSpecification;
   }
 
   return (

@@ -6,6 +6,7 @@ import {DiagnoseResultCard} from '../../../styles/form-container';
 import DropdownComponent from '../dropdown-diagnose';
 
 import {conversionSeverity} from '../../../utils/somatic';
+import {hyperSeverity} from '../../../utils/sleep';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -13,6 +14,8 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
 
   if (result === 'Conversion Disorder') {
     additionalData = conversionSeverity;
+  } else if (result === 'Hypersomnolence Disorder') {
+    additionalData = hyperSeverity;
   }
 
   return (
