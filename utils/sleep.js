@@ -757,6 +757,18 @@ export const circaSpecification = [
   },
 ];
 
+export const eyeSeverity = [
+  {
+    label:
+      '•Sleepwalking type \n•With sleep-related eating \n•With sleep-related sexual behavior (Sexsomnia)',
+    value: 23,
+  },
+  {
+    label: 'Sleep terror type',
+    value: 24,
+  },
+];
+
 export const disorderDurationG = [
   {
     label: 'Duration of period of nightmares is 1 month or less',
@@ -770,18 +782,6 @@ export const disorderDurationG = [
   {
     label: 'Duration of period of nightmares is 6 months or greater',
     value: 17,
-  },
-];
-
-export const disorderSpecificationI = [
-  {
-    label:
-      '•Sleepwalking type \n•With sleep-related eating \n•With sleep-related sexual behavior (Sexsomnia)',
-    value: 40,
-  },
-  {
-    label: 'Sleep terror type',
-    value: 41,
   },
 ];
 

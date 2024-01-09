@@ -146,7 +146,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Narcolepsy' ||
             result === 'Central Sleep Apnea' ||
             result === 'Sleep-Related Hypoventilation' ||
-            result === 'Circadian Rhythm Sleep-Wake Disorders') && (
+            result === 'Circadian Rhythm Sleep-Wake Disorders' ||
+            result === 'Non–Rapid Eye Movement Sleep Arousal Disorders') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}

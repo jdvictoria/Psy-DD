@@ -9,6 +9,7 @@ import {conversionSeverity} from '../../../utils/somatic';
 import {
   centralSeverity,
   circaSeverity,
+  eyeSeverity,
   hyperSeverity,
   hypoSeverity,
   narcoSeverity,
@@ -30,6 +31,8 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = hypoSeverity;
   } else if (result === 'Circadian Rhythm Sleep-Wake Disorders') {
     additionalData = circaSeverity;
+  } else if (result === 'Non–Rapid Eye Movement Sleep Arousal Disorders') {
+    additionalData = eyeSeverity;
   }
 
   return (
