@@ -143,7 +143,8 @@ function HomeDiagnose({isDarkMode}) {
           )}
           {(result === 'Conversion Disorder' ||
             result === 'Hypersomnolence Disorder' ||
-            result === 'Narcolepsy') && (
+            result === 'Narcolepsy' ||
+            result === 'Central Sleep Apnea') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
@@ -157,7 +158,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Factitious Disorder' ||
             result === 'Insomnia Disorder' ||
             result === 'Hypersomnolence Disorder' ||
-            result === 'Narcolepsy') && (
+            result === 'Narcolepsy' ||
+            result === 'Obstructive Sleep Apnea Hypopnea') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}

@@ -14,6 +14,7 @@ import {
   hyperDuration,
   insomniaDuration,
   narcoDuration,
+  obsDuration,
 } from '../../../utils/sleep';
 
 // @ts-ignore
@@ -34,6 +35,8 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     additionalData = hyperDuration;
   } else if (result === 'Narcolepsy') {
     additionalData = narcoDuration;
+  } else if (result === 'Obstructive Sleep Apnea Hypopnea') {
+    additionalData = obsDuration;
   }
 
   return (

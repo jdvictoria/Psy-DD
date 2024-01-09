@@ -647,6 +647,39 @@ export const narcoSpecification = [
   },
 ];
 
+export const obsDuration = [
+  {
+    label: 'Apnea hypopnea index is less than 15',
+    value: 2,
+  },
+  {
+    label: 'Apnea hypopnea index is 15–30',
+    value: 3,
+  },
+  {
+    label: 'Apnea hypopnea index is greater than 30',
+    value: 4,
+  },
+];
+
+export const centralSeverity = [
+  {
+    label:
+      '•Idiopathic central sleep apnea \n•Characterized by repeated episodes of apneas and hypopneas during sleep caused by variability in respiratory effort but without evidence of airway obstruction',
+    value: 11,
+  },
+  {
+    label:
+      '•Cheyne-Stokes breathing \n•A pattern of periodic crescendo-decrescendo variation in tidal volume that results in central apneas and hypopneas at a frequency of at least five events per hour, accompanied by frequent arousal',
+    value: 12,
+  },
+  {
+    label:
+      '•Central sleep apnea comorbid with opioid use \n•The pathogenesis of this subtype is attributed to the effects of opioids on the respiratory rhythm generators in the medulla as well as the differential effects on hypoxic versus hypercapnic respiratory drive',
+    value: 13,
+  },
+];
+
 export const disorderDurationF = [
   {
     label: 'Symptoms last at least 1 month but less than 3 months',
@@ -675,24 +708,6 @@ export const disorderDurationG = [
   {
     label: 'Duration of period of nightmares is 6 months or greater',
     value: 17,
-  },
-];
-
-export const disorderSpecificationF = [
-  {
-    label:
-      '•Idiopathic central sleep apnea \n•Characterized by repeated episodes of apneas and hypopneas during sleep caused by variability in respiratory effort but without evidence of airway obstruction',
-    value: 26,
-  },
-  {
-    label:
-      '•Cheyne-Stokes breathing \n•A pattern of periodic crescendo-decrescendo variation in tidal volume that results in central apneas and hypopneas at a frequency of at least five events per hour, accompanied by frequent arousal',
-    value: 27,
-  },
-  {
-    label:
-      '•Central sleep apnea comorbid with opioid use \n•The pathogenesis of this subtype is attributed to the effects of opioids on the respiratory rhythm generators in the medulla as well as the differential effects on hypoxic versus hypercapnic respiratory drive',
-    value: 28,
   },
 ];
 
@@ -820,21 +835,6 @@ export const disorderSpecificationK = [
     label:
       'If symptoms developed at initiation of medication, with a change in use of medication, or during withdrawal of medication',
     value: 52,
-  },
-];
-
-export const disorderSeverityD = [
-  {
-    label: 'Apnea hypopnea index is less than 15',
-    value: 10,
-  },
-  {
-    label: 'Apnea hypopnea index is 15–30',
-    value: 11,
-  },
-  {
-    label: 'Apnea hypopnea index is greater than 30',
-    value: 12,
   },
 ];
 
