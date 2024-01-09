@@ -698,18 +698,62 @@ export const hypoSeverity = [
   },
 ];
 
-export const disorderDurationF = [
+export const circaSeverity = [
+  {
+    label:
+      '•Delayed sleep phase type \n•A pattern of delayed sleep onset and awakening times, with an inability to fall asleep and awaken at a desired or conventionally acceptable earlier time',
+    value: 17,
+  },
+  {
+    label:
+      '•Advanced sleep phase type \n•A pattern of advanced sleep onset and awakening times, with an inability to remain awake or asleep until the desired or conventionally acceptable later sleep or wake times',
+    value: 18,
+  },
+  {
+    label:
+      '•Irregular sleep-wake type \n•A temporally disorganized sleep-wake pattern, such that the timing of sleep and wake periods is variable throughout the 24-hour period',
+    value: 19,
+  },
+  {
+    label:
+      '•Non-24-hour sleep-wake type \n•A pattern of sleep wake cycles that is not synchronized to the 24-hour environment, with a consistent daily drift of sleep and wake times',
+    value: 20,
+  },
+  {
+    label:
+      '•Shift work type \n•Insomnia during the major sleep period and/or excessive sleepiness during the major awake period associated with a shift work schedule',
+    value: 21,
+  },
+  {
+    label: '•Unspecified type',
+    value: 22,
+  },
+];
+
+export const circaDuration = [
   {
     label: 'Symptoms last at least 1 month but less than 3 months',
-    value: 12,
+    value: 8,
   },
   {
     label: 'Symptoms last 3 months or longer',
-    value: 13,
+    value: 1,
   },
   {
     label: '"Two or more episodes occur within the space of 1 year',
-    value: 14,
+    value: 7,
+  },
+];
+
+export const circaSpecification = [
+  {
+    label: 'A family history of delayed sleep phase is present',
+    value: 9,
+  },
+  {
+    label:
+      'Delayed sleep phase type may overlap with another circadian rhythm sleep-wake disorder, non-24-hour sleep-wake type',
+    value: 10,
   },
 ];
 
@@ -726,47 +770,6 @@ export const disorderDurationG = [
   {
     label: 'Duration of period of nightmares is 6 months or greater',
     value: 17,
-  },
-];
-
-export const disorderSpecificationH = [
-  {
-    label: 'A family history of delayed sleep phase is present',
-    value: 32,
-  },
-  {
-    label:
-      'Delayed sleep phase type may overlap with another circadian rhythm sleep-wake disorder, non-24-hour sleep-wake type',
-    value: 33,
-  },
-  {
-    label:
-      '•Delayed sleep phase type \n•A pattern of delayed sleep onset and awakening times, with an inability to fall asleep and awaken at a desired or conventionally acceptable earlier time',
-    value: 34,
-  },
-  {
-    label:
-      '•Advanced sleep phase type \n•A pattern of advanced sleep onset and awakening times, with an inability to remain awake or asleep until the desired or conventionally acceptable later sleep or wake times',
-    value: 35,
-  },
-  {
-    label:
-      '•Irregular sleep-wake type \n•A temporally disorganized sleep-wake pattern, such that the timing of sleep and wake periods is variable throughout the 24-hour period',
-    value: 36,
-  },
-  {
-    label:
-      '•Non-24-hour sleep-wake type \n•A pattern of sleep wake cycles that is not synchronized to the 24-hour environment, with a consistent daily drift of sleep and wake times',
-    value: 37,
-  },
-  {
-    label:
-      '•Shift work type \n•Insomnia during the major sleep period and/or excessive sleepiness during the major awake period associated with a shift work schedule',
-    value: 38,
-  },
-  {
-    label: '•Unspecified type',
-    value: 39,
   },
 ];
 

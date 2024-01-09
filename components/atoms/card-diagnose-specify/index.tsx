@@ -10,6 +10,7 @@ import {
   factitiousSpecification,
 } from '../../../utils/somatic';
 import {
+  circaSpecification,
   hyperSpecification,
   insomniaSpecification,
   narcoSpecification,
@@ -29,6 +30,8 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = hyperSpecification;
   } else if (result === 'Narcolepsy') {
     additionalData = narcoSpecification;
+  } else if (result === 'Circadian Rhythm Sleep-Wake Disorders') {
+    additionalData = circaSpecification;
   }
 
   return (

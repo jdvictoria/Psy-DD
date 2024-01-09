@@ -57,6 +57,18 @@ function CardDiagnoseResult({
     severe = '(G47.35) ';
   } else if (severity === 16) {
     severe = '(G47.36) ';
+  } else if (severity === 17) {
+    severe = '(G47.21) ';
+  } else if (severity === 18) {
+    severe = '(G47.22) ';
+  } else if (severity === 19) {
+    severe = '(G47.23) ';
+  } else if (severity === 20) {
+    severe = '(G47.24) ';
+  } else if (severity === 21) {
+    severe = '(G47.26) ';
+  } else if (severity === 22) {
+    severe = '(G47.20) ';
   } else {
     severe = '';
   }
@@ -103,6 +115,10 @@ function CardDiagnoseResult({
     specs = ' (NT1)';
   } else if (specification === 8) {
     specs = ' (NT2)';
+  } else if (specification === 9) {
+    specs = ' (Familial)';
+  } else if (specification === 10) {
+    specs = ' (Overlapping with non-24-hour sleep-wake type)';
   } else {
     specs = '';
   }

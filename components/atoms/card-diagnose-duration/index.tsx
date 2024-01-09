@@ -11,6 +11,7 @@ import {
   factitiousDuration,
 } from '../../../utils/somatic';
 import {
+  circaDuration,
   hyperDuration,
   insomniaDuration,
   narcoDuration,
@@ -37,6 +38,8 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     additionalData = narcoDuration;
   } else if (result === 'Obstructive Sleep Apnea Hypopnea') {
     additionalData = obsDuration;
+  } else if (result === 'Circadian Rhythm Sleep-Wake Disorders') {
+    additionalData = circaDuration;
   }
 
   return (

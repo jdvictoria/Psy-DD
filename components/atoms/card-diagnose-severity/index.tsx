@@ -8,6 +8,7 @@ import DropdownComponent from '../dropdown-diagnose';
 import {conversionSeverity} from '../../../utils/somatic';
 import {
   centralSeverity,
+  circaSeverity,
   hyperSeverity,
   hypoSeverity,
   narcoSeverity,
@@ -27,6 +28,8 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = centralSeverity;
   } else if (result === 'Sleep-Related Hypoventilation') {
     additionalData = hypoSeverity;
+  } else if (result === 'Circadian Rhythm Sleep-Wake Disorders') {
+    additionalData = circaSeverity;
   }
 
   return (
