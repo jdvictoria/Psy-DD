@@ -556,10 +556,18 @@ export const sleepDiagnosis = numbers => {
   }
 };
 
-export const disorderDurationC = [
-  {label: 'Symptoms last at least 1 month but less than 3 months', value: 4},
-  {label: 'Symptoms last 3 months or longer', value: 5},
-  {label: 'Two (or more) episodes within the space of 1 year', value: 6},
+export const insomniaDuration = [
+  {label: 'Symptoms last at least 1 month but less than 3 months', value: 8},
+  {label: 'Symptoms last 3 months or longer', value: 1},
+  {label: 'Two (or more) episodes within the space of 1 year', value: 7},
+];
+
+export const insomniaSpecification = [
+  {
+    label: 'With medical condition',
+    value: 4,
+  },
+  {label: 'With mental disorder', value: 5},
 ];
 
 export const disorderDurationD = [
@@ -610,14 +618,6 @@ export const disorderDurationG = [
     label: 'Duration of period of nightmares is 6 months or greater',
     value: 17,
   },
-];
-
-export const disorderSpecificationC = [
-  {
-    label: 'With Medical Condition',
-    value: 17,
-  },
-  {label: 'With Mental Disorder', value: 18},
 ];
 
 export const disorderSpecificationD = [

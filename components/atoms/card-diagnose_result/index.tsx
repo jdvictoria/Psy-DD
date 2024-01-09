@@ -51,6 +51,8 @@ function CardDiagnoseResult({
     time = 'Single ';
   } else if (duration === 7) {
     time = 'Recurrent ';
+  } else if (duration === 8) {
+    time = 'Episodic ';
   } else {
     time = '';
   }
@@ -63,6 +65,10 @@ function CardDiagnoseResult({
     specs = ' (By self)';
   } else if (specification === 3) {
     specs = ' (By proxy)';
+  } else if (specification === 4) {
+    specs = ' (With medical condition)';
+  } else if (specification === 5) {
+    specs = ' (With mental disorder)';
   } else {
     specs = '';
   }
