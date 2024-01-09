@@ -25,6 +25,7 @@ import {personalityDiagnosis} from '../../../utils/personality';
 import {paraphilicDiagnosis} from '../../../utils/paraphilic';
 import {obsessiveDiagnosis} from '../../../utils/obsessive';
 import {neuroDiagnosis} from '../../../utils/neurodevelopmental';
+import {substanceDiagnosis} from '../../../utils/substance';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -88,6 +89,9 @@ function HomeDiagnose({isDarkMode}) {
           break;
         case 'i':
           setResult(neuroDiagnosis(numbers));
+          break;
+        case 'j':
+          setResult(substanceDiagnosis(numbers));
           break;
         default:
           break;
