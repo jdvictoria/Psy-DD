@@ -259,12 +259,51 @@ export const somaticDiagnosis = numbers => {
   }
 };
 
-export const disorderDurationA = [
-  {label: 'Less than 6 months', value: 0},
-  {label: 'Greater or Equal to 6 months', value: 1},
+export const conversionDuration = [
+  {label: 'Symptoms present for less than 6 months', value: 0},
+  {label: 'Symptoms occurring for 6 months or more', value: 1},
 ];
 
-export const disorderDurationB = [
+export const conversionSpecification = [
+  {label: 'Without psychological stressor', value: 0},
+  {label: 'With psychological stressor', value: 1},
+];
+
+export const conversionSeverity = [
+  {label: 'With weakness or paralysis', value: 0},
+  {label: 'With abnormal movement (Tremor)', value: 0},
+  {label: 'With abnormal movement (Dystonia)', value: 0},
+  {label: 'With abnormal movement (Myoclonus)', value: 0},
+  {label: 'With abnormal movement (Gait)', value: 0},
+  {label: 'With speech symptom (Dysphonia)', value: 0},
+  {label: 'With speech symptom (Slurred Speech)', value: 0},
+  {label: 'With Attach Seizure', value: 1},
+  {label: 'With Anesthesia or Sensory Loss', value: 2},
+  {label: 'With special sensory symptom (Visual)', value: 2},
+  {label: 'With special sensory symptom (Olfactory)', value: 2},
+  {label: 'With special sensory symptom (Hearing Disturbance)', value: 2},
+  {label: 'With Mixed Symptoms', value: 3},
+];
+
+export const factorsSeverity = [
+  {
+    label:
+      'Increases medical risk (e.g., inconsistent adherence with antihypertension treatment)',
+    value: 4,
+  },
+  {label: 'Aggravates underlying medical condition', value: 5},
+  {
+    label: 'Results in medical hospitalization or emergency room visit',
+    value: 6,
+  },
+  {
+    label:
+      '•Results in severe, life-threatening risk \n•Ignoring heart attack symptoms',
+    value: 7,
+  },
+];
+
+export const factitiousDuration = [
   {
     label: 'One event of falsification of illness and/or induction of injury',
     value: 2,
@@ -276,44 +315,10 @@ export const disorderDurationB = [
   },
 ];
 
-export const disorderSpecificationA = [
-  {label: 'With weakness or paralysis', value: 2},
-  {label: 'With abnormal movement (Tremor)', value: 3},
-  {label: 'With abnormal movement (Dystonia)', value: 4},
-  {label: 'With abnormal movement (Myoclonus)', value: 5},
-  {label: 'With abnormal movement (Gait)', value: 6},
-  {label: 'With speech symptom (Dysphonia)', value: 7},
-  {label: 'With speech symptom (Slurred Speech)', value: 8},
-  {label: 'With Attach Seizure', value: 9},
-  {label: 'With Anesthesia or Sensory Loss', value: 10},
-  {label: 'With special sensory symptom (Visual)', value: 11},
-  {label: 'With special sensory symptom (Olfactory)', value: 12},
-  {label: 'With special sensory symptom (Hearing Disturbance)', value: 13},
-  {label: 'With Mixed Symptoms', value: 14},
-];
-
-export const disorderSpecificationB = [
+export const factitiousSpecification = [
   {
     label: 'Inflicted to himself / herself',
-    value: 15,
-  },
-  {label: 'Inflicted to other', value: 16},
-];
-
-export const disorderSeverityA = [
-  {
-    label:
-      'Increases medical risk (e.g., inconsistent adherence with antihypertension treatment)',
-    value: 0,
-  },
-  {label: 'Aggravates underlying medical condition', value: 1},
-  {
-    label: 'Results in medical hospitalization or emergency room visit',
     value: 2,
   },
-  {
-    label:
-      '•Results in severe, life-threatening risk \n•Ignoring heart attack symptoms',
-    value: 3,
-  },
+  {label: 'Inflicted to other', value: 3},
 ];

@@ -141,60 +141,17 @@ function HomeDiagnose({isDarkMode}) {
               showResult={showResult}
             />
           )}
-          {(result ===
-            'Psychological Factors Affecting Other Medical Conditions' ||
-            result === 'Hypersomnolence Disorder' ||
-            result === 'Narcolepsy' ||
-            result === 'Obstructive Sleep Apnea Hypoapnea' ||
-            result === 'Nightmare Disorder' ||
-            result === 'Substance/Medication-Induced Sleep Disorder' ||
-            result === 'Delayed Ejaculation' ||
-            result === 'Erectile Disorder' ||
-            result === 'Female Orgasmic Disorder' ||
-            result === 'Arousal Disorder' ||
-            result === 'Penetration Disorder' ||
-            result === 'Male Hypoactive Sexual Desire Disorder' ||
-            result === 'Premature (Early) Ejaculation' ||
-            result === 'Substance/Medication-Induced Sexual Dysfunction' ||
-            result === 'Attention-Deficit/Hyperactivity Disorder' ||
-            result === 'Specific Learning Disorder' ||
-            result === 'Stereotypic Movement Disorder' ||
-            result === 'Voyeuristic Disorder' ||
-            result === 'Exhibitionistic Disorder' ||
-            result === 'Frotteuristic Disorder' ||
-            result === 'Sexual Masochism Disorder' ||
-            result === 'Sexual Sadism Disorder' ||
-            result === 'Pedophilic Disorder' ||
-            result === 'Fetishistic Disorder' ||
-            result === 'Transvestic Disorder' ||
-            result === 'Delusional Disorder' ||
-            result === 'Schizophrenia' ||
-            result === 'Schizoaffective Disorder' ||
+          {(result === 'Conversion Disorder' ||
             result ===
-              'Psychotic Disorder Due to Another Medical Condition') && (
+              'Psychological Factors Affecting Other Medical Conditions') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
               result={result}
             />
           )}
-          {(result === 'Somatic Symptom Disorder' ||
-            result === 'Illness Anxiety Disorder' ||
-            result === 'Conversion Disorder' ||
-            result === 'Factitious Disorder' ||
-            result === 'Insomnia Disorder' ||
-            result === 'Hypersomnolence Disorder' ||
-            result === 'Narcolepsy' ||
-            result === 'Circadian Rhythm Sleep-Wake Disorder' ||
-            result === 'Nightmare Disorder' ||
-            result === 'Delayed Ejaculation' ||
-            result === 'Erectile Disorder' ||
-            result === 'Female Orgasmic Disorder' ||
-            result === 'Arousal Disorder' ||
-            result === 'Penetration Disorder' ||
-            result === 'Male Hypoactive Sexual Desire Disorder' ||
-            result === 'Premature (Early) Ejaculation' ||
-            result === 'Substance/Medication-Induced Sexual Dysfunction') && (
+          {(result === 'Conversion Disorder' ||
+            result === 'Factitious Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}
@@ -202,40 +159,7 @@ function HomeDiagnose({isDarkMode}) {
             />
           )}
           {(result === 'Conversion Disorder' ||
-            result === 'Factitious Disorder' ||
-            result === 'Insomnia Disorder' ||
-            result === 'Hypersomnolence Disorder' ||
-            result === 'Narcolepsy' ||
-            result === 'Central Sleep Apnea' ||
-            result === 'Sleep-Related Hypoventilation' ||
-            result === 'Circadian Rhythm Sleep-Wake Disorder' ||
-            result === 'Non–Rapid Eye Movement Sleep Arousal Disorder' ||
-            result === 'Nightmare Disorder' ||
-            result === 'Substance/Medication-Induced Sleep Disorder' ||
-            result === 'Substance/Medication-Induced Sexual Dysfunction' ||
-            result === 'Autism Spectrum Disorder' ||
-            result === 'Attention-Deficit/Hyperactivity Disorder' ||
-            result === 'Specific Learning Disorder' ||
-            result === 'Persistent (Chronic) Motor or Vocal Tic Disorder' ||
-            result === 'Personality Change Due to Another Medical Condition' ||
-            result === 'Exhibitionistic Disorder' ||
-            result === 'Pedophilic Disorder' ||
-            result === 'Fetishistic Disorder' ||
-            result === 'Transvestic Disorder' ||
-            result === 'Delusional Disorder' ||
-            result === 'Brief Psychotic Disorder' ||
-            result === 'Schizophreniform Disorder' ||
-            result === 'Schizoaffective Disorder' ||
-            result === 'Substance/Medication-Induced Psychotic Disorder' ||
-            result ===
-              'Other Specified Schizophrenia Spectrum and Other Psychotic Disorder' ||
-            result === 'Obsessive-Compulsive Disorder' ||
-            result === 'Body Dysmorphic Disorder' ||
-            result === 'Hoarding Disorder' ||
-            result ===
-              'Substance/Medication-Induce Obsessive-Compulsive and Related Disorder' ||
-            result ===
-              'Obsessive-Compulsive and Related Disorder Due to Another Medical Condition') && (
+            result === 'Factitious Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}
