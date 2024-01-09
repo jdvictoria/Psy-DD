@@ -680,6 +680,24 @@ export const centralSeverity = [
   },
 ];
 
+export const hypoSeverity = [
+  {
+    label:
+      '•Idiopathic hypoventilation \n•This subtype is not attributable to any readily identified condition',
+    value: 14,
+  },
+  {
+    label:
+      '•Congenital central alveolar hypoventilation \n•This subtype is a rare congenital disorder in which the individual typically presents in the perinatal period with shallow breathing, or cyanosis and apnea during sleep',
+    value: 15,
+  },
+  {
+    label:
+      '•Comorbid sleep-related hypoventilation \n•This subtype occurs as a consequence of a medical condition, such as a pulmonary disorder \n•Occurs with obesity',
+    value: 16,
+  },
+];
+
 export const disorderDurationF = [
   {
     label: 'Symptoms last at least 1 month but less than 3 months',
@@ -708,24 +726,6 @@ export const disorderDurationG = [
   {
     label: 'Duration of period of nightmares is 6 months or greater',
     value: 17,
-  },
-];
-
-export const disorderSpecificationG = [
-  {
-    label:
-      '•Idiopathic hypoventilation \n•This subtype is not attributable to any readily identified condition',
-    value: 29,
-  },
-  {
-    label:
-      '•Congenital central alveolar hypoventilation \n•This subtype is a rare congenital disorder in which the individual typically presents in the perinatal period with shallow breathing, or cyanosis and apnea during sleep',
-    value: 30,
-  },
-  {
-    label:
-      '•Comorbid sleep-related hypoventilation \n•This subtype occurs as a consequence of a medical condition, such as a pulmonary disorder \n•Occurs with obesity',
-    value: 31,
   },
 ];
 

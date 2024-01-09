@@ -144,7 +144,8 @@ function HomeDiagnose({isDarkMode}) {
           {(result === 'Conversion Disorder' ||
             result === 'Hypersomnolence Disorder' ||
             result === 'Narcolepsy' ||
-            result === 'Central Sleep Apnea') && (
+            result === 'Central Sleep Apnea' ||
+            result === 'Sleep-Related Hypoventilation') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}

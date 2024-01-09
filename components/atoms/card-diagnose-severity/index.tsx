@@ -9,6 +9,7 @@ import {conversionSeverity} from '../../../utils/somatic';
 import {
   centralSeverity,
   hyperSeverity,
+  hypoSeverity,
   narcoSeverity,
 } from '../../../utils/sleep';
 
@@ -24,6 +25,8 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = narcoSeverity;
   } else if (result === 'Central Sleep Apnea') {
     additionalData = centralSeverity;
+  } else if (result === 'Sleep-Related Hypoventilation') {
+    additionalData = hypoSeverity;
   }
 
   return (

@@ -51,6 +51,12 @@ function CardDiagnoseResult({
     severe = '(R06.3) ';
   } else if (severity === 13) {
     severe = '(G47.37) ';
+  } else if (severity === 14) {
+    severe = '(G47.34) ';
+  } else if (severity === 15) {
+    severe = '(G47.35) ';
+  } else if (severity === 16) {
+    severe = '(G47.36) ';
   } else {
     severe = '';
   }
