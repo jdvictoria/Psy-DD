@@ -5,7 +5,7 @@ import {DiagnoseResultCard} from '../../../styles/form-container';
 // @ts-ignore
 import DropdownComponent from '../dropdown-diagnose';
 
-import {conversionSeverity, factorsSeverity} from '../../../utils/somatic';
+import {conversionSeverity} from '../../../utils/somatic';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -13,10 +13,6 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
 
   if (result === 'Conversion Disorder') {
     additionalData = conversionSeverity;
-  } else if (
-    result === 'Psychological Factors Affecting Other Medical Conditions'
-  ) {
-    additionalData = factorsSeverity;
   }
 
   return (

@@ -31,14 +31,6 @@ function CardDiagnoseResult({
     severe = '(F44.6) ';
   } else if (severity === 3) {
     severe = '(F44.7) ';
-  } else if (severity === 4) {
-    severe = 'Mild ';
-  } else if (severity === 5) {
-    severe = 'Moderate ';
-  } else if (severity === 6) {
-    severe = 'Severe ';
-  } else if (severity === 7) {
-    severe = 'Extreme ';
   } else {
     severe = '';
   }
@@ -47,6 +39,18 @@ function CardDiagnoseResult({
     time = 'Acute ';
   } else if (duration === 1) {
     time = 'Persistent ';
+  } else if (duration === 2) {
+    time = 'Mild ';
+  } else if (duration === 3) {
+    time = 'Moderate ';
+  } else if (duration === 4) {
+    time = 'Severe ';
+  } else if (duration === 5) {
+    time = 'Extreme ';
+  } else if (duration === 6) {
+    time = 'Single ';
+  } else if (duration === 7) {
+    time = 'Recurrent ';
   } else {
     time = '';
   }

@@ -141,9 +141,7 @@ function HomeDiagnose({isDarkMode}) {
               showResult={showResult}
             />
           )}
-          {(result === 'Conversion Disorder' ||
-            result ===
-              'Psychological Factors Affecting Other Medical Conditions') && (
+          {result === 'Conversion Disorder' && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
@@ -151,6 +149,8 @@ function HomeDiagnose({isDarkMode}) {
             />
           )}
           {(result === 'Conversion Disorder' ||
+            result ===
+              'Psychological Factors Affecting Other Medical Conditions' ||
             result === 'Factitious Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}

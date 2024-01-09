@@ -5,7 +5,11 @@ import {DiagnoseResultCard} from '../../../styles/form-container';
 // @ts-ignore
 import DropdownComponent from '../dropdown-diagnose';
 
-import {conversionDuration, factitiousDuration} from '../../../utils/somatic';
+import {
+  conversionDuration,
+  factorsDuration,
+  factitiousDuration,
+} from '../../../utils/somatic';
 
 // @ts-ignore
 function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
@@ -13,6 +17,10 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
 
   if (result === 'Conversion Disorder') {
     additionalData = conversionDuration;
+  } else if (
+    result === 'Psychological Factors Affecting Other Medical Conditions'
+  ) {
+    additionalData = factorsDuration;
   } else if (result === 'Factitious Disorder') {
     additionalData = factitiousDuration;
   }

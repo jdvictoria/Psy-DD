@@ -259,16 +259,7 @@ export const somaticDiagnosis = numbers => {
   }
 };
 
-export const conversionDuration = [
-  {label: 'Symptoms present for less than 6 months', value: 0},
-  {label: 'Symptoms occurring for 6 months or more', value: 1},
-];
-
-export const conversionSpecification = [
-  {label: 'Without psychological stressor', value: 0},
-  {label: 'With psychological stressor', value: 1},
-];
-
+// OK
 export const conversionSeverity = [
   {label: 'With weakness or paralysis', value: 0},
   {label: 'With abnormal movement (Tremor)', value: 0},
@@ -285,33 +276,45 @@ export const conversionSeverity = [
   {label: 'With Mixed Symptoms', value: 3},
 ];
 
-export const factorsSeverity = [
+// OK
+export const conversionDuration = [
+  {label: 'Symptoms present for less than 6 months', value: 0},
+  {label: 'Symptoms occurring for 6 months or more', value: 1},
+];
+
+// OK
+export const conversionSpecification = [
+  {label: 'Without psychological stressor', value: 0},
+  {label: 'With psychological stressor', value: 1},
+];
+
+export const factorsDuration = [
   {
     label:
       'Increases medical risk (e.g., inconsistent adherence with antihypertension treatment)',
-    value: 4,
+    value: 2,
   },
-  {label: 'Aggravates underlying medical condition', value: 5},
+  {label: 'Aggravates underlying medical condition', value: 3},
   {
     label: 'Results in medical hospitalization or emergency room visit',
-    value: 6,
+    value: 4,
   },
   {
     label:
       '•Results in severe, life-threatening risk \n•Ignoring heart attack symptoms',
-    value: 7,
+    value: 5,
   },
 ];
 
 export const factitiousDuration = [
   {
     label: 'One event of falsification of illness and/or induction of injury',
-    value: 2,
+    value: 6,
   },
   {
     label:
       'Two or more events of falsification of illness and/or induction of injury',
-    value: 3,
+    value: 7,
   },
 ];
 
