@@ -423,3 +423,184 @@ export const schizophreniaDiagnosis = numbers => {
     return 'Unspecified Schizophrenia Spectrum and Other Psychotic Disorder';
   }
 };
+
+export const disorderSpecificationV = [
+  {
+    label:
+      'This subtype applies when the central theme of the delusion is that another person is in love with the individual',
+    value: 89,
+  },
+  {
+    label:
+      'This subtype applies when the central theme of the delusion is the conviction of having some great (but unrecognized) talent or insight or having made some important discovery',
+    value: 90,
+  },
+  {
+    label:
+      'This subtype applies when the central theme of the individual’s delusion is that his or her spouse or lover is unfaithful',
+    value: 91,
+  },
+  {
+    label:
+      'The delusion involves the individual’s belief that he or she is being conspired against, cheated, spied on, followed, poisoned or drugged, maliciously maligned, harassed, or obstructed in the pursuit of long-term goals',
+    value: 92,
+  },
+  {
+    label:
+      'This subtype applies when the central theme of the delusion involves bodily functions or sensations',
+    value: 93,
+  },
+  {
+    label: 'This subtype applies when no one delusional theme predominates',
+    value: 94,
+  },
+  {
+    label:
+      'This subtype applies when the dominant delusional belief cannot be clearly determined or is not described in the specific types',
+    value: 95,
+  },
+  {
+    label:
+      'Delusions are deemed bizarre if they are clearly implausible, not understandable, and not derived from ordinary life experiences',
+    value: 96,
+  },
+];
+
+export const disorderSpecificationW = [
+  {
+    label:
+      'If symptoms occur in response to events that, singly or together, would be markedly stressful to almost anyone in similar circumstances in the individual’s culture',
+    value: 97,
+  },
+  {
+    label:
+      'If symptoms do not occur in response to events that, singly or together, would be markedly stressful to almost anyone in similar circumstances in the individual’s culture',
+    value: 98,
+  },
+  {
+    label: 'If onset is during pregnancy or within 4 weeks postpartum',
+    value: 99,
+  },
+  {
+    label:
+      'Refer to the criteria for catatonia associated with another mental disorder',
+    value: 100,
+  },
+];
+
+export const disorderSpecificationX = [
+  {
+    label:
+      'This specifier requires the presence of at least two of the following features: onset of prominent psychotic symptoms within 4 weeks of the first noticeable change in usual behavior or functioning; confusion or perplexity; good premorbid social and occupational functioning; and absence of blunted or flat affect',
+    value: 101,
+  },
+  {
+    label:
+      'This specifier is applied if two or more of the above features have not been present',
+    value: 102,
+  },
+  {
+    label:
+      'Refer to the criteria for catatonia associated with another mental disorder',
+    value: 103,
+  },
+];
+
+export const disorderSpecificationY = [
+  {
+    label:
+      'This subtype applies if a manic episode is part of the presentation. Major depressive episodes may also occur',
+    value: 104,
+  },
+  {
+    label:
+      'This subtype applies if only major depressive episodes are part of the presentation',
+    value: 105,
+  },
+];
+
+export const disorderSpecificationZ = [
+  {
+    label:
+      'If criteria are met for intoxication with the substance and the symptoms develop during intoxication',
+    value: 106,
+  },
+  {
+    label:
+      'If criteria are met for withdrawal from the substance and the symptoms develop during, or shortly after, withdrawal',
+    value: 107,
+  },
+  {
+    label:
+      'If symptoms developed at initiation of medication, with a change in use of medication, or during withdrawal of medication',
+    value: 108,
+  },
+];
+
+export const disorderSpecificationAA = [
+  {
+    label: 'Occurring in the absence of any other features',
+    value: 109,
+  },
+  {
+    label:
+      'This includes persistent delusions with periods of overlapping mood episodes that are present for a substantial portion of the delusional disturbance (such that the criterion stipulating only brief mood disturbance in delusional disorder is not met)',
+    value: 110,
+  },
+  {
+    label:
+      'This syndrome is characterized by psychotic-like symptoms that are below a threshold for full psychosis (e.g., the symptoms are less severe and more transient, and insight is relatively maintained)',
+    value: 111,
+  },
+];
+
+export const disorderSeverityQ = [
+  {
+    label:
+      'First manifestation of the disorder meeting the defining diagnostic symptom and time criteria. An acute episode is a time period in which the symptom criteria are fulfilled',
+    value: 78,
+  },
+  {
+    label:
+      'Partial remission is a time period during which an improvement after a previous episode is maintained and in which the defining criteria of the disorder are only partially fulfilled',
+    value: 79,
+  },
+  {
+    label:
+      'Full remission is a period of time after a previous episode during which no disorder-specific symptoms are present',
+    value: 80,
+  },
+  {
+    label: 'Multiple episodes, currently in acute episode',
+    value: 81,
+  },
+  {
+    label: 'Multiple episodes, currently in partial remission',
+    value: 82,
+  },
+  {
+    label: 'Multiple episodes, currently in full remission',
+    value: 83,
+  },
+  {
+    label:
+      'Symptoms fulfilling the diagnostic symptom criteria of the disorder are remaining for the majority of the illness course, with subthreshold symptom',
+    value: 84,
+  },
+  {
+    label:
+      'Refer to the criteria for catatonia associated with another mental disorder',
+    value: 85,
+  },
+];
+
+export const disorderSeverityR = [
+  {
+    label: 'If delusions are the predominant symptom',
+    value: 86,
+  },
+  {
+    label: 'If hallucinations are the predominant symptom',
+    value: 87,
+  },
+];

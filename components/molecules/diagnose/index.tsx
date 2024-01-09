@@ -158,7 +158,12 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Sexual Sadism Disorder' ||
             result === 'Pedophilic Disorder' ||
             result === 'Fetishistic Disorder' ||
-            result === 'Transvestic Disorder') && (
+            result === 'Transvestic Disorder' ||
+            result === 'Delusional Disorder' ||
+            result === 'Schizophrenia' ||
+            result === 'Schizoaffective Disorder' ||
+            result ===
+              'Psychotic Disorder Due to Another Medical Condition') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
@@ -208,7 +213,14 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Exhibitionistic Disorder' ||
             result === 'Pedophilic Disorder' ||
             result === 'Fetishistic Disorder' ||
-            result === 'Transvestic Disorder') && (
+            result === 'Transvestic Disorder' ||
+            result === 'Delusional Disorder' ||
+            result === 'Brief Psychotic Disorder' ||
+            result === 'Schizophreniform Disorder' ||
+            result === 'Schizoaffective Disorder' ||
+            result === 'Substance/Medication-Induced Psychotic Disorder' ||
+            result ===
+              'Other Specified Schizophrenia Spectrum and Other Psychotic Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}

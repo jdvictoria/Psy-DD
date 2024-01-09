@@ -151,6 +151,26 @@ function CardDiagnoseResult({
     severe = '(Exclusive) ';
   } else if (severity === 77) {
     severe = '(Nonexclusive) ';
+  } else if (severity === 78) {
+    severe = '(First episode, currently in acute episode) ';
+  } else if (severity === 79) {
+    severe = '(First episode, currently in partial remission) ';
+  } else if (severity === 80) {
+    severe = '(First episode, currently in full remission) ';
+  } else if (severity === 81) {
+    severe = '(Multiple episodes, currently in acute episode) ';
+  } else if (severity === 82) {
+    severe = '(Multiple episodes, currently in partial remission) ';
+  } else if (severity === 83) {
+    severe = '(Multiple episodes, currently in full remission ) ';
+  } else if (severity === 84) {
+    severe = '(Continuous) ';
+  } else if (severity === 85) {
+    severe = '(With Catatonia) ';
+  } else if (severity === 86) {
+    severe = '(F06.2 With Delusions) ';
+  } else if (severity === 87) {
+    severe = '(F06.0 With Hallucinations) ';
   } else {
     severe = '';
   }
@@ -295,7 +315,7 @@ function CardDiagnoseResult({
     code =
       ' (Associated with a neurodevelopmental, mental, or behavioral problem)';
   } else if (specification === 63) {
-    code = ' (w/ catatonia)';
+    code = ' (w/ Catatonia)';
   } else if (specification === 64) {
     code = ' (F90.2 Combined presentation)';
   } else if (specification === 65) {
@@ -348,6 +368,52 @@ function CardDiagnoseResult({
     code = ' (w/ Fetishism)';
   } else if (specification === 88) {
     code = ' (w/ Autogynephilia)';
+  } else if (specification === 89) {
+    code = ' (Erotomanic type)';
+  } else if (specification === 90) {
+    code = ' (Grandiose Type)';
+  } else if (specification === 91) {
+    code = ' (Jealous type)';
+  } else if (specification === 92) {
+    code = ' (Persecutory type)';
+  } else if (specification === 93) {
+    code = ' (Somatic Type)';
+  } else if (specification === 94) {
+    code = ' (Mixed type)';
+  } else if (specification === 95) {
+    code = ' (Unspecified type:)';
+  } else if (specification === 96) {
+    code = ' (With Bizarre Content)';
+  } else if (specification === 97) {
+    code = ' (With marked stressor(s))';
+  } else if (specification === 98) {
+    code = ' (Without marked stressor(s))';
+  } else if (specification === 99) {
+    code = ' (With peripartum onset)';
+  } else if (specification === 100) {
+    code = ' (w/ Catatonia)';
+  } else if (specification === 101) {
+    code = ' (With good prognostic features)';
+  } else if (specification === 102) {
+    code = ' (Without good prognostic features)';
+  } else if (specification === 103) {
+    code = ' (w/ Catatonia)';
+  } else if (specification === 104) {
+    code = ' (F25.0 Bipolar type)';
+  } else if (specification === 105) {
+    code = ' (F25.1 Depressive type)';
+  } else if (specification === 106) {
+    code = ' (With onset during intoxication:)';
+  } else if (specification === 107) {
+    code = ' (With onset during withdrawal)';
+  } else if (specification === 108) {
+    code = ' (With onset after medication use)';
+  } else if (specification === 109) {
+    code = ' (Persistent auditory hallucinations)';
+  } else if (specification === 110) {
+    code = ' (Delusions with significant overlapping mood episodes)';
+  } else if (specification === 111) {
+    code = ' (Attenuated psychosis syndrome)';
   } else {
     code = '';
   }

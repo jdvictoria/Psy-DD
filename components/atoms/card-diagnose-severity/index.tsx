@@ -25,6 +25,10 @@ import {
   disorderSeverityO,
   disorderSeverityP,
 } from '../../../utils/paraphilic';
+import {
+  disorderSeverityQ,
+  disorderSeverityR,
+} from '../../../utils/schizophrenia';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -74,6 +78,14 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = disorderSeverityO;
   } else if (result === 'Pedophilic Disorder') {
     additionalData = disorderSeverityP;
+  } else if (
+    result === 'Delusional Disorder' ||
+    result === 'Schizophrenia' ||
+    result === 'Schizoaffective Disorder'
+  ) {
+    additionalData = disorderSeverityQ;
+  } else if (result === 'Psychotic Disorder Due to Another Medical Condition') {
+    additionalData = disorderSeverityR;
   }
 
   return (

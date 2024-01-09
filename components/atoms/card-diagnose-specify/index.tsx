@@ -35,6 +35,14 @@ import {
   disorderSpecificationT,
   disorderSpecificationU,
 } from '../../../utils/paraphilic';
+import {
+  disorderSpecificationAA,
+  disorderSpecificationV,
+  disorderSpecificationW,
+  disorderSpecificationX,
+  disorderSpecificationY,
+  disorderSpecificationZ,
+} from '../../../utils/schizophrenia';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -82,6 +90,21 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = disorderSpecificationT;
   } else if (result === 'Transvestic Disorder') {
     additionalData = disorderSpecificationU;
+  } else if (result === 'Delusional Disorder') {
+    additionalData = disorderSpecificationV;
+  } else if (result === 'Brief Psychotic Disorder') {
+    additionalData = disorderSpecificationW;
+  } else if (result === 'Schizophreniform Disorder') {
+    additionalData = disorderSpecificationX;
+  } else if (result === 'Schizoaffective Disorder') {
+    additionalData = disorderSpecificationY;
+  } else if (result === 'Substance/Medication-Induced Psychotic Disorder') {
+    additionalData = disorderSpecificationZ;
+  } else if (
+    result ===
+    'Other Specified Schizophrenia Spectrum and Other Psychotic Disorder'
+  ) {
+    additionalData = disorderSpecificationAA;
   }
 
   return (
