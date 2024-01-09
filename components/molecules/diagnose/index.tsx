@@ -142,35 +142,41 @@ function HomeDiagnose({isDarkMode}) {
             />
           )}
           {(result === 'Conversion Disorder' ||
-            result === 'Hypersomnolence Disorder') && (
+            result === 'Hypersomnolence Disorder' ||
+            result === 'Narcolepsy') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
               result={result}
             />
           )}
+
           {(result === 'Conversion Disorder' ||
             result ===
               'Psychological Factors Affecting Other Medical Conditions' ||
             result === 'Factitious Disorder' ||
             result === 'Insomnia Disorder' ||
-            result === 'Hypersomnolence Disorder') && (
+            result === 'Hypersomnolence Disorder' ||
+            result === 'Narcolepsy') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}
               result={result}
             />
           )}
+
           {(result === 'Conversion Disorder' ||
             result === 'Factitious Disorder' ||
             result === 'Insomnia Disorder' ||
-            result === 'Hypersomnolence Disorder') && (
+            result === 'Hypersomnolence Disorder' ||
+            result === 'Narcolepsy') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}
               result={result}
             />
           )}
+
           {[...Array(criteriaInstance)].map((_, index) => (
             <CardDiagnoseBig
               key={index}

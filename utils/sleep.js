@@ -594,16 +594,56 @@ export const hyperSpecification = [
   {label: 'With another sleep disorder', value: 6},
 ];
 
-export const disorderDurationE = [
+export const narcoSeverity = [
+  {
+    label:
+      '•Narcolepsy with cataplexy or hypocretin deficiency (Type 1) \n•Criterion B1 (Episodes of Cataplexy) or Criterion B2 (Low CSF Hypocretin-1 levels) is met',
+    value: 7,
+  },
+  {
+    label:
+      '•Narcolepsy without Cataplexy and either without Hypocretin deficiency or Hypocretin unmeasured (Type 2) \n•Criterion B3 (Positive Polysomnography/multiple sleep latency test) is met, but Criterion B1 is not met (i.e., no Cataplexy is present) and Criterion B2 is not met (i.e., CSF Gypocretin-1 levels are not low or have not been measured)',
+    value: 8,
+  },
+  {
+    label:
+      '•Narcolepsy with cataplexy or hypocretin deficiency due to a medical condition',
+    value: 9,
+  },
+  {
+    label:
+      '•Narcolepsy without cataplexy and without hypocretin deficiency due to a medical condition',
+    value: 10,
+  },
+];
+
+export const narcoDuration = [
+  {
+    label: '•Sleep disturbance if present, is mild. \n•If present, is mild.',
+    value: 2,
+  },
+  {
+    label:
+      '•Need for multiple naps daily \n•Sleep may be moderately disturbed \n•Cataplexy, when present, occurs daily or every few days.\n',
+    value: 3,
+  },
+  {
+    label:
+      '•Nearly constant sleepiness and, often \n•Highly disturbed nocturnal sleep \n•Excessive body movement and vivid dreams',
+    value: 4,
+  },
+];
+
+export const narcoSpecification = [
   {
     label:
       '(NT1) is most often based on the presence of recurrent sleepiness and cataplexy',
-    value: 10,
+    value: 7,
   },
   {
     label:
       'Based on sleepiness and positive multiple sleep latency test (MSLT) findings, only to be reassigned to a diagnosis of NT1 following emergence of cataplexy',
-    value: 11,
+    value: 8,
   },
 ];
 
@@ -635,29 +675,6 @@ export const disorderDurationG = [
   {
     label: 'Duration of period of nightmares is 6 months or greater',
     value: 17,
-  },
-];
-
-export const disorderSpecificationE = [
-  {
-    label:
-      '•Narcolepsy with cataplexy or hypocretin deficiency (Type 1) \n•Criterion B1 (Episodes of Cataplexy) or Criterion B2 (Low CSF Hypocretin-1 levels) is met',
-    value: 22,
-  },
-  {
-    label:
-      '•Narcolepsy without Cataplexy and either without Hypocretin deficiency or Hypocretin unmeasured (Type 2) \n•Criterion B3 (Positive Polysomnography/multiple sleep latency test) is met, but Criterion B1 is not met (i.e., no Cataplexy is present) and Criterion B2 is not met (i.e., CSF Gypocretin-1 levels are not low or have not been measured)',
-    value: 23,
-  },
-  {
-    label:
-      '•Narcolepsy with cataplexy or hypocretin deficiency due to a medical condition',
-    value: 24,
-  },
-  {
-    label:
-      '•Narcolepsy without cataplexy and without hypocretin deficiency due to a medical condition',
-    value: 25,
   },
 ];
 
@@ -803,23 +820,6 @@ export const disorderSpecificationK = [
     label:
       'If symptoms developed at initiation of medication, with a change in use of medication, or during withdrawal of medication',
     value: 52,
-  },
-];
-
-export const disorderSeverityC = [
-  {
-    label: '•Sleep disturbance if present, is mild. \n•If present, is mild.',
-    value: 7,
-  },
-  {
-    label:
-      '•Need for multiple naps daily \n•Sleep may be moderately disturbed \n•Cataplexy, when present, occurs daily or every few days.\n',
-    value: 8,
-  },
-  {
-    label:
-      '•Nearly constant sleepiness and, often \n•Highly disturbed nocturnal sleep \n•Excessive body movement and vivid dreams',
-    value: 9,
   },
 ];
 

@@ -37,6 +37,14 @@ function CardDiagnoseResult({
     severe = 'Moderate ';
   } else if (severity === 6) {
     severe = 'Severe ';
+  } else if (severity === 7) {
+    severe = '(G47.411) ';
+  } else if (severity === 8) {
+    severe = '(G47.419) ';
+  } else if (severity === 9) {
+    severe = '(G47.421) ';
+  } else if (severity === 10) {
+    severe = '(G47.429) ';
   } else {
     severe = '';
   }
@@ -79,6 +87,10 @@ function CardDiagnoseResult({
     specs = ' (With mental disorder)';
   } else if (specification === 6) {
     specs = ' (With another sleep disorder)';
+  } else if (specification === 7) {
+    specs = ' (NT1)';
+  } else if (specification === 8) {
+    specs = ' (NT2)';
   } else {
     specs = '';
   }
