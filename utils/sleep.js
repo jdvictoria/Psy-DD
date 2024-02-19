@@ -740,7 +740,7 @@ export const circaDuration = [
     value: 1,
   },
   {
-    label: '"Two or more episodes occur within the space of 1 year',
+    label: 'Two or more episodes occur within the space of 1 year',
     value: 7,
   },
 ];
@@ -769,189 +769,189 @@ export const eyeSeverity = [
   },
 ];
 
-export const disorderDurationG = [
+export const nightmareSeverity = [
+  {
+    label: 'Less than one episode per week on average',
+    value: 4,
+  },
+  {
+    label: 'One or more episodes per week but less than nightly',
+    value: 5,
+  },
+  {
+    label: 'Episodes Nightly',
+    value: 6,
+  },
+];
+
+export const nightmareDuration = [
   {
     label: 'Duration of period of nightmares is 1 month or less',
-    value: 15,
+    value: 0,
   },
   {
     label:
       'Duration of period of nightmares is greater than 1 month but less than 6 months',
-    value: 16,
+    value: 9,
   },
   {
     label: 'Duration of period of nightmares is 6 months or greater',
-    value: 17,
+    value: 1,
   },
 ];
 
-export const disorderSpecificationJ = [
+export const nightmareSpecification = [
   {
     label: 'During Sleep Onset',
-    value: 42,
+    value: 11,
   },
   {
     label: 'With Mental Disorder',
-    value: 43,
+    value: 5,
   },
   {
     label: 'With Medical Condition',
-    value: 44,
+    value: 4,
   },
   {
     label: 'With Another Sleep Disorder',
-    value: 45,
+    value: 6,
   },
 ];
 
-export const disorderSpecificationK = [
-  {
-    label:
-      'Characterized by difficulty falling asleep or maintaining sleep, frequent nocturnal awakenings, or nonrestorative sleep',
-    value: 46,
-  },
-  {
-    label:
-      'Characterized by predominant complaint of excessive sleepiness/fatigue during waking hours or, less commonly, a long sleep period',
-    value: 47,
-  },
-  {
-    label: 'Characterized by abnormal behavioral events during sleep',
-    value: 48,
-  },
-  {
-    label:
-      'Characterized by a substance/medication induced sleep problem characterized by multiple types of sleep symptoms, but no symptom clearly predominates',
-    value: 49,
-  },
-  {
-    label:
-      'If criteria are met for intoxication with the substance and the symptoms develop during the intoxication',
-    value: 50,
-  },
-  {
-    label:
-      'If criteria are met for withdrawal from the substance and the symptoms develop during, or shortly after, withdrawal',
-    value: 51,
-  },
-  {
-    label:
-      'If symptoms developed at initiation of medication, with a change in use of medication, or during withdrawal of medication',
-    value: 52,
-  },
-];
-
-export const disorderSeverityE = [
-  {
-    label: 'Less than one episode per week on average',
-    value: 13,
-  },
-  {
-    label: 'One or more episodes per week but less than nightly',
-    value: 14,
-  },
-  {
-    label: 'Episodes Nightly',
-    value: 15,
-  },
-];
-
-export const disorderSeverityF = [
+export const substanceSeverity = [
   {
     label: 'With mild use disorder (Alcohol)',
-    value: 16,
-  },
-  {
-    label: 'With moderate or severe use disorder (Alcohol)',
-    value: 17,
-  },
-  {
-    label: 'Without use disorder (Alcohol)',
-    value: 18,
-  },
-  {
-    label: 'Without use disorder (Caffeine)',
-    value: 19,
-  },
-  {
-    label: 'With mild use disorder (Cannabis)',
-    value: 20,
-  },
-  {
-    label: 'With moderate or severe use disorder (Cannabis)',
-    value: 21,
-  },
-  {
-    label: 'Without use disorder (Cannabis)',
-    value: 22,
-  },
-  {
-    label: 'With mild use disorder (Opioid)',
-    value: 23,
-  },
-  {
-    label: 'With moderate or severe use disorder (Opioid)',
-    value: 24,
-  },
-  {
-    label: 'Without use disorder (Opioid)',
     value: 25,
   },
   {
-    label: 'With mild use disorder (Sedative, Hypnotic, or Anxiolytic)',
+    label: 'With moderate or severe use disorder (Alcohol)',
     value: 26,
+  },
+  {
+    label: 'Without use disorder (Alcohol)',
+    value: 27,
+  },
+  {
+    label: 'Without use disorder (Caffeine)',
+    value: 28,
+  },
+  {
+    label: 'With mild use disorder (Cannabis)',
+    value: 29,
+  },
+  {
+    label: 'With moderate or severe use disorder (Cannabis)',
+    value: 30,
+  },
+  {
+    label: 'Without use disorder (Cannabis)',
+    value: 31,
+  },
+  {
+    label: 'With mild use disorder (Opioid)',
+    value: 32,
+  },
+  {
+    label: 'With moderate or severe use disorder (Opioid)',
+    value: 33,
+  },
+  {
+    label: 'Without use disorder (Opioid)',
+    value: 34,
+  },
+  {
+    label: 'With mild use disorder (Sedative, Hypnotic, or Anxiolytic)',
+    value: 35,
   },
   {
     label:
       'With moderate or severe use disorder (Sedative, Hypnotic, or Anxiolytic)',
-    value: 27,
+    value: 36,
   },
   {
     label: 'Without use disorder (Sedative, Hypnotic, or Anxiolytic)',
-    value: 28,
+    value: 37,
   },
   {
     label:
       'With mild use disorder (Amphetamine-type substance (or other stimulant))',
-    value: 29,
+    value: 38,
   },
   {
     label:
       'With moderate or severe use disorder (Amphetamine-type substance (or other stimulant))',
-    value: 30,
+    value: 39,
   },
   {
     label:
       'Without use disorder (Amphetamine-type substance (or other stimulant))',
-    value: 31,
+    value: 40,
   },
   {
     label: 'With mild use disorder (Cocaine)',
-    value: 32,
+    value: 41,
   },
   {
     label: 'With moderate or severe use disorder (Cocaine)',
-    value: 33,
+    value: 42,
   },
   {
     label: 'Without use disorder (Cocaine)',
-    value: 34,
+    value: 43,
   },
   {
     label: 'With moderate or severe use disorder (Tobacco)',
-    value: 35,
+    value: 44,
   },
   {
     label: 'With mild use disorder (Other (or unknown) substance)',
-    value: 36,
+    value: 45,
   },
   {
     label:
       'With moderate or severe use disorder (Other (or unknown) substance)',
-    value: 37,
+    value: 46,
   },
   {
     label: 'Without use disorder (Other (or unknown) substance)',
-    value: 38,
+    value: 47,
+  },
+];
+
+export const substanceSpecification = [
+  {
+    label:
+      'Characterized by difficulty falling asleep or maintaining sleep, frequent nocturnal awakenings, or nonrestorative sleep',
+    value: 12,
+  },
+  {
+    label:
+      'Characterized by predominant complaint of excessive sleepiness/fatigue during waking hours or, less commonly, a long sleep period',
+    value: 13,
+  },
+  {
+    label: 'Characterized by abnormal behavioral events during sleep',
+    value: 14,
+  },
+  {
+    label:
+      'Characterized by a substance/medication induced sleep problem characterized by multiple types of sleep symptoms, but no symptom clearly predominates',
+    value: 15,
+  },
+  {
+    label:
+      'If criteria are met for intoxication with the substance and the symptoms develop during the intoxication',
+    value: 16,
+  },
+  {
+    label:
+      'If criteria are met for withdrawal from the substance and the symptoms develop during, or shortly after, withdrawal',
+    value: 17,
+  },
+  {
+    label:
+      'If symptoms developed at initiation of medication, with a change in use of medication, or during withdrawal of medication',
+    value: 18,
   },
 ];

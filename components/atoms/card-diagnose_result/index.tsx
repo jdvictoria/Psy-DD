@@ -8,7 +8,6 @@ import {
 
 import {DiagnoseResultCard} from '../../../styles/form-container';
 
-// @ts-ignore
 function CardDiagnoseResult({
   isDarkMode,
   result,
@@ -16,7 +15,7 @@ function CardDiagnoseResult({
   duration,
   specification,
   showResult,
-}) {
+}: any) {
   const contentStyle = contentText(isDarkMode);
 
   let severe;
@@ -73,6 +72,52 @@ function CardDiagnoseResult({
     severe = '(F51.3) ';
   } else if (severity === 24) {
     severe = '(F51.4) ';
+  } else if (severity === 25) {
+    severe = '(F10.182) ';
+  } else if (severity === 26) {
+    severe = '(F10.282) ';
+  } else if (severity === 27) {
+    severe = '(F10.982) ';
+  } else if (severity === 28) {
+    severe = '(F15.982) ';
+  } else if (severity === 29) {
+    severe = '(F12.188) ';
+  } else if (severity === 30) {
+    severe = '(F12.288) ';
+  } else if (severity === 31) {
+    severe = '(F12.988) ';
+  } else if (severity === 32) {
+    severe = '(F11.182) ';
+  } else if (severity === 33) {
+    severe = '(F11.282) ';
+  } else if (severity === 34) {
+    severe = '(F11.982) ';
+  } else if (severity === 35) {
+    severe = '(F13.182) ';
+  } else if (severity === 36) {
+    severe = '(F13.282) ';
+  } else if (severity === 37) {
+    severe = '(F13.982) ';
+  } else if (severity === 38) {
+    severe = '(F15.182) ';
+  } else if (severity === 39) {
+    severe = '(F15.282) ';
+  } else if (severity === 40) {
+    severe = '(F15.982) ';
+  } else if (severity === 41) {
+    severe = '(F14.182) ';
+  } else if (severity === 42) {
+    severe = '(F14.282) ';
+  } else if (severity === 43) {
+    severe = '(F14.982) ';
+  } else if (severity === 44) {
+    severe = '(F14.282) ';
+  } else if (severity === 45) {
+    severe = '(F19.182) ';
+  } else if (severity === 46) {
+    severe = '(F19.282) ';
+  } else if (severity === 47) {
+    severe = '(F14.982) ';
   } else {
     severe = '';
   }
@@ -123,6 +168,22 @@ function CardDiagnoseResult({
     specs = ' (Familial)';
   } else if (specification === 10) {
     specs = ' (Overlapping with non-24-hour sleep-wake type)';
+  } else if (specification === 11) {
+    specs = ' (During sleep onset)';
+  } else if (specification === 12) {
+    specs = ' (Insomnia Type)';
+  } else if (specification === 13) {
+    specs = ' (Daytime sleepiness type)';
+  } else if (specification === 14) {
+    specs = ' (Parasomnia type)';
+  } else if (specification === 15) {
+    specs = ' (Mixed type)';
+  } else if (specification === 16) {
+    specs = ' (With onset during intoxication)';
+  } else if (specification === 17) {
+    specs = ' (With onset during withdrawal)';
+  } else if (specification === 18) {
+    specs = ' (With onset after medication use)';
   } else {
     specs = '';
   }
