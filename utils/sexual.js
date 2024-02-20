@@ -299,137 +299,389 @@ export const sexualDiagnosis = numbers => {
   }
 };
 
-export const disorderDurationH = [
+export const delayedDuration = [
   {
     label:
       'The disturbance has been present since the individual became sexually active',
-    value: 18,
+    value: 10,
   },
   {
     label:
       'The disturbance began after a period of relatively normal sexual function',
-    value: 19,
+    value: 11,
   },
   {
     label:
       'Not limited to certain types of stimulation, situations, or partners',
-    value: 20,
+    value: 12,
   },
   {
     label:
       'Only occurs with certain types of stimulation, situations, or partners',
-    value: 21,
+    value: 13,
   },
 ];
 
-export const disorderDurationI = [
-  {
-    label: 'Occurs on 25%–50% of occasions of sexual activity',
-    value: 22,
-  },
-  {
-    label: 'Occurs on 50%–75% of occasions of sexual activity',
-    value: 23,
-  },
-  {
-    label: 'Occurs on 75% or more of occasions of sexual activity',
-    value: 24,
-  },
-];
-
-export const disorderSeverityG = [
+export const delayedSeverity = [
   {
     label: 'Evidence of mild distress over the symptoms in Criterion A',
-    value: 39,
+    value: 4,
   },
   {
     label: 'Evidence of moderate distress over the symptoms in Criterion A',
-    value: 40,
+    value: 5,
   },
   {
     label:
       'Evidence of severe or extreme distress over the symptoms in Criterion A',
-    value: 41,
+    value: 6,
   },
 ];
 
-export const disorderSeverityH = [
+export const erectileDuration = [
+  {
+    label:
+      'The disturbance has been present since the individual became sexually active',
+    value: 10,
+  },
+  {
+    label:
+      'The disturbance began after a period of relatively normal sexual function',
+    value: 11,
+  },
+  {
+    label:
+      'Not limited to certain types of stimulation, situations, or partners',
+    value: 12,
+  },
+  {
+    label:
+      'Only occurs with certain types of stimulation, situations, or partners',
+    value: 13,
+  },
+];
+
+export const erectileSeverity = [
+  {
+    label: 'Evidence of mild distress over the symptoms in Criterion A',
+    value: 4,
+  },
+  {
+    label: 'Evidence of moderate distress over the symptoms in Criterion A',
+    value: 5,
+  },
+  {
+    label:
+      'Evidence of severe or extreme distress over the symptoms in Criterion A',
+    value: 6,
+  },
+];
+
+export const femOrgasmicDuration = [
+  {
+    label:
+      'The disturbance has been present since the individual became sexually active',
+    value: 10,
+  },
+  {
+    label:
+      'The disturbance began after a period of relatively normal sexual function',
+    value: 11,
+  },
+  {
+    label:
+      'Not limited to certain types of stimulation, situations, or partners',
+    value: 12,
+  },
+  {
+    label:
+      'Only occurs with certain types of stimulation, situations, or partners',
+    value: 13,
+  },
+];
+
+export const femOrgasmicSeverity = [
+  {
+    label: 'Evidence of mild distress over the symptoms in Criterion A',
+    value: 4,
+  },
+  {
+    label: 'Evidence of moderate distress over the symptoms in Criterion A',
+    value: 5,
+  },
+  {
+    label:
+      'Evidence of severe or extreme distress over the symptoms in Criterion A',
+    value: 6,
+  },
+];
+
+export const femArousalDuration = [
+  {
+    label:
+      'The disturbance has been present since the individual became sexually active',
+    value: 10,
+  },
+  {
+    label:
+      'The disturbance began after a period of relatively normal sexual function',
+    value: 11,
+  },
+  {
+    label:
+      'Not limited to certain types of stimulation, situations, or partners',
+    value: 12,
+  },
+  {
+    label:
+      'Only occurs with certain types of stimulation, situations, or partners',
+    value: 13,
+  },
+];
+
+export const femArousalSeverity = [
+  {
+    label: 'Evidence of mild distress over the symptoms in Criterion A',
+    value: 4,
+  },
+  {
+    label: 'Evidence of moderate distress over the symptoms in Criterion A',
+    value: 5,
+  },
+  {
+    label:
+      'Evidence of severe or extreme distress over the symptoms in Criterion A',
+    value: 6,
+  },
+];
+
+export const penetrationDuration = [
+  {
+    label:
+      'The disturbance has been present since the individual became sexually active',
+    value: 10,
+  },
+  {
+    label:
+      'The disturbance began after a period of relatively normal sexual function',
+    value: 11,
+  },
+  {
+    label:
+      'Not limited to certain types of stimulation, situations, or partners',
+    value: 12,
+  },
+  {
+    label:
+      'Only occurs with certain types of stimulation, situations, or partners',
+    value: 13,
+  },
+];
+
+export const penetrationSeverity = [
+  {
+    label: 'Evidence of mild distress over the symptoms in Criterion A',
+    value: 4,
+  },
+  {
+    label: 'Evidence of moderate distress over the symptoms in Criterion A',
+    value: 5,
+  },
+  {
+    label:
+      'Evidence of severe or extreme distress over the symptoms in Criterion A',
+    value: 6,
+  },
+];
+
+export const hypoactiveDuration = [
+  {
+    label:
+      'The disturbance has been present since the individual became sexually active',
+    value: 10,
+  },
+  {
+    label:
+      'The disturbance began after a period of relatively normal sexual function',
+    value: 11,
+  },
+  {
+    label:
+      'Not limited to certain types of stimulation, situations, or partners',
+    value: 12,
+  },
+  {
+    label:
+      'Only occurs with certain types of stimulation, situations, or partners',
+    value: 13,
+  },
+];
+
+export const hypoactiveSeverity = [
+  {
+    label: 'Evidence of mild distress over the symptoms in Criterion A',
+    value: 4,
+  },
+  {
+    label: 'Evidence of moderate distress over the symptoms in Criterion A',
+    value: 5,
+  },
+  {
+    label:
+      'Evidence of severe or extreme distress over the symptoms in Criterion A',
+    value: 6,
+  },
+];
+
+export const prematureDuration = [
+  {
+    label:
+      'The disturbance has been present since the individual became sexually active',
+    value: 10,
+  },
+  {
+    label:
+      'The disturbance began after a period of relatively normal sexual function',
+    value: 11,
+  },
+  {
+    label:
+      'Not limited to certain types of stimulation, situations, or partners',
+    value: 12,
+  },
+  {
+    label:
+      'Only occurs with certain types of stimulation, situations, or partners',
+    value: 13,
+  },
+];
+
+export const prematureSeverity = [
+  {
+    label: 'Evidence of mild distress over the symptoms in Criterion A',
+    value: 4,
+  },
+  {
+    label: 'Evidence of moderate distress over the symptoms in Criterion A',
+    value: 5,
+  },
+  {
+    label:
+      'Evidence of severe or extreme distress over the symptoms in Criterion A',
+    value: 6,
+  },
+];
+
+export const substanceSexualDuration = [
+  {
+    label: 'Occurs on 25%–50% of occasions of sexual activity',
+    value: 2,
+  },
+  {
+    label: 'Occurs on 50%–75% of occasions of sexual activity',
+    value: 3,
+  },
+  {
+    label: 'Occurs on 75% or more of occasions of sexual activity',
+    value: 4,
+  },
+];
+
+export const substanceSexualSpecification = [
+  {
+    label:
+      'If criteria are met for intoxication with the substance and the symptoms develop during the intoxication',
+    value: 16,
+  },
+  {
+    label:
+      'If criteria are met for withdrawal from the substance and the symptoms develop during, or shortly after, withdrawal',
+    value: 17,
+  },
+  {
+    label:
+      'If symptoms developed at initiation of medication, with a change in use of medication, or during withdrawal of medication',
+    value: 18,
+  },
+];
+
+export const substanceSexualSeverity = [
   {
     label: 'With mild use disorder (Alcohol)',
-    value: 42,
+    value: 48,
   },
   {
     label: 'With moderate or severe use disorder (Alcohol)',
-    value: 43,
+    value: 49,
   },
   {
     label: 'Without use disorder (Alcohol)',
-    value: 44,
+    value: 50,
   },
   {
     label: 'With mild use disorder (Opioid)',
-    value: 45,
+    value: 51,
   },
   {
     label: 'With moderate or severe use disorder (Opioid)',
-    value: 46,
+    value: 52,
   },
   {
     label: 'Without use disorder (Opioid)',
-    value: 47,
+    value: 53,
   },
   {
     label: 'With mild use disorder (Sedative, Hypnotic, or Anxiolytic)',
-    value: 48,
+    value: 54,
   },
   {
     label:
       'With moderate or severe use disorder (Sedative, Hypnotic, or Anxiolytic)',
-    value: 49,
+    value: 55,
   },
   {
     label: 'Without use disorder (Sedative, Hypnotic, or Anxiolytic)',
-    value: 50,
+    value: 56,
   },
   {
     label:
       'With mild use disorder (Amphetamine-type substance (or other stimulant))',
-    value: 51,
-  },
-  {
-    label:
-      'With moderate or severe use disorder (Amphetamine-type substance (or other stimulant))',
-    value: 52,
-  },
-  {
-    label:
-      'Without use disorder (Amphetamine-type substance (or other stimulant))',
-    value: 53,
-  },
-  {
-    label: 'With mild use disorder (Cocaine)',
-    value: 54,
-  },
-  {
-    label: 'With moderate or severe use disorder (Cocaine)',
-    value: 55,
-  },
-  {
-    label: 'Without use disorder (Cocaine)',
-    value: 56,
-  },
-  {
-    label: 'With mild use disorder (Other (or unknown) substance)',
     value: 57,
   },
   {
     label:
-      'With moderate or severe use disorder (Other (or unknown) substance)',
+      'With moderate or severe use disorder (Amphetamine-type substance (or other stimulant))',
     value: 58,
   },
   {
-    label: 'Without use disorder (Other (or unknown) substance)',
+    label:
+      'Without use disorder (Amphetamine-type substance (or other stimulant))',
     value: 59,
+  },
+  {
+    label: 'With mild use disorder (Cocaine)',
+    value: 60,
+  },
+  {
+    label: 'With moderate or severe use disorder (Cocaine)',
+    value: 61,
+  },
+  {
+    label: 'Without use disorder (Cocaine)',
+    value: 62,
+  },
+  {
+    label: 'With mild use disorder (Other (or unknown) substance)',
+    value: 63,
+  },
+  {
+    label:
+      'With moderate or severe use disorder (Other (or unknown) substance)',
+    value: 64,
+  },
+  {
+    label: 'Without use disorder (Other (or unknown) substance)',
+    value: 65,
   },
 ];
 

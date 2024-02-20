@@ -118,6 +118,42 @@ function CardDiagnoseResult({
     severe = '(F19.282) ';
   } else if (severity === 47) {
     severe = '(F14.982) ';
+  } else if (severity === 48) {
+    severe = '(F10.181) ';
+  } else if (severity === 49) {
+    severe = '(F10.281) ';
+  } else if (severity === 50) {
+    severe = '(F10.981) ';
+  } else if (severity === 51) {
+    severe = '(F11.181) ';
+  } else if (severity === 52) {
+    severe = '(F11.281) ';
+  } else if (severity === 53) {
+    severe = '(F11.981) ';
+  } else if (severity === 54) {
+    severe = '(F13.181) ';
+  } else if (severity === 55) {
+    severe = '(F13.281) ';
+  } else if (severity === 56) {
+    severe = '(F13.981) ';
+  } else if (severity === 57) {
+    severe = '(F15.181) ';
+  } else if (severity === 58) {
+    severe = '(F15.281) ';
+  } else if (severity === 59) {
+    severe = '(F15.981) ';
+  } else if (severity === 60) {
+    severe = '(F14.181) ';
+  } else if (severity === 61) {
+    severe = '(F14.281) ';
+  } else if (severity === 62) {
+    severe = '(F14.981) ';
+  } else if (severity === 63) {
+    severe = '(F19.181) ';
+  } else if (severity === 64) {
+    severe = '(F19.281) ';
+  } else if (severity === 65) {
+    severe = '(F19.981) ';
   } else {
     severe = '';
   }
@@ -142,6 +178,14 @@ function CardDiagnoseResult({
     time = 'Episodic ';
   } else if (duration === 9) {
     time = 'Subacute ';
+  } else if (duration === 10) {
+    time = 'Lifelong ';
+  } else if (duration === 11) {
+    time = 'Acquired ';
+  } else if (duration === 12) {
+    time = 'Generalized ';
+  } else if (duration === 13) {
+    time = 'Situational ';
   } else {
     time = '';
   }

@@ -819,7 +819,7 @@ export const nightmareSpecification = [
   },
 ];
 
-export const substanceSeverity = [
+export const substanceSleepSeverity = [
   {
     label: 'With mild use disorder (Alcohol)',
     value: 25,
@@ -919,7 +919,7 @@ export const substanceSeverity = [
   },
 ];
 
-export const substanceSpecification = [
+export const substanceSleepSpecification = [
   {
     label:
       'Characterized by difficulty falling asleep or maintaining sleep, frequent nocturnal awakenings, or nonrestorative sleep',
