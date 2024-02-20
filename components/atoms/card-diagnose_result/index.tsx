@@ -246,6 +246,20 @@ function CardDiagnoseResult({
     time = '(In a controlled environment) ';
   } else if (duration === 23) {
     time = '(In full remission) ';
+  } else if (duration === 24) {
+    time = '(F90.2 Combined presentation) ';
+  } else if (duration === 25) {
+    time = '(F90.0 Predominantly inattentive presentation) ';
+  } else if (duration === 26) {
+    time = '(F90.1 Predominantly hyperactive/impulsive presentation) ';
+  } else if (duration === 27) {
+    time = '(In patial remission) ';
+  } else if (duration === 28) {
+    time = '(F81.0 With impairment in reading) ';
+  } else if (duration === 29) {
+    time = '(F81.81 With impairment in written expression) ';
+  } else if (duration === 30) {
+    time = '(F81.2 With impairment in mathematics) ';
   } else {
     time = '';
   }
@@ -350,6 +364,33 @@ function CardDiagnoseResult({
     specs = ' (With hair-pulling symptoms)';
   } else if (specification === 49) {
     specs = ' (With skin-picking symptoms)';
+  } else if (specification === 50) {
+    specs = ' (Requiring very substantial support)';
+  } else if (specification === 51) {
+    specs = ' (Requiring substantial support)';
+  } else if (specification === 52) {
+    specs = ' (Requiring support)';
+  } else if (specification === 53) {
+    specs = ' (With or without accompanying intellectual impairment)';
+  } else if (specification === 54) {
+    specs = ' (With or without accompanying language impairment)';
+  } else if (specification === 55) {
+    specs =
+      ' (Associated with a known genetic or other medical condition or environmental factor)';
+  } else if (specification === 56) {
+    specs =
+      ' (Associated with a neurodevelopmental, mental, or behavioral problem)';
+  } else if (specification === 57) {
+    specs = ' (With self-injurious behavior)';
+  } else if (specification === 58) {
+    specs = ' (Without self-injurious behavior)';
+  } else if (specification === 59) {
+    specs =
+      ' (Associated with a known genetic or other medical condition, neurodevelopmental disorder, or environmental factor)';
+  } else if (specification === 60) {
+    specs = ' (With motor tics only)';
+  } else if (specification === 61) {
+    specs = ' (With vocal tics only)';
   } else {
     specs = '';
   }

@@ -664,144 +664,160 @@ export const neuroDiagnosis = numbers => {
   }
 };
 
-export const disorderSpecificationM = [
+export const autismSpecification = [
   {
     label: 'Requiring very substantial support',
-    value: 56,
+    value: 50,
   },
   {
     label: 'Requiring substantial support',
-    value: 57,
+    value: 51,
   },
   {
     label: 'Requiring support',
-    value: 58,
+    value: 52,
   },
   {
     label: 'With or without accompanying intellectual impairment',
-    value: 59,
+    value: 53,
   },
   {
     label: 'With or without accompanying language impairment',
-    value: 60,
+    value: 54,
   },
   {
     label:
       'Associated with a known genetic or other medical condition or environmental factor',
-    value: 61,
+    value: 55,
   },
   {
     label:
       'Associated with a neurodevelopmental, mental, or behavioral problem',
-    value: 62,
+    value: 56,
   },
   {
     label: 'With catatonia',
-    value: 63,
+    value: 23,
   },
 ];
 
-export const disorderSpecificationN = [
+export const adhdDuration = [
   {
     label:
-      'If both Criterion A1 (inattention) and Criterion A2 (hyperactivity-impulsivity) are met for the past 6 months',
-    value: 64,
+      'If both Criterion A1 (inattention) and Criterion A2 (Hyperactivity-impulsivity) are met for the past 6 months',
+    value: 24,
   },
   {
     label:
-      'If Criterion A1 (inattention) is met but Criterion A2 (hyperactivityimpulsivity) is not met for the past 6 months',
-    value: 65,
+      'If Criterion A1 (inattention) is met but Criterion A2 (Hyperactivityimpulsivity) is not met for the past 6 months',
+    value: 25,
   },
   {
     label:
-      'If Criterion A2 (hyperactivity-impulsivity) is met and Criterion A1 (inattention) is not met for the past 6 months',
-    value: 66,
+      'If Criterion A2 (hyperactivity-impulsivity) is met and Criterion A1 (Inattention) is not met for the past 6 months',
+    value: 26,
   },
   {
     label:
       '"When full criteria were previously met, fewer than the full criteria have been met for the past 6 months, and the symptoms still result in impairment in social, academic, or occupational functioning',
-    value: 67,
+    value: 27,
   },
 ];
 
-export const disorderSpecificationO = [
-  {
-    label:
-      '•Word reading accuracy \n•Reading rate or fluency \n•Reading comprehension',
-    value: 68,
-  },
-  {
-    label:
-      '•Spelling accuracy \n•Grammar and punctuation accuracy \n•Clarity or organization of written expression',
-    value: 69,
-  },
-  {
-    label:
-      '•Number sense \n•Memorization of arithmetic facts \n•Accurate or fluent calculation \n•Accurate math reasoning',
-    value: 70,
-  },
-];
-
-export const disorderSpecificationP = [
-  {
-    label: 'With motor tics only',
-    value: 71,
-  },
-  {
-    label: 'With vocal tics only',
-    value: 72,
-  },
-];
-
-export const disorderSeverityI = [
+export const adhdSeverity = [
   {
     label:
       'Few, if any, symptoms in excess of those required to make the diagnosis are present, and symptoms result in no more than minor impairments in social or occupational functioning',
-    value: 60,
+    value: 4,
   },
   {
     label:
       'Symptoms or functional impairment between “mild” and “severe” are present',
-    value: 61,
+    value: 5,
   },
   {
     label:
       'Many symptoms in excess of those required to make the diagnosis, or several symptoms that are particularly severe, are present, or the symptoms result in marked impairment in social or occupational functioning',
-    value: 62,
+    value: 6,
   },
 ];
 
-export const disorderSeverityJ = [
+export const specificLearningSeverity = [
   {
     label:
       'Some difficulties learning skills in one or two academic domains, but of mild enough severity that the individual may be able to compensate or function well when provided with appropriate accommodations or support services, especially during the school years',
-    value: 63,
+    value: 4,
   },
   {
     label:
       'Marked difficulties learning skills in one or more academic domains, so that the individual is unlikely to become proficient without some intervals of intensive and specialized teaching during the school years. Some accommodations or supportive services at least part of the day at school, in the workplace, or at home may be needed to complete activities accurately and efficiently',
-    value: 64,
+    value: 5,
   },
   {
     label:
       'Severe difficulties learning skills, affecting several academic domains, so that the individual is unlikely to learn those skills without ongoing intensive individualized and specialized teaching for most of the school years. Even with an array of appropriate accommodations or services at home, at school, or in the workplace, the individual may not be able to complete all activities efficiently',
-    value: 65,
+    value: 6,
   },
 ];
 
-export const disorderSeverityK = [
+export const specificLearningDuration = [
+  {
+    label:
+      '•Word reading accuracy \n•Reading rate or fluency \n•Reading comprehension',
+    value: 28,
+  },
+  {
+    label:
+      '•Spelling accuracy \n•Grammar and punctuation accuracy \n•Clarity or organization of written expression',
+    value: 29,
+  },
+  {
+    label:
+      '•Number sense \n•Memorization of arithmetic facts \n•Accurate or fluent calculation \n•Accurate math reasoning',
+    value: 30,
+  },
+];
+
+export const movementSeverity = [
   {
     label: 'Symptoms are easily suppressed by sensory stimulus or distraction',
-    value: 66,
+    value: 4,
   },
   {
     label:
       'Symptoms require explicit protective measures and behavioral modification',
-    value: 67,
+    value: 5,
   },
   {
     label:
       'Continuous monitoring and protective measures are required to prevent serious injury',
-    value: 68,
+    value: 6,
+  },
+];
+
+export const movementSpecification = [
+  {
+    label: 'With self-injurious behavior',
+    value: 57,
+  },
+  {
+    label: 'Without self-injurious behavior',
+    value: 58,
+  },
+  {
+    label:
+      'Associated with a known genetic or other medical condition, neurodevelopmental disorder, or environmental factor',
+    value: 59,
+  },
+];
+
+export const ticSpecification = [
+  {
+    label: 'With motor tics only',
+    value: 60,
+  },
+  {
+    label: 'With vocal tics only',
+    value: 61,
   },
 ];
