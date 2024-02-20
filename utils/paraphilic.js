@@ -292,26 +292,26 @@ export const masochismDuration = [
   },
 ];
 
-export const asphyxiophiliaSpecification: = [
+export const asphyxiophiliaSpecification = [
   {
-    label: 'If the individual engages in the practice of achieving sexual arousal related to restriction of breathing',
+    label:
+      'If the individual engages in the practice of achieving sexual arousal related to restriction of breathing',
     value: 32,
-  }
+  },
 ];
 
 export const sadismDuration = [
   {
     label:
-        'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
+      'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
     value: 22,
   },
   {
     label:
-        'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
+      'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
     value: 23,
   },
 ];
-
 
 export const pedophilicSeverity = [
   {
@@ -346,12 +346,12 @@ export const pedophilicSpecification = [
 export const fetishisticDuration = [
   {
     label:
-        'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
+      'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
     value: 22,
   },
   {
     label:
-        'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
+      'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
     value: 23,
   },
 ];
@@ -374,12 +374,12 @@ export const fetishisticSeverity = [
 export const transvesticDuration = [
   {
     label:
-        'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
+      'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
     value: 22,
   },
   {
     label:
-        'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
+      'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
     value: 23,
   },
 ];
