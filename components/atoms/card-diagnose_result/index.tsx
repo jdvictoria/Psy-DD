@@ -184,6 +184,16 @@ function CardDiagnoseResult({
     severe = '(Other type) ';
   } else if (severity === 80) {
     severe = '(Combined type) ';
+  } else if (severity === 81) {
+    severe = '(Exclusive type) ';
+  } else if (severity === 82) {
+    severe = '(Nonexclusive type) ';
+  } else if (severity === 83) {
+    severe = '(Body Parts) ';
+  } else if (severity === 84) {
+    severe = '(Non Living Objects) ';
+  } else if (severity === 85) {
+    severe = '(Other) ';
   } else {
     severe = '';
   }
@@ -232,6 +242,10 @@ function CardDiagnoseResult({
     time = 'Continuous ';
   } else if (duration === 21) {
     time = 'Unspecified ';
+  } else if (duration === 22) {
+    time = '(In a controlled environment) ';
+  } else if (duration === 23) {
+    time = '(In full remission) ';
   } else {
     time = '';
   }
@@ -294,6 +308,28 @@ function CardDiagnoseResult({
     specs = ' (Delusions with significant overlapping mood episodes)';
   } else if (specification === 28) {
     specs = ' (Attenuated psychosis syndrome)';
+  } else if (specification === 29) {
+    specs = ' (Sexually aroused by exposing genitals to prepubertal children)';
+  } else if (specification === 30) {
+    specs =
+      ' (Sexually aroused by exposing genitals to physically mature individuals)';
+  } else if (specification === 31) {
+    specs =
+      ' (Sexually aroused by exposing genitals to prepubertal children and to physically mature individuals)';
+  } else if (specification === 32) {
+    specs = ' (With asphyxiophilia)';
+  } else if (specification === 33) {
+    specs = ' (Sexually attracted to males)';
+  } else if (specification === 34) {
+    specs = ' (Sexually attracted to females)';
+  } else if (specification === 35) {
+    specs = ' (Sexually attracted to both)';
+  } else if (specification === 36) {
+    specs = ' (Limited to incest)';
+  } else if (specification === 37) {
+    specs = ' (With Fetishism)';
+  } else if (specification === 38) {
+    specs = ' (With Autogynephilia)';
   } else {
     specs = '';
   }

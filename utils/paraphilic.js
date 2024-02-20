@@ -223,119 +223,174 @@ export const paraphilicDiagnosis = numbers => {
   }
 };
 
-export const disorderSeverityL = [
+export const voyeuristicDuration = [
   {
     label:
       'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
-    value: 69,
+    value: 22,
   },
   {
     label:
       'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
-    value: 70,
+    value: 23,
   },
 ];
 
-export const disorderSeverityM = [
-  {
-    label:
-      'Living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
-    value: 71,
-  },
-  {
-    label:
-      'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
-    value: 72,
-  },
-];
-
-export const disorderSeverityO = [
-  {
-    label:
-      'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
-    value: 73,
-  },
-  {
-    label:
-      'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
-    value: 74,
-  },
-  {
-    label:
-      'If the individual engages in the practice of achieving sexual arousal related to restriction of breathing',
-    value: 75,
-  },
-];
-
-export const disorderSeverityP = [
-  {
-    label: 'Exclusive type (Attracted only to children)',
-    value: 76,
-  },
-  {
-    label: 'Nonexclusive type',
-    value: 77,
-  },
-];
-
-export const disorderSpecificationR = [
+export const exhibitionisticSpecification = [
   {
     label: 'Sexually aroused by exposing genitals to prepubertal children',
-    value: 77,
+    value: 29,
   },
   {
     label:
       'Sexually aroused by exposing genitals to physically mature individuals',
-    value: 78,
+    value: 30,
   },
   {
     label:
       'Sexually aroused by exposing genitals to prepubertal children and to physically mature individuals',
-    value: 79,
+    value: 31,
   },
 ];
 
-export const disorderSpecificationS = [
+export const exhibitionisticDuration = [
   {
-    label: 'Sexually attracted to males',
-    value: 80,
+    label:
+      'Living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
+    value: 22,
   },
   {
-    label: 'Sexually attracted to females',
+    label:
+      'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
+    value: 23,
+  },
+];
+
+export const frotteuristicDuration = [
+  {
+    label:
+      'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
+    value: 22,
+  },
+  {
+    label:
+      'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
+    value: 23,
+  },
+];
+
+export const masochismDuration = [
+  {
+    label:
+      'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
+    value: 22,
+  },
+  {
+    label:
+      'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
+    value: 23,
+  },
+];
+
+export const asphyxiophiliaSpecification: = [
+  {
+    label: 'If the individual engages in the practice of achieving sexual arousal related to restriction of breathing',
+    value: 32,
+  }
+];
+
+export const sadismDuration = [
+  {
+    label:
+        'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
+    value: 22,
+  },
+  {
+    label:
+        'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
+    value: 23,
+  },
+];
+
+
+export const pedophilicSeverity = [
+  {
+    label: 'Exclusive type',
     value: 81,
   },
   {
-    label: 'Sexually attracted to both',
+    label: 'Nonexclusive type',
     value: 82,
+  },
+];
+
+export const pedophilicSpecification = [
+  {
+    label: 'Sexually attracted to males',
+    value: 33,
+  },
+  {
+    label: 'Sexually attracted to females',
+    value: 34,
+  },
+  {
+    label: 'Sexually attracted to both',
+    value: 35,
   },
   {
     label: 'Limited to incest',
-    value: 83,
+    value: 36,
   },
 ];
 
-export const disorderSpecificationT = [
+export const fetishisticDuration = [
+  {
+    label:
+        'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
+    value: 22,
+  },
+  {
+    label:
+        'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
+    value: 23,
+  },
+];
+
+export const fetishisticSeverity = [
   {
     label: 'Body Parts',
-    value: 84,
+    value: 83,
   },
   {
     label: 'Non Living Objects',
-    value: 85,
+    value: 84,
   },
   {
     label: 'Other',
-    value: 86,
+    value: 85,
   },
 ];
 
-export const disorderSpecificationU = [
+export const transvesticDuration = [
+  {
+    label:
+        'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
+    value: 22,
+  },
+  {
+    label:
+        'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
+    value: 23,
+  },
+];
+
+export const transvesticSpecification = [
   {
     label: 'If sexually aroused by fabrics, materials, or garments',
-    value: 87,
+    value: 37,
   },
   {
     label: 'If sexually aroused by thoughts or images of self as a woman',
-    value: 88,
+    value: 38,
   },
 ];
