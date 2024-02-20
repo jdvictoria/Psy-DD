@@ -684,21 +684,3 @@ export const substanceSexualSeverity = [
     value: 65,
   },
 ];
-
-export const disorderSpecificationL = [
-  {
-    label:
-      'If criteria are met for intoxication with the substance and the symptoms develop during the intoxication',
-    value: 53,
-  },
-  {
-    label:
-      'If criteria are met for withdrawal from the substance and the symptoms develop during, or shortly after, withdrawal',
-    value: 54,
-  },
-  {
-    label:
-      'If symptoms developed at initiation of medication, with a change in use of medication, or during withdrawal of medication',
-    value: 55,
-  },
-];
