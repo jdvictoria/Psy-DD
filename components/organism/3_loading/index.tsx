@@ -1,11 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Image} from 'react-native';
 
 import * as Progress from 'react-native-progress';
+import {StyledSafeView} from '../../../styles/input-container';
 
-function Loading() {
+// @ts-ignore
+function Loading({navigation}) {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigation.navigate('Home');
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [navigation]);
+
   return (
-    <>
+    <StyledSafeView>
       <Image
         style={{
           width: 250,
@@ -23,7 +33,7 @@ function Loading() {
         color={'white'}
         borderWidth={5}
       />
-    </>
+    </StyledSafeView>
   );
 }
 

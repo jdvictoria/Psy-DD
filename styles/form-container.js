@@ -20,6 +20,13 @@ export const StyledRow = styled.View`
   flex-direction: row;
 `;
 
+export const StyledTouchableRow = styled.TouchableOpacity`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+`;
+
 export const StyledCol = styled.View`
   display: flex;
   justify-content: center;
@@ -120,11 +127,12 @@ export const DiagnoseResultCard = styled.View`
   align-items: center;
   flex-direction: row;
 
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 
   width: 90%;
-  height: 60px;
+  min-height: 60px;
+  height: auto;
 
   border-radius: 20px;
 `;

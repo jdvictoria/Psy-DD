@@ -11,7 +11,13 @@ import {
 import {contentText, StyledText20} from '../../../styles/form-text';
 
 // @ts-ignore
-function CardDiagnoseSmall({isDarkMode, clearBigCard, addBigCard}) {
+function CardDiagnoseSmall({
+  isDarkMode,
+  clearBigCard,
+  addBigCard,
+  handleDiagnose,
+  disabled,
+}) {
   const contentStyle = contentText(isDarkMode);
 
   return (
@@ -46,7 +52,9 @@ function CardDiagnoseSmall({isDarkMode, clearBigCard, addBigCard}) {
       <DiagnoseResultRight
         style={{
           backgroundColor: '#00A911',
-        }}>
+        }}
+        onPress={handleDiagnose}
+        disabled={disabled}>
         <StyledText20 style={contentStyle.semibold}>Diagnose</StyledText20>
       </DiagnoseResultRight>
     </DiagnoseResultCard>
