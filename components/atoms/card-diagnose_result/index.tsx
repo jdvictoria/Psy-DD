@@ -176,6 +176,14 @@ function CardDiagnoseResult({
     severe = '(F06.2 with delusions) ';
   } else if (severity === 76) {
     severe = '(F06.0 with hallucinations: ) ';
+  } else if (severity === 77) {
+    severe = '(Mixed type) ';
+  } else if (severity === 78) {
+    severe = '(Paranoid type) ';
+  } else if (severity === 79) {
+    severe = '(Other type) ';
+  } else if (severity === 80) {
+    severe = '(Combined type) ';
   } else {
     severe = '';
   }

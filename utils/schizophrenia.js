@@ -703,3 +703,25 @@ export const otherSchizophreniaSpecification = [
     value: 28,
   },
 ];
+
+export const personalitySeverity = [
+  {
+    label: 'Occurring in the absence of any other features',
+    value: 77,
+  },
+  {
+    label:
+      'This includes persistent delusions with periods of overlapping mood episodes that are present for a substantial portion of the delusional disturbance (such that the criterion stipulating only brief mood disturbance in delusional disorder is not met)',
+    value: 78,
+  },
+  {
+    label:
+      'This syndrome is characterized by psychotic-like symptoms that are below a threshold for full psychosis (e.g., the symptoms are less severe and more transient, and insight is relatively maintained)',
+    value: 79,
+  },
+  {
+    label:
+      'This syndrome is characterized by psychotic-like symptoms that are below a threshold for full psychosis (e.g., the symptoms are less severe and more transient, and insight is relatively maintained)',
+    value: 80,
+  },
+];
