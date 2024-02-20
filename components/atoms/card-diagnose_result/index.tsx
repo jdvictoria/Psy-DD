@@ -154,6 +154,28 @@ function CardDiagnoseResult({
     severe = '(F19.281) ';
   } else if (severity === 65) {
     severe = '(F19.981) ';
+  } else if (severity === 66) {
+    severe = '(Erotomanic type) ';
+  } else if (severity === 67) {
+    severe = '(Grandiose type) ';
+  } else if (severity === 68) {
+    severe = '(Jealous type) ';
+  } else if (severity === 69) {
+    severe = '(Persecutory type) ';
+  } else if (severity === 70) {
+    severe = '(Somatic type) ';
+  } else if (severity === 71) {
+    severe = '(Mixed type) ';
+  } else if (severity === 72) {
+    severe = '(Unspecified type) ';
+  } else if (severity === 73) {
+    severe = '(F25.0 Bipolar type) ';
+  } else if (severity === 74) {
+    severe = '(F25.1 Depressive type) ';
+  } else if (severity === 75) {
+    severe = '(F06.2 with delusions) ';
+  } else if (severity === 76) {
+    severe = '(F06.0 with hallucinations: ) ';
   } else {
     severe = '';
   }
@@ -186,6 +208,22 @@ function CardDiagnoseResult({
     time = 'Generalized ';
   } else if (duration === 13) {
     time = 'Situational ';
+  } else if (duration === 14) {
+    time = 'First episode, currently in acute episode ';
+  } else if (duration === 15) {
+    time = 'First episode, currently in partial remission ';
+  } else if (duration === 16) {
+    time = 'First episode, currently in full remission ';
+  } else if (duration === 17) {
+    time = 'First episode, currently in full remission ';
+  } else if (duration === 18) {
+    time = 'First episode, currently in full remission ';
+  } else if (duration === 19) {
+    time = 'First episode, currently in full remission ';
+  } else if (duration === 20) {
+    time = 'Continuous ';
+  } else if (duration === 21) {
+    time = 'Unspecified ';
   } else {
     time = '';
   }
@@ -228,6 +266,26 @@ function CardDiagnoseResult({
     specs = ' (With onset during withdrawal)';
   } else if (specification === 18) {
     specs = ' (With onset after medication use)';
+  } else if (specification === 19) {
+    specs = ' (With Bizarre Content)';
+  } else if (specification === 20) {
+    specs = ' (With marked stressor(s))';
+  } else if (specification === 21) {
+    specs = ' (Without marked stressor(s))';
+  } else if (specification === 22) {
+    specs = ' (With peripartum onset)';
+  } else if (specification === 23) {
+    specs = ' (With catatonia)';
+  } else if (specification === 24) {
+    specs = ' (With good prognostic features)';
+  } else if (specification === 25) {
+    specs = ' (Without good prognostic features)';
+  } else if (specification === 26) {
+    specs = ' (Persistent auditory hallucinations)';
+  } else if (specification === 27) {
+    specs = ' (Delusions with significant overlapping mood episodes)';
+  } else if (specification === 28) {
+    specs = ' (Attenuated psychosis syndrome)';
   } else {
     specs = '';
   }
