@@ -194,6 +194,206 @@ function CardDiagnoseResult({
     severe = '(Non Living Objects) ';
   } else if (severity === 85) {
     severe = '(Other) ';
+  } else if (severity === 86) {
+    severe = '(F10.10 Mild) ';
+  } else if (severity === 87) {
+    severe = '(F10.11 Mild) ';
+  } else if (severity === 88) {
+    severe = '(F10.20 Moderate) ';
+  } else if (severity === 89) {
+    severe = '(F10.21 Moderate) ';
+  } else if (severity === 90) {
+    severe = '(F10.20 Severe) ';
+  } else if (severity === 91) {
+    severe = '(F10.21 Severe) ';
+  } else if (severity === 93) {
+    severe = '(F10.130) ';
+  } else if (severity === 94) {
+    severe = '(F10.230) ';
+  } else if (severity === 95) {
+    severe = '(F10.930) ';
+  } else if (severity === 96) {
+    severe = '(F10.132) ';
+  } else if (severity === 97) {
+    severe = '(F10.232) ';
+  } else if (severity === 98) {
+    severe = '(F10.932) ';
+  } else if (severity === 99) {
+    severe = '(12.10 Mild) ';
+  } else if (severity === 100) {
+    severe = '(12.11 Mild) ';
+  } else if (severity === 101) {
+    severe = '(12.20 Moderate) ';
+  } else if (severity === 102) {
+    severe = '(12.21 Moderate) ';
+  } else if (severity === 103) {
+    severe = '(12.20 Severe) ';
+  } else if (severity === 104) {
+    severe = '(12.21 Severe) ';
+  } else if (severity === 105) {
+    severe = '(F12.120) ';
+  } else if (severity === 106) {
+    severe = '(F12.220) ';
+  } else if (severity === 107) {
+    severe = '(F12.290) ';
+  } else if (severity === 108) {
+    severe = '(F12.122) ';
+  } else if (severity === 109) {
+    severe = '(F12.222) ';
+  } else if (severity === 110) {
+    severe = '(F12.292) ';
+  } else if (severity === 111) {
+    severe = '(16.10 Mild) ';
+  } else if (severity === 112) {
+    severe = '(16.11 Mild) ';
+  } else if (severity === 113) {
+    severe = '(16.20 Moderate) ';
+  } else if (severity === 114) {
+    severe = '(16.21 Moderate) ';
+  } else if (severity === 115) {
+    severe = '(16.20 Severe) ';
+  } else if (severity === 116) {
+    severe = '(16.21 Severe) ';
+  } else if (severity === 117) {
+    severe = '(F16.120) ';
+  } else if (severity === 118) {
+    severe = '(F16.220) ';
+  } else if (severity === 119) {
+    severe = '(F16.920) ';
+  } else if (severity === 120) {
+    severe = '(18.10 Mild) ';
+  } else if (severity === 121) {
+    severe = '(18.11 Mild) ';
+  } else if (severity === 122) {
+    severe = '(18.20 Moderate) ';
+  } else if (severity === 123) {
+    severe = '(18.21 Moderate) ';
+  } else if (severity === 124) {
+    severe = '(18.20 Severe) ';
+  } else if (severity === 125) {
+    severe = '(18.21 Severe) ';
+  } else if (severity === 126) {
+    severe = '(11.10 Mild) ';
+  } else if (severity === 127) {
+    severe = '(11.11 Mild) ';
+  } else if (severity === 128) {
+    severe = '(11.20 Moderate) ';
+  } else if (severity === 129) {
+    severe = '(11.21 Moderate) ';
+  } else if (severity === 130) {
+    severe = '(11.20 Severe) ';
+  } else if (severity === 131) {
+    severe = '(11.21 Severe) ';
+  } else if (severity === 132) {
+    severe = '(F11.120) ';
+  } else if (severity === 133) {
+    severe = '(F11.220) ';
+  } else if (severity === 134) {
+    severe = '(F11.290) ';
+  } else if (severity === 135) {
+    severe = '(F11.122) ';
+  } else if (severity === 136) {
+    severe = '(F11.222) ';
+  } else if (severity === 137) {
+    severe = '(F11.292) ';
+  } else if (severity === 138) {
+    severe = '(13.10 Mild) ';
+  } else if (severity === 139) {
+    severe = '(13.11 Mild) ';
+  } else if (severity === 140) {
+    severe = '(13.20 Moderate) ';
+  } else if (severity === 141) {
+    severe = '(13.21 Moderate) ';
+  } else if (severity === 142) {
+    severe = '(13.20 Severe) ';
+  } else if (severity === 143) {
+    severe = '(13.21 Severe) ';
+  } else if (severity === 144) {
+    severe = '(F13.120) ';
+  } else if (severity === 145) {
+    severe = '(F13.220) ';
+  } else if (severity === 146) {
+    severe = '(F13.920) ';
+  } else if (severity === 147) {
+    severe = '(F13.130) ';
+  } else if (severity === 148) {
+    severe = '(F13.230) ';
+  } else if (severity === 149) {
+    severe = '(F13.930) ';
+  } else if (severity === 150) {
+    severe = '(F13.132) ';
+  } else if (severity === 151) {
+    severe = '(F13.232) ';
+  } else if (severity === 152) {
+    severe = '(F13.932) ';
+  } else if (severity === 153) {
+    severe = '(F14.10) ';
+  } else if (severity === 154) {
+    severe = '(F15.10) ';
+  } else if (severity === 155) {
+    severe = '(F14.11) ';
+  } else if (severity === 156) {
+    severe = '(F15.11) ';
+  } else if (severity === 157) {
+    severe = '(F14.20) ';
+  } else if (severity === 158) {
+    severe = '(F15.20) ';
+  } else if (severity === 159) {
+    severe = '(F14.21) ';
+  } else if (severity === 160) {
+    severe = '(F15.21) ';
+  } else if (severity === 161) {
+    severe = '(F15.120) ';
+  } else if (severity === 162) {
+    severe = '(F15.220) ';
+  } else if (severity === 163) {
+    severe = '(F15.920) ';
+  } else if (severity === 164) {
+    severe = '(F14.120) ';
+  } else if (severity === 165) {
+    severe = '(F14.220) ';
+  } else if (severity === 166) {
+    severe = '(F14.920) ';
+  } else if (severity === 167) {
+    severe = '(F15.122) ';
+  } else if (severity === 168) {
+    severe = '(F15.222) ';
+  } else if (severity === 169) {
+    severe = '(F15.922) ';
+  } else if (severity === 170) {
+    severe = '(F14.122) ';
+  } else if (severity === 171) {
+    severe = '(F14.222) ';
+  } else if (severity === 172) {
+    severe = '(F14.922) ';
+  } else if (severity === 173) {
+    severe = '(F17.200) ';
+  } else if (severity === 174) {
+    severe = '(F17.201) ';
+  } else if (severity === 175) {
+    severe = '(19.10 Mild) ';
+  } else if (severity === 176) {
+    severe = '(19.11 Mild) ';
+  } else if (severity === 177) {
+    severe = '(19.20 Moderate) ';
+  } else if (severity === 178) {
+    severe = '(19.21 Moderate) ';
+  } else if (severity === 179) {
+    severe = '(19.20 Severe) ';
+  } else if (severity === 180) {
+    severe = '(19.21 Severe) ';
+  } else if (severity === 181) {
+    severe = '(F19.130) ';
+  } else if (severity === 182) {
+    severe = '(F19.230) ';
+  } else if (severity === 183) {
+    severe = '(F19.930) ';
+  } else if (severity === 184) {
+    severe = '(F19.132) ';
+  } else if (severity === 185) {
+    severe = '(F19.232) ';
+  } else if (severity === 186) {
+    severe = '(F19.932) ';
   } else {
     severe = '';
   }
@@ -260,6 +460,10 @@ function CardDiagnoseResult({
     time = '(F81.81 With impairment in written expression) ';
   } else if (duration === 30) {
     time = '(F81.2 With impairment in mathematics) ';
+  } else if (duration === 31) {
+    time = '(In early remission) ';
+  } else if (duration === 32) {
+    time = '(In sustained remission) ';
   } else {
     time = '';
   }
@@ -391,6 +595,12 @@ function CardDiagnoseResult({
     specs = ' (With motor tics only)';
   } else if (specification === 61) {
     specs = ' (With vocal tics only)';
+  } else if (specification === 62) {
+    specs = ' (With perceptual disturbances)';
+  } else if (specification === 63) {
+    specs = ' (On maintenance therapy)';
+  } else if (specification === 64) {
+    specs = ' (In a controlled environment)';
   } else {
     specs = '';
   }

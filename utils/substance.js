@@ -1483,3 +1483,731 @@ export const substanceDiagnosis = numbers => {
     return 'Unspecified Other (or Unknown) Substance– Related Disorder';
   }
 };
+
+export const alcoholUseDuration = [
+  {
+    label:
+      'After full criteria for alcohol use disorder were previously met, none of the criteria for alcohol use disorder have been met for at least 3 months but for less than 12 months',
+    value: 31,
+  },
+  {
+    label:
+      'After full criteria for alcohol use disorder were previously met, none of the criteria for alcohol use disorder have been met at any time during a period of 12 months or longer',
+    value: 32,
+  },
+  {
+    label:
+      'This additional specifier is used if the individual is in an environment where access to alcohol is restricted',
+    value: 22,
+  },
+];
+
+export const alcoholUseSeverity = [
+  {
+    label: 'Presence of 2–3 symptoms',
+    value: 86,
+  },
+  {
+    label: '(Mild) •In early remission \n•In sustained remission',
+    value: 87,
+  },
+  {
+    label: 'Presence of 4–5 symptoms',
+    value: 88,
+  },
+  {
+    label: '(Moderate) •In early remission \n•In sustained remission',
+    value: 89,
+  },
+  {
+    label: 'Presence of 6 or more symptoms',
+    value: 90,
+  },
+  {
+    label: '(Severe) •In early remission \n•In sustained remission',
+    value: 91,
+  },
+];
+
+export const alcoholWithdrawalSpecification = [
+  {
+    label:
+      'This specifier applies in the rare instance when hallucinations (usually visual or tactile) occur with intact reality testing, or auditory, visual, or tactile illusions occur in the absence of a delirium',
+    value: 62,
+  },
+];
+
+export const alcoholWithdrawalSeverity = [
+  {
+    label: '(Without perceptual disturbances) Mild alcohol use disorder',
+    value: 93,
+  },
+  {
+    label:
+      '(Without perceptual disturbances) Moderate or Severe alcohol use disorder',
+    value: 94,
+  },
+  {
+    label: '(Without perceptual disturbances) No comorbid alcohol use disorder',
+    value: 95,
+  },
+  {
+    label: '(With perceptual disturbances) Mild alcohol use disorder',
+    value: 96,
+  },
+  {
+    label:
+      '(With perceptual disturbances) Moderate or Severe alcohol use disorder',
+    value: 97,
+  },
+  {
+    label: '(With perceptual disturbances) No comorbid alcohol use disorder',
+    value: 98,
+  },
+];
+
+export const cannabisUseDuration = [
+  {
+    label:
+      'After full criteria for cannabis use disorder were previously met, none of the criteria for cannabis use disorder have been met for at least 3 months but for less than 12 months',
+    value: 31,
+  },
+  {
+    label:
+      'After full criteria for cannabis use disorder were previously met, none of the criteria for cannabis use disorder have been met at any time during a period of 12 months or longer',
+    value: 32,
+  },
+  {
+    label:
+      'This additional specifier is used if the individual is in an environment where access to cannabis is restricted',
+    value: 22,
+  },
+];
+
+export const cannabisUseSeverity = [
+  {
+    label: 'Presence of 2–3 symptoms',
+    value: 99,
+  },
+  {
+    label: '(Mild)•In early remission \n•In sustained remission',
+    value: 100,
+  },
+  {
+    label: 'Presence of 4–5 symptoms',
+    value: 101,
+  },
+  {
+    label: '(Moderate) •In early remission \n•In sustained remission',
+    value: 102,
+  },
+  {
+    label: 'Presence of 6 or more symptoms',
+    value: 103,
+  },
+  {
+    label: '(Severe) •In early remission \n•In sustained remission',
+    value: 104,
+  },
+];
+
+export const cannabisIntoxicationSeverity = [
+  {
+    label: '(Without perceptual disturbances) Mild cannabis use disorder',
+    value: 105,
+  },
+  {
+    label:
+      '(Without perceptual disturbances) Moderate or Severe cannabis use disorder',
+    value: 106,
+  },
+  {
+    label:
+      '(Without perceptual disturbances) No comorbid cannabis use disorder',
+    value: 107,
+  },
+  {
+    label: '(With perceptual disturbances) Mild cannabis use disorder',
+    value: 108,
+  },
+  {
+    label:
+      '(With perceptual disturbances) Moderate or Severe cannabis use disorder',
+    value: 109,
+  },
+  {
+    label: '(With perceptual disturbances) No comorbid cannabis use disorder',
+    value: 110,
+  },
+];
+
+export const phencyclidineUseDuration = [
+  {
+    label:
+      'After full criteria for phencyclidine use disorder were previously met, none of the criteria for phencyclidine use disorder have been met for at least 3 months but for less than 12 months',
+    value: 31,
+  },
+  {
+    label:
+      'After full criteria for phencyclidine use disorder were previously met, none of the criteria for phencyclidine use disorder have been met at any time during a period of 12 months or longer',
+    value: 32,
+  },
+  {
+    label:
+      'This additional specifier is used if the individual is in an environment where access to phencyclidine is restricted',
+    value: 22,
+  },
+];
+
+export const phencyclidineUseSeverity = [
+  {
+    label: 'Presence of 2–3 symptoms',
+    value: 111,
+  },
+  {
+    label: '(Mild) •In early remission \n•In sustained remission',
+    value: 112,
+  },
+  {
+    label: 'Presence of 4–5 symptoms',
+    value: 113,
+  },
+  {
+    label: '(Moderate) •In early remission \n•In sustained remission',
+    value: 114,
+  },
+  {
+    label: 'Presence of 6 or more symptoms',
+    value: 115,
+  },
+  {
+    label: '(Severe) •In early remission \n•In sustained remission',
+    value: 116,
+  },
+];
+
+export const hallucinogenSeverity = [
+  {
+    label: 'Mild hallucinogen use disorder',
+    value: 117,
+  },
+  {
+    label: 'Moderate or Severe hallucinogen use disorder',
+    value: 118,
+  },
+  {
+    label: 'No comorbid hallucinogen use disorder',
+    value: 119,
+  },
+];
+
+export const inhalantUseDuration = [
+  {
+    label:
+      'After full criteria for inhalant use disorder were previously met, none of the criteria for inhalant use disorder have been met for at least 3 months but for less than 12 months',
+    value: 31,
+  },
+  {
+    label:
+      'After full criteria for inhalant use disorder were previously met, none of the criteria for inhalant use disorder have been met at any time during a period of 12 months or longer',
+    value: 32,
+  },
+  {
+    label:
+      'This additional specifier is used if the individual is in an environment where access to inhalant is restricted',
+    value: 22,
+  },
+];
+
+export const inhalantUseSeverity = [
+  {
+    label: 'Presence of 2–3 symptoms',
+    value: 120,
+  },
+  {
+    label: '(Mild) •In early remission \n•In sustained remission',
+    value: 121,
+  },
+  {
+    label: 'Presence of 4–5 symptoms',
+    value: 122,
+  },
+  {
+    label: '(Moderate) •In early remission \n•In sustained remission',
+    value: 123,
+  },
+  {
+    label: 'Presence of 6 or more symptoms',
+    value: 124,
+  },
+  {
+    label: '(Severe) •In early remission \n•In sustained remission',
+    value: 125,
+  },
+];
+
+export const opioidUseSeverity = [
+  {
+    label: 'Presence of 2–3 symptoms',
+    value: 126,
+  },
+  {
+    label: '(Mild) •In early remission \n•In sustained remission',
+    value: 127,
+  },
+  {
+    label: 'Presence of 4–5 symptoms',
+    value: 128,
+  },
+  {
+    label: '(Moderate) •In early remission \n•In sustained remission',
+    value: 129,
+  },
+  {
+    label: 'Presence of 6 or more symptoms',
+    value: 130,
+  },
+  {
+    label: '(Severe) •In early remission \n•In sustained remission',
+    value: 131,
+  },
+];
+
+export const opioidIntoxicationSeverity = [
+  {
+    label: '(Without perceptual disturbances) Mild opioid use disorder',
+    value: 132,
+  },
+  {
+    label:
+      '(Without perceptual disturbances) Moderate or Severe opioid use disorder',
+    value: 133,
+  },
+  {
+    label: '(Without perceptual disturbances) No comorbid opioid use disorder',
+    value: 134,
+  },
+  {
+    label: '(With perceptual disturbances) Mild opioid use disorder',
+    value: 135,
+  },
+  {
+    label:
+      '(With perceptual disturbances) Moderate or Severe opioid use disorder',
+    value: 136,
+  },
+  {
+    label: '(With perceptual disturbances) No comorbid opioid use disorder',
+    value: 137,
+  },
+];
+
+export const sedativeUseDuration = [
+  {
+    label:
+      'After full criteria for sedative use disorder were previously met, none of the criteria for sedative use disorder have been met for at least 3 months but for less than 12 months',
+    value: 31,
+  },
+  {
+    label:
+      'After full criteria for sedative use disorder were previously met, none of the criteria for sedative use disorder have been met at any time during a period of 12 months or longer',
+    value: 32,
+  },
+  {
+    label:
+      'This additional specifier is used if the individual is in an environment where access to sedative is restricted',
+    value: 22,
+  },
+];
+
+export const sedativeUseSeverity = [
+  {
+    label: 'Presence of 2–3 symptoms',
+    value: 138,
+  },
+  {
+    label: '(Mild) •In early remission \n•In sustained remission',
+    value: 139,
+  },
+  {
+    label: 'Presence of 4–5 symptoms',
+    value: 140,
+  },
+  {
+    label: '(Moderate) •In early remission \n•In sustained remission',
+    value: 141,
+  },
+  {
+    label: 'Presence of 6 or more symptoms',
+    value: 142,
+  },
+  {
+    label: '(Severe) •In early remission \n•In sustained remission',
+    value: 143,
+  },
+];
+
+export const sedativeSeverity = [
+  {
+    label: 'Mild sedative, hypnotic, or anxiolytic use disorder',
+    value: 144,
+  },
+  {
+    label: 'Moderate or Severe sedative, hypnotic, or anxiolytic use disorder',
+    value: 145,
+  },
+  {
+    label: 'No comorbid sedative, hypnotic, or anxiolytic use disorder',
+    value: 146,
+  },
+];
+
+export const sedativeWithdrawalSpecification = [
+  {
+    label:
+      'This specifier applies in the rare instance when hallucinations (usually visual or tactile) occur with intact reality testing, or auditory, visual, or tactile illusions occur in the absence of a delirium',
+    value: 62,
+  },
+];
+
+export const sedativeWithdrawalSeverity = [
+  {
+    label:
+      '(Without perceptual disturbances) Mild sedative, hypnotic, or anxiolytic use disorder',
+    value: 147,
+  },
+  {
+    label:
+      '(Without perceptual disturbances) Moderate or Severe sedative, hypnotic, or anxiolytic use disorder',
+    value: 148,
+  },
+  {
+    label:
+      '(Without perceptual disturbances) No comorbid sedative, hypnotic, or anxiolytic use disorder',
+    value: 149,
+  },
+  {
+    label:
+      '(With perceptual disturbances) Mild sedative, hypnotic, or anxiolytic use disorder',
+    value: 150,
+  },
+  {
+    label:
+      '(With perceptual disturbances) Moderate or Severe sedative, hypnotic, or anxiolytic use disorder',
+    value: 151,
+  },
+  {
+    label:
+      '(With perceptual disturbances) No comorbid sedative, hypnotic, or anxiolytic use disorder',
+    value: 152,
+  },
+];
+
+export const stimulantUseDuration = [
+  {
+    label:
+      'After full criteria for stimulant use disorder were previously met, none of the criteria for stimulant use disorder have been met for at least 3 months but for less than 12 months',
+    value: 31,
+  },
+  {
+    label:
+      'After full criteria for stimulant use disorder were previously met, none of the criteria for stimulant use disorder have been met at any time during a period of 12 months or longer',
+    value: 32,
+  },
+  {
+    label:
+      'This additional specifier is used if the individual is in an environment where access to stimulant is restricted',
+    value: 22,
+  },
+];
+
+export const stimulantUseSeverity = [
+  {
+    label: 'Mild (Cocaine)',
+    value: 153,
+  },
+  {
+    label: 'Mild (Amphetamine-type substance / Other or unspecified stimulant)',
+    value: 154,
+  },
+  {
+    label: 'Mild, Early / Sustained Remission (Cocaine)',
+    value: 155,
+  },
+  {
+    label:
+      'Mild, Early / Sustained Remission (Amphetamine-type substance / Other or unspecified stimulant)',
+    value: 156,
+  },
+  {
+    label: 'Moderate (Cocaine)',
+    value: 157,
+  },
+  {
+    label:
+      'Moderate (Amphetamine-type substance / Other or unspecified stimulant)',
+    value: 158,
+  },
+  {
+    label: 'Moderate, Early Remission (Cocaine)',
+    value: 159,
+  },
+  {
+    label:
+      'Moderate, Early Remission (Amphetamine-type substance / Other or unspecified stimulant)',
+    value: 160,
+  },
+  {
+    label: 'Severe (Cocaine)',
+    value: 157,
+  },
+  {
+    label:
+      'Severe (Amphetamine-type substance / Other or unspecified stimulant)',
+    value: 158,
+  },
+  {
+    label: 'Severe, Early Remission (Cocaine)',
+    value: 159,
+  },
+  {
+    label:
+      'Severe, Early Remission (Amphetamine-type substance / Other or unspecified stimulant)',
+    value: 160,
+  },
+];
+
+export const stimulantIntoxicationSpecification = [
+  {
+    label:
+      'This specifier applies in the rare instance when hallucinations (usually visual or tactile) occur with intact reality testing, or auditory, visual, or tactile illusions occur in the absence of a delirium',
+    value: 62,
+  },
+];
+
+export const stimulantIntoxicationSeverity = [
+  {
+    label:
+      '(Without perceptual disturbances) Mild amphetamine-type substance or other stimulant use disorder',
+    value: 161,
+  },
+  {
+    label:
+      '(Without perceptual disturbances) Moderate or Severe amphetamine-type substance or other stimulant use disorder',
+    value: 162,
+  },
+  {
+    label:
+      '(Without perceptual disturbances) No comorbid mild amphetamine-type substance or other stimulant use disorder',
+    value: 163,
+  },
+  {
+    label:
+      '(Without perceptual disturbances) Moderate or severe cocaine use disorder is comorbid',
+    value: 164,
+  },
+  {
+    label: '(Without perceptual disturbances) No comorbid cocaine use disorder',
+    value: 165,
+  },
+  {
+    label:
+      '(Without perceptual disturbances) Mild cocaine use disorder is comorbid',
+    value: 166,
+  },
+  {
+    label:
+      '(With perceptual disturbances) Mild amphetamine-type substance or other stimulant use disorder',
+    value: 167,
+  },
+  {
+    label:
+      '(With perceptual disturbances) Moderate or Severe amphetamine-type substance or other stimulant use disorder',
+    value: 168,
+  },
+  {
+    label:
+      '(With perceptual disturbances) No comorbid mild amphetamine-type substance or other stimulant use disorder',
+    value: 169,
+  },
+  {
+    label:
+      '(With perceptual disturbances) Moderate or severe cocaine use disorder is comorbid',
+    value: 170,
+  },
+  {
+    label: '(With perceptual disturbances) No comorbid cocaine use disorder',
+    value: 171,
+  },
+  {
+    label:
+      '(With perceptual disturbances) Mild cocaine use disorder is comorbid',
+    value: 172,
+  },
+];
+
+export const tobaccoUseDuration = [
+  {
+    label:
+      'After full criteria for tobacco use disorder were previously met, none of the criteria for tobacco use disorder have been met for at least 3 months but for less than 12 months',
+    value: 31,
+  },
+  {
+    label:
+      'After full criteria for tobacco use disorder were previously met, none of the criteria for tobacco use disorder have been met at any time during a period of 12 months or longer',
+    value: 32,
+  },
+  {
+    label:
+      'This additional specifier is used if the individual is in an environment where access to tobacco is restricted',
+    value: 22,
+  },
+];
+
+export const tobaccoUseSpecification = [
+  {
+    label:
+      'The individual is taking a long-term maintenance medication, such as nicotine replacement medication, and no criteria for tobacco use disorder have been met for that class of medication',
+    value: 63,
+  },
+  {
+    label:
+      'This additional specifier is used if the individual is in an environment where access to tobacco is restricted',
+    value: 64,
+  },
+];
+
+export const tobaccoUseSeverity = [
+  {
+    label: 'Presence of 4–5 symptoms',
+    value: 173,
+  },
+  {
+    label: '(Moderate) •In early remission \n•In sustained remission',
+    value: 174,
+  },
+  {
+    label: 'Presence of 6 or more symptoms',
+    value: 173,
+  },
+  {
+    label: '(Severe) •In early remission \n•In sustained remission',
+    value: 174,
+  },
+];
+
+export const otherUnknownUseDuration = [
+  {
+    label:
+      'After full criteria for other or unknown substance use disorder were previously met, none of the criteria for other or unknown substance use disorder have been met for at least 3 months but for less than 12 months',
+    value: 31,
+  },
+  {
+    label:
+      'After full criteria for other or unknown substance use disorder were previously met, none of the criteria for other or unknown substance use disorder have been met at any time during a period of 12 months or longer',
+    value: 32,
+  },
+  {
+    label:
+      'This additional specifier is used if the individual is in an environment where access to other or unknown substance is restricted',
+    value: 22,
+  },
+];
+
+export const otherUnknownUseSeverity = [
+  {
+    label: 'Presence of 2–3 symptoms',
+    value: 175,
+  },
+  {
+    label: '(Mild) •In early remission \n•In sustained remission',
+    value: 176,
+  },
+  {
+    label: 'Presence of 4–5 symptoms',
+    value: 177,
+  },
+  {
+    label: '(Moderate) •In early remission \n•In sustained remission',
+    value: 178,
+  },
+  {
+    label: 'Presence of 6 or more symptoms',
+    value: 179,
+  },
+  {
+    label: '(Severe) •In early remission \n•In sustained remission',
+    value: 180,
+  },
+];
+
+export const otherUnknownSeverity = [
+  {
+    label:
+      '(Without perceptual disturbances) Mild other or unknown substance use disorder',
+    value: 181,
+  },
+  {
+    label:
+      '(Without perceptual disturbances) Moderate or Severe other or unknown substance use disorder',
+    value: 182,
+  },
+  {
+    label:
+      '(Without perceptual disturbances) No comorbid other or unknown substance use disorder',
+    value: 183,
+  },
+  {
+    label:
+      '(With perceptual disturbances) Mild other or unknown substance use disorder',
+    value: 184,
+  },
+  {
+    label:
+      '(With perceptual disturbances) Moderate or Severe other or unknown substance use disorder',
+    value: 185,
+  },
+  {
+    label:
+      '(With perceptual disturbances) No comorbid other or unknown substance use disorder',
+    value: 186,
+  },
+];
+
+export const gamblingDuration = [
+  {
+    label:
+      'Meeting diagnostic criteria at more than one time point, with symptoms subsiding between periods of gambling disorder for at least several month',
+    value: 8,
+  },
+  {
+    label:
+      'Experiencing continuous symptoms, to meet diagnostic criteria for multiple years',
+    value: 1,
+  },
+  {
+    label:
+      'After full criteria for gambling disorder were previously met, none of the criteria for gambling use disorder have been met for at least 3 months but for less than 12 months',
+    value: 31,
+  },
+  {
+    label:
+      'After full criteria for gambling disorder were previously met, none of the criteria for gambling have been met at any time during a period of 12 months or longer',
+    value: 32,
+  },
+];
+
+export const gamblingSeverity = [
+  {
+    label: '4–5 criteria met',
+    value: 4,
+  },
+  {
+    label: '6-7 criteria met',
+    value: 5,
+  },
+  {
+    label: '8-9 criteria met',
+    value: 6,
+  },
+];
