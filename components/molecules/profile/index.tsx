@@ -21,9 +21,14 @@ import {
 import CardProfile from '../../atoms/card-profile';
 
 // @ts-ignore
-function HomeProfile({isDarkMode}) {
+function HomeProfile({isDarkMode, profile}) {
   const contentStyle = contentText(isDarkMode);
   const subcontentStyle = subcontentText();
+
+  const FirstName = profile.FirstName || '';
+  const LastName = profile.LastName || '';
+  const Birthday = profile.Birthday || '';
+  const License = profile.License || '';
 
   return (
     <StyledView>
@@ -54,7 +59,7 @@ function HomeProfile({isDarkMode}) {
           </ProfileCircle>
           <StyledCol style={{marginBottom: 25}}>
             <StyledText20 style={contentStyle.semibold}>
-              Juan A. Dela Cruz
+              {profile.FirstName + ' ' + profile.LastName}
             </StyledText20>
             <StyledText16
               style={[{color: '#7C818C'}, subcontentStyle.semibold]}>
@@ -65,13 +70,13 @@ function HomeProfile({isDarkMode}) {
             <CardProfile
               isDarkMode={isDarkMode}
               label={'Name'}
-              value={'Juan A. Dela Cruz'}
+              value={FirstName + ' ' + LastName}
               icon={require('../../../assets/icons/name-icon.png')}
             />
             <CardProfile
               isDarkMode={isDarkMode}
-              label={'Age'}
-              value={'August 12, 2001'}
+              label={'Birthday'}
+              value={Birthday}
               icon={require('../../../assets/icons/age-icon.png')}
             />
           </StyledRow>
@@ -79,28 +84,14 @@ function HomeProfile({isDarkMode}) {
             <CardProfile
               isDarkMode={isDarkMode}
               label={'PRC No.'}
-              value={'200000'}
+              value={License}
               icon={require('../../../assets/icons/code-icon.png')}
             />
             <CardProfile
               isDarkMode={isDarkMode}
               label={'Profession'}
-              value={'Psychologist'}
+              value={'PSYCHOLOGIST'}
               icon={require('../../../assets/icons/work-icon.png')}
-            />
-          </StyledRow>
-          <StyledRow>
-            <CardProfile
-              isDarkMode={isDarkMode}
-              label={'Reg. Date'}
-              value={'2009-01-01'}
-              icon={require('../../../assets/icons/reg-icon.png')}
-            />
-            <CardProfile
-              isDarkMode={isDarkMode}
-              label={'Exp. Date'}
-              value={'2025-01-01'}
-              icon={require('../../../assets/icons/exp-icon.png')}
             />
           </StyledRow>
         </ScrollView>

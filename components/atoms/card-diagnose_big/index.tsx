@@ -1,28 +1,124 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import {DiagnoseSymptomCard, StyledRow} from '../../../styles/form-container';
+import {
+  DiagnoseSymptomCard,
+  StyledRow,
+  StyledTouchableRow,
+} from '../../../styles/form-container';
+import {contentText, StyledText16} from '../../../styles/form-text';
 
-import DropdownComponent from '../dropdown-diagnose';
+import DropdownSymptoms from '../dropdown-symptoms';
+
+import {traumaSymptoms} from '../../../utils/trauma';
+import {somaticSymptoms} from '../../../utils/somatic';
+import {sleepSymptoms} from '../../../utils/sleep';
+import {sexualSymptoms} from '../../../utils/sexual';
+import {schizophreniaSymptoms} from '../../../utils/schizophrenia';
+import {personalitySymptoms} from '../../../utils/personality';
+import {paraphilicSymptoms} from '../../../utils/paraphilic';
+import {obsessiveSymptoms} from '../../../utils/obsessive';
+import {neurodevelopmentalSymptoms} from '../../../utils/neurodevelopmental';
+import {substanceSymptoms} from '../../../utils/substance';
 
 // @ts-ignore
-function CardDiagnoseBig({isDarkMode}) {
+function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
+  const contentStyle = contentText(isDarkMode);
+
+  const [additionalCardCount, setAdditionalCardCount] = useState(1);
+
+  let symptomData:
+    | {label: string; value: string}[]
+    | {label: string; value: number}[];
+
+  switch (filter) {
+    case 'a':
+      symptomData = traumaSymptoms;
+      break;
+    case 'b':
+      symptomData = somaticSymptoms;
+      break;
+    case 'c':
+      symptomData = sleepSymptoms;
+      break;
+    case 'd':
+      symptomData = sexualSymptoms;
+      break;
+    case 'e':
+      symptomData = schizophreniaSymptoms;
+      break;
+    case 'f':
+      symptomData = personalitySymptoms;
+      break;
+    case 'g':
+      symptomData = paraphilicSymptoms;
+      break;
+    case 'h':
+      symptomData = obsessiveSymptoms;
+      break;
+    case 'i':
+      symptomData = neurodevelopmentalSymptoms;
+      break;
+    case 'j':
+      symptomData = substanceSymptoms;
+      break;
+    default:
+      break;
+  }
+
+  const handleAddSymptomPress = () => {
+    setAdditionalCardCount(prevCount => prevCount + 1);
+  };
+
+  const renderCards = () => {
+    const additionalCards = [];
+    for (let i = 0; i < additionalCardCount; i++) {
+      additionalCards.push(
+        <DiagnoseSymptomCard
+          key={`additionalCard-${i}`}
+          style={{
+            height: 85,
+            backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF',
+            marginTop: 5,
+          }}>
+          <StyledRow>
+            <DropdownSymptoms
+              isDarkMode={isDarkMode}
+              data={symptomData}
+              label={'Symptom/s'}
+              value={null}
+              setValue={selectedSymptom => {
+                setNumbers(prevNumbers => {
+                  // Check for duplicates before updating the state
+                  if (!prevNumbers.includes(selectedSymptom)) {
+                    return [...prevNumbers, selectedSymptom];
+                  }
+                  return prevNumbers;
+                });
+              }}
+            />
+          </StyledRow>
+        </DiagnoseSymptomCard>,
+      );
+    }
+    return additionalCards;
+  };
+
   return (
-    <DiagnoseSymptomCard
-      style={{
-        backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF',
-      }}>
-      <StyledRow>
-        <DropdownComponent isDarkMode={isDarkMode} label={'Symptom'} />
+    <>
+      <StyledRow style={{justifyContent: 'flex-start', width: '90%'}}>
+        <StyledText16 style={[contentStyle.bold]}>
+          Criteria {bigCardCount.toUpperCase()}
+        </StyledText16>
       </StyledRow>
-      <StyledRow>
-        <DropdownComponent isDarkMode={isDarkMode} label={'Duration'} />
-        <DropdownComponent isDarkMode={isDarkMode} label={'Severity'} />
-      </StyledRow>
-      <StyledRow>
-        <DropdownComponent isDarkMode={isDarkMode} label={'Drug Influenced?'} />
-        <DropdownComponent isDarkMode={isDarkMode} label={'Causes Distress?'} />
-      </StyledRow>
-    </DiagnoseSymptomCard>
+      {renderCards()}
+      <StyledTouchableRow
+        style={{width: '90%', marginTop: 5, marginBottom: 10}}
+        onPress={handleAddSymptomPress}>
+        <StyledText16 style={[contentStyle.bold, {color: '#959595'}]}>
+          Add Symptom
+        </StyledText16>
+      </StyledTouchableRow>
+    </>
   );
 }
 

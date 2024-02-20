@@ -23,7 +23,7 @@ import SignInComponent from '../../molecules/sign-in';
 import SignUpComponent from '../../molecules/sign-up';
 
 // @ts-ignore
-function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
+function UserAuth({navigation, isDarkMode, setUserID, setIsDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
   const [isSignIn, setIsSignIn] = useState(true);
@@ -43,12 +43,8 @@ function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
     };
   }, []);
 
-  const changeToSignUp = () => {
-    setIsSignIn(false);
-  };
-
-  const changeToSignIn = () => {
-    setIsSignIn(true);
+  const handleChangeMode = () => {
+    setIsSignIn(prevState => !prevState);
   };
 
   const toggleSwitch = () =>
@@ -98,8 +94,9 @@ function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
           </StyledCol>
           {isSignIn ? (
             <SignInComponent
+              navigation={navigation}
               isDarkMode={isDarkMode}
-              setIsLoggedIn={setIsLoggedIn}
+              setUserID={setUserID}
             />
           ) : (
             <SignUpComponent
@@ -113,8 +110,7 @@ function UserAuth({isDarkMode, setIsLoggedIn, setIsDarkMode}) {
                 ? "Don't have any Account?"
                 : 'Already have an Account?'}
             </StyledText16>
-            <TouchableOpacity
-              onPress={isSignIn ? changeToSignUp : changeToSignIn}>
+            <TouchableOpacity onPress={handleChangeMode}>
               <StyledText16 style={[contentStyle.semibold, {color: 'white'}]}>
                 {' '}
                 {isSignIn ? 'Sign Up' : 'Sign In'}

@@ -4,7 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {Dropdown} from 'react-native-element-dropdown';
 
 // @ts-ignore
-function DropdownComponent({isDarkMode, data, label, value, setValue}) {
+function DropdownSymptoms({isDarkMode, data, label, value, setValue}) {
   const [isFocus, setIsFocus] = useState(true);
 
   const renderLabel = () => {
@@ -30,7 +30,13 @@ function DropdownComponent({isDarkMode, data, label, value, setValue}) {
       style={[
         styles.container,
         {
-          width: '95%',
+          width:
+            label === 'Symptom/s' ||
+            label === 'Category' ||
+            label === 'Duration' ||
+            label === 'Specification'
+              ? '95%'
+              : '47.5%',
         },
       ]}>
       {renderLabel()}
@@ -73,7 +79,7 @@ function DropdownComponent({isDarkMode, data, label, value, setValue}) {
   );
 }
 
-export default DropdownComponent;
+export default DropdownSymptoms;
 
 const styles = StyleSheet.create({
   container: {
