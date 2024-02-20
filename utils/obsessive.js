@@ -371,113 +371,113 @@ export const obsessiveDiagnosis = numbers => {
   }
 };
 
-export const disorderSpecificationAB = [
+export const ocdSpecification = [
   {
     label:
       'The individual recognizes that obsessive-compulsive disorder beliefs are definitely or probably not true or that they may or may not be true',
-    value: 112,
+    value: 39,
   },
   {
     label:
       'The individual thinks obsessive-compulsive disorder beliefs are probably true',
-    value: 113,
+    value: 40,
   },
   {
     label:
       'The individual is completely convinced that obsessive-compulsive disorder beliefs are true',
-    value: 114,
+    value: 41,
   },
   {
     label: 'The individual has a current or past history of a tic disorder',
-    value: 115,
+    value: 42,
   },
 ];
 
-export const disorderSpecificationAC = [
+export const dysmorphicSpecification = [
   {
     label:
       'The individual recognizes that obsessive-compulsive disorder beliefs are definitely or probably not true or that they may or may not be true',
-    value: 112,
+    value: 43,
+  },
+  {
+    label:
+      'The individual recognizes that obsessive-compulsive disorder beliefs are definitely or probably not true or that they may or may not be true',
+    value: 39,
   },
   {
     label:
       'The individual thinks obsessive-compulsive disorder beliefs are probably true',
-    value: 113,
+    value: 40,
   },
   {
     label:
       'The individual is completely convinced that obsessive-compulsive disorder beliefs are true',
-    value: 114,
-  },
-  {
-    label:
-      'The individual is preoccupied with the idea that his or her body build is too small or insufficiently muscular. This specifier is used even if the individual is preoccupied with other body areas, which is often the case',
-    value: 116,
+    value: 41,
   },
 ];
 
-export const disorderSpecificationAD = [
-  {
-    label:
-      'The individual recognizes that obsessive-compulsive disorder beliefs are definitely or probably not true or that they may or may not be true',
-    value: 112,
-  },
-  {
-    label:
-      'The individual thinks obsessive-compulsive disorder beliefs are probably true',
-    value: 113,
-  },
-  {
-    label:
-      'The individual is completely convinced that obsessive-compulsive disorder beliefs are true',
-    value: 114,
-  },
+export const hoardingSpecification = [
   {
     label:
       'If difficulty discarding possessions is accompanied by excessive acquisition of items that are not needed or for which there is no available space',
-    value: 117,
+    value: 44,
+  },
+  {
+    label:
+      'The individual recognizes that obsessive-compulsive disorder beliefs are definitely or probably not true or that they may or may not be true',
+    value: 39,
+  },
+  {
+    label:
+      'The individual thinks obsessive-compulsive disorder beliefs are probably true',
+    value: 40,
+  },
+  {
+    label:
+      'The individual is completely convinced that obsessive-compulsive disorder beliefs are true',
+    value: 41,
   },
 ];
 
-export const disorderSpecificationAE = [
+export const substanceObsessive = [
   {
     label:
       'If criteria are met for intoxication with the substance and the symptoms develop during intoxication',
-    value: 118,
+    value: 16,
   },
   {
     label:
       'If criteria are met for withdrawal from the substance and the symptoms develop during, or shortly after, withdrawal',
-    value: 119,
+    value: 17,
   },
   {
     label:
       'If symptoms developed at initiation of medication, with a change in use of medication, or during withdrawal of medication',
-    value: 120,
+    value: 18,
   },
 ];
 
-export const disorderSpecificationAF = [
+export const ocdRelatedSpecification = [
   {
     label:
       'If obsessive-compulsive disorder–like symptoms predominate in the clinical presentation',
-    value: 121,
+    value: 45,
   },
   {
     label:
       'If preoccupation with perceived appearance defects or flaws predominates',
-    value: 122,
+    value: 46,
   },
   {
     label: 'If hoarding predominates in the clinical presentation',
-    value: 123,
+    value: 47,
   },
   {
     label: 'If hair pulling predominates in the clinical presentation',
-    value: 124,
+    value: 48,
   },
   {
     label: 'If skin picking predominates in the clinical presentation',
-    value: 125,
+    value: 49,
   },
 ];

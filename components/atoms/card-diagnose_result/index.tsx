@@ -330,6 +330,26 @@ function CardDiagnoseResult({
     specs = ' (With Fetishism)';
   } else if (specification === 38) {
     specs = ' (With Autogynephilia)';
+  } else if (specification === 39) {
+    specs = ' (With good or fair insight)';
+  } else if (specification === 40) {
+    specs = ' (With poor insight)';
+  } else if (specification === 41) {
+    specs = ' (With absent insight/delusional beliefs)';
+  } else if (specification === 42) {
+    specs = ' (Tic-related)';
+  } else if (specification === 44) {
+    specs = ' (With excessive acquisition)';
+  } else if (specification === 45) {
+    specs = ' (With obsessive compulsive disorder-like symptoms)';
+  } else if (specification === 46) {
+    specs = ' (With appearance preoccupation)';
+  } else if (specification === 47) {
+    specs = ' (With hoarding symptoms)';
+  } else if (specification === 48) {
+    specs = ' (With hair-pulling symptoms)';
+  } else if (specification === 49) {
+    specs = ' (With skin-picking symptoms)';
   } else {
     specs = '';
   }
