@@ -394,6 +394,80 @@ function CardDiagnoseResult({
     severe = '(F19.232) ';
   } else if (severity === 186) {
     severe = '(F19.932) ';
+  } else if (severity === 187) {
+    severe = '(F40.218) ';
+  } else if (severity === 188) {
+    severe = '(F40.228) ';
+  } else if (severity === 189) {
+    severe = '(F40.23x) ';
+  } else if (severity === 190) {
+    severe = '(F40.230) ';
+  } else if (severity === 191) {
+    severe = '(F40.231) ';
+  } else if (severity === 192) {
+    severe = '(F40.232) ';
+  } else if (severity === 193) {
+    severe = '(F40.233) ';
+  } else if (severity === 194) {
+    severe = '(F40.248) ';
+  } else if (severity === 195) {
+    severe = '(F40.298) ';
+  } else if (severity === 196) {
+    severe = '(F10.180) ';
+  } else if (severity === 197) {
+    severe = '(F10.280) ';
+  } else if (severity === 198) {
+    severe = '(F10.980) ';
+  } else if (severity === 199) {
+    severe = '(F15.980) ';
+  } else if (severity === 200) {
+    severe = '(F12.180) ';
+  } else if (severity === 201) {
+    severe = '(F12.280) ';
+  } else if (severity === 202) {
+    severe = '(F12.980) ';
+  } else if (severity === 203) {
+    severe = '(F11.188) ';
+  } else if (severity === 204) {
+    severe = '(F11.288) ';
+  } else if (severity === 205) {
+    severe = '(F11.988) ';
+  } else if (severity === 206) {
+    severe = '(F13.180) ';
+  } else if (severity === 207) {
+    severe = '(F13.280) ';
+  } else if (severity === 208) {
+    severe = '(F13.980) ';
+  } else if (severity === 209) {
+    severe = '(F15.180) ';
+  } else if (severity === 210) {
+    severe = '(F15.280) ';
+  } else if (severity === 211) {
+    severe = '(F15.980) ';
+  } else if (severity === 212) {
+    severe = '(F14.180) ';
+  } else if (severity === 213) {
+    severe = '(F14.280) ';
+  } else if (severity === 214) {
+    severe = '(F14.980) ';
+  } else if (severity === 215) {
+    severe = '(F19.180) ';
+  } else if (severity === 216) {
+    severe = '(F19.280) ';
+  } else if (severity === 217) {
+    severe = '(F19.980) ';
+  } else if (severity === 218) {
+    severe = '(F18.180) ';
+  } else if (severity === 219) {
+    severe = '(F18.280) ';
+  } else if (severity === 220) {
+    severe = '(F18.980) ';
+  } else if (severity === 221) {
+    severe = '(F16.180) ';
+  } else if (severity === 222) {
+    severe = '(F16.280) ';
+  } else if (severity === 223) {
+    severe = '(F16.980) ';
   } else {
     severe = '';
   }
@@ -601,6 +675,8 @@ function CardDiagnoseResult({
     specs = ' (On maintenance therapy)';
   } else if (specification === 64) {
     specs = ' (In a controlled environment)';
+  } else if (specification === 65) {
+    specs = ' (Performance only)';
   } else {
     specs = '';
   }
