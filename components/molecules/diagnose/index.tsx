@@ -18,7 +18,7 @@ import CardDiagnoseSeverity from '../../atoms/card-diagnose-severity';
 
 import {traumaDiagnosis} from '../../../utils/a-trauma';
 import {somaticDiagnosis} from '../../../utils/b-somatic';
-import {sleepDiagnosis} from '../../../utils/sleep';
+import {sleepDiagnosis} from '../../../utils/c-sleep';
 import {sexualDiagnosis} from '../../../utils/sexual';
 import {schizophreniaDiagnosis} from '../../../utils/schizophrenia';
 import {personalityDiagnosis} from '../../../utils/personality';
@@ -147,7 +147,9 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Central Sleep Apnea' ||
             result === 'Sleep-Related Hypoventilation' ||
             result === 'Circadian Rhythm Sleep-Wake Disorders' ||
-            result === 'Non–Rapid Eye Movement Sleep Arousal Disorders') && (
+            result === 'Non–Rapid Eye Movement Sleep Arousal Disorders' ||
+            result === 'Nightmare Disorder' ||
+            result === 'Substance/Medication-Induced Sleep Disorder') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
@@ -163,7 +165,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Hypersomnolence Disorder' ||
             result === 'Narcolepsy' ||
             result === 'Obstructive Sleep Apnea Hypopnea' ||
-            result === 'Circadian Rhythm Sleep-Wake Disorders') && (
+            result === 'Circadian Rhythm Sleep-Wake Disorders' ||
+            result === 'Nightmare Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}
@@ -176,7 +179,9 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Insomnia Disorder' ||
             result === 'Hypersomnolence Disorder' ||
             result === 'Narcolepsy' ||
-            result === 'Circadian Rhythm Sleep-Wake Disorders') && (
+            result === 'Circadian Rhythm Sleep-Wake Disorders' ||
+            result === 'Nightmare Disorder' ||
+            result === 'Substance/Medication-Induced Sleep Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}

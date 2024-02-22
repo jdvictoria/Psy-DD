@@ -13,7 +13,9 @@ import {
   hyperSeverity,
   hypoSeverity,
   narcoSeverity,
-} from '../../../utils/sleep';
+  nightmareSeverity,
+  substanceSleepSeverity,
+} from '../../../utils/c-sleep';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -33,6 +35,10 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = circaSeverity;
   } else if (result === 'Non–Rapid Eye Movement Sleep Arousal Disorders') {
     additionalData = eyeSeverity;
+  } else if (result === 'Nightmare Disorder') {
+    additionalData = nightmareSeverity;
+  } else if (result === 'Substance/Medication-Induced Sleep Disorder') {
+    additionalData = substanceSleepSeverity;
   }
 
   return (

@@ -16,7 +16,8 @@ import {
   insomniaDuration,
   narcoDuration,
   obsDuration,
-} from '../../../utils/sleep';
+  nightmareDuration,
+} from '../../../utils/c-sleep';
 
 // @ts-ignore
 function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
@@ -40,6 +41,8 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     additionalData = obsDuration;
   } else if (result === 'Circadian Rhythm Sleep-Wake Disorders') {
     additionalData = circaDuration;
+  } else if (result === 'Nightmare Disorder') {
+    additionalData = nightmareDuration;
   }
 
   return (

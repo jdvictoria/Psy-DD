@@ -527,29 +527,59 @@ const optionalDisorderL = numbers => {
 };
 
 export const sleepDiagnosis = numbers => {
-  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Insomnia Disorder';
-  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
     return 'Hypersomnolence Disorder';
   } else if (mainDisorderC(numbers) && optionalDisorderC(numbers)) {
     return 'Narcolepsy';
   } else if (mainDisorderD(numbers)) {
     return 'Obstructive Sleep Apnea Hypoapnea';
-  } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderE(numbers))
+  ) {
     return 'Central Sleep Apnea';
-  } else if (mainDisorderF(numbers) || optionalDisorderF(numbers)) {
+  } else if (
+    mainDisorderF(numbers) ||
+    (mainDisorderF(numbers) && optionalDisorderF(numbers))
+  ) {
     return 'Sleep-Related Hypoventilation';
-  } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
+  } else if (
+    mainDisorderG(numbers) ||
+    (mainDisorderG(numbers) && optionalDisorderG(numbers))
+  ) {
     return 'Circadian Rhythm Sleep-Wake Disorder';
-  } else if (mainDisorderH(numbers) || optionalDisorderH(numbers)) {
+  } else if (
+    mainDisorderH(numbers) ||
+    (mainDisorderH(numbers) && optionalDisorderH(numbers))
+  ) {
     return 'Non–Rapid Eye Movement Sleep Arousal Disorder';
-  } else if (mainDisorderI(numbers) || optionalDisorderI(numbers)) {
+  } else if (
+    mainDisorderI(numbers) ||
+    (mainDisorderI(numbers) && optionalDisorderI(numbers))
+  ) {
     return 'Nightmare Disorder';
-  } else if (mainDisorderJ(numbers) || optionalDisorderJ(numbers)) {
+  } else if (
+    mainDisorderJ(numbers) ||
+    (mainDisorderJ(numbers) && optionalDisorderJ(numbers))
+  ) {
     return 'Rapid Eye Movement Sleep Behavior Disorder';
-  } else if (mainDisorderK(numbers) || optionalDisorderK(numbers)) {
+  } else if (
+    mainDisorderK(numbers) ||
+    (mainDisorderK(numbers) && optionalDisorderK(numbers))
+  ) {
     return 'Restless Legs Syndrome';
-  } else if (mainDisorderL(numbers) || optionalDisorderL(numbers)) {
+  } else if (
+    mainDisorderL(numbers) ||
+    (mainDisorderL(numbers) && optionalDisorderL(numbers))
+  ) {
     return 'Substance/Medication-Induced Sleep Disorder';
   } else {
     return 'Other Specified / Unspecified Sleep Symptom and Related Disorder';

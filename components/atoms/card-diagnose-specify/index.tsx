@@ -14,7 +14,9 @@ import {
   hyperSpecification,
   insomniaSpecification,
   narcoSpecification,
-} from '../../../utils/sleep';
+  nightmareSpecification,
+  substanceSleepSpecification,
+} from '../../../utils/c-sleep';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -32,6 +34,10 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = narcoSpecification;
   } else if (result === 'Circadian Rhythm Sleep-Wake Disorders') {
     additionalData = circaSpecification;
+  } else if (result === 'Nightmare Disorder') {
+    additionalData = nightmareSpecification;
+  } else if (result === 'Substance/Medication-Induced Sleep Disorder') {
+    additionalData = substanceSleepSpecification;
   }
 
   return (
