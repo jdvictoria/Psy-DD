@@ -9,7 +9,7 @@ import {contentText, StyledText16} from '../../../styles/form-text';
 
 import DropdownSymptoms from '../dropdown-symptoms';
 
-import {traumaSymptoms} from '../../../utils/trauma';
+import {traumaSymptoms} from '../../../utils/a-trauma';
 import {somaticSymptoms} from '../../../utils/somatic';
 import {sleepSymptoms} from '../../../utils/sleep';
 import {sexualSymptoms} from '../../../utils/sexual';

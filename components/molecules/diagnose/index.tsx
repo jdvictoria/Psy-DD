@@ -16,7 +16,7 @@ import CardDiagnoseDuration from '../../atoms/card-diagnose-duration';
 import CardDiagnoseSpecify from '../../atoms/card-diagnose-specify';
 import CardDiagnoseSeverity from '../../atoms/card-diagnose-severity';
 
-import {traumaDiagnosis} from '../../../utils/trauma';
+import {traumaDiagnosis} from '../../../utils/a-trauma';
 import {somaticDiagnosis} from '../../../utils/somatic';
 import {sleepDiagnosis} from '../../../utils/sleep';
 import {sexualDiagnosis} from '../../../utils/sexual';
