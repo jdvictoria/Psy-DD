@@ -721,6 +721,48 @@ function CardDiagnoseResult({
   } else if (severity === 349) {
     severe = '(F19.921) ';
   } else if (severity === 350) {
+    severe = '(F06.33 With manic features) ';
+  } else if (severity === 351) {
+    severe = '(F06.33 With manic- or hypomanic-like episode) ';
+  } else if (severity === 352) {
+    severe = '(F06.34 With mixed features) ';
+  } else if (severity === 353) {
+    severe = '(F10.14) ';
+  } else if (severity === 354) {
+    severe = '(F10.24) ';
+  } else if (severity === 355) {
+    severe = '(F10.94) ';
+  } else if (severity === 356) {
+    severe = '(F16.14) ';
+  } else if (severity === 357) {
+    severe = '(F16.24) ';
+  } else if (severity === 358) {
+    severe = '(F16.94) ';
+  } else if (severity === 359) {
+    severe = '(F13.14) ';
+  } else if (severity === 360) {
+    severe = '(F13.24) ';
+  } else if (severity === 361) {
+    severe = '(F13.94) ';
+  } else if (severity === 362) {
+    severe = '(F15.14) ';
+  } else if (severity === 363) {
+    severe = '(F15.24) ';
+  } else if (severity === 364) {
+    severe = '(F15.94) ';
+  } else if (severity === 365) {
+    severe = '(F14.14) ';
+  } else if (severity === 366) {
+    severe = '(F14.24) ';
+  } else if (severity === 367) {
+    severe = '(F14.94) ';
+  } else if (severity === 368) {
+    severe = '(F19.14) ';
+  } else if (severity === 369) {
+    severe = '(F19.24) ';
+  } else if (severity === 370) {
+    severe = '(F19.94) ';
+  } else if (severity === 371) {
     severe = '() ';
   } else {
     severe = '';
