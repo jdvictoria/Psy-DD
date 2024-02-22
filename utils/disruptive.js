@@ -351,7 +351,7 @@ export const optionalDisorderE = numbers => {
   );
 };
 
-export const anxietyDiagnosis = numbers => {
+export const disruptiveDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
     return 'Oppositional Defiant Disorder';
   } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
