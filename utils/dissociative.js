@@ -92,7 +92,7 @@ export const dissociativeDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
     return 'Dissociative Amnesia';
   } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
-    return 'Depersonalization / Derealization Disorder ';
+    return 'Depersonalization / Derealization Disorder';
   } else {
     return 'Other Specified / Unspecified Dissociatve Symptom and Related Disorder';
   }
