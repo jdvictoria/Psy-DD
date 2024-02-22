@@ -468,6 +468,32 @@ function CardDiagnoseResult({
     severe = '(F16.280) ';
   } else if (severity === 223) {
     severe = '(F16.980) ';
+  } else if (severity === 224) {
+    severe = '(Early onset) ';
+  } else if (severity === 225) {
+    severe = '(Late onset) ';
+  } else if (severity === 226) {
+    severe = '(F06.31 With depressive features) ';
+  } else if (severity === 227) {
+    severe = '(F06.32 With major depressive–like episode) ';
+  } else if (severity === 228) {
+    severe = '(F06.34 With mixed features) ';
+  } else if (severity === 229) {
+    severe = '(F32.0 / F33.0) ';
+  } else if (severity === 230) {
+    severe = '(F32.1 / F33.1) ';
+  } else if (severity === 231) {
+    severe = '(F32.2 / F33.2) ';
+  } else if (severity === 232) {
+    severe = '(F32.3 / F33.3) ';
+  } else if (severity === 233) {
+    severe = '(F32.4 / F33.4) ';
+  } else if (severity === 234) {
+    severe = '(F32.5 / F33.5) ';
+  } else if (severity === 235) {
+    severe = '(F32.9 / F33.9) ';
+  } else if (severity === 236) {
+    severe = 'Moderate-severe ';
   } else {
     severe = '';
   }
@@ -538,6 +564,8 @@ function CardDiagnoseResult({
     time = '(In early remission) ';
   } else if (duration === 32) {
     time = '(In sustained remission) ';
+  } else if (duration === 33) {
+    time = '(In partial remission) ';
   } else {
     time = '';
   }
@@ -677,6 +705,16 @@ function CardDiagnoseResult({
     specs = ' (In a controlled environment)';
   } else if (specification === 65) {
     specs = ' (Performance only)';
+  } else if (specification === 66) {
+    specs = ' (With anxious distress)';
+  } else if (specification === 67) {
+    specs = ' (With atypical features)';
+  } else if (specification === 68) {
+    specs = ' (With psychotic features)';
+  } else if (specification === 69) {
+    specs = ' (With mood-congruent psychotic features)';
+  } else if (specification === 70) {
+    specs = ' (With mood-incongruent psychotic features)';
   } else {
     specs = '';
   }
