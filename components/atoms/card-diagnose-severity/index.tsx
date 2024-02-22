@@ -5,7 +5,7 @@ import {DiagnoseResultCard} from '../../../styles/form-container';
 // @ts-ignore
 import DropdownComponent from '../dropdown-diagnose';
 
-import {conversionSeverity} from '../../../utils/somatic';
+import {conversionSeverity} from '../../../utils/b-somatic';
 import {
   centralSeverity,
   circaSeverity,

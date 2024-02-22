@@ -9,7 +9,7 @@ import {
   conversionDuration,
   factorsDuration,
   factitiousDuration,
-} from '../../../utils/somatic';
+} from '../../../utils/b-somatic';
 import {
   circaDuration,
   hyperDuration,

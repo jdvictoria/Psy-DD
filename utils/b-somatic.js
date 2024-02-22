@@ -25,7 +25,6 @@ export const somaticSymptoms = [
   },
 
   // Illness Anxiety Disorder
-  // Brief illness anxiety disorder: Duration of symptoms is less than 6 months.
   // Criteria A
   {label: 'Preoccupation with having or acquiring a serious illness', value: 5},
 
@@ -240,15 +239,30 @@ const mainDisorderG = numbers => {
 };
 
 export const somaticDiagnosis = numbers => {
-  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Somatic Symptom Disorder';
-  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
     return 'Illness Anxiety Disorder';
-  } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderC(numbers))
+  ) {
     return 'Conversion Disorder';
-  } else if (mainDisorderD(numbers) || optionalDisorderD(numbers)) {
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
     return 'Psychological Factors Affecting Other Medical Conditions';
-  } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderE(numbers))
+  ) {
     return 'Factitious Disorder';
   } else if (mainDisorderF(numbers)) {
     return 'Maladaptive Avoidance';
@@ -259,7 +273,6 @@ export const somaticDiagnosis = numbers => {
   }
 };
 
-// OK
 export const conversionSeverity = [
   {label: 'With weakness or paralysis', value: 0},
   {label: 'With abnormal movement (Tremor)', value: 0},
@@ -276,13 +289,11 @@ export const conversionSeverity = [
   {label: 'With Mixed Symptoms', value: 3},
 ];
 
-// OK
 export const conversionDuration = [
   {label: 'Symptoms present for less than 6 months', value: 0},
   {label: 'Symptoms occurring for 6 months or more', value: 1},
 ];
 
-// OK
 export const conversionSpecification = [
   {label: 'Without psychological stressor', value: 0},
   {label: 'With psychological stressor', value: 1},

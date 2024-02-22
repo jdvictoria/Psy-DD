@@ -10,7 +10,7 @@ import {contentText, StyledText16} from '../../../styles/form-text';
 import DropdownSymptoms from '../dropdown-symptoms';
 
 import {traumaSymptoms} from '../../../utils/a-trauma';
-import {somaticSymptoms} from '../../../utils/somatic';
+import {somaticSymptoms} from '../../../utils/b-somatic';
 import {sleepSymptoms} from '../../../utils/sleep';
 import {sexualSymptoms} from '../../../utils/sexual';
 import {schizophreniaSymptoms} from '../../../utils/schizophrenia';

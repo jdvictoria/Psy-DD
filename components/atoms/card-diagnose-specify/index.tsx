@@ -8,7 +8,7 @@ import DropdownComponent from '../dropdown-diagnose';
 import {
   conversionSpecification,
   factitiousSpecification,
-} from '../../../utils/somatic';
+} from '../../../utils/b-somatic';
 import {
   circaSpecification,
   hyperSpecification,

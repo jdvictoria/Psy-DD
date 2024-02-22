@@ -17,7 +17,7 @@ import CardDiagnoseSpecify from '../../atoms/card-diagnose-specify';
 import CardDiagnoseSeverity from '../../atoms/card-diagnose-severity';
 
 import {traumaDiagnosis} from '../../../utils/a-trauma';
-import {somaticDiagnosis} from '../../../utils/somatic';
+import {somaticDiagnosis} from '../../../utils/b-somatic';
 import {sleepDiagnosis} from '../../../utils/sleep';
 import {sexualDiagnosis} from '../../../utils/sexual';
 import {schizophreniaDiagnosis} from '../../../utils/schizophrenia';
