@@ -764,6 +764,8 @@ function CardDiagnoseResult({
     severe = '(F19.94) ';
   } else if (severity === 371) {
     severe = '() ';
+  } else if (severity === 372) {
+    severe = '(Apathetic type) ';
   } else {
     severe = '';
   }

@@ -396,25 +396,51 @@ const optionalDisorderI = numbers => {
 };
 
 export const schizophreniaDiagnosis = numbers => {
-  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Schizotypal (Personality) Disorder';
-  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
     return 'Delusional Disorder';
-  } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
-    return 'Schizophrenia';
-  } else if (mainDisorderD(numbers) || optionalDisorderD(numbers)) {
-    return 'Schizophreniform Disorder';
-  } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderC(numbers))
+  ) {
     return 'Brief Psychotic Disorder';
-  } else if (mainDisorderF(numbers) || optionalDisorderF(numbers)) {
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
+    return 'Schizophreniform Disorder';
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderE(numbers))
+  ) {
+    return 'Schizophrenia';
+  } else if (
+    mainDisorderF(numbers) ||
+    (mainDisorderF(numbers) && optionalDisorderF(numbers))
+  ) {
     return 'Schizoaffective Disorder';
-  } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
+  } else if (
+    mainDisorderG(numbers) ||
+    (mainDisorderG(numbers) && optionalDisorderG(numbers))
+  ) {
     return 'Substance/Medication-Induced Psychotic Disorder';
-  } else if (mainDisorderH(numbers) || optionalDisorderH(numbers)) {
+  } else if (
+    (mainDisorderH(numbers) && numbers.includes(45)) ||
+    (mainDisorderH(numbers) &&
+      numbers.includes(45) &&
+      optionalDisorderH(numbers))
+  ) {
     return 'Psychotic Disorder Due to Another Medical Condition';
   } else if (
-    (mainDisorderI(numbers) && numbers.includes(45)) ||
-    optionalDisorderI(numbers)
+    mainDisorderI(numbers) ||
+    (mainDisorderI(numbers) && optionalDisorderI(numbers))
   ) {
     return 'Catatonic Disorder Due to Another Medical Condition';
   } else if (mainDisorderI(numbers)) {

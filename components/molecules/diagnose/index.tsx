@@ -21,7 +21,7 @@ import {somaticDiagnosis} from '../../../utils/b-somatic';
 import {sleepDiagnosis} from '../../../utils/c-sleep';
 import {sexualDiagnosis} from '../../../utils/d-sexual';
 import {schizophreniaDiagnosis} from '../../../utils/e-schizophrenia';
-import {personalityDiagnosis} from '../../../utils/personality';
+import {personalityDiagnosis} from '../../../utils/f-personality';
 import {paraphilicDiagnosis} from '../../../utils/paraphilic';
 import {obsessiveDiagnosis} from '../../../utils/obsessive';
 import {neuroDiagnosis} from '../../../utils/neurodevelopmental';
@@ -160,8 +160,9 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Substance/Medication-Induced Sexual Dysfunction' ||
             result === 'Delusional Disorder' ||
             result === 'Schizoaffective Disorder' ||
+            result === 'Psychotic Disorder Due to Another Medical Condition' ||
             result ===
-              'Psychotic Disorder Due to Another Medical Condition') && (
+              'Personality Change Due to Another Medical Condition') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}

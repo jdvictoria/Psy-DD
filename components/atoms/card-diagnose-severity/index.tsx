@@ -31,6 +31,7 @@ import {
   psychoticDueToAnotherSeverity,
   schizoaffectiveSeverity,
 } from '../../../utils/e-schizophrenia';
+import {personalityDueToAnotherSeverity} from '../../../utils/f-personality';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -76,6 +77,8 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = schizoaffectiveSeverity;
   } else if (result === 'Psychotic Disorder Due to Another Medical Condition') {
     additionalData = psychoticDueToAnotherSeverity;
+  } else if (result === 'Personality Change Due to Another Medical Condition') {
+    additionalData = personalityDueToAnotherSeverity;
   }
 
   return (
