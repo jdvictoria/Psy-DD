@@ -601,30 +601,57 @@ export const optionalDisorderI = numbers => {
 };
 
 export const anxietyDiagnosis = numbers => {
-  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Separation Anxiety Disorder';
-  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
     return 'Selective Mutism';
-  } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderC(numbers))
+  ) {
     return 'Specific Phobia';
-  } else if (mainDisorderD(numbers) || optionalDisorderD(numbers)) {
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
     return 'Social Anxiety Disorder';
-  } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderE(numbers))
+  ) {
     return 'Panic Disorder';
-  } else if (mainDisorderF(numbers) || optionalDisorderF(numbers)) {
+  } else if (
+    mainDisorderF(numbers) ||
+    (mainDisorderF(numbers) && optionalDisorderF(numbers))
+  ) {
     return 'Agoraphobia';
-  } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
+  } else if (
+    mainDisorderG(numbers) ||
+    (mainDisorderG(numbers) && optionalDisorderG(numbers))
+  ) {
     return 'Generalized Anxiety Disorder';
-  } else if (mainDisorderH(numbers) || optionalDisorderH(numbers)) {
+  } else if (
+    mainDisorderH(numbers) ||
+    (mainDisorderH(numbers) && optionalDisorderH(numbers))
+  ) {
     return 'Substance / Medication-Induced Anxiety Disorder';
-  } else if (mainDisorderI(numbers) || optionalDisorderI(numbers)) {
+  } else if (
+    mainDisorderI(numbers) ||
+    (mainDisorderI(numbers) && optionalDisorderI(numbers))
+  ) {
     return 'Anxiety Disorder Due to Another Medical Condition';
   } else {
     return 'Other Specified / Unspecified Anxiety Symptom and Related Disorder';
   }
 };
 
-export const specificPhobiaIntensity = [
+export const specificPhobiaSeverity = [
   {
     label: 'Animal (e.g., spiders, insects, dogs)',
     value: 187,

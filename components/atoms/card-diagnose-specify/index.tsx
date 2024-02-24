@@ -51,6 +51,7 @@ import {
   stimulantIntoxicationSpecification,
   tobaccoUseSpecification,
 } from '../../../utils/j-substance';
+import {socialAnxietySpecification} from '../../../utils/k-anxiety';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -128,6 +129,8 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = stimulantIntoxicationSpecification;
   } else if (result === 'Tobacco Use Disorder') {
     additionalData = tobaccoUseSpecification;
+  } else if (result === 'Social Anxiety Disorder') {
+    additionalData = socialAnxietySpecification;
   }
 
   return (

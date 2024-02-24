@@ -26,6 +26,7 @@ import {paraphilicDiagnosis} from '../../../utils/g-paraphilic';
 import {obsessiveDiagnosis} from '../../../utils/h-obsessive';
 import {neuroDiagnosis} from '../../../utils/i-neurodevelopmental';
 import {substanceDiagnosis} from '../../../utils/j-substance';
+import {anxietyDiagnosis} from '../../../utils/k-anxiety';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -92,6 +93,9 @@ function HomeDiagnose({isDarkMode}) {
           break;
         case 'j':
           setResult(substanceDiagnosis(numbers));
+          break;
+        case 'k':
+          setResult(anxietyDiagnosis(numbers));
           break;
         default:
           break;
@@ -184,7 +188,9 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Tobacco Use Disorder' ||
             result === 'Other (or Unknown) Substance Use Disorder' ||
             result === 'Other (or Unknown) Substance Withdrawal' ||
-            result === 'Gambling Disorder') && (
+            result === 'Gambling Disorder' ||
+            result === 'Specific Phobia' ||
+            result === 'Substance / Medication-Induced Anxiety Disorder') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
@@ -272,7 +278,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Alcohol Withdrawal' ||
             result === 'Sedative, Hypnotic, or Anxiolytic Withdrawal' ||
             result === 'Stimulant Withdrawal' ||
-            result === 'Tobacco Use Disorder') && (
+            result === 'Tobacco Use Disorder' ||
+            result === 'Social Anxiety Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}

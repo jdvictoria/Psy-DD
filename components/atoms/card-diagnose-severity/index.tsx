@@ -61,6 +61,10 @@ import {
   stimulantUseSeverity,
   tobaccoUseSeverity,
 } from '../../../utils/j-substance';
+import {
+  specificPhobiaSeverity,
+  substanceAnxietySeverity,
+} from '../../../utils/k-anxiety';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -154,6 +158,10 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = otherUnknownSeverity;
   } else if (result === 'Gambling Disorder') {
     additionalData = gamblingSeverity;
+  } else if (result === 'Specific Phobia') {
+    additionalData = specificPhobiaSeverity;
+  } else if (result === 'Substance / Medication-Induced Anxiety Disorder') {
+    additionalData = substanceAnxietySeverity;
   }
 
   return (

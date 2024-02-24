@@ -19,6 +19,7 @@ import {paraphilicSymptoms} from '../../../utils/g-paraphilic';
 import {obsessiveSymptoms} from '../../../utils/h-obsessive';
 import {neurodevelopmentalSymptoms} from '../../../utils/i-neurodevelopmental';
 import {substanceSymptoms} from '../../../utils/j-substance';
+import {anxietySymptoms} from '../../../utils/k-anxiety';
 
 // @ts-ignore
 function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
@@ -61,6 +62,9 @@ function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
     case 'j':
       symptomData = substanceSymptoms;
       break;
+    case 'k':
+      symptomData = anxietySymptoms;
+      break;
     default:
       break;
   }
@@ -86,15 +90,19 @@ function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
               data={symptomData}
               label={'Symptom/s'}
               value={null}
-              setValue={selectedSymptom => {
-                setNumbers(prevNumbers => {
-                  // Check for duplicates before updating the state
-                  if (!prevNumbers.includes(selectedSymptom)) {
-                    return [...prevNumbers, selectedSymptom];
-                  }
-                  return prevNumbers;
-                });
-              }}
+              setValue={
+                // @ts-ignore
+                selectedSymptom => {
+                  // @ts-ignore
+                  setNumbers(prevNumbers => {
+                    // Check for duplicates before updating the state
+                    if (!prevNumbers.includes(selectedSymptom)) {
+                      return [...prevNumbers, selectedSymptom];
+                    }
+                    return prevNumbers;
+                  });
+                }
+              }
             />
           </StyledRow>
         </DiagnoseSymptomCard>,
