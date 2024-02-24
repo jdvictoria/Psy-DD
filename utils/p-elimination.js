@@ -1,4 +1,4 @@
-export const dissociativeSymptoms = [
+export const eliminationSymptoms = [
   // Enuresis
   // Criteria A
   {

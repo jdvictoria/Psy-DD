@@ -20,6 +20,14 @@ import {obsessiveSymptoms} from '../../../utils/h-obsessive';
 import {neurodevelopmentalSymptoms} from '../../../utils/i-neurodevelopmental';
 import {substanceSymptoms} from '../../../utils/j-substance';
 import {anxietySymptoms} from '../../../utils/k-anxiety';
+import {bipolarSymptoms} from '../../../utils/l-bipolar';
+import {disruptiveSymptoms} from '../../../utils/m-disruptive';
+import {depressiveSymptoms} from '../../../utils/n-depressive';
+import {dissociativeSymptoms} from '../../../utils/o-dissociative';
+import {eliminationSymptoms} from '../../../utils/p-elimination';
+import {eatingSymptoms} from '../../../utils/q-eating';
+import {genderSymptoms} from '../../../utils/r-gender';
+import {neurocognitiveSymptoms} from '../../../utils/s-neurocognitive';
 
 // @ts-ignore
 function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
@@ -64,6 +72,30 @@ function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
       break;
     case 'k':
       symptomData = anxietySymptoms;
+      break;
+    case 'l':
+      symptomData = bipolarSymptoms;
+      break;
+    case 'm':
+      symptomData = disruptiveSymptoms;
+      break;
+    case 'n':
+      symptomData = depressiveSymptoms;
+      break;
+    case 'o':
+      symptomData = dissociativeSymptoms;
+      break;
+    case 'p':
+      symptomData = eliminationSymptoms;
+      break;
+    case 'q':
+      symptomData = eatingSymptoms;
+      break;
+    case 'r':
+      symptomData = genderSymptoms;
+      break;
+    case 's':
+      symptomData = neurocognitiveSymptoms;
       break;
     default:
       break;

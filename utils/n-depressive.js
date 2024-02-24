@@ -1,4 +1,4 @@
-export const dissociativeSymptoms = [
+export const depressiveSymptoms = [
   // Common
   {
     label:

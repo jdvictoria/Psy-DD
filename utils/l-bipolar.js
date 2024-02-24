@@ -1,4 +1,4 @@
-export const neurocognitiveSymptoms = [
+export const bipolarSymptoms = [
   {
     label: 'environment',
     value: 0,
