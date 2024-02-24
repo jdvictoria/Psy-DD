@@ -102,6 +102,7 @@ function HomeDiagnose({isDarkMode}) {
           setResult(anxietyDiagnosis(numbers));
           break;
         case 'l':
+          setResult(disruptiveDiagnosis(numbers));
           break;
         case 'm':
           setResult(disruptiveDiagnosis(numbers));
