@@ -30,6 +30,7 @@ import {anxietyDiagnosis} from '../../../utils/k-anxiety';
 
 import {eliminationDiagnosis} from '../../../utils/p-elimination';
 import {disruptiveDiagnosis} from '../../../utils/m-disruptive';
+import {dissociativeDiagnosis} from '../../../utils/o-dissociative';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -100,8 +101,13 @@ function HomeDiagnose({isDarkMode}) {
         case 'k':
           setResult(anxietyDiagnosis(numbers));
           break;
+        case 'l':
+          break;
         case 'm':
           setResult(disruptiveDiagnosis(numbers));
+          break;
+        case 'o':
+          setResult(dissociativeDiagnosis(numbers));
           break;
         case 'p':
           setResult(eliminationDiagnosis(numbers));
