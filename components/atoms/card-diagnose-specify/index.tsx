@@ -33,6 +33,13 @@ import {
   pedophilicSpecification,
   transvesticSpecification,
 } from '../../../utils/g-paraphilic';
+import {
+  dysmorphicSpecification,
+  hoardingSpecification,
+  ocdDueToAnotherSpecification,
+  ocdSpecification,
+  substanceObsessiveSpecification,
+} from '../../../utils/h-obsessive';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -80,6 +87,22 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = pedophilicSpecification;
   } else if (result === 'Transvestic Disorder') {
     additionalData = transvesticSpecification;
+  } else if (result === 'Obsessive-Compulsive Disorder') {
+    additionalData = ocdSpecification;
+  } else if (result === 'Body Dysmorphic Disorder') {
+    additionalData = dysmorphicSpecification;
+  } else if (result === 'Hoarding Disorder') {
+    additionalData = hoardingSpecification;
+  } else if (
+    result ===
+    'Obsessive-Compulsive and Related Disorder Due to Another Medical Condition'
+  ) {
+    additionalData = ocdDueToAnotherSpecification;
+  } else if (
+    result ===
+    'Substance/Medication-Induce Obsessive-Compulsive and Related Disorder'
+  ) {
+    additionalData = substanceObsessiveSpecification;
   }
 
   return (

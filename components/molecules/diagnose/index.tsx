@@ -23,7 +23,7 @@ import {sexualDiagnosis} from '../../../utils/d-sexual';
 import {schizophreniaDiagnosis} from '../../../utils/e-schizophrenia';
 import {personalityDiagnosis} from '../../../utils/f-personality';
 import {paraphilicDiagnosis} from '../../../utils/g-paraphilic';
-import {obsessiveDiagnosis} from '../../../utils/obsessive';
+import {obsessiveDiagnosis} from '../../../utils/h-obsessive';
 import {neuroDiagnosis} from '../../../utils/neurodevelopmental';
 import {substanceDiagnosis} from '../../../utils/substance';
 
@@ -226,7 +226,14 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Exhibitionistic Disorder' ||
             result === 'Sexual Masochism Disorder' ||
             result === 'Pedophilic Disorder' ||
-            result === 'Transvestic Disorder') && (
+            result === 'Transvestic Disorder' ||
+            result === 'Obsessive-Compulsive Disorder' ||
+            result === 'Body Dysmorphic Disorder' ||
+            result === 'Hoarding Disorder' ||
+            result ===
+              'Obsessive-Compulsive and Related Disorder Due to Another Medical Condition' ||
+            result ===
+              'Substance/Medication-Induce Obsessive-Compulsive and Related Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}
