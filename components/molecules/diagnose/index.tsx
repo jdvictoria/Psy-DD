@@ -106,11 +106,19 @@ function HomeDiagnose({isDarkMode}) {
         case 'm':
           setResult(disruptiveDiagnosis(numbers));
           break;
+        case 'n':
+          break;
         case 'o':
           setResult(dissociativeDiagnosis(numbers));
           break;
         case 'p':
           setResult(eliminationDiagnosis(numbers));
+          break;
+        case 'q':
+          break;
+        case 'r':
+          break;
+        case 's':
           break;
         default:
           break;
