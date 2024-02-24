@@ -24,7 +24,7 @@ import {schizophreniaDiagnosis} from '../../../utils/e-schizophrenia';
 import {personalityDiagnosis} from '../../../utils/f-personality';
 import {paraphilicDiagnosis} from '../../../utils/g-paraphilic';
 import {obsessiveDiagnosis} from '../../../utils/h-obsessive';
-import {neuroDiagnosis} from '../../../utils/neurodevelopmental';
+import {neuroDiagnosis} from '../../../utils/i-neurodevelopmental';
 import {substanceDiagnosis} from '../../../utils/substance';
 
 // @ts-ignore
@@ -163,7 +163,10 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Psychotic Disorder Due to Another Medical Condition' ||
             result === 'Personality Change Due to Another Medical Condition' ||
             result === 'Pedophilic Disorder' ||
-            result === 'Fetishistic Disorder') && (
+            result === 'Fetishistic Disorder' ||
+            result === 'Attention-Deficit/Hyperactivity Disorder' ||
+            result === 'Specific Learning Disorder' ||
+            result === 'Stereotypic Movement Disorder') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
@@ -198,7 +201,9 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Sexual Masochism Disorder' ||
             result === 'Sexual Sadism Disorder' ||
             result === 'Fetishistic Disorder' ||
-            result === 'Transvestic Disorder') && (
+            result === 'Transvestic Disorder' ||
+            result === 'Attention-Deficit/Hyperactivity Disorder' ||
+            result === 'Specific Learning Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}
@@ -233,7 +238,10 @@ function HomeDiagnose({isDarkMode}) {
             result ===
               'Obsessive-Compulsive and Related Disorder Due to Another Medical Condition' ||
             result ===
-              'Substance/Medication-Induce Obsessive-Compulsive and Related Disorder') && (
+              'Substance/Medication-Induce Obsessive-Compulsive and Related Disorder' ||
+            result === 'Autism Spectrum Disorder' ||
+            result === 'Stereotypic Movement Disorder' ||
+            result === 'Persistent (Chronic) Motor or Vocal Tic Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}

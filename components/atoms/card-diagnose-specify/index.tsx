@@ -40,6 +40,11 @@ import {
   ocdSpecification,
   substanceObsessiveSpecification,
 } from '../../../utils/h-obsessive';
+import {
+  autismSpecification,
+  movementSpecification,
+  ticSpecification,
+} from '../../../utils/i-neurodevelopmental';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -103,6 +108,12 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     'Substance/Medication-Induce Obsessive-Compulsive and Related Disorder'
   ) {
     additionalData = substanceObsessiveSpecification;
+  } else if (result === 'Autism Spectrum Disorder') {
+    additionalData = autismSpecification;
+  } else if (result === 'Stereotypic Movement Disorder') {
+    additionalData = movementSpecification;
+  } else if (result === 'Persistent (Chronic) Motor or Vocal Tic Disorder') {
+    additionalData = ticSpecification;
   }
 
   return (

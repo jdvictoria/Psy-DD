@@ -36,6 +36,11 @@ import {
   fetishisticSeverity,
   pedophilicSeverity,
 } from '../../../utils/g-paraphilic';
+import {
+  adhdSeverity,
+  movementSeverity,
+  specificLearningSeverity,
+} from '../../../utils/i-neurodevelopmental';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -87,6 +92,12 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = pedophilicSeverity;
   } else if (result === 'Fetishistic Disorder') {
     additionalData = fetishisticSeverity;
+  } else if (result === 'Attention-Deficit/Hyperactivity Disorder') {
+    additionalData = adhdSeverity;
+  } else if (result === 'Specific Learning Disorder') {
+    additionalData = specificLearningSeverity;
+  } else if (result === 'Stereotypic Movement Disorder') {
+    additionalData = movementSeverity;
   }
 
   return (

@@ -42,6 +42,10 @@ import {
   transvesticDuration,
   voyeuristicDuration,
 } from '../../../utils/g-paraphilic';
+import {
+  adhdDuration,
+  specificLearningDuration,
+} from '../../../utils/i-neurodevelopmental';
 
 // @ts-ignore
 function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
@@ -103,6 +107,10 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     additionalData = fetishisticDuration;
   } else if (result === 'Transvestic Disorder') {
     additionalData = transvesticDuration;
+  } else if (result === 'Attention-Deficit/Hyperactivity Disorder') {
+    additionalData = adhdDuration;
+  } else if (result === 'Specific Learning Disorder') {
+    additionalData = specificLearningDuration;
   }
 
   return (
