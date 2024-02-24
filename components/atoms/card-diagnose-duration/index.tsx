@@ -33,6 +33,15 @@ import {
   schizoaffectiveDuration,
   schizophreniaDuration,
 } from '../../../utils/e-schizophrenia';
+import {
+  exhibitionisticDuration,
+  fetishisticDuration,
+  frotteuristicDuration,
+  masochistDuration,
+  sadismDuration,
+  transvesticDuration,
+  voyeuristicDuration,
+} from '../../../utils/g-paraphilic';
 
 // @ts-ignore
 function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
@@ -80,6 +89,20 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     additionalData = schizophreniaDuration;
   } else if (result === 'Schizoaffective Disorder') {
     additionalData = schizoaffectiveDuration;
+  } else if (result === 'Voyeuristic Disorder') {
+    additionalData = voyeuristicDuration;
+  } else if (result === 'Exhibitionistic Disorder') {
+    additionalData = exhibitionisticDuration;
+  } else if (result === 'Frotteuristic Disorder') {
+    additionalData = frotteuristicDuration;
+  } else if (result === 'Sexual Masochism Disorder') {
+    additionalData = masochistDuration;
+  } else if (result === 'Sexual Sadism Disorder') {
+    additionalData = sadismDuration;
+  } else if (result === 'Fetishistic Disorder') {
+    additionalData = fetishisticDuration;
+  } else if (result === 'Transvestic Disorder') {
+    additionalData = transvesticDuration;
   }
 
   return (

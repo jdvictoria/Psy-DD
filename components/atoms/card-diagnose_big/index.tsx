@@ -15,7 +15,7 @@ import {sleepSymptoms} from '../../../utils/c-sleep';
 import {sexualSymptoms} from '../../../utils/d-sexual';
 import {schizophreniaSymptoms} from '../../../utils/e-schizophrenia';
 import {personalitySymptoms} from '../../../utils/f-personality';
-import {paraphilicSymptoms} from '../../../utils/paraphilic';
+import {paraphilicSymptoms} from '../../../utils/g-paraphilic';
 import {obsessiveSymptoms} from '../../../utils/obsessive';
 import {neurodevelopmentalSymptoms} from '../../../utils/neurodevelopmental';
 import {substanceSymptoms} from '../../../utils/substance';

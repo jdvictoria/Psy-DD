@@ -22,7 +22,7 @@ import {sleepDiagnosis} from '../../../utils/c-sleep';
 import {sexualDiagnosis} from '../../../utils/d-sexual';
 import {schizophreniaDiagnosis} from '../../../utils/e-schizophrenia';
 import {personalityDiagnosis} from '../../../utils/f-personality';
-import {paraphilicDiagnosis} from '../../../utils/paraphilic';
+import {paraphilicDiagnosis} from '../../../utils/g-paraphilic';
 import {obsessiveDiagnosis} from '../../../utils/obsessive';
 import {neuroDiagnosis} from '../../../utils/neurodevelopmental';
 import {substanceDiagnosis} from '../../../utils/substance';
@@ -161,8 +161,9 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Delusional Disorder' ||
             result === 'Schizoaffective Disorder' ||
             result === 'Psychotic Disorder Due to Another Medical Condition' ||
-            result ===
-              'Personality Change Due to Another Medical Condition') && (
+            result === 'Personality Change Due to Another Medical Condition' ||
+            result === 'Pedophilic Disorder' ||
+            result === 'Fetishistic Disorder') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
@@ -190,7 +191,14 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Substance/Medication-Induced Sexual Dysfunction' ||
             result === 'Delusional Disorder' ||
             result === 'Schizophrenia' ||
-            result === 'Schizoaffective Disorder') && (
+            result === 'Schizoaffective Disorder' ||
+            result === 'Voyeuristic Disorder' ||
+            result === 'Exhibitionistic Disorder' ||
+            result === 'Frotteuristic Disorder' ||
+            result === 'Sexual Masochism Disorder' ||
+            result === 'Sexual Sadism Disorder' ||
+            result === 'Fetishistic Disorder' ||
+            result === 'Transvestic Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}
@@ -214,7 +222,11 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Schizoaffective Disorder' ||
             result === 'Substance/Medication-Induced Psychotic Disorder' ||
             result ===
-              'Unspecified Schizophrenia Spectrum and Other Psychotic Disorder') && (
+              'Unspecified Schizophrenia Spectrum and Other Psychotic Disorder' ||
+            result === 'Exhibitionistic Disorder' ||
+            result === 'Sexual Masochism Disorder' ||
+            result === 'Pedophilic Disorder' ||
+            result === 'Transvestic Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}

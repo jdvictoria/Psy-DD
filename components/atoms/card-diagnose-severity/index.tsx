@@ -32,6 +32,10 @@ import {
   schizoaffectiveSeverity,
 } from '../../../utils/e-schizophrenia';
 import {personalityDueToAnotherSeverity} from '../../../utils/f-personality';
+import {
+  fetishisticSeverity,
+  pedophilicSeverity,
+} from '../../../utils/g-paraphilic';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -79,6 +83,10 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = psychoticDueToAnotherSeverity;
   } else if (result === 'Personality Change Due to Another Medical Condition') {
     additionalData = personalityDueToAnotherSeverity;
+  } else if (result === 'Pedophilic Disorder') {
+    additionalData = pedophilicSeverity;
+  } else if (result === 'Fetishistic Disorder') {
+    additionalData = fetishisticSeverity;
   }
 
   return (

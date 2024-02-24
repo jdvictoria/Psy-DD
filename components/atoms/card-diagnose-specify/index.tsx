@@ -27,6 +27,12 @@ import {
   schizophreniformSpecification,
   substancePsychoticSpecification,
 } from '../../../utils/e-schizophrenia';
+import {
+  exhibitionisticSpecification,
+  masochistSpecification,
+  pedophilicSpecification,
+  transvesticSpecification,
+} from '../../../utils/g-paraphilic';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -66,6 +72,14 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     result === 'Unspecified Schizophrenia Spectrum and Other Psychotic Disorder'
   ) {
     additionalData = otherSchizophreniaSpecification;
+  } else if (result === 'Exhibitionistic Disorder') {
+    additionalData = exhibitionisticSpecification;
+  } else if (result === 'Sexual Masochism Disorder') {
+    additionalData = masochistSpecification;
+  } else if (result === 'Pedophilic Disorder') {
+    additionalData = pedophilicSpecification;
+  } else if (result === 'Transvestic Disorder') {
+    additionalData = transvesticSpecification;
   }
 
   return (
