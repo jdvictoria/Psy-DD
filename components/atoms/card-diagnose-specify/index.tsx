@@ -18,6 +18,15 @@ import {
   substanceSleepSpecification,
 } from '../../../utils/c-sleep';
 import {substanceSexualSpecification} from '../../../utils/d-sexual';
+import {
+  delusionalSpecification,
+  otherSchizophreniaSpecification,
+  psychoticSpecification,
+  schizoaffectiveSpecification,
+  schizophreniaSpecification,
+  schizophreniformSpecification,
+  substancePsychoticSpecification,
+} from '../../../utils/e-schizophrenia';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -41,6 +50,22 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = substanceSleepSpecification;
   } else if (result === 'Substance/Medication-Induced Sexual Dysfunction') {
     additionalData = substanceSexualSpecification;
+  } else if (result === 'Delusional Disorder') {
+    additionalData = delusionalSpecification;
+  } else if (result === 'Brief Psychotic Disorder') {
+    additionalData = psychoticSpecification;
+  } else if (result === 'Schizophreniform Disorder') {
+    additionalData = schizophreniformSpecification;
+  } else if (result === 'Schizophrenia') {
+    additionalData = schizophreniaSpecification;
+  } else if (result === 'Schizoaffective Disorder') {
+    additionalData = schizoaffectiveSpecification;
+  } else if (result === 'Substance/Medication-Induced Psychotic Disorder') {
+    additionalData = substancePsychoticSpecification;
+  } else if (
+    result === 'Unspecified Schizophrenia Spectrum and Other Psychotic Disorder'
+  ) {
+    additionalData = otherSchizophreniaSpecification;
   }
 
   return (

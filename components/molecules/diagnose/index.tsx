@@ -20,7 +20,7 @@ import {traumaDiagnosis} from '../../../utils/a-trauma';
 import {somaticDiagnosis} from '../../../utils/b-somatic';
 import {sleepDiagnosis} from '../../../utils/c-sleep';
 import {sexualDiagnosis} from '../../../utils/d-sexual';
-import {schizophreniaDiagnosis} from '../../../utils/schizophrenia';
+import {schizophreniaDiagnosis} from '../../../utils/e-schizophrenia';
 import {personalityDiagnosis} from '../../../utils/personality';
 import {paraphilicDiagnosis} from '../../../utils/paraphilic';
 import {obsessiveDiagnosis} from '../../../utils/obsessive';
@@ -157,7 +157,11 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Penetration Disorder' ||
             result === 'Male Hypoactive Sexual Desire Disorder' ||
             result === 'Premature (Early) Ejaculation' ||
-            result === 'Substance/Medication-Induced Sexual Dysfunction') && (
+            result === 'Substance/Medication-Induced Sexual Dysfunction' ||
+            result === 'Delusional Disorder' ||
+            result === 'Schizoaffective Disorder' ||
+            result ===
+              'Psychotic Disorder Due to Another Medical Condition') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
@@ -182,7 +186,10 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Penetration Disorder' ||
             result === 'Male Hypoactive Sexual Desire Disorder' ||
             result === 'Premature (Early) Ejaculation' ||
-            result === 'Substance/Medication-Induced Sexual Dysfunction') && (
+            result === 'Substance/Medication-Induced Sexual Dysfunction' ||
+            result === 'Delusional Disorder' ||
+            result === 'Schizophrenia' ||
+            result === 'Schizoaffective Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}
@@ -198,7 +205,15 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Circadian Rhythm Sleep-Wake Disorders' ||
             result === 'Nightmare Disorder' ||
             result === 'Substance/Medication-Induced Sleep Disorder' ||
-            result === 'Substance/Medication-Induced Sexual Dysfunction') && (
+            result === 'Substance/Medication-Induced Sexual Dysfunction' ||
+            result === 'Delusional Disorder' ||
+            result === 'Brief Psychotic Disorder' ||
+            result === 'Schizophreniform Disorder' ||
+            result === 'Schizophrenia' ||
+            result === 'Schizoaffective Disorder' ||
+            result === 'Substance/Medication-Induced Psychotic Disorder' ||
+            result ===
+              'Unspecified Schizophrenia Spectrum and Other Psychotic Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}

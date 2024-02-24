@@ -28,6 +28,11 @@ import {
   prematureDuration,
   substanceSexualDuration,
 } from '../../../utils/d-sexual';
+import {
+  delusionalDuration,
+  schizoaffectiveDuration,
+  schizophreniaDuration,
+} from '../../../utils/e-schizophrenia';
 
 // @ts-ignore
 function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
@@ -69,6 +74,12 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     additionalData = prematureDuration;
   } else if (result === 'Substance/Medication-Induced Sexual Dysfunction') {
     additionalData = substanceSexualDuration;
+  } else if (result === 'Delusional Disorder') {
+    additionalData = delusionalDuration;
+  } else if (result === 'Schizophrenia') {
+    additionalData = schizophreniaDuration;
+  } else if (result === 'Schizoaffective Disorder') {
+    additionalData = schizoaffectiveDuration;
   }
 
   return (

@@ -26,6 +26,11 @@ import {
   prematureSeverity,
   substanceSexualSeverity,
 } from '../../../utils/d-sexual';
+import {
+  delusionalSeverity,
+  psychoticDueToAnotherSeverity,
+  schizoaffectiveSeverity,
+} from '../../../utils/e-schizophrenia';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -65,6 +70,12 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = prematureSeverity;
   } else if (result === 'Substance/Medication-Induced Sexual Dysfunction') {
     additionalData = substanceSexualSeverity;
+  } else if (result === 'Delusional Disorder') {
+    additionalData = delusionalSeverity;
+  } else if (result === 'Schizoaffective Disorder') {
+    additionalData = schizoaffectiveSeverity;
+  } else if (result === 'Psychotic Disorder Due to Another Medical Condition') {
+    additionalData = psychoticDueToAnotherSeverity;
   }
 
   return (

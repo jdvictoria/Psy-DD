@@ -464,7 +464,7 @@ export const delusionalDuration = [
   },
 ];
 
-export const delusionSpecification = [
+export const delusionalSpecification = [
   {
     label:
       'Delusions are deemed bizarre if they are clearly implausible, not understandable, and not derived from ordinary life experiences',
@@ -472,7 +472,7 @@ export const delusionSpecification = [
   },
 ];
 
-export const delusionSeverity = [
+export const delusionalSeverity = [
   {
     label:
       'This subtype applies when the central theme of the delusion is that another person is in love with the individual',
@@ -676,7 +676,7 @@ export const substancePsychoticSpecification = [
   },
 ];
 
-export const psychoticSeverity = [
+export const psychoticDueToAnotherSeverity = [
   {
     label: 'If delusions are the predominant symptom',
     value: 75,
@@ -701,27 +701,5 @@ export const otherSchizophreniaSpecification = [
     label:
       'This syndrome is characterized by psychotic-like symptoms that are below a threshold for full psychosis (e.g., the symptoms are less severe and more transient, and insight is relatively maintained)',
     value: 28,
-  },
-];
-
-export const personalitySeverity = [
-  {
-    label: 'Occurring in the absence of any other features',
-    value: 77,
-  },
-  {
-    label:
-      'This includes persistent delusions with periods of overlapping mood episodes that are present for a substantial portion of the delusional disturbance (such that the criterion stipulating only brief mood disturbance in delusional disorder is not met)',
-    value: 78,
-  },
-  {
-    label:
-      'This syndrome is characterized by psychotic-like symptoms that are below a threshold for full psychosis (e.g., the symptoms are less severe and more transient, and insight is relatively maintained)',
-    value: 79,
-  },
-  {
-    label:
-      'This syndrome is characterized by psychotic-like symptoms that are below a threshold for full psychosis (e.g., the symptoms are less severe and more transient, and insight is relatively maintained)',
-    value: 80,
   },
 ];
