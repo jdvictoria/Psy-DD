@@ -72,9 +72,15 @@ export const optionalDisorderB = numbers => {
 };
 
 export const eliminationDiagnosis = numbers => {
-  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Enuresis';
-  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
     return 'Encopresis';
   } else {
     return 'Other Specified / Unspecified Elimination Symptom and Related Disorder';

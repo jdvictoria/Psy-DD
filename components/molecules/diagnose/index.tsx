@@ -29,6 +29,7 @@ import {substanceDiagnosis} from '../../../utils/j-substance';
 import {anxietyDiagnosis} from '../../../utils/k-anxiety';
 
 import {eliminationDiagnosis} from '../../../utils/p-elimination';
+import {disruptiveDiagnosis} from '../../../utils/m-disruptive';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -98,6 +99,9 @@ function HomeDiagnose({isDarkMode}) {
           break;
         case 'k':
           setResult(anxietyDiagnosis(numbers));
+          break;
+        case 'm':
+          setResult(disruptiveDiagnosis(numbers));
           break;
         case 'p':
           setResult(eliminationDiagnosis(numbers));

@@ -352,15 +352,30 @@ export const optionalDisorderE = numbers => {
 };
 
 export const disruptiveDiagnosis = numbers => {
-  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Oppositional Defiant Disorder';
-  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
     return 'Intermittent Explosive Disorder';
-  } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderC(numbers))
+  ) {
     return 'Conduct Disorder';
-  } else if (mainDisorderD(numbers) || optionalDisorderD(numbers)) {
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
     return 'Pyromania';
-  } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderE(numbers))
+  ) {
     return 'Kleptomania';
   } else {
     return 'Other Specified / Unspecified Disruptive Symptom and Related Disorder';
