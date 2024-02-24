@@ -12,7 +12,7 @@ import DropdownSymptoms from '../dropdown-symptoms';
 import {traumaSymptoms} from '../../../utils/a-trauma';
 import {somaticSymptoms} from '../../../utils/b-somatic';
 import {sleepSymptoms} from '../../../utils/c-sleep';
-import {sexualSymptoms} from '../../../utils/sexual';
+import {sexualSymptoms} from '../../../utils/d-sexual';
 import {schizophreniaSymptoms} from '../../../utils/schizophrenia';
 import {personalitySymptoms} from '../../../utils/personality';
 import {paraphilicSymptoms} from '../../../utils/paraphilic';

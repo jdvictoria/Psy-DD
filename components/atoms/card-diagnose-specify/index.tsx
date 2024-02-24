@@ -17,6 +17,7 @@ import {
   nightmareSpecification,
   substanceSleepSpecification,
 } from '../../../utils/c-sleep';
+import {substanceSexualSpecification} from '../../../utils/d-sexual';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -38,6 +39,8 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = nightmareSpecification;
   } else if (result === 'Substance/Medication-Induced Sleep Disorder') {
     additionalData = substanceSleepSpecification;
+  } else if (result === 'Substance/Medication-Induced Sexual Dysfunction') {
+    additionalData = substanceSexualSpecification;
   }
 
   return (

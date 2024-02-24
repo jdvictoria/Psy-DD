@@ -16,6 +16,16 @@ import {
   nightmareSeverity,
   substanceSleepSeverity,
 } from '../../../utils/c-sleep';
+import {
+  delayedSeverity,
+  erectileSeverity,
+  femArousalSeverity,
+  femOrgasmicSeverity,
+  hypoactiveSeverity,
+  penetrationSeverity,
+  prematureSeverity,
+  substanceSexualSeverity,
+} from '../../../utils/d-sexual';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -39,6 +49,22 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = nightmareSeverity;
   } else if (result === 'Substance/Medication-Induced Sleep Disorder') {
     additionalData = substanceSleepSeverity;
+  } else if (result === 'Delayed Ejaculation') {
+    additionalData = delayedSeverity;
+  } else if (result === 'Erectile Disorder') {
+    additionalData = erectileSeverity;
+  } else if (result === 'Female Orgasmic Disorder') {
+    additionalData = femOrgasmicSeverity;
+  } else if (result === 'Arousal Disorder') {
+    additionalData = femArousalSeverity;
+  } else if (result === 'Penetration Disorder') {
+    additionalData = penetrationSeverity;
+  } else if (result === 'Male Hypoactive Sexual Desire Disorder') {
+    additionalData = hypoactiveSeverity;
+  } else if (result === 'Premature (Early) Ejaculation') {
+    additionalData = prematureSeverity;
+  } else if (result === 'Substance/Medication-Induced Sexual Dysfunction') {
+    additionalData = substanceSexualSeverity;
   }
 
   return (

@@ -18,6 +18,16 @@ import {
   obsDuration,
   nightmareDuration,
 } from '../../../utils/c-sleep';
+import {
+  delayedDuration,
+  erectileDuration,
+  femArousalDuration,
+  femOrgasmicDuration,
+  hypoactiveDuration,
+  penetrationDuration,
+  prematureDuration,
+  substanceSexualDuration,
+} from '../../../utils/d-sexual';
 
 // @ts-ignore
 function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
@@ -43,6 +53,22 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     additionalData = circaDuration;
   } else if (result === 'Nightmare Disorder') {
     additionalData = nightmareDuration;
+  } else if (result === 'Delayed Ejaculation') {
+    additionalData = delayedDuration;
+  } else if (result === 'Erectile Disorder') {
+    additionalData = erectileDuration;
+  } else if (result === 'Female Orgasmic Disorder') {
+    additionalData = femOrgasmicDuration;
+  } else if (result === 'Arousal Disorder') {
+    additionalData = femArousalDuration;
+  } else if (result === 'Penetration Disorder') {
+    additionalData = penetrationDuration;
+  } else if (result === 'Male Hypoactive Sexual Desire Disorder') {
+    additionalData = hypoactiveDuration;
+  } else if (result === 'Premature (Early) Ejaculation') {
+    additionalData = prematureDuration;
+  } else if (result === 'Substance/Medication-Induced Sexual Dysfunction') {
+    additionalData = substanceSexualDuration;
   }
 
   return (
