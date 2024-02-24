@@ -28,6 +28,8 @@ import {neuroDiagnosis} from '../../../utils/i-neurodevelopmental';
 import {substanceDiagnosis} from '../../../utils/j-substance';
 import {anxietyDiagnosis} from '../../../utils/k-anxiety';
 
+import {eliminationDiagnosis} from '../../../utils/p-elimination';
+
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
   const contentStyle = contentText(isDarkMode);
@@ -97,13 +99,15 @@ function HomeDiagnose({isDarkMode}) {
         case 'k':
           setResult(anxietyDiagnosis(numbers));
           break;
+        case 'p':
+          setResult(eliminationDiagnosis(numbers));
+          break;
         default:
           break;
       }
     }
   }, [filter, numbers, showResult]);
 
-  // console.log(numbers);
   return (
     <StyledView>
       <HeaderContainer
