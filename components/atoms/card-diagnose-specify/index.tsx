@@ -45,6 +45,12 @@ import {
   movementSpecification,
   ticSpecification,
 } from '../../../utils/i-neurodevelopmental';
+import {
+  alcoholWithdrawalSpecification,
+  sedativeWithdrawalSpecification,
+  stimulantIntoxicationSpecification,
+  tobaccoUseSpecification,
+} from '../../../utils/j-substance';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -114,6 +120,14 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = movementSpecification;
   } else if (result === 'Persistent (Chronic) Motor or Vocal Tic Disorder') {
     additionalData = ticSpecification;
+  } else if (result === 'Alcohol Withdrawal') {
+    additionalData = alcoholWithdrawalSpecification;
+  } else if (result === 'Sedative, Hypnotic, or Anxiolytic Withdrawal') {
+    additionalData = sedativeWithdrawalSpecification;
+  } else if (result === 'Stimulant Withdrawal') {
+    additionalData = stimulantIntoxicationSpecification;
+  } else if (result === 'Tobacco Use Disorder') {
+    additionalData = tobaccoUseSpecification;
   }
 
   return (

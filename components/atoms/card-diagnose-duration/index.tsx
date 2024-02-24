@@ -46,6 +46,17 @@ import {
   adhdDuration,
   specificLearningDuration,
 } from '../../../utils/i-neurodevelopmental';
+import {
+  alcoholUseDuration,
+  cannabisUseDuration,
+  gamblingDuration,
+  inhalantUseDuration,
+  otherUnknownUseDuration,
+  phencyclidineUseDuration,
+  sedativeUseDuration,
+  stimulantUseDuration,
+  tobaccoUseDuration,
+} from '../../../utils/j-substance';
 
 // @ts-ignore
 function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
@@ -111,6 +122,24 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     additionalData = adhdDuration;
   } else if (result === 'Specific Learning Disorder') {
     additionalData = specificLearningDuration;
+  } else if (result === 'Alcohol Use Disorder') {
+    additionalData = alcoholUseDuration;
+  } else if (result === 'Cannabis Use Disorder') {
+    additionalData = cannabisUseDuration;
+  } else if (result === 'Phencyclidine Use Disorder') {
+    additionalData = phencyclidineUseDuration;
+  } else if (result === 'Inhalant Use Disorder') {
+    additionalData = inhalantUseDuration;
+  } else if (result === 'Sedative, Hypnotic, or Anxiolytic Use Disorder') {
+    additionalData = sedativeUseDuration;
+  } else if (result === 'Stimulant Use Disorder') {
+    additionalData = stimulantUseDuration;
+  } else if (result === 'Tobacco Use Disorder') {
+    additionalData = tobaccoUseDuration;
+  } else if (result === 'Other (or Unknown) Substance Use Disorder') {
+    additionalData = otherUnknownUseDuration;
+  } else if (result === 'Gambling Disorder') {
+    additionalData = gamblingDuration;
   }
 
   return (

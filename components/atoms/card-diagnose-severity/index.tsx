@@ -41,6 +41,26 @@ import {
   movementSeverity,
   specificLearningSeverity,
 } from '../../../utils/i-neurodevelopmental';
+import {
+  alcoholUseSeverity,
+  alcoholWithdrawalSeverity,
+  cannabisIntoxicationSeverity,
+  cannabisUseSeverity,
+  gamblingSeverity,
+  hallucinogenSeverity,
+  inhalantUseSeverity,
+  opioidIntoxicationSeverity,
+  opioidUseSeverity,
+  otherUnknownSeverity,
+  otherUnknownUseSeverity,
+  phencyclidineUseSeverity,
+  sedativeIntoxicationSeverity,
+  sedativeUseSeverity,
+  sedativeWithdrawalSeverity,
+  stimulantIntoxicationSeverity,
+  stimulantUseSeverity,
+  tobaccoUseSeverity,
+} from '../../../utils/j-substance';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -98,6 +118,42 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = specificLearningSeverity;
   } else if (result === 'Stereotypic Movement Disorder') {
     additionalData = movementSeverity;
+  } else if (result === 'Alcohol Use Disorder') {
+    additionalData = alcoholUseSeverity;
+  } else if (result === 'Alcohol Withdrawal') {
+    additionalData = alcoholWithdrawalSeverity;
+  } else if (result === 'Cannabis Use Disorder') {
+    additionalData = cannabisUseSeverity;
+  } else if (result === 'Cannabis Intoxication') {
+    additionalData = cannabisIntoxicationSeverity;
+  } else if (result === 'Phencyclidine Use Disorder') {
+    additionalData = phencyclidineUseSeverity;
+  } else if (result === 'Other Hallucinogen Intoxication') {
+    additionalData = hallucinogenSeverity;
+  } else if (result === 'Inhalant Use Disorder') {
+    additionalData = inhalantUseSeverity;
+  } else if (result === 'Opioid Use Disorder') {
+    additionalData = opioidUseSeverity;
+  } else if (result === 'Opioid Intoxication') {
+    additionalData = opioidIntoxicationSeverity;
+  } else if (result === 'Sedative, Hypnotic, or Anxiolytic Use Disorder') {
+    additionalData = sedativeUseSeverity;
+  } else if (result === 'Sedative, Hypnotic, or Anxiolytic Intoxication') {
+    additionalData = sedativeIntoxicationSeverity;
+  } else if (result === 'Sedative, Hypnotic, or Anxiolytic Withdrawal') {
+    additionalData = sedativeWithdrawalSeverity;
+  } else if (result === 'Stimulant Use Disorder') {
+    additionalData = stimulantUseSeverity;
+  } else if (result === 'Stimulant Intoxication') {
+    additionalData = stimulantIntoxicationSeverity;
+  } else if (result === 'Tobacco Use Disorder') {
+    additionalData = tobaccoUseSeverity;
+  } else if (result === 'Other (or Unknown) Substance Use Disorder') {
+    additionalData = otherUnknownUseSeverity;
+  } else if (result === 'Other (or Unknown) Substance Withdrawal') {
+    additionalData = otherUnknownSeverity;
+  } else if (result === 'Gambling Disorder') {
+    additionalData = gamblingSeverity;
   }
 
   return (

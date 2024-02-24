@@ -25,7 +25,7 @@ import {personalityDiagnosis} from '../../../utils/f-personality';
 import {paraphilicDiagnosis} from '../../../utils/g-paraphilic';
 import {obsessiveDiagnosis} from '../../../utils/h-obsessive';
 import {neuroDiagnosis} from '../../../utils/i-neurodevelopmental';
-import {substanceDiagnosis} from '../../../utils/substance';
+import {substanceDiagnosis} from '../../../utils/j-substance';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -166,7 +166,25 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Fetishistic Disorder' ||
             result === 'Attention-Deficit/Hyperactivity Disorder' ||
             result === 'Specific Learning Disorder' ||
-            result === 'Stereotypic Movement Disorder') && (
+            result === 'Stereotypic Movement Disorder' ||
+            result === 'Alcohol Use Disorder' ||
+            result === 'Alcohol Withdrawal' ||
+            result === 'Cannabis Use Disorder' ||
+            result === 'Cannabis Intoxication' ||
+            result === 'Phencyclidine Use Disorder' ||
+            result === 'Other Hallucinogen Intoxication' ||
+            result === 'Inhalant Use Disorder' ||
+            result === 'Opioid Use Disorder' ||
+            result === 'Opioid Intoxication' ||
+            result === 'Sedative, Hypnotic, or Anxiolytic Use Disorder' ||
+            result === 'Sedative, Hypnotic, or Anxiolytic Intoxication' ||
+            result === 'Sedative, Hypnotic, or Anxiolytic Withdrawal' ||
+            result === 'Stimulant Use Disorder' ||
+            result === 'Stimulant Intoxication' ||
+            result === 'Tobacco Use Disorder' ||
+            result === 'Other (or Unknown) Substance Use Disorder' ||
+            result === 'Other (or Unknown) Substance Withdrawal' ||
+            result === 'Gambling Disorder') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
@@ -203,7 +221,16 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Fetishistic Disorder' ||
             result === 'Transvestic Disorder' ||
             result === 'Attention-Deficit/Hyperactivity Disorder' ||
-            result === 'Specific Learning Disorder') && (
+            result === 'Specific Learning Disorder' ||
+            result === 'Alcohol Use Disorder' ||
+            result === 'Cannabis Use Disorder' ||
+            result === 'Phencyclidine Use Disorder' ||
+            result === 'Inhalant Use Disorder' ||
+            result === 'Sedative, Hypnotic, or Anxiolytic Use Disorder' ||
+            result === 'Stimulant Use Disorder' ||
+            result === 'Tobacco Use Disorder' ||
+            result === 'Other (or Unknown) Substance Use Disorder' ||
+            result === 'Gambling Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}
@@ -241,7 +268,11 @@ function HomeDiagnose({isDarkMode}) {
               'Substance/Medication-Induce Obsessive-Compulsive and Related Disorder' ||
             result === 'Autism Spectrum Disorder' ||
             result === 'Stereotypic Movement Disorder' ||
-            result === 'Persistent (Chronic) Motor or Vocal Tic Disorder') && (
+            result === 'Persistent (Chronic) Motor or Vocal Tic Disorder' ||
+            result === 'Alcohol Withdrawal' ||
+            result === 'Sedative, Hypnotic, or Anxiolytic Withdrawal' ||
+            result === 'Stimulant Withdrawal' ||
+            result === 'Tobacco Use Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}
