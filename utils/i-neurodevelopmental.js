@@ -623,25 +623,43 @@ const mainDisorderR = numbers => {
 };
 
 export const neuroDiagnosis = numbers => {
-  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Intellectual Developmental Disorder';
   } else if (mainDisorderB(numbers)) {
     return 'Global Developmental Delay';
   } else if (mainDisorderC(numbers)) {
     return 'Unspecified Intellectual Developmental Disorder';
-  } else if (mainDisorderD(numbers) || optionalDisorderD(numbers)) {
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
     return 'Language Disorder';
   } else if (mainDisorderE(numbers)) {
     return 'Speech Sound Disorder';
-  } else if (mainDisorderF(numbers) || optionalDisorderF(numbers)) {
+  } else if (
+    mainDisorderF(numbers) ||
+    (mainDisorderF(numbers) && optionalDisorderF(numbers))
+  ) {
     return 'Childhood-Onset Fluency Disorder (Stuttering)';
-  } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
+  } else if (
+    mainDisorderG(numbers) ||
+    (mainDisorderG(numbers) && optionalDisorderG(numbers))
+  ) {
     return 'Social (Pragmatic) Communication Disorder';
   } else if (mainDisorderH(numbers)) {
     return 'Unspecified Communication Disorder';
-  } else if (mainDisorderI(numbers) || optionalDisorderI(numbers)) {
+  } else if (
+    mainDisorderI(numbers) ||
+    (mainDisorderI(numbers) && optionalDisorderI(numbers))
+  ) {
     return 'Autism Spectrum Disorder';
-  } else if (mainDisorderJ(numbers) || optionalDisorderJ(numbers)) {
+  } else if (
+    mainDisorderJ(numbers) ||
+    (mainDisorderJ(numbers) && optionalDisorderJ(numbers))
+  ) {
     return 'Attention-Deficit/Hyperactivity Disorder';
   } else if (mainDisorderK(numbers)) {
     return 'Other Specified Attention Deficit/Hyperactivity Disorder';
@@ -649,9 +667,15 @@ export const neuroDiagnosis = numbers => {
     return 'Unspecified Attention-Deficit/Hyperactivity Disorder';
   } else if (mainDisorderM(numbers)) {
     return 'Specific Learning Disorder';
-  } else if (mainDisorderN(numbers) || optionalDisorderN(numbers)) {
+  } else if (
+    mainDisorderN(numbers) ||
+    (mainDisorderN(numbers) && optionalDisorderN(numbers))
+  ) {
     return 'Developmental Coordination Disorder';
-  } else if (mainDisorderO(numbers) || optionalDisorderO(numbers)) {
+  } else if (
+    mainDisorderO(numbers) ||
+    (mainDisorderO(numbers) && optionalDisorderO(numbers))
+  ) {
     return 'Stereotypic Movement Disorder';
   } else if (mainDisorderP(numbers)) {
     return 'Tourette’s Disorder';

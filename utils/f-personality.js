@@ -441,13 +441,25 @@ const mainDisorderK = numbers => {
 };
 
 export const personalityDiagnosis = numbers => {
-  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'General Personality Disorder';
-  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
     return 'Paranoid Personality Disorder';
-  } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderC(numbers))
+  ) {
     return 'Schizoid Personality Disorder';
-  } else if (mainDisorderD(numbers) || optionalDisorderD(numbers)) {
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
     return 'Schizotypal Personality Disorder';
   } else if (mainDisorderE(numbers)) {
     return 'Antisocial Personality Disorder';
@@ -468,22 +480,22 @@ export const personalityDiagnosis = numbers => {
   }
 };
 
-export const disorderSpecificationQ = [
+export const personalityDueToAnotherSeverity = [
   {
     label: 'If the predominant feature is marked apathy and indifference',
-    value: 73,
+    value: 372,
   },
   {
     label: 'If the predominant feature is suspiciousness or paranoid ideation',
-    value: 74,
+    value: 78,
   },
   {
     label:
       'If the presentation is not characterized by any of the above subtypes',
-    value: 75,
+    value: 79,
   },
   {
     label: 'If more than one feature predominates in the clinical picture',
-    value: 76,
+    value: 80,
   },
 ];

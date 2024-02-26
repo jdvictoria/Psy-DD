@@ -9,4 +9,13 @@ export const categData = [
   {label: 'Obsessive-Compulsive and Related Disorders', value: 'h'},
   {label: 'Neurodevelopmental Disorders', value: 'i'},
   {label: 'Substance and Related Disorders', value: 'j'},
+  {label: 'Anxiety', value: 'k'},
+  {label: 'Bipolar', value: 'l'},
+  {label: 'Disruptive', value: 'm'},
+  {label: 'Depressive Disorder', value: 'n'},
+  {label: 'Dissociative Disorders', value: 'o'},
+  {label: 'Elimination Disorders', value: 'p'},
+  {label: 'Feeding and Eating Disorders', value: 'q'},
+  {label: 'Gender Dysphoria', value: 'r'},
+  {label: 'Neurocognitive Disorders', value: 's'},
 ];

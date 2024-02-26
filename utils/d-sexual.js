@@ -280,19 +280,40 @@ const optionalDisorderH = numbers => {
 export const sexualDiagnosis = numbers => {
   if (mainDisorderA(numbers)) {
     return 'Delayed Ejaculation';
-  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
     return 'Erectile Disorder';
-  } else if (mainDisorderC(numbers) || optionalDisorderA(numbers)) {
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Female Orgasmic Disorder';
-  } else if (mainDisorderD(numbers) || optionalDisorderD(numbers)) {
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
     return 'Arousal Disorder';
-  } else if (mainDisorderE(numbers) || optionalDisorderA(numbers)) {
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Penetration Disorder';
-  } else if (mainDisorderF(numbers) || optionalDisorderA(numbers)) {
+  } else if (
+    mainDisorderF(numbers) ||
+    (mainDisorderF(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Male Hypoactive Sexual Desire Disorder';
-  } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
+  } else if (
+    mainDisorderG(numbers) ||
+    (mainDisorderG(numbers) && optionalDisorderG(numbers))
+  ) {
     return 'Premature (Early) Ejaculation';
-  } else if (mainDisorderH(numbers) || optionalDisorderH(numbers)) {
+  } else if (
+    mainDisorderH(numbers) ||
+    (mainDisorderH(numbers) && optionalDisorderH(numbers))
+  ) {
     return 'Substance/Medication-Induced Sexual Dysfunction';
   } else {
     return 'Other Specified / Unspecified Sexual Dysfunction';

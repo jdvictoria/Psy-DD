@@ -577,20 +577,40 @@ const optionalDisorderG = numbers => {
 };
 
 export const traumaDiagnosis = numbers => {
-  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
-    console.log('went');
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Reactive Attachment Disorder';
-  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
     return 'Disinhibited Social Engagement Disorder';
-  } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderC(numbers))
+  ) {
     return 'Post traumatic Stress Disorder';
-  } else if (mainDisorderD(numbers) || optionalDisorderD(numbers)) {
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
     return 'Post Traumatic Stress Disorder in Children (6 Years & Younger)';
-  } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderE(numbers))
+  ) {
     return 'Acute Stress Disorder';
-  } else if (mainDisorderF(numbers) || optionalDisorderF(numbers)) {
+  } else if (
+    mainDisorderF(numbers) ||
+    (mainDisorderF(numbers) && optionalDisorderF(numbers))
+  ) {
     return 'Adjustment Disorder';
-  } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
+  } else if (
+    mainDisorderG(numbers) ||
+    (mainDisorderG(numbers) && optionalDisorderG(numbers))
+  ) {
     return 'Prolonged Grief Disorder';
   } else {
     return 'Other Specified / Unspecified Trauma and Stressor Related Disorder';

@@ -394,6 +394,378 @@ function CardDiagnoseResult({
     severe = '(F19.232) ';
   } else if (severity === 186) {
     severe = '(F19.932) ';
+  } else if (severity === 187) {
+    severe = '(F40.218) ';
+  } else if (severity === 188) {
+    severe = '(F40.228) ';
+  } else if (severity === 189) {
+    severe = '(F40.23x) ';
+  } else if (severity === 190) {
+    severe = '(F40.230) ';
+  } else if (severity === 191) {
+    severe = '(F40.231) ';
+  } else if (severity === 192) {
+    severe = '(F40.232) ';
+  } else if (severity === 193) {
+    severe = '(F40.233) ';
+  } else if (severity === 194) {
+    severe = '(F40.248) ';
+  } else if (severity === 195) {
+    severe = '(F40.298) ';
+  } else if (severity === 196) {
+    severe = '(F10.180) ';
+  } else if (severity === 197) {
+    severe = '(F10.280) ';
+  } else if (severity === 198) {
+    severe = '(F10.980) ';
+  } else if (severity === 199) {
+    severe = '(F15.980) ';
+  } else if (severity === 200) {
+    severe = '(F12.180) ';
+  } else if (severity === 201) {
+    severe = '(F12.280) ';
+  } else if (severity === 202) {
+    severe = '(F12.980) ';
+  } else if (severity === 203) {
+    severe = '(F11.188) ';
+  } else if (severity === 204) {
+    severe = '(F11.288) ';
+  } else if (severity === 205) {
+    severe = '(F11.988) ';
+  } else if (severity === 206) {
+    severe = '(F13.180) ';
+  } else if (severity === 207) {
+    severe = '(F13.280) ';
+  } else if (severity === 208) {
+    severe = '(F13.980) ';
+  } else if (severity === 209) {
+    severe = '(F15.180) ';
+  } else if (severity === 210) {
+    severe = '(F15.280) ';
+  } else if (severity === 211) {
+    severe = '(F15.980) ';
+  } else if (severity === 212) {
+    severe = '(F14.180) ';
+  } else if (severity === 213) {
+    severe = '(F14.280) ';
+  } else if (severity === 214) {
+    severe = '(F14.980) ';
+  } else if (severity === 215) {
+    severe = '(F19.180) ';
+  } else if (severity === 216) {
+    severe = '(F19.280) ';
+  } else if (severity === 217) {
+    severe = '(F19.980) ';
+  } else if (severity === 218) {
+    severe = '(F18.180) ';
+  } else if (severity === 219) {
+    severe = '(F18.280) ';
+  } else if (severity === 220) {
+    severe = '(F18.980) ';
+  } else if (severity === 221) {
+    severe = '(F16.180) ';
+  } else if (severity === 222) {
+    severe = '(F16.280) ';
+  } else if (severity === 223) {
+    severe = '(F16.980) ';
+  } else if (severity === 224) {
+    severe = '(Early onset) ';
+  } else if (severity === 225) {
+    severe = '(Late onset) ';
+  } else if (severity === 226) {
+    severe = '(F06.31 With depressive features) ';
+  } else if (severity === 227) {
+    severe = '(F06.32 With major depressive–like episode) ';
+  } else if (severity === 228) {
+    severe = '(F06.34 With mixed features) ';
+  } else if (severity === 229) {
+    severe = '(F32.0 / F33.0) ';
+  } else if (severity === 230) {
+    severe = '(F32.1 / F33.1) ';
+  } else if (severity === 231) {
+    severe = '(F32.2 / F33.2) ';
+  } else if (severity === 232) {
+    severe = '(F32.3 / F33.3) ';
+  } else if (severity === 233) {
+    severe = '(F32.4 / F33.4) ';
+  } else if (severity === 234) {
+    severe = '(F32.5 / F33.5) ';
+  } else if (severity === 235) {
+    severe = '(F32.9 / F33.9) ';
+  } else if (severity === 236) {
+    severe = 'Moderate-severe ';
+  } else if (severity === 237) {
+    severe = '(G10 Huntington’s disease F02.81) ';
+  } else if (severity === 238) {
+    severe = '(G10 Huntington’s disease F02.80) ';
+  } else if (severity === 239) {
+    severe = '(G20 Parkinson’s disease F02.81) ';
+  } else if (severity === 240) {
+    severe = '(G20 Parkinson’s disease F02.80) ';
+  } else if (severity === 241) {
+    severe = '(G31.84) ';
+  } else if (severity === 242) {
+    severe = '(F06.0) ';
+  } else if (severity === 243) {
+    severe = '(F06.31) ';
+  } else if (severity === 244) {
+    severe = '(F07.0) ';
+  } else if (severity === 245) {
+    severe = '(A81.9 prion disease F02.81) ';
+  } else if (severity === 246) {
+    severe = '(A81.9 prion disease F02.80) ';
+  } else if (severity === 247) {
+    severe = '(F06.2) ';
+  } else if (severity === 248) {
+    severe = '(F06.32) ';
+  } else if (severity === 249) {
+    severe = '(B20 HIV infection F02.81) ';
+  } else if (severity === 250) {
+    severe = '(B20 HIV infection F02.80) ';
+  } else if (severity === 251) {
+    severe = '(F10.27) ';
+  } else if (severity === 252) {
+    severe = '(F10.97) ';
+  } else if (severity === 253) {
+    severe = '(F10.26) ';
+  } else if (severity === 254) {
+    severe = '(F10.96) ';
+  } else if (severity === 255) {
+    severe = '(F18.17) ';
+  } else if (severity === 256) {
+    severe = '(F18.27) ';
+  } else if (severity === 257) {
+    severe = '(F18.97) ';
+  } else if (severity === 258) {
+    severe = '(F13.27) ';
+  } else if (severity === 259) {
+    severe = '(F13.97) ';
+  } else if (severity === 260) {
+    severe = '(F19.17) ';
+  } else if (severity === 261) {
+    severe = '(F19.27) ';
+  } else if (severity === 262) {
+    severe = '(F19.97) ';
+  } else if (severity === 263) {
+    severe = '(F10.188) ';
+  } else if (severity === 264) {
+    severe = '(F10.288) ';
+  } else if (severity === 265) {
+    severe = '(F10.988) ';
+  } else if (severity === 266) {
+    severe = '(F18.188) ';
+  } else if (severity === 267) {
+    severe = '(F18.188) ';
+  } else if (severity === 268) {
+    severe = '(F18.188) ';
+  } else if (severity === 269) {
+    severe = '(F13.188) ';
+  } else if (severity === 270) {
+    severe = '(F13.288) ';
+  } else if (severity === 271) {
+    severe = '(F13.988) ';
+  } else if (severity === 272) {
+    severe = '(F15.188) ';
+  } else if (severity === 273) {
+    severe = '(F15.288) ';
+  } else if (severity === 274) {
+    severe = '(F15.988) ';
+  } else if (severity === 275) {
+    severe = '(F14.188) ';
+  } else if (severity === 276) {
+    severe = '(F14.288) ';
+  } else if (severity === 277) {
+    severe = '(F14.988) ';
+  } else if (severity === 278) {
+    severe = '(F19.188) ';
+  } else if (severity === 279) {
+    severe = '(F19.288) ';
+  } else if (severity === 280) {
+    severe = '(F19.988) ';
+  } else if (severity === 281) {
+    severe = '(S06.2X9S / F02.81) ';
+  } else if (severity === 282) {
+    severe = '(S06.2X9S / F02.82) ';
+  } else if (severity === 283) {
+    severe = '(F06.34) ';
+  } else if (severity === 284) {
+    severe = '(F01.51) ';
+  } else if (severity === 285) {
+    severe = '(F01.50) ';
+  } else if (severity === 286) {
+    severe = '(G31.09 frontotemporal degeneration F02.81) ';
+  } else if (severity === 287) {
+    severe = '(G31.09 frontotemporal degeneration F02.80) ';
+  } else if (severity === 288) {
+    severe = '(G30.9) ';
+  } else if (severity === 289) {
+    severe = '(F02.8x b) ';
+  } else if (severity === 290) {
+    severe = '(G31.84 c) ';
+  } else if (severity === 291) {
+    severe = '(G31.09) ';
+  } else if (severity === 292) {
+    severe = '(G31.83) ';
+  } else if (severity === 293) {
+    severe = '(F01.5x b) ';
+  } else if (severity === 294) {
+    severe = '(S06.2X9S) ';
+  } else if (severity === 295) {
+    severe = '(B20) ';
+  } else if (severity === 296) {
+    severe = '(A81.9) ';
+  } else if (severity === 297) {
+    severe = '(G20) ';
+  } else if (severity === 298) {
+    severe = '(G10) ';
+  } else if (severity === 299) {
+    severe = '(R41.9 c) ';
+  } else if (severity === 300) {
+    severe = '(R41.9 c) ';
+  } else if (severity === 301) {
+    severe = '(G30.9 Alzheimer’s disease F02.81) ';
+  } else if (severity === 302) {
+    severe = '(G30.9 Alzheimer’s disease F02.80) ';
+  } else if (severity === 303) {
+    severe = '(G30.9 Alzheimer’s disease F06.2) ';
+  } else if (severity === 304) {
+    severe = '(G30.9 Alzheimer’s disease F06.32) ';
+  } else if (severity === 305) {
+    severe = '(G31.83 Lewy body disease F02.81) ';
+  } else if (severity === 306) {
+    severe = '(G31.83 Lewy body disease F02.80) ';
+  } else if (severity === 307) {
+    severe = '(F06.33) ';
+  } else if (severity === 308) {
+    severe = '(Medication-induced delirium) ';
+  } else if (severity === 309) {
+    severe = '(F05 Delirium due to another medical condition) ';
+  } else if (severity === 310) {
+    severe = '(F05 Delirium due to multiple etiologies) ';
+  } else if (severity === 311) {
+    severe = '(F10.131) ';
+  } else if (severity === 312) {
+    severe = '(F10.231) ';
+  } else if (severity === 313) {
+    severe = '(F10.931) ';
+  } else if (severity === 314) {
+    severe = '(F11.188) ';
+  } else if (severity === 315) {
+    severe = '(F11.288) ';
+  } else if (severity === 316) {
+    severe = '(F11.988) ';
+  } else if (severity === 317) {
+    severe = '(F13.131) ';
+  } else if (severity === 318) {
+    severe = '(F13.231) ';
+  } else if (severity === 319) {
+    severe = '(F13.931) ';
+  } else if (severity === 320) {
+    severe = '(F19.131) ';
+  } else if (severity === 321) {
+    severe = '(F19.231) ';
+  } else if (severity === 322) {
+    severe = '(F19.931) ';
+  } else if (severity === 323) {
+    severe = '(F10.121) ';
+  } else if (severity === 324) {
+    severe = '(F10.221) ';
+  } else if (severity === 325) {
+    severe = '(F10.921) ';
+  } else if (severity === 326) {
+    severe = '(F12.121) ';
+  } else if (severity === 327) {
+    severe = '(F12.221) ';
+  } else if (severity === 328) {
+    severe = '(F12.921) ';
+  } else if (severity === 329) {
+    severe = '(F16.121) ';
+  } else if (severity === 330) {
+    severe = '(F16.221) ';
+  } else if (severity === 331) {
+    severe = '(F16.921) ';
+  } else if (severity === 332) {
+    severe = '(F18.121) ';
+  } else if (severity === 333) {
+    severe = '(F18.221) ';
+  } else if (severity === 334) {
+    severe = '(F18.921) ';
+  } else if (severity === 335) {
+    severe = '(F11.121) ';
+  } else if (severity === 336) {
+    severe = '(F11.221) ';
+  } else if (severity === 337) {
+    severe = '(F11.921) ';
+  } else if (severity === 338) {
+    severe = '(F13.121) ';
+  } else if (severity === 339) {
+    severe = '(F13.221) ';
+  } else if (severity === 340) {
+    severe = '(F13.921) ';
+  } else if (severity === 341) {
+    severe = '(F15.121) ';
+  } else if (severity === 342) {
+    severe = '(F15.221) ';
+  } else if (severity === 343) {
+    severe = '(F15.921) ';
+  } else if (severity === 344) {
+    severe = '(F14.121) ';
+  } else if (severity === 345) {
+    severe = '(F14.221) ';
+  } else if (severity === 346) {
+    severe = '(F14.921) ';
+  } else if (severity === 347) {
+    severe = '(F19.121) ';
+  } else if (severity === 348) {
+    severe = '(F19.221) ';
+  } else if (severity === 349) {
+    severe = '(F19.921) ';
+  } else if (severity === 350) {
+    severe = '(F06.33 With manic features) ';
+  } else if (severity === 351) {
+    severe = '(F06.33 With manic- or hypomanic-like episode) ';
+  } else if (severity === 352) {
+    severe = '(F06.34 With mixed features) ';
+  } else if (severity === 353) {
+    severe = '(F10.14) ';
+  } else if (severity === 354) {
+    severe = '(F10.24) ';
+  } else if (severity === 355) {
+    severe = '(F10.94) ';
+  } else if (severity === 356) {
+    severe = '(F16.14) ';
+  } else if (severity === 357) {
+    severe = '(F16.24) ';
+  } else if (severity === 358) {
+    severe = '(F16.94) ';
+  } else if (severity === 359) {
+    severe = '(F13.14) ';
+  } else if (severity === 360) {
+    severe = '(F13.24) ';
+  } else if (severity === 361) {
+    severe = '(F13.94) ';
+  } else if (severity === 362) {
+    severe = '(F15.14) ';
+  } else if (severity === 363) {
+    severe = '(F15.24) ';
+  } else if (severity === 364) {
+    severe = '(F15.94) ';
+  } else if (severity === 365) {
+    severe = '(F14.14) ';
+  } else if (severity === 366) {
+    severe = '(F14.24) ';
+  } else if (severity === 367) {
+    severe = '(F14.94) ';
+  } else if (severity === 368) {
+    severe = '(F19.14) ';
+  } else if (severity === 369) {
+    severe = '(F19.24) ';
+  } else if (severity === 370) {
+    severe = '(F19.94) ';
+  } else if (severity === 371) {
+    severe = '() ';
+  } else if (severity === 372) {
+    severe = '(Apathetic type) ';
   } else {
     severe = '';
   }
@@ -464,6 +836,8 @@ function CardDiagnoseResult({
     time = '(In early remission) ';
   } else if (duration === 32) {
     time = '(In sustained remission) ';
+  } else if (duration === 33) {
+    time = '(In partial remission) ';
   } else {
     time = '';
   }
@@ -601,6 +975,30 @@ function CardDiagnoseResult({
     specs = ' (On maintenance therapy)';
   } else if (specification === 64) {
     specs = ' (In a controlled environment)';
+  } else if (specification === 65) {
+    specs = ' (Performance only)';
+  } else if (specification === 66) {
+    specs = ' (With anxious distress)';
+  } else if (specification === 67) {
+    specs = ' (With atypical features)';
+  } else if (specification === 68) {
+    specs = ' (With psychotic features)';
+  } else if (specification === 69) {
+    specs = ' (With mood-congruent psychotic features)';
+  } else if (specification === 70) {
+    specs = ' (With mood-incongruent psychotic features)';
+  } else if (specification === 71) {
+    specs = ' (Without behavioral disturbance)';
+  } else if (specification === 72) {
+    specs = ' (With behavioral disturbance)';
+  } else if (specification === 73) {
+    specs = ' (Due to Alzheimer’s disease)';
+  } else if (specification === 74) {
+    specs = ' (Hyperactive)';
+  } else if (specification === 75) {
+    specs = ' (Hypoactive)';
+  } else if (specification === 76) {
+    specs = ' (Mixed level of activity)';
   } else {
     specs = '';
   }
