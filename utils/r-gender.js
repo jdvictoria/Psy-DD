@@ -110,10 +110,12 @@ export const optionalDisorderB = numbers => {
   return numbers.includes(16);
 };
 
-export const genderDiagnosis = numbers => {
+export const dsyphoriaDiagnosis = numbers => {
   if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
     return 'Gender Dysphoria in Children';
   } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
     return 'Gender Dysphoria in Adolescents and Adults';
+  } else {
+    return 'Other Specified / Unspecified Gender Dysphoria';
   }
 };
