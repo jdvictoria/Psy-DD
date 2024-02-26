@@ -84,6 +84,10 @@ import {
   majorDisorderSeverity,
   persistentSeverity,
 } from '../../../utils/n-depressive';
+import {
+  bipolarrelatedSeverity,
+  substanceBipolarSeverity,
+} from '../../../utils/l-bipolar';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -232,6 +236,14 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     result === 'Depressive Disorder Due to Another Medical Condition'
   ) {
     additionalData = depressiveDisorderSeverity;
+  } else if (
+    result === 'Bipolar and Related Disorder Due to Another Medical Condition'
+  ) {
+    additionalData = bipolarrelatedSeverity;
+  } else if (
+    result === 'Substance/Medication-Induced Bipolar and Related Disorder'
+  ) {
+    additionalData = substanceBipolarSeverity;
   }
 
   return (

@@ -60,6 +60,10 @@ import {
   persistentSpecification,
   substanceDepressiveSpecification,
 } from '../../../utils/n-depressive';
+import {
+  cyclothymicSpecification,
+  substanceBipolarSpecification,
+} from '../../../utils/l-bipolar';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -147,6 +151,12 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = persistentSpecification;
   } else if (result === 'Substance/Medication-Induced Depressive Disorder') {
     additionalData = substanceDepressiveSpecification;
+  } else if (
+    result === 'Substance/Medication-Induced Bipolar and Related Disorder'
+  ) {
+    additionalData = substanceBipolarSpecification;
+  } else if (result === 'Cyclothymic Disorder') {
+    additionalData = cyclothymicSpecification;
   }
 
   return (

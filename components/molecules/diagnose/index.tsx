@@ -35,6 +35,7 @@ import {neurocognitiveDiagnosis} from '../../../utils/s-neurocognitive';
 import {dsyphoriaDiagnosis} from '../../../utils/r-gender';
 import {eatingDiagnosis} from '../../../utils/q-eating';
 import {depressiveDiagnosis} from '../../../utils/n-depressive';
+import {bipolarDiagnosis} from '../../../utils/l-bipolar';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -106,6 +107,7 @@ function HomeDiagnose({isDarkMode}) {
           setResult(anxietyDiagnosis(numbers));
           break;
         case 'l':
+          setResult(bipolarDiagnosis(numbers));
           break;
         case 'm':
           setResult(disruptiveDiagnosis(numbers));
@@ -243,8 +245,11 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Delirium' ||
             result === 'Persistent Depressive Disorder' ||
             result === 'Major Depressive Disorder' ||
+            result === 'Depressive Disorder Due to Another Medical Condition' ||
             result ===
-              'Depressive Disorder Due to Another Medical Condition') && (
+              'Bipolar and Related Disorder Due to Another Medical Condition' ||
+            result ===
+              'Substance/Medication-Induced Bipolar and Related Disorder') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
@@ -340,7 +345,10 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Delirium' ||
             result === 'Major Neurocognitive Disorder' ||
             result === 'Persistent Depressive Disorder' ||
-            result === 'Substance/Medication-Induced Depressive Disorder') && (
+            result === 'Substance/Medication-Induced Depressive Disorder' ||
+            result ===
+              'Substance/Medication-Induced Bipolar and Related Disorder' ||
+            result === 'Cyclothymic Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}
