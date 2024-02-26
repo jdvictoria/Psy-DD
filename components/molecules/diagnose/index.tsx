@@ -33,6 +33,7 @@ import {disruptiveDiagnosis} from '../../../utils/m-disruptive';
 import {dissociativeDiagnosis} from '../../../utils/o-dissociative';
 import {neurocognitiveDiagnosis} from '../../../utils/s-neurocognitive';
 import {dsyphoriaDiagnosis} from '../../../utils/r-gender';
+import {eatingDiagnosis} from '../../../utils/q-eating';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -117,6 +118,7 @@ function HomeDiagnose({isDarkMode}) {
           setResult(eliminationDiagnosis(numbers));
           break;
         case 'q':
+          setResult(eatingDiagnosis(numbers));
           break;
         case 'r':
           setResult(dsyphoriaDiagnosis(numbers));

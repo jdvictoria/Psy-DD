@@ -197,3 +197,107 @@ export const eatingSymptoms = [
     value: 31,
   },
 ];
+
+export const mainDisorderA = numbers => {
+  return numbers.includes(1);
+};
+
+export const optionalDisorderA = numbers => {
+  return numbers.includes(2) || numbers.includes(3) || numbers.includes(4);
+};
+
+export const mainDisorderB = numbers => {
+  return numbers.includes(5);
+};
+
+export const optionalDisorderB = numbers => {
+  return numbers.includes(6) || numbers.includes(7);
+};
+
+export const mainDisorderC = numbers => {
+  const criteriaValues = [8, 9, 10, 11];
+  const matchingCriteria = criteriaValues.filter(value =>
+    numbers.includes(value),
+  );
+  return matchingCriteria.length >= 1;
+};
+
+export const optionalDisorderC = numbers => {
+  return numbers.includes(12) || numbers.includes(13) || numbers.includes(14);
+};
+
+export const mainDisorderD = numbers => {
+  return numbers.includes(15) && numbers.includes(16);
+};
+
+export const optionalDisorderD = numbers => {
+  return numbers.includes(17);
+};
+
+export const mainDisorderE = numbers => {
+  return (
+    numbers.includes(18) &&
+    numbers.includes(19) &&
+    numbers.includes(20) &&
+    numbers.includes(21) &&
+    numbers.includes(22)
+  );
+};
+
+export const optionalDisorderE = numbers => {
+  return numbers.includes(23);
+};
+
+export const mainDisorderF = numbers => {
+  return numbers.includes(30);
+};
+
+export const optionalDisorderF = numbers => {
+  return (
+    numbers.includes(18) ||
+    numbers.includes(19) ||
+    numbers.includes(24) ||
+    numbers.includes(25) ||
+    numbers.includes(26) ||
+    numbers.includes(27) ||
+    numbers.includes(28) ||
+    numbers.includes(29) ||
+    numbers.includes(31)
+  );
+};
+
+export const eatingDiagnosis = numbers => {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
+    return 'Pica';
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
+    return 'Rumination Disorder';
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderC(numbers))
+  ) {
+    return 'Avoidant/Restrictive Food Intake Disorder';
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
+    return 'Anorexia Nervosa';
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderE(numbers))
+  ) {
+    return 'Bulimia Nervosa';
+  } else if (
+    mainDisorderF(numbers) ||
+    (mainDisorderF(numbers) && optionalDisorderF(numbers))
+  ) {
+    return 'Binge-Eating Disorder';
+  } else {
+    return 'Other Specified / Unspecified Feeding and Eating Disorder';
+  }
+};
