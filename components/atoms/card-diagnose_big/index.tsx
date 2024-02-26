@@ -29,8 +29,7 @@ import {eatingSymptoms} from '../../../utils/q-eating';
 import {genderSymptoms} from '../../../utils/r-gender';
 import {neurocognitiveSymptoms} from '../../../utils/s-neurocognitive';
 
-// @ts-ignore
-function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
+function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}: any) {
   const contentStyle = contentText(isDarkMode);
 
   const [additionalCardCount, setAdditionalCardCount] = useState(1);

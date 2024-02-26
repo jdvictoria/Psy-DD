@@ -7,11 +7,9 @@ import {
   StyledText20,
   subcontentText,
 } from '../../../styles/form-text';
-
 import {ProfileInfoCard} from '../../../styles/form-container';
 
-// @ts-ignore
-function CardProfile({isDarkMode, label, value, icon}) {
+function CardProfile({isDarkMode, label, value, icon}: any) {
   const contentStyle = contentText(isDarkMode);
   const subcontentStyle = subcontentText();
 

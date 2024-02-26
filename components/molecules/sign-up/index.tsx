@@ -80,6 +80,7 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
 
     if (verifyClick && !isValid) {
       timeoutId = setTimeout(() => {
+        // @ts-ignore
         setVerifyError('Error: PRC Authentication Failed');
         setVerifyClick(false);
         // setOpenWeb(false);
@@ -126,9 +127,17 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
 
       console.log('User added!');
     } catch (error) {
-      if (error.code === 'auth/email-already-in-use') {
+      if (
+        // @ts-ignore
+        error.code === 'auth/email-already-in-use'
+      ) {
+        // @ts-ignore
         setSignUpError('Error: Email Already In Use');
-      } else if (error.code === 'auth/invalid-email') {
+      } else if (
+        // @ts-ignore
+        error.code === 'auth/invalid-email'
+      ) {
+        // @ts-ignore
         setSignUpError('Error: Invalid Email');
       } else {
         console.error('Error creating user:', error);

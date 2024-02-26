@@ -63,8 +63,7 @@ import {
 } from '../../../utils/s-neurocognitive';
 import {persistentDuration} from '../../../utils/n-depressive';
 
-// @ts-ignore
-function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
+function CardDiagnoseDuration({isDarkMode, setDuration, result}: any) {
   let additionalData;
 
   if (result === 'Conversion Disorder') {

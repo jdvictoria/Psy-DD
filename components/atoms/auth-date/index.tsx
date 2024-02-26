@@ -9,7 +9,6 @@ import {
   StyledText16,
   StyledText17,
 } from '../../../styles/input-text';
-
 import {StyledCol} from '../../../styles/input-container';
 
 import DatePicker from 'react-native-date-picker';
@@ -25,8 +24,7 @@ const DatePlaceholder = styled.View`
   border-radius: 10px;
 `;
 
-// @ts-ignore
-function AuthDate({isDarkMode, date, setDate, dateString, setDateString}) {
+function AuthDate({isDarkMode, date, setDate, dateString, setDateString}: any) {
   const inputStyle = inputText(isDarkMode);
 
   const [open, setOpen] = useState(false);

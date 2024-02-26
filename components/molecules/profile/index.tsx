@@ -9,7 +9,6 @@ import {
   StyledRow,
   StyledView,
 } from '../../../styles/form-container';
-
 import {
   contentText,
   subcontentText,
@@ -20,8 +19,7 @@ import {
 
 import CardProfile from '../../atoms/card-profile';
 
-// @ts-ignore
-function HomeProfile({isDarkMode, profile}) {
+function HomeProfile({isDarkMode, profile}: any) {
   const contentStyle = contentText(isDarkMode);
   const subcontentStyle = subcontentText();
 

@@ -7,8 +7,7 @@ import DropdownComponent from '../dropdown-diagnose';
 
 import {categData} from '../../../utils/categories';
 
-// @ts-ignore
-function CardDiagnoseFilter({isDarkMode, setFilter}) {
+function CardDiagnoseFilter({isDarkMode, setFilter}: any) {
   return (
     <DiagnoseResultCard
       style={{
