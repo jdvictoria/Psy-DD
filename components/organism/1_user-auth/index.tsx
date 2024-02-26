@@ -22,8 +22,14 @@ import {
 import SignInComponent from '../../molecules/sign-in';
 import SignUpComponent from '../../molecules/sign-up';
 
-// @ts-ignore
-function UserAuth({navigation, isDarkMode, setUserID, setIsDarkMode}) {
+function UserAuth({
+  navigation,
+  isDarkMode,
+  setUserID,
+  setIsLoggedIn,
+  setProfileData,
+  setIsDarkMode,
+}: any) {
   const contentStyle = contentText(isDarkMode);
 
   const [isSignIn, setIsSignIn] = useState(true);
@@ -95,8 +101,10 @@ function UserAuth({navigation, isDarkMode, setUserID, setIsDarkMode}) {
           {isSignIn ? (
             <SignInComponent
               navigation={navigation}
-              isDarkMode={isDarkMode}
               setUserID={setUserID}
+              setIsLoggedIn={setIsLoggedIn}
+              isDarkMode={isDarkMode}
+              setProfileData={setProfileData}
             />
           ) : (
             <SignUpComponent
