@@ -61,6 +61,7 @@ import {
   deliriumDuration,
   majorneurocognitiveDuration,
 } from '../../../utils/s-neurocognitive';
+import {persistentDuration} from '../../../utils/n-depressive';
 
 // @ts-ignore
 function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
@@ -148,6 +149,8 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     additionalData = deliriumDuration;
   } else if (result === 'Major Neurocognitive Disorder') {
     additionalData = majorneurocognitiveDuration;
+  } else if (result === 'Persistent Depressive Disorder') {
+    additionalData = persistentDuration;
   }
 
   return (

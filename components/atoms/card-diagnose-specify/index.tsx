@@ -56,6 +56,10 @@ import {
   deliriumSpecification,
   majorneurocognitiveSpecification,
 } from '../../../utils/s-neurocognitive';
+import {
+  persistentSpecification,
+  substanceDepressiveSpecification,
+} from '../../../utils/n-depressive';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -139,6 +143,10 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = deliriumSpecification;
   } else if (result === 'Major Neurocognitive Disorder') {
     additionalData = majorneurocognitiveSpecification;
+  } else if (result === 'Persistent Depressive Disorder') {
+    additionalData = persistentSpecification;
+  } else if (result === 'Substance/Medication-Induced Depressive Disorder') {
+    additionalData = substanceDepressiveSpecification;
   }
 
   return (

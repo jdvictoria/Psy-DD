@@ -34,6 +34,7 @@ import {dissociativeDiagnosis} from '../../../utils/o-dissociative';
 import {neurocognitiveDiagnosis} from '../../../utils/s-neurocognitive';
 import {dsyphoriaDiagnosis} from '../../../utils/r-gender';
 import {eatingDiagnosis} from '../../../utils/q-eating';
+import {depressiveDiagnosis} from '../../../utils/n-depressive';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -110,6 +111,7 @@ function HomeDiagnose({isDarkMode}) {
           setResult(disruptiveDiagnosis(numbers));
           break;
         case 'n':
+          setResult(depressiveDiagnosis(numbers));
           break;
         case 'o':
           setResult(dissociativeDiagnosis(numbers));
@@ -238,7 +240,11 @@ function HomeDiagnose({isDarkMode}) {
               'Major / Mild Neurocognitive Disorder due to Alzheimer’s Disease' ||
             result ===
               'Major / Mild Neurocognitive Disorder with Lewy Bodies' ||
-            result === 'Delirium') && (
+            result === 'Delirium' ||
+            result === 'Persistent Depressive Disorder' ||
+            result === 'Major Depressive Disorder' ||
+            result ===
+              'Depressive Disorder Due to Another Medical Condition') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
@@ -286,7 +292,8 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Other (or Unknown) Substance Use Disorder' ||
             result === 'Gambling Disorder' ||
             result === 'Delirium' ||
-            result === 'Major Neurocognitive Disorder') && (
+            result === 'Major Neurocognitive Disorder' ||
+            result === 'Persistent Depressive Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}
@@ -331,7 +338,9 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Tobacco Use Disorder' ||
             result === 'Social Anxiety Disorder' ||
             result === 'Delirium' ||
-            result === 'Major Neurocognitive Disorder') && (
+            result === 'Major Neurocognitive Disorder' ||
+            result === 'Persistent Depressive Disorder' ||
+            result === 'Substance/Medication-Induced Depressive Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}

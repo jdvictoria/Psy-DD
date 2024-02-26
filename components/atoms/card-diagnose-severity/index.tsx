@@ -79,6 +79,11 @@ import {
   traumaticSeverity,
   vascularSeverity,
 } from '../../../utils/s-neurocognitive';
+import {
+  depressiveDisorderSeverity,
+  majorDisorderSeverity,
+  persistentSeverity,
+} from '../../../utils/n-depressive';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -219,6 +224,14 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = neurocognitivelewySeverity;
   } else if (result === 'Delirium') {
     additionalData = deliriumSeverity;
+  } else if (result === 'Persistent Depressive Disorder') {
+    additionalData = persistentSeverity;
+  } else if (result === 'Major Depressive Disorder') {
+    additionalData = majorDisorderSeverity;
+  } else if (
+    result === 'Depressive Disorder Due to Another Medical Condition'
+  ) {
+    additionalData = depressiveDisorderSeverity;
   }
 
   return (

@@ -686,6 +686,57 @@ export const optionalDisorderO = numbers => {
   return numbers.includes(82) || numbers.includes(83) || numbers.includes(84);
 };
 
+export const depressiveDiagnosis = numbers => {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
+    return 'Disruptive Mood Dysregulation Disorder';
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
+    return 'Major Depressive Disorder';
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderC(numbers))
+  ) {
+    return 'Persistent Depressive Disorder';
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
+    return 'Premenstrual Dysphoric Disorder';
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderE(numbers))
+  ) {
+    return 'Substance/Medication-Induced Depressive Disorder';
+  } else if (
+    mainDisorderF(numbers) ||
+    (mainDisorderF(numbers) && optionalDisorderF(numbers))
+  ) {
+    return 'Depressive Disorder Due to Another Medical Condition';
+  } else if (mainDisorderG(numbers)) {
+    return 'Other Specified Depressive Disorder';
+  } else if (mainDisorderH(numbers)) {
+    return 'Recurrent brief depression';
+  } else if (mainDisorderI(numbers)) {
+    return 'Short-duration depressive episode (4–13 days)';
+  } else if (mainDisorderJ(numbers)) {
+    return 'Depressive episode with insufficient symptoms';
+  } else if (mainDisorderK(numbers)) {
+    return 'Major depressive episode superimposed';
+  } else if (mainDisorderL(numbers)) {
+    return 'Unspecified Depressive Disorder';
+  } else if (mainDisorderM(numbers)) {
+    return 'Unspecified Mood Disorder';
+  } else if (mainDisorderN(numbers)) {
+    return 'Unspecified Mood Disorder';
+  } else {
+    return 'Other Specified / Unspecified Depressive Disorders';
+  }
+};
 // mainDisorderP for atypical features
 export const persistentDuration = [
   {
@@ -720,7 +771,7 @@ export const persistentSeverity = [
   },
 ];
 
-export const substanceSubstanceSpecification = [
+export const substanceDepressiveSpecification = [
   {
     label:
       'If criteria are met for intoxication with the substance and the symptoms develop during intoxication',
