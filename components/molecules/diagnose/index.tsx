@@ -37,8 +37,7 @@ import {eatingDiagnosis} from '../../../utils/q-eating';
 import {depressiveDiagnosis} from '../../../utils/n-depressive';
 import {bipolarDiagnosis} from '../../../utils/l-bipolar';
 
-// @ts-ignore
-function HomeDiagnose({isDarkMode}) {
+function HomeDiagnose({isDarkMode}: any) {
   const contentStyle = contentText(isDarkMode);
 
   const [result, setResult] = useState('');

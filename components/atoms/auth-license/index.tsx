@@ -1,13 +1,10 @@
 import React from 'react';
 
 import {inputText, StyledText17} from '../../../styles/input-text';
-
 import {FormTextInput} from '../../../styles/input-forms';
-
 import {StyledCol} from '../../../styles/input-container';
 
-// @ts-ignore
-function AuthLicense({isDarkMode, license, setLicense}) {
+function AuthLicense({isDarkMode, license, setLicense}: any) {
   const inputStyle = inputText(isDarkMode);
 
   const handleLicenseChange = (text: any) => {

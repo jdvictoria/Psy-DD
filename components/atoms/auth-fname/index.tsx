@@ -1,13 +1,10 @@
 import React from 'react';
 
 import {StyledCol} from '../../../styles/input-container';
-
 import {inputText, StyledText17} from '../../../styles/input-text';
-
 import {FormTextInput} from '../../../styles/input-forms';
 
-// @ts-ignore
-function AuthFirstName({isDarkMode, name, setName}) {
+function AuthFirstName({isDarkMode, name, setName}: any) {
   const inputStyle = inputText(isDarkMode);
 
   const handleNameChange = (text: string) => {

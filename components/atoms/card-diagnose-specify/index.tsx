@@ -65,8 +65,7 @@ import {
   substanceBipolarSpecification,
 } from '../../../utils/l-bipolar';
 
-// @ts-ignore
-function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
+function CardDiagnoseSpecify({isDarkMode, setSpecification, result}: any) {
   let additionalData;
 
   if (result === 'Conversion Disorder') {

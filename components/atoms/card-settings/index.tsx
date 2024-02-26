@@ -6,9 +6,9 @@ import {
   SettingsCardRight,
 } from '../../../styles/form-container';
 import {Image, Switch} from 'react-native';
+
 import {contentText, StyledText16} from '../../../styles/form-text';
 
-// @ts-ignore
 function CardSettings({
   isDarkMode,
   setIsDarkMode,
@@ -16,9 +16,10 @@ function CardSettings({
   text,
   rightIcon,
   handleLogOut,
-}) {
+}: any) {
   const contentStyle = contentText(isDarkMode);
 
+  // @ts-ignore
   const toggleSwitch = () => setIsDarkMode(previousState => !previousState);
 
   return (

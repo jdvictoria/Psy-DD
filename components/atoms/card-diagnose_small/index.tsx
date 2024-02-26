@@ -7,17 +7,15 @@ import {
   DiagnoseResultLeft,
   DiagnoseResultRight,
 } from '../../../styles/form-container';
-
 import {contentText, StyledText20} from '../../../styles/form-text';
 
-// @ts-ignore
 function CardDiagnoseSmall({
   isDarkMode,
   clearBigCard,
   addBigCard,
   handleDiagnose,
   disabled,
-}) {
+}: any) {
   const contentStyle = contentText(isDarkMode);
 
   return (

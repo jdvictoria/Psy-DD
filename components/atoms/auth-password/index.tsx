@@ -7,13 +7,10 @@ import {
   StyledText12,
   StyledText17,
 } from '../../../styles/input-text';
-
 import {FormTextInput} from '../../../styles/input-forms';
-
 import {StyledCol} from '../../../styles/input-container';
 
-// @ts-ignore
-function AuthPassword({isDarkMode, password, setPassword}) {
+function AuthPassword({isDarkMode, password, setPassword}: any) {
   const inputStyle = inputText(isDarkMode);
   const errorStyle = errorText();
 

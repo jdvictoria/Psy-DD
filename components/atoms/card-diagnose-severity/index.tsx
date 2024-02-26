@@ -89,8 +89,7 @@ import {
   substanceBipolarSeverity,
 } from '../../../utils/l-bipolar';
 
-// @ts-ignore
-function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
+function CardDiagnoseSeverity({isDarkMode, setSeverity, result}: any) {
   let additionalData;
 
   if (result === 'Conversion Disorder') {

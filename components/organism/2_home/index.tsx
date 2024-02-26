@@ -99,7 +99,7 @@ function HomeNavigation({
             />
           ),
         }}>
-        {props => (
+        {() => (
           <HomeSettings
             navigation={navigation}
             isDarkMode={isDarkMode}

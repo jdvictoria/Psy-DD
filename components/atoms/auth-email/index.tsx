@@ -1,18 +1,15 @@
 import React, {useState} from 'react';
 
 import {StyledCol} from '../../../styles/input-container';
-
 import {
   errorText,
   inputText,
   StyledText12,
   StyledText17,
 } from '../../../styles/input-text';
-
 import {FormTextInput} from '../../../styles/input-forms';
 
-// @ts-ignore
-function AuthEmail({isDarkMode, email, setEmail}) {
+function AuthEmail({isDarkMode, email, setEmail}: any) {
   const inputStyle = inputText(isDarkMode);
   const errorStyle = errorText();
 
