@@ -9,20 +9,26 @@ import {
 
 import {contentText, StyledText20} from '../../../styles/form-text';
 import CardSettings from '../../atoms/card-settings';
-import {firebase} from '@react-native-firebase/auth';
+import auth from '@react-native-firebase/auth';
+
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // @ts-ignore
 function HomeSettings({navigation, isDarkMode, setIsDarkMode}) {
   const contentStyle = contentText(isDarkMode);
 
-  const handleLogOut = () => {
-    firebase
-      .auth()
+  const handleLogout = async () => {
+    auth()
       .signOut()
       .then(() => {
         console.log('User signed out!');
-        navigation.navigate('Auth');
       });
+
+    await AsyncStorage.setItem('uid', '');
+    await AsyncStorage.setItem('auth', JSON.stringify(false));
+    await AsyncStorage.setItem('data', JSON.stringify({}));
+
+    navigation.navigate('Auth');
   };
 
   return (
@@ -62,7 +68,7 @@ function HomeSettings({navigation, isDarkMode, setIsDarkMode}) {
           <CardSettings
             isDarkMode={isDarkMode}
             setIsDarkMode={null}
-            handleLogOut={handleLogOut}
+            handleLogOut={handleLogout}
             icon={
               isDarkMode
                 ? require('../../../assets/icons/logout-icon_dark.png')

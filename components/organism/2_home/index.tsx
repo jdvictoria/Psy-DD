@@ -1,7 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {Image} from 'react-native';
-
-import firestore from '@react-native-firebase/firestore';
 
 import {
   AnimatedTabBarNavigator,
@@ -14,27 +12,13 @@ import HomeProfile from '../../molecules/profile';
 import HomeSettings from '../../molecules/settings';
 
 // @ts-ignore
-function HomeNavigation({navigation, isDarkMode, userID, setIsDarkMode}) {
+function HomeNavigation({
+  navigation,
+  isDarkMode,
+  profileData,
+  setIsDarkMode,
+}: any) {
   const Tabs = AnimatedTabBarNavigator();
-
-  const [profileData, setProfileData] = useState({});
-
-  useEffect(() => {
-    const fetchUserProfile = async () => {
-      try {
-        const userDoc = await firestore().collection('Users').doc(userID).get();
-        if (userDoc.exists) {
-          setProfileData(userDoc.data());
-        } else {
-          console.log('User document not found.');
-        }
-      } catch (error) {
-        console.error('Error fetching user profile:', error);
-      }
-    };
-
-    fetchUserProfile();
-  }, [userID]);
 
   return (
     <Tabs.Navigator

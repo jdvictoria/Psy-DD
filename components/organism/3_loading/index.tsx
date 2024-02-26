@@ -4,12 +4,37 @@ import {Image} from 'react-native';
 import * as Progress from 'react-native-progress';
 import {StyledSafeView} from '../../../styles/input-container';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 // @ts-ignore
-function Loading({navigation}) {
+function Loading({navigation, setUserID, setIsLoggedIn, setProfileData}) {
+  const getData = async () => {
+    try {
+      const uid = await AsyncStorage.getItem('uid');
+      const auth = JSON.parse((await AsyncStorage.getItem('auth')) as string);
+      const data = JSON.parse((await AsyncStorage.getItem('data')) as string);
+
+      console.log(uid);
+      console.log(auth);
+      console.log(data);
+
+      if (uid !== null && auth !== null && data !== null) {
+        setUserID(uid);
+        setIsLoggedIn(auth);
+        setProfileData(data);
+        navigation.navigate('Home');
+      } else {
+        navigation.navigate('Auth');
+      }
+    } catch (e) {
+      // error reading value
+    }
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigation.navigate('Home');
-    }, 2000);
+      getData();
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [navigation]);
