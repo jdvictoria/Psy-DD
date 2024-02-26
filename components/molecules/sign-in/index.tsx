@@ -1,6 +1,8 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {Alert, TouchableOpacity} from 'react-native';
-import {firebase} from '@react-native-firebase/auth';
+
+import auth from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore';
 
 import {StyledRow, StyledCol} from '../../../styles/input-container';
 
@@ -16,8 +18,15 @@ import {FormBox, FormInput, FormButton} from '../../../styles/input-forms';
 import AuthEmail from '../../atoms/auth-email';
 import AuthPassword from '../../atoms/auth-password';
 
-// @ts-ignore
-function SignInComponent({navigation, isDarkMode, setUserID}) {
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+function SignInComponent({
+  navigation,
+  isDarkMode,
+  setUserID,
+  setIsLoggedIn,
+  setProfileData,
+}: any) {
   const contentStyle = contentText(isDarkMode);
   const inputStyle = inputText(isDarkMode);
 
@@ -40,33 +49,55 @@ function SignInComponent({navigation, isDarkMode, setUserID}) {
   const [error, setError] = useState(null);
 
   const handleSignIn = async () => {
-    await firebase.auth().currentUser?.reload();
-    await firebase
-      .auth()
+    await auth().currentUser?.reload();
+    await auth()
       .signInWithEmailAndPassword(email, password)
       .then(async () => {
-        if (firebase.auth().currentUser?.emailVerified) {
-          setUserID(firebase.auth().currentUser?.uid);
-          navigation.navigate('Loading');
+        if (auth().currentUser?.emailVerified) {
+          const userDocument = await firestore()
+            .collection('Users')
+            .doc(auth().currentUser?.uid)
+            .get();
+
+          if (userDocument.exists) {
+            const userData = userDocument.data();
+
+            setUserID(auth().currentUser?.uid);
+            setIsLoggedIn(true);
+            setProfileData(userData);
+
+            await AsyncStorage.setItem(
+              'uid',
+              auth().currentUser?.uid as string,
+            );
+            await AsyncStorage.setItem('auth', JSON.stringify(true));
+            await AsyncStorage.setItem('data', JSON.stringify(userData));
+
+            // @ts-ignore
+            navigation.navigate('Home');
+          } else {
+            console.log('Document does not exist');
+          }
         } else {
-          await firebase.auth().currentUser?.sendEmailVerification();
+          await auth().currentUser?.sendEmailVerification();
           alertEmailVerification();
         }
       })
-      .catch(error => {
+      .catch(() => {
+        // @ts-ignore
         setError('Error: Email Does Not Exist.');
       });
   };
 
   const handleForgotPass = async () => {
-    await firebase.auth().currentUser?.reload();
-    await firebase
-      .auth()
+    await auth().currentUser?.reload();
+    await auth()
       .sendPasswordResetEmail(email)
       .then(async () => {
         alertPasswordReset();
       })
-      .catch(error => {
+      .catch(() => {
+        // @ts-ignore
         setError('Error: Unverified / Invalid Email.');
       });
   };
