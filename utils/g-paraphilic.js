@@ -202,19 +202,40 @@ const mainDisorderH = numbers => {
 };
 
 export const paraphilicDiagnosis = numbers => {
-  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Voyeuristic Disorder';
-  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
     return 'Exhibitionistic Disorder';
-  } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderC(numbers))
+  ) {
     return 'Frotteuristic Disorder';
-  } else if (mainDisorderD(numbers) || optionalDisorderD(numbers)) {
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
     return 'Sexual Masochism Disorder';
-  } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderE(numbers))
+  ) {
     return 'Sexual Sadism Disorder';
-  } else if (mainDisorderF(numbers) || optionalDisorderF(numbers)) {
+  } else if (
+    mainDisorderF(numbers) ||
+    (mainDisorderF(numbers) && optionalDisorderF(numbers))
+  ) {
     return 'Pedophilic Disorder';
-  } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
+  } else if (
+    mainDisorderG(numbers) ||
+    (mainDisorderG(numbers) && optionalDisorderG(numbers))
+  ) {
     return 'Fetishistic Disorder';
   } else if (mainDisorderH(numbers)) {
     return 'Transvestic Disorder';
@@ -227,6 +248,19 @@ export const voyeuristicDuration = [
   {
     label:
       'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
+    value: 22,
+  },
+  {
+    label:
+      'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
+    value: 23,
+  },
+];
+
+export const exhibitionisticDuration = [
+  {
+    label:
+      'Living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
     value: 22,
   },
   {
@@ -253,19 +287,6 @@ export const exhibitionisticSpecification = [
   },
 ];
 
-export const exhibitionisticDuration = [
-  {
-    label:
-      'Living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
-    value: 22,
-  },
-  {
-    label:
-      'The individual has not acted on the urges with a nonconsenting person, and there has been no distress or impairment in social, occupational, or other areas of functioning, for at least 5 years while in an uncontrolled environment',
-    value: 23,
-  },
-];
-
 export const frotteuristicDuration = [
   {
     label:
@@ -279,7 +300,7 @@ export const frotteuristicDuration = [
   },
 ];
 
-export const masochismDuration = [
+export const masochistDuration = [
   {
     label:
       'Primarily applicable to individuals living in institutional or other settings where opportunities to engage in voyeuristic behavior are restricted',
@@ -292,7 +313,7 @@ export const masochismDuration = [
   },
 ];
 
-export const asphyxiophiliaSpecification = [
+export const masochistSpecification = [
   {
     label:
       'If the individual engages in the practice of achieving sexual arousal related to restriction of breathing',

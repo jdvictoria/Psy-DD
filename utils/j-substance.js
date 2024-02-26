@@ -1409,55 +1409,106 @@ export const mainDisorderZ = numbers => {
 export const substanceDiagnosis = numbers => {
   if (mainDisorderA(numbers)) {
     return 'Alcohol Use Disorder';
-  } else if (numbers.includes(13) || optionalDisorderB(numbers)) {
+  } else if (
+    numbers.includes(13) ||
+    (numbers.includes(13) && optionalDisorderB(numbers))
+  ) {
     return 'Alcohol Intoxication';
-  } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderC(numbers))
+  ) {
     return 'Alcohol Withdrawal';
-  } else if (mainDisorderD(numbers) || optionalDisorderC(numbers)) {
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderC(numbers))
+  ) {
     return 'Caffeine Intoxication';
-  } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderE(numbers))
+  ) {
     return 'Caffeine Withdrawal';
   } else if (mainDisorderF(numbers)) {
     return 'Cannabis Use Disorder';
-  } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
+  } else if (
+    mainDisorderG(numbers) ||
+    (mainDisorderG(numbers) && optionalDisorderG(numbers))
+  ) {
     return 'Cannabis Intoxication';
-  } else if (mainDisorderH(numbers) || optionalDisorderH(numbers)) {
+  } else if (
+    mainDisorderH(numbers) ||
+    (mainDisorderH(numbers) && optionalDisorderH(numbers))
+  ) {
     return 'Cannabis Withdrawal';
   } else if (mainDisorderI(numbers)) {
     return 'Phencyclidine Use Disorder';
-  } else if (mainDisorderJ(numbers) || optionalDisorderJ(numbers)) {
+  } else if (
+    mainDisorderJ(numbers) ||
+    (mainDisorderJ(numbers) && optionalDisorderJ(numbers))
+  ) {
     return 'Other Hallucinogen Intoxication';
   } else if (mainDisorderK(numbers)) {
     return 'Inhalant Use Disorder';
-  } else if (mainDisorderL(numbers) || optionalDisorderL(numbers)) {
+  } else if (
+    mainDisorderL(numbers) ||
+    (mainDisorderL(numbers) && optionalDisorderL(numbers))
+  ) {
     return 'Inhalant Intoxication';
   } else if (mainDisorderM(numbers)) {
     return 'Opioid Use Disorder';
-  } else if (mainDisorderN(numbers) || optionalDisorderN(numbers)) {
+  } else if (
+    mainDisorderN(numbers) ||
+    (mainDisorderN(numbers) && optionalDisorderN(numbers))
+  ) {
     return 'Opioid Intoxication';
-  } else if (mainDisorderO(numbers) || optionalDisorderO(numbers)) {
+  } else if (
+    mainDisorderO(numbers) ||
+    (mainDisorderO(numbers) && optionalDisorderO(numbers))
+  ) {
     return 'Opioid Withdrawal';
   } else if (mainDisorderP(numbers)) {
     return 'Sedative, Hypnotic, or Anxiolytic Use Disorder';
-  } else if (mainDisorderQ(numbers) || optionalDisorderQ(numbers)) {
+  } else if (
+    mainDisorderQ(numbers) ||
+    (mainDisorderQ(numbers) && optionalDisorderQ(numbers))
+  ) {
     return 'Sedative, Hypnotic, or Anxiolytic Intoxication';
-  } else if (mainDisorderR(numbers) || optionalDisorderR(numbers)) {
+  } else if (
+    mainDisorderR(numbers) ||
+    (mainDisorderR(numbers) && optionalDisorderR(numbers))
+  ) {
     return 'Sedative, Hypnotic, or Anxiolytic Withdrawal';
   } else if (mainDisorderS(numbers)) {
     return 'Stimulant Use Disorder';
-  } else if (mainDisorderT(numbers) || optionalDisorderT(numbers)) {
+  } else if (
+    mainDisorderT(numbers) ||
+    (mainDisorderT(numbers) && optionalDisorderT(numbers))
+  ) {
     return 'Stimulant Intoxication';
-  } else if (mainDisorderU(numbers) || optionalDisorderU(numbers)) {
+  } else if (
+    mainDisorderU(numbers) ||
+    (mainDisorderU(numbers) && optionalDisorderU(numbers))
+  ) {
     return 'Stimulant Withdrawal';
   } else if (mainDisorderV(numbers)) {
     return 'Tobacco Use Disorder';
-  } else if (mainDisorderW(numbers) || optionalDisorderW(optionalDisorderW)) {
+  } else if (
+    mainDisorderW(numbers) ||
+    (mainDisorderW(numbers) && optionalDisorderW(numbers))
+  ) {
     return 'Tobacco Withdrawal';
   } else if (mainDisorderX(numbers)) {
     return 'Other (or Unknown) Substance Use Disorder';
-  } else if (mainDisorderY(numbers) || optionalDisorderY(numbers)) {
+  } else if (
+    mainDisorderY(numbers) ||
+    (mainDisorderY(numbers) && optionalDisorderY(numbers))
+  ) {
     return 'Other (or Unknown) Substance Withdrawal';
-  } else if (mainDisorderZ(numbers) || numbers.includes(242)) {
+  } else if (
+    mainDisorderZ(numbers) ||
+    (mainDisorderZ(numbers) && numbers.includes(242))
+  ) {
     return 'Gambling Disorder';
   } else if (numbers.includes(252)) {
     return 'Unspecified Alcohol-Related Disorder';
@@ -1847,7 +1898,7 @@ export const sedativeUseSeverity = [
   },
 ];
 
-export const sedativeSeverity = [
+export const sedativeIntoxicationSeverity = [
   {
     label: 'Mild sedative, hypnotic, or anxiolytic use disorder',
     value: 144,

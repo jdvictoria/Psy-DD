@@ -9,16 +9,25 @@ import {contentText, StyledText16} from '../../../styles/form-text';
 
 import DropdownSymptoms from '../dropdown-symptoms';
 
-import {traumaSymptoms} from '../../../utils/trauma';
-import {somaticSymptoms} from '../../../utils/somatic';
-import {sleepSymptoms} from '../../../utils/sleep';
-import {sexualSymptoms} from '../../../utils/sexual';
-import {schizophreniaSymptoms} from '../../../utils/schizophrenia';
-import {personalitySymptoms} from '../../../utils/personality';
-import {paraphilicSymptoms} from '../../../utils/paraphilic';
-import {obsessiveSymptoms} from '../../../utils/obsessive';
-import {neurodevelopmentalSymptoms} from '../../../utils/neurodevelopmental';
-import {substanceSymptoms} from '../../../utils/substance';
+import {traumaSymptoms} from '../../../utils/a-trauma';
+import {somaticSymptoms} from '../../../utils/b-somatic';
+import {sleepSymptoms} from '../../../utils/c-sleep';
+import {sexualSymptoms} from '../../../utils/d-sexual';
+import {schizophreniaSymptoms} from '../../../utils/e-schizophrenia';
+import {personalitySymptoms} from '../../../utils/f-personality';
+import {paraphilicSymptoms} from '../../../utils/g-paraphilic';
+import {obsessiveSymptoms} from '../../../utils/h-obsessive';
+import {neurodevelopmentalSymptoms} from '../../../utils/i-neurodevelopmental';
+import {substanceSymptoms} from '../../../utils/j-substance';
+import {anxietySymptoms} from '../../../utils/k-anxiety';
+import {bipolarSymptoms} from '../../../utils/l-bipolar';
+import {disruptiveSymptoms} from '../../../utils/m-disruptive';
+import {depressiveSymptoms} from '../../../utils/n-depressive';
+import {dissociativeSymptoms} from '../../../utils/o-dissociative';
+import {eliminationSymptoms} from '../../../utils/p-elimination';
+import {eatingSymptoms} from '../../../utils/q-eating';
+import {genderSymptoms} from '../../../utils/r-gender';
+import {neurocognitiveSymptoms} from '../../../utils/s-neurocognitive';
 
 // @ts-ignore
 function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
@@ -61,6 +70,33 @@ function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
     case 'j':
       symptomData = substanceSymptoms;
       break;
+    case 'k':
+      symptomData = anxietySymptoms;
+      break;
+    case 'l':
+      symptomData = bipolarSymptoms;
+      break;
+    case 'm':
+      symptomData = disruptiveSymptoms;
+      break;
+    case 'n':
+      symptomData = depressiveSymptoms;
+      break;
+    case 'o':
+      symptomData = dissociativeSymptoms;
+      break;
+    case 'p':
+      symptomData = eliminationSymptoms;
+      break;
+    case 'q':
+      symptomData = eatingSymptoms;
+      break;
+    case 'r':
+      symptomData = genderSymptoms;
+      break;
+    case 's':
+      symptomData = neurocognitiveSymptoms;
+      break;
     default:
       break;
   }
@@ -86,15 +122,19 @@ function CardDiagnoseBig({isDarkMode, filter, setNumbers, bigCardCount}) {
               data={symptomData}
               label={'Symptom/s'}
               value={null}
-              setValue={selectedSymptom => {
-                setNumbers(prevNumbers => {
-                  // Check for duplicates before updating the state
-                  if (!prevNumbers.includes(selectedSymptom)) {
-                    return [...prevNumbers, selectedSymptom];
-                  }
-                  return prevNumbers;
-                });
-              }}
+              setValue={
+                // @ts-ignore
+                selectedSymptom => {
+                  // @ts-ignore
+                  setNumbers(prevNumbers => {
+                    // Check for duplicates before updating the state
+                    if (!prevNumbers.includes(selectedSymptom)) {
+                      return [...prevNumbers, selectedSymptom];
+                    }
+                    return prevNumbers;
+                  });
+                }
+              }
             />
           </StyledRow>
         </DiagnoseSymptomCard>,

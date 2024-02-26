@@ -338,19 +338,40 @@ const optionalDisorderG = numbers => {
 };
 
 export const obsessiveDiagnosis = numbers => {
-  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Obsessive-Compulsive Disorder';
-  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
     return 'Body Dysmorphic Disorder';
-  } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderC(numbers))
+  ) {
     return 'Hoarding Disorder';
-  } else if (mainDisorderD(numbers) || optionalDisorderD(numbers)) {
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
     return 'Trichotillomania (Hair-Pulling Disorder)';
-  } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderE(numbers))
+  ) {
     return 'Excoriation (Skin-Picking) Disorder';
-  } else if (mainDisorderF(numbers) || optionalDisorderF(numbers)) {
+  } else if (
+    mainDisorderF(numbers) ||
+    (mainDisorderF(numbers) && optionalDisorderF(numbers))
+  ) {
     return 'Substance/Medication-Induce Obsessive-Compulsive and Related Disorder';
-  } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
+  } else if (
+    mainDisorderG(numbers) ||
+    (mainDisorderG(numbers) && optionalDisorderG(numbers))
+  ) {
     return 'Obsessive-Compulsive and Related Disorder Due to Another Medical Condition';
   } else if (numbers.includes(36)) {
     return 'Body dysmorphic–like disorder with actual flaws';
@@ -439,7 +460,7 @@ export const hoardingSpecification = [
   },
 ];
 
-export const substanceObsessive = [
+export const substanceObsessiveSpecification = [
   {
     label:
       'If criteria are met for intoxication with the substance and the symptoms develop during intoxication',
@@ -457,7 +478,7 @@ export const substanceObsessive = [
   },
 ];
 
-export const ocdRelatedSpecification = [
+export const ocdDueToAnotherSpecification = [
   {
     label:
       'If obsessive-compulsive disorder–like symptoms predominate in the clinical presentation',

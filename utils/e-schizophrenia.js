@@ -396,25 +396,51 @@ const optionalDisorderI = numbers => {
 };
 
 export const schizophreniaDiagnosis = numbers => {
-  if (mainDisorderA(numbers) || optionalDisorderA(numbers)) {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
     return 'Schizotypal (Personality) Disorder';
-  } else if (mainDisorderB(numbers) || optionalDisorderB(numbers)) {
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
     return 'Delusional Disorder';
-  } else if (mainDisorderE(numbers) || optionalDisorderE(numbers)) {
-    return 'Schizophrenia';
-  } else if (mainDisorderD(numbers) || optionalDisorderD(numbers)) {
-    return 'Schizophreniform Disorder';
-  } else if (mainDisorderC(numbers) || optionalDisorderC(numbers)) {
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderC(numbers))
+  ) {
     return 'Brief Psychotic Disorder';
-  } else if (mainDisorderF(numbers) || optionalDisorderF(numbers)) {
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
+    return 'Schizophreniform Disorder';
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderE(numbers))
+  ) {
+    return 'Schizophrenia';
+  } else if (
+    mainDisorderF(numbers) ||
+    (mainDisorderF(numbers) && optionalDisorderF(numbers))
+  ) {
     return 'Schizoaffective Disorder';
-  } else if (mainDisorderG(numbers) || optionalDisorderG(numbers)) {
+  } else if (
+    mainDisorderG(numbers) ||
+    (mainDisorderG(numbers) && optionalDisorderG(numbers))
+  ) {
     return 'Substance/Medication-Induced Psychotic Disorder';
-  } else if (mainDisorderH(numbers) || optionalDisorderH(numbers)) {
+  } else if (
+    (mainDisorderH(numbers) && numbers.includes(45)) ||
+    (mainDisorderH(numbers) &&
+      numbers.includes(45) &&
+      optionalDisorderH(numbers))
+  ) {
     return 'Psychotic Disorder Due to Another Medical Condition';
   } else if (
-    (mainDisorderI(numbers) && numbers.includes(45)) ||
-    optionalDisorderI(numbers)
+    mainDisorderI(numbers) ||
+    (mainDisorderI(numbers) && optionalDisorderI(numbers))
   ) {
     return 'Catatonic Disorder Due to Another Medical Condition';
   } else if (mainDisorderI(numbers)) {
@@ -464,7 +490,7 @@ export const delusionalDuration = [
   },
 ];
 
-export const delusionSpecification = [
+export const delusionalSpecification = [
   {
     label:
       'Delusions are deemed bizarre if they are clearly implausible, not understandable, and not derived from ordinary life experiences',
@@ -472,7 +498,7 @@ export const delusionSpecification = [
   },
 ];
 
-export const delusionSeverity = [
+export const delusionalSeverity = [
   {
     label:
       'This subtype applies when the central theme of the delusion is that another person is in love with the individual',
@@ -676,7 +702,7 @@ export const substancePsychoticSpecification = [
   },
 ];
 
-export const psychoticSeverity = [
+export const psychoticDueToAnotherSeverity = [
   {
     label: 'If delusions are the predominant symptom',
     value: 75,
@@ -701,27 +727,5 @@ export const otherSchizophreniaSpecification = [
     label:
       'This syndrome is characterized by psychotic-like symptoms that are below a threshold for full psychosis (e.g., the symptoms are less severe and more transient, and insight is relatively maintained)',
     value: 28,
-  },
-];
-
-export const personalitySeverity = [
-  {
-    label: 'Occurring in the absence of any other features',
-    value: 77,
-  },
-  {
-    label:
-      'This includes persistent delusions with periods of overlapping mood episodes that are present for a substantial portion of the delusional disturbance (such that the criterion stipulating only brief mood disturbance in delusional disorder is not met)',
-    value: 78,
-  },
-  {
-    label:
-      'This syndrome is characterized by psychotic-like symptoms that are below a threshold for full psychosis (e.g., the symptoms are less severe and more transient, and insight is relatively maintained)',
-    value: 79,
-  },
-  {
-    label:
-      'This syndrome is characterized by psychotic-like symptoms that are below a threshold for full psychosis (e.g., the symptoms are less severe and more transient, and insight is relatively maintained)',
-    value: 80,
   },
 ];
