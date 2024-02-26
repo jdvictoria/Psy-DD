@@ -52,6 +52,10 @@ import {
   tobaccoUseSpecification,
 } from '../../../utils/j-substance';
 import {socialAnxietySpecification} from '../../../utils/k-anxiety';
+import {
+  deliriumSpecification,
+  majorneurocognitiveSpecification,
+} from '../../../utils/s-neurocognitive';
 
 // @ts-ignore
 function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
@@ -131,6 +135,10 @@ function CardDiagnoseSpecify({isDarkMode, setSpecification, result}) {
     additionalData = tobaccoUseSpecification;
   } else if (result === 'Social Anxiety Disorder') {
     additionalData = socialAnxietySpecification;
+  } else if (result === 'Delirium') {
+    additionalData = deliriumSpecification;
+  } else if (result === 'Major Neurocognitive Disorder') {
+    additionalData = majorneurocognitiveSpecification;
   }
 
   return (

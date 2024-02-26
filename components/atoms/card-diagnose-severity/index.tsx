@@ -65,6 +65,20 @@ import {
   specificPhobiaSeverity,
   substanceAnxietySeverity,
 } from '../../../utils/k-anxiety';
+import {
+  deliriumSeverity,
+  frontotemporalSeverity,
+  hivSeverity,
+  huntingtonSeverity,
+  majorneurocognitiveSeverity,
+  neurocognitivealzheimersSeverity,
+  neurocognitivelewySeverity,
+  parkinsonsSeverity,
+  prionSeverity,
+  substanceNeurocognitiveSeverity,
+  traumaticSeverity,
+  vascularSeverity,
+} from '../../../utils/s-neurocognitive';
 
 // @ts-ignore
 function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
@@ -162,6 +176,49 @@ function CardDiagnoseSeverity({isDarkMode, setSeverity, result}) {
     additionalData = specificPhobiaSeverity;
   } else if (result === 'Substance / Medication-Induced Anxiety Disorder') {
     additionalData = substanceAnxietySeverity;
+  } else if (
+    result ===
+    'Major / Mild Neurocognitive Disorder Due to Huntington’s Disease'
+  ) {
+    additionalData = huntingtonSeverity;
+  } else if (
+    result === 'Major / Mild Neurocognitive Disorder Due to Parkinson’s Disease'
+  ) {
+    additionalData = parkinsonsSeverity;
+  } else if (
+    result === 'Major / Mild Neurocognitive Disorder Due to Prion Disease'
+  ) {
+    additionalData = prionSeverity;
+  } else if (
+    result === 'Major / Mild Neurocognitive Disorder Due to HIV Infection'
+  ) {
+    additionalData = hivSeverity;
+  } else if (
+    result ===
+    'Substance/Medication-Induced Major / Mild Neurocognitive Disorder'
+  ) {
+    additionalData = substanceNeurocognitiveSeverity;
+  } else if (
+    result ===
+    'Major / Mild Neurocognitive Disorder due to Traumatic Brain Injury'
+  ) {
+    additionalData = traumaticSeverity;
+  } else if (result === 'Major / Mild Vascular Neurocognitive Disorder') {
+    additionalData = vascularSeverity;
+  } else if (result === 'Probable Frontotemporal Neurocognitive Disorder') {
+    additionalData = frontotemporalSeverity;
+  } else if (result === 'Major Neurocognitive Disorder') {
+    additionalData = majorneurocognitiveSeverity;
+  } else if (
+    result === 'Major / Mild Neurocognitive Disorder due to Alzheimer’s Disease'
+  ) {
+    additionalData = neurocognitivealzheimersSeverity;
+  } else if (
+    result === 'Major / Mild Neurocognitive Disorder with Lewy Bodies'
+  ) {
+    additionalData = neurocognitivelewySeverity;
+  } else if (result === 'Delirium') {
+    additionalData = deliriumSeverity;
   }
 
   return (

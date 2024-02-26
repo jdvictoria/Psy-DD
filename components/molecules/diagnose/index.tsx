@@ -31,6 +31,7 @@ import {anxietyDiagnosis} from '../../../utils/k-anxiety';
 import {eliminationDiagnosis} from '../../../utils/p-elimination';
 import {disruptiveDiagnosis} from '../../../utils/m-disruptive';
 import {dissociativeDiagnosis} from '../../../utils/o-dissociative';
+import {neurocognitiveDiagnosis} from '../../../utils/s-neurocognitive';
 
 // @ts-ignore
 function HomeDiagnose({isDarkMode}) {
@@ -119,6 +120,7 @@ function HomeDiagnose({isDarkMode}) {
         case 'r':
           break;
         case 's':
+          setResult(neurocognitiveDiagnosis(numbers));
           break;
         default:
           break;
@@ -212,7 +214,27 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Other (or Unknown) Substance Withdrawal' ||
             result === 'Gambling Disorder' ||
             result === 'Specific Phobia' ||
-            result === 'Substance / Medication-Induced Anxiety Disorder') && (
+            result === 'Substance / Medication-Induced Anxiety Disorder' ||
+            result ===
+              'Major / Mild Neurocognitive Disorder Due to Huntington’s Disease' ||
+            result ===
+              'Major / Mild Neurocognitive Disorder Due to Parkinson’s Disease' ||
+            result ===
+              'Major / Mild Neurocognitive Disorder Due to Prion Disease' ||
+            result ===
+              'Major / Mild Neurocognitive Disorder Due to HIV Infection' ||
+            result ===
+              'Substance/Medication-Induced Major / Mild Neurocognitive Disorder' ||
+            result ===
+              'Major / Mild Neurocognitive Disorder due to Traumatic Brain Injury' ||
+            result === 'Major / Mild Vascular Neurocognitive Disorder' ||
+            result === 'Probable Frontotemporal Neurocognitive Disorder' ||
+            result === 'Major Neurocognitive Disorder' ||
+            result ===
+              'Major / Mild Neurocognitive Disorder due to Alzheimer’s Disease' ||
+            result ===
+              'Major / Mild Neurocognitive Disorder with Lewy Bodies' ||
+            result === 'Delirium') && (
             <CardDiagnoseSeverity
               isDarkMode={isDarkMode}
               setSeverity={setSeverity}
@@ -258,7 +280,9 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Stimulant Use Disorder' ||
             result === 'Tobacco Use Disorder' ||
             result === 'Other (or Unknown) Substance Use Disorder' ||
-            result === 'Gambling Disorder') && (
+            result === 'Gambling Disorder' ||
+            result === 'Delirium' ||
+            result === 'Major Neurocognitive Disorder') && (
             <CardDiagnoseDuration
               isDarkMode={isDarkMode}
               setDuration={setDuration}
@@ -301,7 +325,9 @@ function HomeDiagnose({isDarkMode}) {
             result === 'Sedative, Hypnotic, or Anxiolytic Withdrawal' ||
             result === 'Stimulant Withdrawal' ||
             result === 'Tobacco Use Disorder' ||
-            result === 'Social Anxiety Disorder') && (
+            result === 'Social Anxiety Disorder' ||
+            result === 'Delirium' ||
+            result === 'Major Neurocognitive Disorder') && (
             <CardDiagnoseSpecify
               isDarkMode={isDarkMode}
               setSpecification={setSpecification}

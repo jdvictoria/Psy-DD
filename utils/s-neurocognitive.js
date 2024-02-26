@@ -35,155 +35,155 @@ export const neurocognitiveSymptoms = [
     value: 5,
   },
 
-  // Major or Mild Neurocognitive Disorder due to Frontotemporal Degeneration
-  // Criteria A
-  {
-    label: 'The criteria are met for major or mild neurocognitive disorder',
-    value: 6,
-  },
-
-  // Criteria B
-  {
-    label: 'The disturbance has insidious onset and gradual progression',
-    value: 7,
-  },
-
-  // Criteria C
-  {
-    label: 'Behavioral Variant',
-    value: 8,
-  },
-  {
-    label: 'Language Variant',
-    value: 9,
-  },
-
-  // Criteria D
-  {
-    label:
-      'Relative sparing of learning and memory and perceptual-motor function',
-    value: 10,
-  },
-
-  // Criteria E
-  {
-    label:
-      'The disturbance is not better explained by cerebrovascular disease, another neurodegenerative disease, the effects of a substance, or another mental, neurological, or systemic disorder',
-    value: 11,
-  },
-
-  // Major or Mild Neurocognitive Disorder with Lewy Bodies
-  // Criteria A
-  {
-    label: 'The criteria are met for major or mild neurocognitive disorder',
-    value: 12,
-  },
-
-  // Criteria B
-  {
-    label: 'The disorder has an insidious onset and gradual progression',
-    value: 13,
-  },
-
-  // Criteria C
-  {
-    label:
-      'The disorder meets a combination of core diagnostic features and suggestive diagnostic features for either probable or possible neurocognitive disorder with Lewy bodies',
-    value: 14,
-  },
-
-  // Criteria D
-  {
-    label:
-      'The disturbance is not better explained by cerebrovascular disease, another neurodegenerative disease, the effects of a substance, or another mental, neurological, or systemic disorder',
-    value: 15,
-  },
-
-  // Major or Mild Neurocognitive Disorder due to Alzheimer’s Disease
-  // Criteria A
-  {
-    label: 'The criteria are met for major or mild neurocognitive disorder',
-    value: 16,
-  },
-
-  // Criteria B
-  {
-    label:
-      'There is insidious onset and gradual progression of impairment in one or more cognitive domains (for major neurocognitive disorder, at least two domains must be impaired)',
-    value: 17,
-  },
-
-  // Criteria C (Mild)
-  {
-    label: 'Clear evidence of decline in memory and learning',
-    value: 18,
-  },
-  {
-    label:
-      'Steadily progressive, gradual decline in cognition, without extended plateaus',
-    value: 19,
-  },
-  {
-    label:
-      'No evidence of mixed etiology (i.e., absence of other neurodegenerative or cerebrovascular disease, or another neurological or systemic disease or condition likely contributing to cognitive decline)',
-    value: 20,
-  },
-
-  // Criteria C (Major)
-  {
-    label:
-      'Clear evidence of decline in memory and learning and at least one other cognitive domain (based on detailed history or serial neuropsychological testing)',
-    value: 21,
-  },
-  {
-    label:
-      'Steadily progressive, gradual decline in cognition, without extended plateaus',
-    value: 22,
-  },
-  {
-    label:
-      'No evidence of mixed etiology (i.e., absence of other neurodegenerative or cerebrovascular disease, or another neurological, mental, or systemic disease or condition likely contributing to cognitive decline)',
-    value: 23,
-  },
-
-  // Criteria D
-  {
-    label:
-      'The disturbance is not better explained by cerebrovascular disease, another neurodegenerative disease, the effects of a substance, or another mental, neurological, or systemic disorder',
-    value: 24,
-  },
-
   // Major Neurocognitive Disorder
   // Criteria A
   {
     label:
       'Concern of the individual, a knowledgeable informant, or the clinician that there has been a significant decline in cognitive function',
-    value: 25,
+    value: 6,
   },
   {
     label:
       'A substantial impairment in cognitive performance, preferably documented by standardized neuropsychological testing or, in its absence, another quantified clinical assessment',
-    value: 26,
+    value: 7,
   },
 
   // Criteria B
   {
     label:
       'The cognitive deficits interfere with independence in everyday activities (i.e., at a minimum, requiring assistance with complex instrumental activities of daily living such as paying bills or managing medications) (Clinically significant)',
-    value: 27,
+    value: 8,
   },
 
   // Criteria C
   {
     label:
       'The cognitive deficits do not occur exclusively in the context of a delirium',
-    value: 28,
+    value: 9,
   },
 
   // Criteria D
   {
     label:
       'The cognitive deficits are not better explained by another mental disorder (e.g., major depressive disorder, schizophrenia)',
+    value: 10,
+  },
+
+  // Major or Mild Neurocognitive Disorder due to Alzheimer’s Disease
+  // Criteria A
+  {
+    label: 'The criteria are met for major or mild neurocognitive disorder',
+    value: 11,
+  },
+
+  // Criteria B
+  {
+    label:
+      'There is insidious onset and gradual progression of impairment in one or more cognitive domains (for major neurocognitive disorder, at least two domains must be impaired)',
+    value: 12,
+  },
+
+  // Criteria C (Mild)
+  {
+    label: 'Clear evidence of decline in memory and learning',
+    value: 13,
+  },
+  {
+    label:
+      'Steadily progressive, gradual decline in cognition, without extended plateaus',
+    value: 14,
+  },
+  {
+    label:
+      'No evidence of mixed etiology (i.e., absence of other neurodegenerative or cerebrovascular disease, or another neurological or systemic disease or condition likely contributing to cognitive decline)',
+    value: 15,
+  },
+
+  // Criteria C (Major)
+  {
+    label:
+      'Clear evidence of decline in memory and learning and at least one other cognitive domain (based on detailed history or serial neuropsychological testing)',
+    value: 16,
+  },
+  {
+    label:
+      'Steadily progressive, gradual decline in cognition, without extended plateaus',
+    value: 17,
+  },
+  {
+    label:
+      'No evidence of mixed etiology (i.e., absence of other neurodegenerative or cerebrovascular disease, or another neurological, mental, or systemic disease or condition likely contributing to cognitive decline)',
+    value: 18,
+  },
+
+  // Criteria D
+  {
+    label:
+      'The disturbance is not better explained by cerebrovascular disease, another neurodegenerative disease, the effects of a substance, or another mental, neurological, or systemic disorder',
+    value: 19,
+  },
+
+  // Major or Mild Neurocognitive Disorder due to Frontotemporal Degeneration
+  // Criteria A
+  {
+    label: 'The criteria are met for major or mild neurocognitive disorder',
+    value: 20,
+  },
+
+  // Criteria B
+  {
+    label: 'The disturbance has insidious onset and gradual progression',
+    value: 21,
+  },
+
+  // Criteria C
+  {
+    label: 'Behavioral Variant',
+    value: 22,
+  },
+  {
+    label: 'Language Variant',
+    value: 23,
+  },
+
+  // Criteria D
+  {
+    label:
+      'Relative sparing of learning and memory and perceptual-motor function',
+    value: 24,
+  },
+
+  // Criteria E
+  {
+    label:
+      'The disturbance is not better explained by cerebrovascular disease, another neurodegenerative disease, the effects of a substance, or another mental, neurological, or systemic disorder',
+    value: 25,
+  },
+
+  // Major or Mild Neurocognitive Disorder with Lewy Bodies
+  // Criteria A
+  {
+    label: 'The criteria are met for major or mild neurocognitive disorder',
+    value: 26,
+  },
+
+  // Criteria B
+  {
+    label: 'The disorder has an insidious onset and gradual progression',
+    value: 27,
+  },
+
+  // Criteria C
+  {
+    label:
+      'The disorder meets a combination of core diagnostic features and suggestive diagnostic features for either probable or possible neurocognitive disorder with Lewy bodies',
+    value: 28,
+  },
+
+  // Criteria D
+  {
+    label:
+      'The disturbance is not better explained by cerebrovascular disease, another neurodegenerative disease, the effects of a substance, or another mental, neurological, or systemic disorder',
     value: 29,
   },
 
@@ -237,126 +237,127 @@ export const neurocognitiveSymptoms = [
     value: 37,
   },
 
-  // Major or Mild Vascular Neurocognitive Disorder (Probable Vascular Neurocognitive Disorder)
-  // Criteria A
-  {
-    label:
-      'Clinical criteria are supported by neuroimaging evidence of significant parenchymal injury attributed to cerebrovascular disease (neuroimaging-supported)',
-    value: 38,
-  },
-  {
-    label:
-      'The neurocognitive syndrome is temporally related to one or more documented cerebrovascular events',
-    value: 39,
-  },
-  {
-    label:
-      'Both clinical and genetic (e.g., cerebral autosomal dominant arteriopathy with subcortical infarcts and leukoencephalopathy) evidence of cerebrovascular disease is present',
-    value: 40,
-  },
-
-  // Major or Mild Vascular Neurocognitive Disorder (Possible Vascular Neurocognitive Disorder)
-  // Criteria A
-  {
-    label:
-      'The clinical criteria are met but neuroimaging is not available, and the temporal relationship of the neurocognitive syndrome with one or more cerebrovascular events is not established',
-    value: 41,
-  },
-
   // Major or Mild Neurocognitive Disorder due to Traumatic Brain Injury
   // Criteria A
   {
     label: 'The criteria are met for major or mild neurocognitive disorder',
-    value: 42,
+    value: 38,
   },
 
   // Criteria B
   {
     label: 'Loss of consciousness',
-    value: 43,
+    value: 39,
   },
   {
     label: 'Posttraumatic amnesia',
-    value: 44,
+    value: 40,
   },
   {
     label: 'Disorientation and confusion',
-    value: 45,
+    value: 41,
   },
   {
     label:
       'Neurological signs (e.g., neuroimaging demonstrating injury; visual field cuts; anosmia; hemiparesis; hemisensory loss; cortical blindness; aphasia; apraxia; weakness; loss of balance; other sensory loss that cannot be accounted for by peripheral or other causes)',
-    value: 46,
+    value: 42,
   },
 
   // Criteria C
   {
     label:
       'The neurocognitive disorder presents immediately after the occurrence of the traumatic brain injury or immediately after recovery of consciousness and persists past the acute post-injury period',
-    value: 47,
+    value: 43,
   },
 
   // Substance/Medication-Induced Major or Mild Neurocognitive Disorder
   // Criteria A
   {
     label: 'The criteria are met for major or mild neurocognitive disorder',
-    value: 48,
+    value: 44,
   },
 
   // Criteria B
   {
     label:
       'The neurocognitive impairments do not occur exclusively during the course of a delirium and persist beyond the usual duration of intoxication and acute withdrawal',
-    value: 49,
+    value: 45,
   },
 
   // Criteria C
   {
     label:
       'The involved substance or medication and duration and extent of use are capable of producing the neurocognitive impairment',
-    value: 50,
+    value: 46,
   },
 
   // Criteria D
   {
     label:
       'The temporal course of the neurocognitive deficits is consistent with the timing of substance or medication use and abstinence (e.g., the deficits remain stable or improve after a period of abstinence)',
-    value: 51,
+    value: 47,
   },
 
   // Criteria E
   {
     label:
       'The neurocognitive disorder is not attributable to another medical condition or is not better explained by another mental disorder',
-    value: 52,
+    value: 48,
   },
 
   // Major or Mild Neurocognitive Disorder Due to HIV Infection
   // Criteria A
   {
     label: 'The criteria are met for major or mild neurocognitive disorder',
-    value: 53,
+    value: 49,
   },
 
   {
     label:
       'There is documented infection with human immunodeficiency virus (HIV)',
-    value: 54,
+    value: 50,
   },
 
   {
     label:
       'The neurocognitive disorder is not better explained by non-HIV conditions, including secondary brain diseases such as progressive multifocal leukoencephalopathy or cryptococcal meningitis',
-    value: 55,
+    value: 51,
   },
 
   {
     label:
       'The neurocognitive disorder is not attributable to another medical condition and is not better explained by a mental disorder',
-    value: 56,
+    value: 52,
   },
 
   // Major or Mild Neurocognitive Disorder Due to Parkinson’s Disease
+  // Criteria A
+  {
+    label: 'The criteria are met for major or mild neurocognitive disorder',
+    value: 53,
+  },
+
+  // Criteria B
+  {
+    label:
+      'The disturbance occurs in the setting of established Parkinson’s disease',
+    value: 54,
+  },
+
+  // Criteria C
+  {
+    label: 'There is insidious onset and gradual progression of impairment',
+    value: 55,
+  },
+
+  // Criteria D
+  {
+    label:
+      'The neurocognitive disorder is not attributable to another medical condition and is not better explained by another mental disorder',
+    value: 56,
+  },
+
+  // Major or Mild Neurocognitive Disorder Due to Huntington’s Disease
   // Criteria A
   {
     label: 'The criteria are met for major or mild neurocognitive disorder',
@@ -365,14 +366,14 @@ export const neurocognitiveSymptoms = [
 
   // Criteria B
   {
-    label:
-      'The disturbance occurs in the setting of established Parkinson’s disease',
+    label: 'There is insidious onset and gradual progression',
     value: 58,
   },
 
   // Criteria C
   {
-    label: 'There is insidious onset and gradual progression of impairment',
+    label:
+      'There is clinically established Huntington’s disease, or risk for Huntington’s disease based on family history or genetic testing',
     value: 59,
   },
 
@@ -383,7 +384,7 @@ export const neurocognitiveSymptoms = [
     value: 60,
   },
 
-  // Major or Mild Neurocognitive Disorder Due to Huntington’s Disease
+  // Major or Mild Neurocognitive Disorder Due to Another Medical Condition
   // Criteria A
   {
     label: 'The criteria are met for major or mild neurocognitive disorder',
@@ -392,66 +393,321 @@ export const neurocognitiveSymptoms = [
 
   // Criteria B
   {
-    label: 'There is insidious onset and gradual progression',
+    label:
+      'There is evidence from the history, physical examination, or laboratory findings that the neurocognitive disorder is the pathophysiological consequence of another medical condition (e.g., multiple sclerosis)',
     value: 62,
   },
 
   // Criteria C
   {
     label:
-      'There is clinically established Huntington’s disease, or risk for Huntington’s disease based on family history or genetic testing',
-    value: 63,
-  },
-
-  // Criteria D
-  {
-    label:
-      'The neurocognitive disorder is not attributable to another medical condition and is not better explained by another mental disorder',
-    value: 64,
-  },
-
-  // Major or Mild Neurocognitive Disorder Due to Another Medical Condition
-  // Criteria A
-  {
-    label: 'The criteria are met for major or mild neurocognitive disorder',
-    value: 65,
-  },
-
-  // Criteria B
-  {
-    label:
-      'There is evidence from the history, physical examination, or laboratory findings that the neurocognitive disorder is the pathophysiological consequence of another medical condition (e.g., multiple sclerosis)',
-    value: 66,
-  },
-
-  // Criteria C
-  {
-    label:
       'The cognitive deficits are not better explained by another mental disorder (e.g., major depressive disorder) or another specific neurocognitive disorder (e.g., major neurocognitive disorder due to Alzheimer’s disease)',
-    value: 67,
+    value: 63,
   },
 
   // Major or Mild Neurocognitive Disorder Due to Multiple Etiologies
   // Criteria A
   {
     label: 'The criteria are met for major or mild neurocognitive disorder',
-    value: 68,
+    value: 64,
   },
 
   // Criteria B
   {
     label:
       'There is evidence from the history, physical examination, or laboratory findings that the neurocognitive disorder is the pathophysiological consequence of more than one etiological process, excluding substances (e.g., neurocognitive disorder due to Alzheimer’s disease with subsequent development of vascular neurocognitive disorder)',
-    value: 69,
+    value: 65,
   },
 
   // Criteria C
   {
     label:
       'The cognitive deficits are not better explained by another mental disorder and do not occur exclusively during the course of a delirium',
+    value: 66,
+  },
+
+  // Major or Mild Neurocognitive Disorder Due to Prion Disease
+  // Criteria A
+  {
+    label: 'The criteria are met for major or mild neurocognitive disorder',
+    value: 67,
+  },
+
+  // Criteria B
+  {
+    label:
+      'There is insidious onset, and rapid progression of impairment is common',
+    value: 68,
+  },
+
+  // Criteria C
+  {
+    label:
+      'There are motor features of prion disease, such as myoclonus or ataxia, or biomarker evidence',
+    value: 69,
+  },
+
+  // Criteria C
+  {
+    label:
+      'The neurocognitive disorder is not attributable to another medical condition and is not better explained by another mental disorder',
     value: 70,
   },
+
+  // Variants
+  // Major or Mild Vascular Neurocognitive Disorder (Probable Vascular Neurocognitive Disorder)
+  // Criteria A
+  {
+    label:
+      'Clinical criteria are supported by neuroimaging evidence of significant parenchymal injury attributed to cerebrovascular disease (neuroimaging-supported)',
+    value: 71,
+  },
+  {
+    label:
+      'The neurocognitive syndrome is temporally related to one or more documented cerebrovascular events',
+    value: 72,
+  },
+  {
+    label:
+      'Both clinical and genetic (e.g., cerebral autosomal dominant arteriopathy with subcortical infarcts and leukoencephalopathy) evidence of cerebrovascular disease is present',
+    value: 73,
+  },
+
+  // Major or Mild Vascular Neurocognitive Disorder (Possible Vascular Neurocognitive Disorder)
+  // Criteria A
+  {
+    label:
+      'The clinical criteria are met but neuroimaging is not available, and the temporal relationship of the neurocognitive syndrome with one or more cerebrovascular events is not established',
+    value: 74,
+  },
 ];
+
+export const mainDisorderA = numbers => {
+  return numbers.includes(1);
+};
+
+export const optionalDisorderA = numbers => {
+  return (
+    numbers.includes(2) ||
+    numbers.includes(3) ||
+    numbers.includes(4) ||
+    numbers.includes(5)
+  );
+};
+
+export const mainDisorderB = numbers => {
+  return numbers.includes(6) || numbers.includes(7);
+};
+
+export const optionalDisorderB = numbers => {
+  return numbers.includes(8) || numbers.includes(9) || numbers.includes(10);
+};
+
+export const mainDisorderC = numbers => {
+  return numbers.includes(11) || numbers.includes(12);
+};
+
+export const optionalDisorderC = numbers => {
+  return (
+    (numbers.includes(13) && numbers.includes(14) && numbers.includes(15)) ||
+    (numbers.includes(16) && numbers.includes(17) && numbers.includes(18)) ||
+    numbers.includes(19)
+  );
+};
+
+export const mainDisorderD = numbers => {
+  return numbers.includes(22) || numbers.includes(23);
+};
+
+export const optionalDisorderD = numbers => {
+  return (
+    numbers.includes(20) ||
+    numbers.includes(21) ||
+    numbers.includes(24) ||
+    numbers.includes(25)
+  );
+};
+
+export const mainDisorderE = numbers => {
+  return numbers.includes(26) || numbers.includes(27) || numbers.includes(28);
+};
+
+export const optionalDisorderE = numbers => {
+  return numbers.includes(29);
+};
+
+export const mainDisorderF = numbers => {
+  return numbers.includes(30);
+};
+
+export const optionalDisorderF = numbers => {
+  return numbers.includes(31) || numbers.includes(32);
+};
+
+export const mainDisorderG = numbers => {
+  return numbers.includes(33) && numbers.includes(34) && numbers.includes(35);
+};
+
+export const optionalDisorderG = numbers => {
+  return (
+    numbers.includes(36) ||
+    numbers.includes(37) ||
+    numbers.includes(71) ||
+    numbers.includes(72) ||
+    numbers.includes(73) ||
+    numbers.includes(74)
+  );
+};
+
+export const mainDisorderH = numbers => {
+  return numbers.includes(38) && numbers.includes(39) && numbers.includes(43);
+};
+
+export const optionalDisorderH = numbers => {
+  return numbers.includes(40) || numbers.includes(41) || numbers.includes(42);
+};
+
+export const mainDisorderI = numbers => {
+  return numbers.includes(45);
+};
+
+export const optionalDisorderI = numbers => {
+  return (
+    numbers.includes(44) ||
+    numbers.includes(46) ||
+    numbers.includes(47) ||
+    numbers.includes(48)
+  );
+};
+
+export const mainDisorderJ = numbers => {
+  return numbers.includes(49) && numbers.includes(50);
+};
+
+export const optionalDisorderJ = numbers => {
+  return numbers.includes(51) || numbers.includes(52);
+};
+
+export const mainDisorderK = numbers => {
+  return numbers.includes(67) && numbers.includes(68) && numbers.includes(69);
+};
+
+export const optionalDisorderK = numbers => {
+  return numbers.includes(70);
+};
+
+export const mainDisorderL = numbers => {
+  return numbers.includes(53) && numbers.includes(54) && numbers.includes(55);
+};
+
+export const optionalDisorderL = numbers => {
+  return numbers.includes(56);
+};
+
+export const mainDisorderM = numbers => {
+  return numbers.includes(57) && numbers.includes(58) && numbers.includes(59);
+};
+
+export const optionalDisorderM = numbers => {
+  return numbers.includes(60);
+};
+
+export const mainDisorderN = numbers => {
+  return numbers.includes(63);
+};
+
+export const optionalDisorderN = numbers => {
+  return numbers.includes(61) || numbers.includes(62);
+};
+
+export const mainDisorderO = numbers => {
+  return numbers.includes(65) && numbers.includes(66);
+};
+
+export const optionalDisorderO = numbers => {
+  return numbers.includes(64);
+};
+
+export const neurocognitiveDiagnosis = numbers => {
+  if (
+    mainDisorderA(numbers) ||
+    (mainDisorderA(numbers) && optionalDisorderA(numbers))
+  ) {
+    return 'Delirium';
+  } else if (
+    mainDisorderB(numbers) ||
+    (mainDisorderB(numbers) && optionalDisorderB(numbers))
+  ) {
+    return 'Major Neurocognitive Disorder';
+  } else if (
+    mainDisorderC(numbers) ||
+    (mainDisorderC(numbers) && optionalDisorderC(numbers))
+  ) {
+    return 'Major / Mild Neurocognitive Disorder due to Alzheimer’s Disease';
+  } else if (
+    mainDisorderD(numbers) ||
+    (mainDisorderD(numbers) && optionalDisorderD(numbers))
+  ) {
+    return 'Major / Mild Neurocognitive Disorder due to Frontotemporal Degeneration';
+  } else if (
+    mainDisorderE(numbers) ||
+    (mainDisorderE(numbers) && optionalDisorderE(numbers))
+  ) {
+    return 'Major / Mild Neurocognitive Disorder with Lewy Bodies';
+  } else if (
+    mainDisorderF(numbers) ||
+    (mainDisorderF(numbers) && optionalDisorderF(numbers))
+  ) {
+    return 'Probable Frontotemporal Neurocognitive Disorder';
+  } else if (
+    mainDisorderG(numbers) ||
+    (mainDisorderG(numbers) && optionalDisorderG(numbers))
+  ) {
+    return 'Major / Mild Vascular Neurocognitive Disorder';
+  } else if (
+    mainDisorderH(numbers) ||
+    (mainDisorderH(numbers) && optionalDisorderH(numbers))
+  ) {
+    return 'Major / Mild Neurocognitive Disorder due to Traumatic Brain Injury';
+  } else if (
+    mainDisorderI(numbers) ||
+    (mainDisorderI(numbers) && optionalDisorderI(numbers))
+  ) {
+    return 'Substance/Medication-Induced Major / Mild Neurocognitive Disorder';
+  } else if (
+    mainDisorderJ(numbers) ||
+    (mainDisorderJ(numbers) && optionalDisorderJ(numbers))
+  ) {
+    return 'Major / Mild Neurocognitive Disorder Due to HIV Infection';
+  } else if (
+    mainDisorderK(numbers) ||
+    (mainDisorderK(numbers) && optionalDisorderK(numbers))
+  ) {
+    return 'Major / Mild Neurocognitive Disorder Due to Prion Disease';
+  } else if (
+    mainDisorderL(numbers) ||
+    (mainDisorderL(numbers) && optionalDisorderL(numbers))
+  ) {
+    return 'Major / Mild Neurocognitive Disorder Due to Parkinson’s Disease';
+  } else if (
+    mainDisorderM(numbers) ||
+    (mainDisorderM(numbers) && optionalDisorderM(numbers))
+  ) {
+    return 'Major / Mild Neurocognitive Disorder Due to Huntington’s Disease';
+  } else if (
+    mainDisorderN(numbers) ||
+    (mainDisorderN(numbers) && optionalDisorderN(numbers))
+  ) {
+    return 'Major / Mild Neurocognitive Disorder Due to Another Medical Condition';
+  } else if (
+    mainDisorderO(numbers) ||
+    (mainDisorderO(numbers) && optionalDisorderO(numbers))
+  ) {
+    return 'Major / Mild Neurocognitive Disorder Due to Multiple Etiologies';
+  } else {
+    return 'Other Specified / Unspecified Neurocognitive Related Disorder';
+  }
+};
 
 export const huntingtonSeverity = [
   {
@@ -535,7 +791,7 @@ export const hivSeverity = [
   },
 ];
 
-export const substranceNeurocognitiveSeverity = [
+export const substanceNeurocognitiveSeverity = [
   {
     label:
       'With moderate or severe use disorder (Alcohol (major NCD), nonamnestic-confabulatory type)',

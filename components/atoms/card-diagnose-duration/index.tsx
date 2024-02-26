@@ -57,6 +57,10 @@ import {
   stimulantUseDuration,
   tobaccoUseDuration,
 } from '../../../utils/j-substance';
+import {
+  deliriumDuration,
+  majorneurocognitiveDuration,
+} from '../../../utils/s-neurocognitive';
 
 // @ts-ignore
 function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
@@ -140,6 +144,10 @@ function CardDiagnoseDuration({isDarkMode, setDuration, result}) {
     additionalData = otherUnknownUseDuration;
   } else if (result === 'Gambling Disorder') {
     additionalData = gamblingDuration;
+  } else if (result === 'Delirium') {
+    additionalData = deliriumDuration;
+  } else if (result === 'Major Neurocognitive Disorder') {
+    additionalData = majorneurocognitiveDuration;
   }
 
   return (
