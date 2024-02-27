@@ -97,8 +97,8 @@ function SignUpComponent({isDarkMode, setIsSignIn}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [date, setDate] = useState(new Date());
-  const [dateString, setDateString] = useState('03/28/1986');
-  const [license, setLicense] = useState('0001444');
+  const [dateString, setDateString] = useState('');
+  const [license, setLicense] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 

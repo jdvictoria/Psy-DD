@@ -44,8 +44,8 @@ function SignInComponent({
       [{text: 'OK', onPress: () => console.log('OK Pressed')}],
     );
 
-  const [email, setEmail] = useState('vjoshuaarlo12@gmail.com');
-  const [password, setPassword] = useState('psyApp12');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
 
   const handleSignIn = async () => {
