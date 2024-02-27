@@ -57,10 +57,7 @@ function UserAuth({
     setIsDarkMode((previousState: any) => !previousState);
 
   return (
-    <StyledKeyboardView
-      style={{
-        marginBottom: isKeyboardOn ? (isSignIn ? 90 : 135) : 0,
-      }}>
+    <StyledKeyboardView>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <>
           <TouchableOpacity
