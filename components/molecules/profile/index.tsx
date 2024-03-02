@@ -28,6 +28,8 @@ function HomeProfile({isDarkMode, profile}: any) {
   const Birthday = profile.Birthday || '';
   const License = profile.License || '';
 
+  const Initials = (FirstName[0] || '') + (LastName[0] || '');
+
   return (
     <StyledView>
       <HeaderContainer
@@ -53,7 +55,9 @@ function HomeProfile({isDarkMode, profile}: any) {
           showsVerticalScrollIndicator={false}>
           <ProfileCircle
             style={{backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF'}}>
-            <StyledText40 style={contentStyle.semibold}>JD</StyledText40>
+            <StyledText40 style={contentStyle.semibold}>
+              {Initials}
+            </StyledText40>
           </ProfileCircle>
           <StyledCol style={{marginBottom: 25}}>
             <StyledText20 style={contentStyle.semibold}>
