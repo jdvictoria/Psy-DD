@@ -90,7 +90,7 @@ function SignInComponent({
         })
         .catch(() => {
           // @ts-ignore
-          setError('Error: Email Does Not Exist.');
+          setError('Error: Invalid Email / Password.');
         });
     }
   };
