@@ -15,8 +15,10 @@ import HomeSettings from '../../molecules/settings';
 function HomeNavigation({
   navigation,
   isDarkMode,
+  userID,
   profileData,
   setIsDarkMode,
+  refetchProfile,
 }: any) {
   const Tabs = AnimatedTabBarNavigator();
 
@@ -76,7 +78,9 @@ function HomeNavigation({
           <HomeProfile
             {...props}
             isDarkMode={isDarkMode}
+            userID={userID}
             profile={profileData}
+            refetchProfile={refetchProfile}
           />
         )}
       </Tabs.Screen>

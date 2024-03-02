@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView} from 'react-native';
+import {Image, ScrollView} from 'react-native';
 
 import {
   BodyContainer,
@@ -19,7 +19,12 @@ import {
 
 import CardProfile from '../../atoms/card-profile';
 
-function HomeProfile({isDarkMode, profile}: any) {
+import {launchImageLibrary} from 'react-native-image-picker';
+
+import firestore from '@react-native-firebase/firestore';
+import storage from '@react-native-firebase/storage';
+
+function HomeProfile({isDarkMode, userID, profile, refetchProfile}: any) {
   const contentStyle = contentText(isDarkMode);
   const subcontentStyle = subcontentText();
 
@@ -27,8 +32,57 @@ function HomeProfile({isDarkMode, profile}: any) {
   const LastName = profile.LastName || '';
   const Birthday = profile.Birthday || '';
   const License = profile.License || '';
+  const ProfPic = profile.ProfilePicture || '';
 
   const Initials = (FirstName[0] || '') + (LastName[0] || '');
+
+  // @ts-ignore
+  const uploadPicture = async imageUri => {
+    try {
+      // Upload image to Firebase Storage
+      const fileName =
+        profile.FirstName +
+        '-' +
+        imageUri.substring(imageUri.lastIndexOf('/') + 1);
+      const storageRef = storage().ref(`doctor/${fileName}`);
+      const task = storageRef.putFile(imageUri);
+      const downloadURL = await task.then(() => storageRef.getDownloadURL());
+
+      const userRef = firestore().collection('Users').doc(userID);
+
+      await userRef.update({
+        ProfilePicture: downloadURL,
+      });
+
+      refetchProfile();
+    } catch (error) {
+      console.log('Upload Failed');
+    }
+  };
+
+  const openImagePicker = () => {
+    const options = {
+      mediaType: 'photo',
+      includeBase64: false,
+      maxHeight: 2000,
+      maxWidth: 2000,
+    };
+
+    // @ts-ignore
+    launchImageLibrary(options, response => {
+      if (response.didCancel) {
+        console.log('User cancelled image picker');
+        // @ts-ignore
+      } else if (response.error) {
+        // @ts-ignore
+        console.log('Image picker error: ', response.error);
+      } else {
+        // @ts-ignore
+        let imageUri = response.uri || response.assets?.[0]?.uri;
+        uploadPicture(imageUri);
+      }
+    });
+  };
 
   return (
     <StyledView>
@@ -49,16 +103,31 @@ function HomeProfile({isDarkMode, profile}: any) {
             justifyContent: 'center',
             alignItems: 'center',
             paddingBottom: 125,
-            // backgroundColor: 'red',
           }}
           style={{width: '100%'}}
           showsVerticalScrollIndicator={false}>
           <ProfileCircle
-            style={{backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF'}}>
-            <StyledText40 style={contentStyle.semibold}>
-              {Initials}
-            </StyledText40>
+            style={{backgroundColor: isDarkMode ? '#1A2230' : '#FFFFFF'}}
+            onPress={openImagePicker}>
+            {ProfPic ? (
+              <Image
+                style={{
+                  width: 100,
+                  height: 100,
+                  marginTop: 25,
+                  marginBottom: 25,
+                  borderWidth: 1,
+                  borderRadius: 50,
+                }}
+                source={{uri: ProfPic}}
+              />
+            ) : (
+              <StyledText40 style={contentStyle.semibold}>
+                {Initials}
+              </StyledText40>
+            )}
           </ProfileCircle>
+
           <StyledCol style={{marginBottom: 25}}>
             <StyledText20 style={contentStyle.semibold}>
               {profile.FirstName + ' ' + profile.LastName}

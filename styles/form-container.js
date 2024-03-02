@@ -57,7 +57,7 @@ export const BodyContainer = styled.View`
   height: 85%;
 `;
 
-export const ProfileCircle = styled.View`
+export const ProfileCircle = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
 

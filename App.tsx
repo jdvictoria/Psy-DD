@@ -9,6 +9,9 @@ import UserAuth from './components/organism/1_user-auth';
 import HomeNavigation from './components/organism/2_home';
 import Loading from './components/organism/3_loading';
 
+import firestore from '@react-native-firebase/firestore';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 function App() {
   const netInfo = useNetInfo();
 
@@ -19,6 +22,26 @@ function App() {
   const [userID, setUserID] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [profileData, setProfileData] = useState({});
+
+  const refetchProfile = async () => {
+    try {
+      const userDocument = await firestore()
+        .collection('Users')
+        .doc(userID)
+        .get();
+
+      if (userDocument.exists) {
+        const userData = userDocument.data();
+        // @ts-ignore
+        setProfileData(userData);
+        await AsyncStorage.setItem('data', JSON.stringify(userData));
+      } else {
+        console.log('Document does not exist');
+      }
+    } catch (error) {
+      console.log('Error Fetching Profile');
+    }
+  };
 
   return (
     <NavigationContainer>
@@ -56,8 +79,10 @@ function App() {
             <HomeNavigation
               {...props}
               isDarkMode={isDarkMode}
+              userID={userID}
               profileData={profileData}
               setIsDarkMode={setIsDarkMode}
+              refetchProfile={refetchProfile}
             />
           )}
         </Stack.Screen>
