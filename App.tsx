@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+import {useNetInfo} from '@react-native-community/netinfo';
+
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -8,6 +10,8 @@ import HomeNavigation from './components/organism/2_home';
 import Loading from './components/organism/3_loading';
 
 function App() {
+  const netInfo = useNetInfo();
+
   const Stack = createStackNavigator();
 
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -39,6 +43,7 @@ function App() {
             <UserAuth
               {...props}
               isDarkMode={isDarkMode}
+              netInfo={netInfo}
               setUserID={setUserID}
               setIsLoggedIn={setIsLoggedIn}
               setProfileData={setProfileData}

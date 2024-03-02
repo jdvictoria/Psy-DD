@@ -23,6 +23,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 function SignInComponent({
   navigation,
   isDarkMode,
+  netInfo,
   setUserID,
   setIsLoggedIn,
   setProfileData,
@@ -49,44 +50,49 @@ function SignInComponent({
   const [error, setError] = useState(null);
 
   const handleSignIn = async () => {
-    await auth().currentUser?.reload();
-    await auth()
-      .signInWithEmailAndPassword(email, password)
-      .then(async () => {
-        if (auth().currentUser?.emailVerified) {
-          const userDocument = await firestore()
-            .collection('Users')
-            .doc(auth().currentUser?.uid)
-            .get();
+    if (!netInfo.isConnected) {
+      // @ts-ignore
+      setError('Error: No Internet Connection.');
+    } else {
+      await auth().currentUser?.reload();
+      await auth()
+        .signInWithEmailAndPassword(email, password)
+        .then(async () => {
+          if (auth().currentUser?.emailVerified) {
+            const userDocument = await firestore()
+              .collection('Users')
+              .doc(auth().currentUser?.uid)
+              .get();
 
-          if (userDocument.exists) {
-            const userData = userDocument.data();
+            if (userDocument.exists) {
+              const userData = userDocument.data();
 
-            setUserID(auth().currentUser?.uid);
-            setIsLoggedIn(true);
-            setProfileData(userData);
+              setUserID(auth().currentUser?.uid);
+              setIsLoggedIn(true);
+              setProfileData(userData);
 
-            await AsyncStorage.setItem(
-              'uid',
-              auth().currentUser?.uid as string,
-            );
-            await AsyncStorage.setItem('auth', JSON.stringify(true));
-            await AsyncStorage.setItem('data', JSON.stringify(userData));
+              await AsyncStorage.setItem(
+                'uid',
+                auth().currentUser?.uid as string,
+              );
+              await AsyncStorage.setItem('auth', JSON.stringify(true));
+              await AsyncStorage.setItem('data', JSON.stringify(userData));
 
-            // @ts-ignore
-            navigation.navigate('Home');
+              // @ts-ignore
+              navigation.navigate('Home');
+            } else {
+              console.log('Document does not exist');
+            }
           } else {
-            console.log('Document does not exist');
+            await auth().currentUser?.sendEmailVerification();
+            alertEmailVerification();
           }
-        } else {
-          await auth().currentUser?.sendEmailVerification();
-          alertEmailVerification();
-        }
-      })
-      .catch(() => {
-        // @ts-ignore
-        setError('Error: Email Does Not Exist.');
-      });
+        })
+        .catch(() => {
+          // @ts-ignore
+          setError('Error: Email Does Not Exist.');
+        });
+    }
   };
 
   const handleForgotPass = async () => {
