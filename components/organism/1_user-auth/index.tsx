@@ -25,6 +25,7 @@ import SignUpComponent from '../../molecules/sign-up';
 function UserAuth({
   navigation,
   isDarkMode,
+  netInfo,
   setUserID,
   setIsLoggedIn,
   setProfileData,
@@ -98,9 +99,10 @@ function UserAuth({
           {isSignIn ? (
             <SignInComponent
               navigation={navigation}
+              isDarkMode={isDarkMode}
+              netInfo={netInfo}
               setUserID={setUserID}
               setIsLoggedIn={setIsLoggedIn}
-              isDarkMode={isDarkMode}
               setProfileData={setProfileData}
             />
           ) : (
